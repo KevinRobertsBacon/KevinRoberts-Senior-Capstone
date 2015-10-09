@@ -1,0 +1,12 @@
+Adobe After Effects v13.5 Windows 64 render log for project “DemoReel.aep”
+
+Rendering started on 10/8/2015 at 2:04:04 PM
+
+  10/8/2015 2:04:04 PM: Starting composition “DemoReel”.
+
+  Output To: C:\Users\Kev-bo\Videos\DemoReel.mov  After Effects warning: Undo group mismatch, will attempt to fix.  10/8/2015 2:14:17 PM: Finished composition “DemoReel”.
+
+
+  Total Time Elapsed: 10 Min, 13 Sec
+Log closed on 10/8/2015 at 2:14:17 PM
+
