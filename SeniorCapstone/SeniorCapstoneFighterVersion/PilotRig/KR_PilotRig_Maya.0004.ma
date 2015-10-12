@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
-//Name: KR_PilotRig_Maya.0003.ma
-//Last modified: Mon, Oct 12, 2015 03:52:46 PM
+//Name: KR_PilotRig_Maya.0004.ma
+//Last modified: Mon, Oct 12, 2015 03:53:00 PM
 //Codeset: 1252
 file -rdi 1 -ns "KR_PilotModel_Maya_0010" -rfn "KR_PilotModel_Maya_0010RN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion/PilotRig/KR_PilotModel_Maya.0010.ma";
@@ -77,7 +77,7 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "029212D8-40AB-A9FC-E05C-1F87A3A4A8D5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.0020204857007411 0.6029200536721212 0.0017455781705229968 ;
+	setAttr ".t" -type "double3" 1.0020204857007411 0.61842809581542335 -0.01154702938087887 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "9E79AE80-40FE-7421-2451-3E8B89670B2C";
@@ -1254,7 +1254,7 @@ createNode locator -n "kneepointer_RShape" -p "kneepointer_R";
 	rename -uid "E5A62ECD-4887-F078-3880-3189BABB8574";
 	setAttr -k off ".v";
 createNode fosterParent -n "KR_PilotModel_Maya_0010RNfosterParent1";
-	rename -uid "E20BA982-4389-6479-0610-158CAF409377";
+	rename -uid "D328CDAF-47BA-B67A-84DB-2EB15186145E";
 createNode mesh -n "brush77MainShapeDeformed" -p "KR_PilotModel_Maya_0010RNfosterParent1";
 	rename -uid "393E89CD-4E9F-2B8F-C3D3-A891F88FEA91";
 	setAttr -k off ".v";
@@ -1756,7 +1756,7 @@ createNode mesh -n "MeshShapeDeformed" -p "KR_PilotModel_Maya_0010RNfosterParent
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "fosterParent1" -p "KR_PilotModel_Maya_0010RNfosterParent1";
-	rename -uid "4C1A349B-40DD-FB10-0620-17B1E6A45A99";
+	rename -uid "9C16EBE3-4CDE-A3DD-EDB4-DDAB927BFCEB";
 createNode mesh -n "MeshShapeDeformed" -p "fosterParent1";
 	rename -uid "4F13445B-4E4D-C540-64F1-8EA3AF8F05F8";
 	setAttr -k off ".v";
@@ -4475,4 +4475,4 @@ connectAttr "|KR_PilotModel_Maya_0010RNfosterParent1|fosterParent1|MeshShapeDefo
 connectAttr "|KR_PilotModel_Maya_0010RNfosterParent1|MeshShapeDeformed.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "CleareyePartShapeDeformed.iog" ":initialShadingGroup.dsm" -na;
-// End of KR_PilotRig_Maya.0003.ma
+// End of KR_PilotRig_Maya.0004.ma

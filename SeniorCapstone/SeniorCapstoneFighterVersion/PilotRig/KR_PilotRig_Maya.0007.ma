@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
-//Name: KR_PilotRig_Maya.0003.ma
-//Last modified: Mon, Oct 12, 2015 03:52:46 PM
+//Name: KR_PilotRig_Maya.0007.ma
+//Last modified: Mon, Oct 12, 2015 05:06:05 PM
 //Codeset: 1252
 file -rdi 1 -ns "KR_PilotModel_Maya_0010" -rfn "KR_PilotModel_Maya_0010RN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion/PilotRig/KR_PilotModel_Maya.0010.ma";
@@ -9,7 +9,6 @@ file -r -ns "KR_PilotModel_Maya_0010" -dr 1 -rfn "KR_PilotModel_Maya_0010RN" -op
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
-requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l meter -a degree -t film;
 fileInfo "application" "maya";
@@ -21,8 +20,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "86A2ADA8-49A3-E3C7-2E8F-A098B08CF83F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.76357762760294612 1.3969306888051489 1.1225999462980172 ;
-	setAttr ".r" -type "double3" -34.538352729086505 -332.60000000020807 -1.7912252562332422e-015 ;
+	setAttr ".t" -type "double3" 0.28642149641010628 1.2395493700874771 0.62397988330545329 ;
+	setAttr ".r" -type "double3" -33.338352730679603 -341.8000000000356 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "65A93CA8-4ED4-12CD-3A33-45B7B709211D";
 	setAttr -k off ".v" no;
@@ -30,17 +29,17 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 1.5921820831129525;
+	setAttr ".coi" 1.2549329149206434;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.5676577174161821e-006 102.49251591786378 0.49280624020936337 ;
+	setAttr ".tp" -type "double3" 25.514461756074684 90.015780128029519 -3.5255219330378482 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "C72A80A2-454B-6457-B939-1D8D7A130624";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.45513363178077548 1.001 -0.01277637921132147 ;
+	setAttr ".t" -type "double3" 0.0032353251301087483 1.001 0.018482291932119331 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "7BB61DF4-4BCB-F383-FDA9-52AE1DFC1DF9";
@@ -50,7 +49,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
 	setAttr ".coi" 1.001;
-	setAttr ".ow" 0.23924027999152947;
+	setAttr ".ow" 0.83924027999152973;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -59,7 +58,7 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "72E470CD-4C54-DE92-5DAC-69B37051D8F3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.11539431903031463 0.50571762756319216 1.417383526813855 ;
+	setAttr ".t" -type "double3" 0.31742961193126262 0.90924976825509141 1.417383526813855 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "96550A64-46F2-C3C2-0E42-83A9401F8634";
 	setAttr -k off ".v" no;
@@ -68,7 +67,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
 	setAttr ".coi" 1.001;
-	setAttr ".ow" 1.3650845830625935;
+	setAttr ".ow" 1.0348158282685154;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -77,7 +76,7 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "029212D8-40AB-A9FC-E05C-1F87A3A4A8D5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.0020204857007411 0.6029200536721212 0.0017455781705229968 ;
+	setAttr ".t" -type "double3" 1.0020204857007411 0.61842809581542335 -0.01154702938087887 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "9E79AE80-40FE-7421-2451-3E8B89670B2C";
@@ -87,7 +86,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
 	setAttr ".coi" 1.001;
-	setAttr ".ow" 1.4954183495327094;
+	setAttr ".ow" 1.0109766521038415;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -98,6 +97,7 @@ createNode joint -n "bind_jnt_root";
 	setAttr ".t" -type "double3" 0 0.60459031141117703 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 60.459031141117698 0 1;
 	setAttr ".radi" 0.5;
 createNode joint -n "bind_jnt_spineA" -p "bind_jnt_root";
@@ -106,6 +106,7 @@ createNode joint -n "bind_jnt_spineA" -p "bind_jnt_root";
 	setAttr ".t" -type "double3" 0 0.024497241717431065 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -89.999999999999972 -17.969139740157082 89.999999999999986 ;
 	setAttr ".bps" -type "matrix" 1.1102230246251565e-016 0.95122281894876226 0.30850469803743763 0
 		 -4.4408920985006271e-016 0.30850469803743741 -0.95122281894876226 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
@@ -118,7 +119,8 @@ createNode joint -n "bind_jnt_spineB" -p "bind_jnt_spineA";
 	setAttr ".t" -type "double3" 0.046328269148251569 3.552713678800501e-017 1.0286942219884026e-017 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -9.2386437680357287e-016 -9.3723520919554361e-015 
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -9.2386437680357287e-016 -9.3723520919554376e-015 
 		11.259302932400161 ;
 	setAttr ".bps" -type "matrix" 2.2177296181331363e-017 0.99315060432287638 0.11684124756739706 0
 		 -4.5721914382866434e-016 0.11684124756739683 -0.99315060432287638 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
@@ -131,6 +133,7 @@ createNode joint -n "bind_jnt_spineC" -p "bind_jnt_spineB";
 	setAttr ".t" -type "double3" 0.050968333036435429 3.3306690738754695e-017 8.3373185043838778e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -5.5200706982905059e-016 -5.7817251027240869e-015 
 		10.907505164917854 ;
 	setAttr ".bps" -type "matrix" -6.4740226653757107e-017 0.99731745681569117 -0.073197611509408581 0
@@ -144,6 +147,7 @@ createNode joint -n "bind_jnt_spineD" -p "bind_jnt_spineC";
 	setAttr ".t" -type "double3" 0.065086316294812027 3.6130163469267926e-018 6.5678692560528214e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -3.0463446145711574e-016 -3.5926290834850561e-015 
 		9.6935228142939049 ;
 	setAttr ".bps" -type "matrix" -1.4011728638668047e-016 0.97075340350034145 -0.24007879871513776 0
@@ -157,7 +161,8 @@ createNode joint -n "bind_jnt_spineE" -p "bind_jnt_spineD";
 	setAttr ".t" -type "double3" 0.05705196958515938 2.4424906541753444e-017 3.5773414192741726e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 5.3406152230765497e-016 -5.9170539505991141e-015 -10.314856796457477 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 5.3406152230765497e-016 -5.9170539505991149e-015 -10.314856796457477 ;
 	setAttr ".bps" -type "matrix" -5.9822351668250033e-017 0.99805257848288875 -0.062378286155180651 0
 		 -4.5383087619752316e-016 -0.062378286155180873 -0.99805257848288875 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
 		 -3.4703330502307378e-015 84.407040375312533 0.17865610855223069 1;
@@ -170,6 +175,7 @@ createNode joint -n "bind_jnt_neck" -p "bind_jnt_spineE";
 	setAttr ".ro" 5;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 0 0 -22.634038885125708 ;
 	setAttr ".bps" -type "matrix" 1.1943902636023301e-016 0.94519020546803156 0.32652025279804764 0
 		 -4.4189987206543853e-016 0.32652025279804742 -0.94519020546803145 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
@@ -183,6 +189,7 @@ createNode joint -n "bind_jnt_neckTip" -p "bind_jnt_neck";
 	setAttr ".ro" 5;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -8.7460432143943278e-016 -9.6931781055468043e-015 
 		10.311542247573021 ;
 	setAttr ".bps" -type "matrix" 3.8409705791614962e-017 0.98837169765061716 0.15205718425394324 0
@@ -196,6 +203,7 @@ createNode joint -n "bind_jnt_head" -p "bind_jnt_neckTip";
 	setAttr ".ro" 5;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jot" -type "string" "none";
 	setAttr ".jo" -type "double3" 0 0 8.7 ;
 	setAttr ".bps" -type "matrix" -3.1028711447503315e-017 0.99999967543708956 0.00080568338459560684 0
@@ -209,6 +217,7 @@ createNode joint -n "bind_jnt_headTip" -p "bind_jnt_head";
 	setAttr ".t" -type "double3" 0.088832639549034337 0.064881331536068912 1.0505213254802132e-017 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" -3.1028711447503315e-017 0.99999967543708956 0.00080568338459560684 0
 		 -4.5670383950131074e-016 0.00080568338459535704 -0.99999967543708956 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
 		 -9.8301167220889986e-015 108.42174601887235 -5.4090372983166777 1;
@@ -220,6 +229,7 @@ createNode joint -n "bind_jnt_jaw" -p "bind_jnt_head";
 	setAttr ".t" -type "double3" -0.025272700625908015 -0.015775664958515571 -2.6704849126631359e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -8.9134696489421613e-015 7.6049370282836483e-015 -99.058641015870919 ;
 	setAttr ".bps" -type "matrix" 4.5589302306462428e-016 -0.15824084458341545 0.9874005444122097 0
 		 4.1264142670476013e-017 0.9874005444122097 0.1582408445834157 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
@@ -231,6 +241,7 @@ createNode joint -n "bind_jnt_jawTip" -p "bind_jnt_jaw";
 	setAttr ".t" -type "double3" 0.039865021119732065 6.7012367876984062e-017 -5.2913317145381955e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.69876513826788422;
 createNode joint -n "bind_jnt_eye_L" -p "bind_jnt_head";
 	rename -uid "F6A5FECD-4208-31B3-E35B-BFBFBC76AD24";
@@ -239,6 +250,7 @@ createNode joint -n "bind_jnt_eye_L" -p "bind_jnt_head";
 	setAttr ".t" -type "double3" 0.03123037484112702 -0.039341622690193596 -0.02060506864684573 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 0 0 -90 ;
 	setAttr ".bps" -type "matrix" 4.5670383950131074e-016 -0.000805683384595135 0.99999967543708956 0
 		 -3.1028711447503413e-017 0.99999967543708956 0.0008056833845953848 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
@@ -250,6 +262,7 @@ createNode joint -n "bind_jnt_eyetip_L" -p "bind_jnt_eye_L";
 	setAttr ".t" -type "double3" 0.010116398083218384 0 2.2462916156525693e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.50060205905112964;
 createNode joint -n "bind_jnt_eye_R" -p "bind_jnt_head";
 	rename -uid "D7D4EA1F-413F-B17A-EDD2-0587DF3DBCCC";
@@ -258,6 +271,7 @@ createNode joint -n "bind_jnt_eye_R" -p "bind_jnt_head";
 	setAttr ".t" -type "double3" 0.031231684106473957 -0.039341382608472246 0.02060509999999996 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 0 0 -90 ;
 	setAttr ".bps" -type "matrix" 4.5670383950131074e-016 -0.000805683384595135 0.99999967543708956 0
 		 -3.1028711447503413e-017 0.99999967543708956 0.0008056833845953848 0 -1.0000000000000002 1.1102230246251568e-016 4.4408920985006262e-016 0
@@ -269,6 +283,7 @@ createNode joint -n "bind_jnt_eyetip_R" -p "bind_jnt_eye_R";
 	setAttr ".t" -type "double3" 0.010116399999999954 0 8.8817841970012525e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.50060205905112964;
 createNode joint -n "bind_jnt_clavicle_L" -p "bind_jnt_spineE";
 	rename -uid "75D86ED5-4E81-28BA-1762-B4980713775D";
@@ -278,7 +293,8 @@ createNode joint -n "bind_jnt_clavicle_L" -p "bind_jnt_spineE";
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 144.8030944341574 56.036957988552693 46.044969503552828 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 144.80309443415737 56.036957988552679 46.044969503552736 ;
 	setAttr ".bps" -type "matrix" 0.82939810105850897 0.36191917137097962 -0.42557408679885955 0
 		 -0.32200388444917594 0.93220947935222354 0.16522404487694364 0 0.45652194729298762 6.7096084829321306e-016 0.88971215100155765 0
 		 4.9727508744820055 88.146747491760166 -0.96497572003645304 1;
@@ -288,11 +304,12 @@ createNode joint -n "bind_jnt_shoulder_L" -p "bind_jnt_clavicle_L";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".v" no;
 	setAttr ".oc" 6;
-	setAttr ".t" -type "double3" 0.063901377305403087 1.2767564783189301e-017 -4.4408920985006263e-018 ;
+	setAttr ".t" -type "double3" 0.063901377305403073 -3.061170077823182e-017 -2.5151000920383417e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.3702075773546811 -27.130946182912318 -24.220599411104921 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2341679488085739 -24.808986847035236 -24.157314974024722 ;
 	setAttr ".bps" -type "matrix" 0.99891288640808606 -0.046615934699052869 2.7755575615628914e-016 0
 		 0.046615934699053022 0.99891288640808606 1.1032841307212493e-015 0 -4.9960036108132044e-016 -1.0683725173649505e-015 1 0
 		 10.272718973694467 90.459460844143749 -3.6844527492300823 1;
@@ -301,11 +318,12 @@ createNode joint -n "bind_jnt_elbow_L" -p "bind_jnt_shoulder_L";
 	rename -uid "EEB55A66-40EA-E737-5FD4-DCA429BC82AD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 7;
-	setAttr ".t" -type "double3" 0.14470189191745564 -8.0843935191044601e-017 -2.4097705817037075e-017 ;
+	setAttr ".t" -type "double3" 0.14492500192249991 -1.8992403136297575e-016 -7.7715611723760965e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.01319291228373669 -1.0159074947441056 1.9278053903836128 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.072985188672287649 -5.607172846949938 1.920813845218813 ;
 	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
 		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
 		 24.727177426092119 89.784919449698393 -3.6844527492300805 1;
@@ -313,9 +331,11 @@ createNode joint -n "bind_jnt_elbow_L" -p "bind_jnt_shoulder_L";
 createNode joint -n "bind_jnt_wrist_L" -p "bind_jnt_elbow_L";
 	rename -uid "C75F7571-4A81-9D58-E3A0-2D8E871D6DE1";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" 0.14843495325004596 4.6252871053597407e-016 2.8421709430404008e-016 ;
+	setAttr ".t" -type "double3" 0.1485511445009369 1.2534515526213541e-016 1.7763568394002506e-016 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.029443008178996519 2.2662853794063138 -0.0011642893690025913 ;
 	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
 		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
 		 39.567088103887016 89.5921933369996 -3.4212775528565027 1;
@@ -324,10 +344,11 @@ createNode joint -n "bind_jnt_pinkyA_L" -p "bind_jnt_wrist_L";
 	rename -uid "ACDF1A39-4BE6-18E5-DA32-23830BEA4DE6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" 0.031273494723610684 0.00022960730520949824 -0.012397903420443611 ;
+	setAttr ".t" -type "double3" 0.031273494723610684 0.00022960730520964036 -0.012397903420443602 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 7.9095016908052186e-012 1.0159931459274245 0.74394223851811092 ;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
@@ -337,10 +358,11 @@ createNode joint -n "bind_jnt_pinkyB_L" -p "bind_jnt_pinkyA_L";
 	rename -uid "3900AD8B-4094-E0A6-F878-3BABE4DDEA06";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.022963726700757619 0 0 ;
+	setAttr ".t" -type "double3" 0.022963726700757688 1.4210854715202004e-016 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 45.012336413697362 89.574547012203652 -4.6054197834845967 1;
@@ -349,10 +371,11 @@ createNode joint -n "bind_jnt_pinkyC_L" -p "bind_jnt_pinkyB_L";
 	rename -uid "332EC638-4256-3350-D828-A6949788E55D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" 0.021293637486157025 0 0 ;
+	setAttr ".t" -type "double3" 0.021293637486157025 0 8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 47.141700162313064 89.574547012203652 -4.6054197834845967 1;
@@ -361,10 +384,11 @@ createNode joint -n "bind_jnt_pinkyD_L" -p "bind_jnt_pinkyC_L";
 	rename -uid "54FA0BBE-4041-E54C-D93A-EBB4AC7A02C0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 0.017535936753305847 0 0 ;
+	setAttr ".t" -type "double3" 0.017535936753305777 0 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 48.895293837643649 89.574547012203652 -4.6054197834845967 1;
@@ -372,19 +396,21 @@ createNode joint -n "bind_jnt_pinkyD_L" -p "bind_jnt_pinkyC_L";
 createNode joint -n "bind_jnt_pinkyE_L" -p "bind_jnt_pinkyD_L";
 	rename -uid "6FB2C26B-4E2B-EF6E-DC65-5F917D57F46E";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" 0.018788503664256242 0 0 ;
+	setAttr ".t" -type "double3" 0.018788503664256169 0 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.54545777757373914;
 createNode joint -n "bind_jnt_ringA_L" -p "bind_jnt_wrist_L";
 	rename -uid "DB9CB361-427A-644C-C0B3-8EA89B85EC91";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" 0.031489004720240889 0.0018686801546331823 0.00095326118589503575 ;
+	setAttr ".t" -type "double3" 0.031489004720240889 0.0018686801546333243 0.00095326118589503575 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 7.9095016908052186e-012 1.0159931459274245 0.74394223851811092 ;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
@@ -394,10 +420,11 @@ createNode joint -n "bind_jnt_ringB_L" -p "bind_jnt_ringA_L";
 	rename -uid "1FA0AFC2-420B-71EF-6717-6BA982BE7A65";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.022963726700757619 0 0 ;
+	setAttr ".t" -type "double3" 0.022963726700757688 1.4210854715202004e-016 4.4408920985006263e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 45.012336413697369 89.7381606652107 -3.2700933890593076 1;
@@ -410,6 +437,7 @@ createNode joint -n "bind_jnt_ringC_L" -p "bind_jnt_ringB_L";
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 47.58009858114572 89.7381606652107 -3.2700933890593076 1;
@@ -418,10 +446,11 @@ createNode joint -n "bind_jnt_ringD_L" -p "bind_jnt_ringC_L";
 	rename -uid "91396BB2-469A-6032-3E01-61B5106A5B13";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 0.020041070575206703 0 0 ;
+	setAttr ".t" -type "double3" 0.020041070575206633 0 4.4408920985006263e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 49.58420563866639 89.7381606652107 -3.2700933890593076 1;
@@ -429,19 +458,21 @@ createNode joint -n "bind_jnt_ringD_L" -p "bind_jnt_ringC_L";
 createNode joint -n "bind_jnt_ringE_L" -p "bind_jnt_ringD_L";
 	rename -uid "7E654288-43A6-8B56-5AA8-E687804D5B1C";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" 0.018788503664256242 0 0 ;
+	setAttr ".t" -type "double3" 0.018788503664256169 0 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.54545777757373914;
 createNode joint -n "bind_jnt_middleA_L" -p "bind_jnt_wrist_L";
 	rename -uid "6568C49C-4A58-E4ED-52D9-D0ABFC865CD4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" 0.03170887873479529 0.0023924381611379886 0.013733922913014377 ;
+	setAttr ".t" -type "double3" 0.031708878734795366 0.0023924381611379886 0.01373392291301438 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 7.9095016908052186e-012 1.0159931459274245 0.74394223851811092 ;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
@@ -451,10 +482,11 @@ createNode joint -n "bind_jnt_middleB_L" -p "bind_jnt_middleA_L";
 	rename -uid "068DDCE9-460D-7ADA-7FD9-1AA705E6556F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.022963726700757619 0 0 ;
+	setAttr ".t" -type "double3" 0.022963726700757619 2.8421709430404008e-016 -2.2204460492503131e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 45.012336413697369 89.790246569182585 -1.9918262531465896 1;
@@ -463,10 +495,11 @@ createNode joint -n "bind_jnt_middleC_L" -p "bind_jnt_middleB_L";
 	rename -uid "F5953302-45BF-873A-FB1D-E1BBF169F3AE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" 0.027973994344559258 0 0 ;
+	setAttr ".t" -type "double3" 0.027973994344559258 0 2.2204460492503131e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 47.809735848153295 89.790246569182585 -1.9918262531465898 1;
@@ -475,10 +508,11 @@ createNode joint -n "bind_jnt_middleD_L" -p "bind_jnt_middleC_L";
 	rename -uid "FB912A5B-446E-3FB9-3216-1290B6FC8171";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 0.020667354030681866 0 0 ;
+	setAttr ".t" -type "double3" 0.020667354030681793 0 -2.2204460492503131e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 49.876471251221481 89.790246569182585 -1.99182625314659 1;
@@ -486,19 +520,21 @@ createNode joint -n "bind_jnt_middleD_L" -p "bind_jnt_middleC_L";
 createNode joint -n "bind_jnt_middleE_L" -p "bind_jnt_middleD_L";
 	rename -uid "D65482DF-4405-A6E3-F91C-80BFC60D4693";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" 0.021711159789807227 0 0 ;
+	setAttr ".t" -type "double3" 0.021711159789807154 0 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.54545777757373914;
 createNode joint -n "bind_jnt_indexA_L" -p "bind_jnt_wrist_L";
 	rename -uid "9F833078-4F2E-1674-6498-9788F0AE229A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" 0.031966422561993182 -0.0009884566893866519 0.02577979920674443 ;
+	setAttr ".t" -type "double3" 0.031966422561993182 -0.00098845668938650987 0.025779799206744433 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 7.9095016908052186e-012 1.0159931459274245 0.74394223851811092 ;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
@@ -508,10 +544,11 @@ createNode joint -n "bind_jnt_indexB_L" -p "bind_jnt_indexA_L";
 	rename -uid "A260010C-4F54-8D9D-9945-64A43472B749";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.022963726700757619 0 0 ;
+	setAttr ".t" -type "double3" 0.022963726700757688 1.4210854715202004e-016 1.1102230246251566e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 45.012336413697369 89.451851191343181 -0.78704921434325847 1;
@@ -520,10 +557,11 @@ createNode joint -n "bind_jnt_indexC_L" -p "bind_jnt_indexB_L";
 	rename -uid "ACD263F3-4899-33D0-9C4A-65BAA06032AA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" 0.023172487852582649 0 1.1102230246251566e-018 ;
+	setAttr ".t" -type "double3" 0.023172487852582649 0 2.2204460492503131e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 47.329585198955634 89.451851191343181 -0.78704921434325847 1;
@@ -532,10 +570,11 @@ createNode joint -n "bind_jnt_indexD_L" -p "bind_jnt_indexC_L";
 	rename -uid "6F2660C5-4BD8-0FF0-FD5A-168254860965";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 0.019832309423381603 0 0 ;
+	setAttr ".t" -type "double3" 0.019832309423381531 0 -1.1102230246251566e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
 		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
 		 49.312816141293794 89.451851191343181 -0.78704921434325859 1;
@@ -543,18 +582,20 @@ createNode joint -n "bind_jnt_indexD_L" -p "bind_jnt_indexC_L";
 createNode joint -n "bind_jnt_indexE_L" -p "bind_jnt_indexD_L";
 	rename -uid "47F1FDB1-4E06-77C3-261B-D585CFF5543F";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" 0.020458592878856763 0 0 ;
+	setAttr ".t" -type "double3" 0.020458592878856693 0 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.54545777757373914;
 createNode joint -n "bind_jnt_thumbA_L" -p "bind_jnt_wrist_L";
 	rename -uid "98FD210B-4850-500D-31ED-ACB7638B154E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" 0.015392233462623183 -0.0025590444188691207 0.020227836088001726 ;
+	setAttr ".t" -type "double3" 0.015392233462623252 -0.0025590444188689789 0.020227836088001726 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 89.721993825744846 -72.697154016419887 -3.6582311055389702 ;
 	setAttr ".bps" -type "matrix" 0.27956915838921942 -0.022829198233776094 0.95985411046968305 0
 		 -0.95666981982511812 0.078120222870410483 0.28049970876001568 0 -0.081387600488770265 -0.99668252642788946 3.4629417389187012e-016 0
@@ -564,9 +605,10 @@ createNode joint -n "bind_jnt_thumbB_L" -p "bind_jnt_thumbA_L";
 	rename -uid "80920905-408E-76FD-E40E-CEAD11054166";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" 0.022401736267463019 3.8652668548617638e-017 1.8594376911420155e-018 ;
+	setAttr ".t" -type "double3" 0.022401736267463033 7.105427357601002e-017 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -0.94480699287931924 -1.4332372468634307 -40.311491603786898 ;
 	setAttr ".bps" -type "matrix" 0.82979686247992079 -0.092855320838958755 0.55028634038141766 0
 		 -0.54687304925841618 0.06119578747900551 0.83497601378101061 0 -0.11120717159105169 -0.99379724541111436 -3.2291263150899589e-015 0
@@ -576,9 +618,10 @@ createNode joint -n "bind_jnt_thumbC_L" -p "bind_jnt_thumbB_L";
 	rename -uid "A0336A34-46AC-AFF6-FFF9-5EBABE88DA3A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" 0.023900198132963561 1.3596001549731807e-017 -1.7185094341457151e-017 ;
+	setAttr ".t" -type "double3" 0.023900198132963481 -3.552713678800501e-017 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" -0.59713060099692916 -0.73715680853113053 5.624177246880234 ;
 	setAttr ".bps" -type "matrix" 0.77071257260648707 -0.099189471730943307 0.62941526762863553 0
 		 -0.62426655005725706 0.08034210355496936 0.77706912232823466 0 -0.12764562235306415 -0.99181984003855217 -1.0681055763174494e-014 0
@@ -587,428 +630,538 @@ createNode joint -n "bind_jnt_thumbC_L" -p "bind_jnt_thumbB_L";
 createNode joint -n "bind_jnt_thumbD_L" -p "bind_jnt_thumbC_L";
 	rename -uid "9F4A323E-4C0D-A120-A4DE-F1B3D45F064F";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" 0.016252062772433122 -4.4004347639750604e-017 -1.0489117625154561e-016 ;
+	setAttr ".t" -type "double3" 0.016252062772433042 7.105427357601002e-017 -1.4210854715202004e-016 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.53192370747432172;
 createNode joint -n "fk_jnt_shoulder_L" -p "bind_jnt_clavicle_L";
-	rename -uid "799A5958-41FF-1AB8-59DD-44BE6F38BCA1";
+	rename -uid "A6B4A603-4221-127F-FBAE-1FA2EDD091D1";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".v" no;
 	setAttr ".oc" 6;
-	setAttr ".t" -type "double3" 0.063901377305402962 0 -8.2156503822261583e-017 ;
+	setAttr ".t" -type "double3" 0.063901377305403073 -3.061170077823182e-017 -2.5151000920383417e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.3702075773546813 -27.130946182912322 -24.220599411104917 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2341679488085731 -24.808986847035236 -24.157314974024718 ;
+	setAttr ".bps" -type "matrix" 0.99891288640808606 -0.046615934699052869 2.7755575615628914e-016 0
+		 0.046615934699053022 0.99891288640808606 1.1032841307212493e-015 0 -4.9960036108132044e-016 -1.0683725173649505e-015 1 0
+		 10.272718973694467 90.459460844143749 -3.6844527492300823 1;
 	setAttr ".radi" 1.1967339237109775;
 createNode joint -n "fk_jnt_elbow_L" -p "fk_jnt_shoulder_L";
-	rename -uid "08536A1F-482B-2F83-8476-D29B3DA51CF6";
+	rename -uid "18BDDB1C-443F-91FB-A007-C0AD2207B7CC";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 7;
-	setAttr ".t" -type "double3" 0.14470189191745564 -8.0843935191044601e-017 -2.4097705817037075e-017 ;
+	setAttr ".t" -type "double3" 0.14492500192249991 -1.8992403136297575e-016 -7.7715611723760965e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.01319291228373669 -1.0159074947441056 1.9278053903836128 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.07298518867228769 -5.6071728469499407 1.920813845218813 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 24.727177426092119 89.784919449698393 -3.6844527492300805 1;
 	setAttr ".radi" 1.2159221772393805;
 createNode joint -n "fk_jnt_wrist_L" -p "fk_jnt_elbow_L";
-	rename -uid "4A223F6B-4089-7EA9-EC38-C29F180C6394";
-	setAttr ".t" -type "double3" 0.14843495325004596 4.6252871053597407e-016 2.8421709430404008e-016 ;
+	rename -uid "7F40FC2E-4EAF-CD62-ED79-EA9F9EB6E982";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.1485511445009369 1.2534515526213541e-016 1.7763568394002506e-016 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.029443008178996536 2.2662853794063151 -0.0011642893690025917 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 39.567088103887016 89.5921933369996 -3.4212775528565027 1;
 	setAttr ".radi" 1.2159221772393805;
 createNode joint -n "ik_jnt_shoulder_L" -p "bind_jnt_clavicle_L";
-	rename -uid "8DBFE1C4-485B-5CC1-6F4E-6998076544CD";
+	rename -uid "DD8A6598-4520-718E-BE0A-2AAFAF75F6DE";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 6;
-	setAttr ".t" -type "double3" 0.063901377305403032 1.4210854715202004e-016 -8.2156503822261583e-017 ;
+	setAttr ".t" -type "double3" 0.063901377305403073 -3.061170077823182e-017 -2.5151000920383417e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.3702075773546796 -27.130946182912332 -24.220599411104921 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2341679488085731 -24.808986847035236 -24.157314974024718 ;
+	setAttr ".bps" -type "matrix" 0.99891288640808606 -0.046615934699052869 2.7755575615628914e-016 0
+		 0.046615934699053022 0.99891288640808606 1.1032841307212493e-015 0 -4.9960036108132044e-016 -1.0683725173649505e-015 1 0
+		 10.272718973694467 90.459460844143749 -3.6844527492300823 1;
 	setAttr ".radi" 1.1967339237109775;
 createNode joint -n "ik_jnt_elbow_L" -p "ik_jnt_shoulder_L";
-	rename -uid "9480CBB1-46ED-E438-8E57-239AA0AE74D2";
+	rename -uid "25D0F90B-428E-34D8-6398-1C8B410BB585";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 7;
-	setAttr ".t" -type "double3" 0.14470189191745556 -1.4210854715202004e-016 -1.7763568394002505e-017 ;
+	setAttr ".t" -type "double3" 0.14492500192249991 -1.8992403136297575e-016 -7.7715611723760965e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.01319291228373669 -1.0159074947441056 1.9278053903836128 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.072985188672287732 -5.6071728469499433 1.920813845218813 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 24.727177426092119 89.784919449698393 -3.6844527492300805 1;
 	setAttr ".radi" 1.2159221772393805;
 createNode joint -n "ik_jnt_wrist_L" -p "ik_jnt_elbow_L";
-	rename -uid "12F508A5-4317-3587-512C-718089AE9470";
-	setAttr ".t" -type "double3" 0.14843495325004594 5.6843418860808016e-016 2.8421709430404008e-016 ;
+	rename -uid "5C3189DC-49F0-A9A8-1C56-C188F831CD96";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.1485511445009369 1.2534515526213541e-016 1.7763568394002506e-016 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.029443008178996553 2.2662853794063165 -0.0011642893690025921 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 39.567088103887016 89.5921933369996 -3.4212775528565027 1;
 	setAttr ".radi" 1.2159221772393805;
 createNode joint -n "bind_jnt_clavicle_R" -p "bind_jnt_spineE";
-	rename -uid "6CB0E647-4260-07C2-1EC4-8D9CBFF13044";
+	rename -uid "36480E07-4AB6-A865-80CD-82A75510752B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" 0.038037147419912001 0.0090813141658464859 0.049727499999999959 ;
+	setAttr ".t" -type "double3" 0.038037147419911863 0.0090813141658464946 0.049727499999999959 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 144.80309443415749 56.036957988552651 -133.95503049644711 ;
-	setAttr ".bps" -type "matrix" 0.82939810105850897 -0.36191917137097979 0.42557408679885977 0
-		 -0.32200388444917566 -0.93220947935222354 -0.16522404487694414 0 0.45652194729298817 -4.2538438852412913e-016 -0.88971215100155765 0
-		 -4.9727500000000013 88.146699999999996 -0.96497600000000028 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 144.80309443415743 56.036957988552665 -133.95503049644722 ;
+	setAttr ".bps" -type "matrix" 0.82939810105850897 0.36191917137097962 -0.42557408679885955 0
+		 -0.32200388444917594 0.93220947935222354 0.16522404487694364 0 0.45652194729298762 6.7096084829321306e-016 0.88971215100155765 0
+		 4.9727508744820055 88.146747491760166 -0.96497572003645304 1;
 	setAttr ".radi" 0.74737515606917393;
 createNode joint -n "bind_jnt_shoulder_R" -p "bind_jnt_clavicle_R";
-	rename -uid "38772EF3-4414-74F1-27C9-00B58EFE4D3F";
+	rename -uid "A3B40F8F-4C1C-9F16-0331-0997C834E428";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".v" no;
 	setAttr ".oc" 6;
-	setAttr ".t" -type "double3" -0.063901527893750795 -8.7102241749903444e-007 5.5675773351637759e-008 ;
+	setAttr ".t" -type "double3" -0.063901527893750726 -8.7102241735692593e-007 5.5675773409369355e-008 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.3702075773546116 -27.130946182912346 -24.220599411104928 ;
-	setAttr ".bps" -type "matrix" 0.99891288640808618 0.046615934699052924 -3.8857805861880479e-016 0
-		 0.046615934699053202 -0.99891288640808606 -2.6367796834847468e-016 0 -4.4408920985006262e-016 9.337512614940642e-017 -1.0000000000000002 0
-		 -10.272699999999992 90.459500000000006 -3.6844499999999929 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2341679488086255 -24.808986847035243 -24.157314974024736 ;
+	setAttr ".bps" -type "matrix" 0.99891288640808606 -0.046615934699052869 2.7755575615628914e-016 0
+		 0.046615934699053022 0.99891288640808606 1.1032841307212493e-015 0 -4.9960036108132044e-016 -1.0683725173649505e-015 1 0
+		 10.272718973694467 90.459460844143749 -3.6844527492300823 1;
 	setAttr ".radi" 1.1967339237109775;
-createNode joint -n "bind_jnt_elbow_R1" -p "bind_jnt_shoulder_R";
-	rename -uid "0F37148B-425C-3B03-C434-48A1CD02944A";
+createNode joint -n "bind_jnt_elbow_R" -p "bind_jnt_shoulder_R";
+	rename -uid "F34710AF-4B85-2909-F378-D2B800B033B6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 7;
-	setAttr ".t" -type "double3" -0.14470233426133669 5.6605063434744808e-007 1.3322676295501878e-016 ;
+	setAttr ".t" -type "double3" -0.14492528607606819 5.7345134152342325e-007 3.1360110614997436e-008 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.013192912283739314 -1.0159074947440292 1.9278053903834629 ;
-	setAttr ".bps" -type "matrix" 0.99975850383408982 0.012983876673186153 -0.017730001634466745 0
-		 0.012981835408619385 -0.99991570592052192 -0.00023022356098134752 0 -0.017731496294622909 -1.3927844358208481e-013 -0.99984278466124576 0
-		 -24.727200000000003 89.784900000000007 -3.6844500000000004 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.072985188671504164 -5.60717284694993 1.9208138452188226 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 24.727177426092119 89.784919449698393 -3.6844527492300805 1;
 	setAttr ".radi" 1.2159221772393805;
-createNode joint -n "bind_jnt_wrist_R1" -p "bind_jnt_elbow_R1";
-	rename -uid "FB0121C4-4DB7-D80A-1D46-9A8EA7B41E06";
+createNode joint -n "bind_jnt_wrist_R" -p "bind_jnt_elbow_R";
+	rename -uid "1014DBC9-4947-E39F-8E84-3EA120392D36";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -0.14843484218612565 -2.5970684021103806e-007 5.0062232999081856e-008 ;
+	setAttr ".t" -type "double3" -0.14855119346522011 -2.6178426864476024e-007 1.3215995835480499e-008 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 0.99975850383408982 0.012983876673186153 -0.017730001634466745 0
-		 0.012981835408619385 -0.99991570592052192 -0.00023022356098134752 0 -0.017731496294622909 -1.3927844358208481e-013 -0.99984278466124576 0
-		 -39.567100000000003 89.592200000000005 -3.4212799999999999 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.029443008205627886 2.2662853794063609 -0.0011642893689728735 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 39.567088103887016 89.5921933369996 -3.4212775528565027 1;
 	setAttr ".radi" 1.2159221772393805;
-createNode joint -n "bind_jnt_pinkyA_R1" -p "bind_jnt_wrist_R1";
-	rename -uid "B7BC314B-4E92-A64A-9ABD-D6A3C4F5C3E7";
+createNode joint -n "bind_jnt_pinkyA_R" -p "bind_jnt_wrist_R";
+	rename -uid "68D34F33-4570-971A-AF1E-E1A3EDC3A981";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" -0.031273745632048315 -0.0002290737659586739 0.012397885437109082 ;
+	setAttr ".t" -type "double3" -0.031273745632048461 -0.00022907376596492668 0.012397885437108985 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 4.9325151361199187e-012 1.0159931459270755 0.7439422385180563 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -42.715999999999994 89.574499999999972 -4.6054200000000005 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -5.0316512020628634e-011 1.0159931459270328 0.74394223851860508 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 42.7159637436216 89.574547012203652 -4.6054197834845967 1;
 	setAttr ".radi" 0.56705375879702213;
-createNode joint -n "bind_jnt_pinkyB_R1" -p "bind_jnt_pinkyA_R1";
-	rename -uid "F765C968-47BF-CB47-60BF-D7A0FC95B356";
+createNode joint -n "bind_jnt_pinkyB_R" -p "bind_jnt_pinkyA_R";
+	rename -uid "308B72E3-412B-0AAC-4D3B-0EA39A07C300";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" -0.022963000000000094 -5.6843418860808016e-016 1.1546319456101628e-016 ;
+	setAttr ".t" -type "double3" -0.022962999999999952 1.4210854715202004e-016 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -45.012300000000003 89.574500000000015 -4.6054200000000014 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2074182697257336e-006 -1.892517177436998e-022 2.4715534250814302e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 45.012336413697362 89.574547012203652 -4.6054197834845967 1;
 	setAttr ".radi" 0.55841536630770872;
-createNode joint -n "bind_jnt_pinkyC_R1" -p "bind_jnt_pinkyB_R1";
-	rename -uid "FA35913E-438D-A3C2-C38A-7F91CBE78FBF";
+createNode joint -n "bind_jnt_pinkyC_R" -p "bind_jnt_pinkyB_R";
+	rename -uid "437F3E2E-48EC-9AE6-5AAD-58A658E84D9D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -0.021294000000000039 0 8.8817841970012528e-017 ;
+	setAttr ".t" -type "double3" -0.021294000000000111 -1.4210854715202004e-016 -8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -47.141700000000007 89.5745 -4.6054200000000005 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.7075472925031882e-006 -2.6764234009524973e-022 3.4953044186001266e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 47.141700162313064 89.574547012203652 -4.6054197834845967 1;
 	setAttr ".radi" 0.53897898320675441;
-createNode joint -n "bind_jnt_pinkyD_R1" -p "bind_jnt_pinkyC_R1";
-	rename -uid "9E1645FC-4885-7C19-2812-13B99EBCAD7B";
+createNode joint -n "bind_jnt_pinkyD_R" -p "bind_jnt_pinkyC_R";
+	rename -uid "EAB61B2B-4896-C842-7C3F-8C81E03A56D8";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.017535999999999989 -2.8421709430404008e-016 8.8817841970012528e-017 ;
+	setAttr ".t" -type "double3" -0.017535999999999989 0 -8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -48.895300000000006 89.574500000000029 -4.6054200000000014 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 3.1945284701301998e-006 -5.0071295841273487e-022 6.5391158826891623e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 48.895293837643649 89.574547012203652 -4.6054197834845967 1;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_pinkyE_R1" -p "bind_jnt_pinkyD_R1";
-	rename -uid "6BC64FE5-4C5A-0637-0AA6-3C9E0706C805";
+createNode joint -n "bind_jnt_pinkyE_R" -p "bind_jnt_pinkyD_R";
+	rename -uid "906BB62F-47FB-4AD9-50C3-A89158FCE01E";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" -0.01878799999999984 1.4210854715202004e-016 8.8817841970012528e-017 ;
+	setAttr ".t" -type "double3" -0.018787999999999912 0 -8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 6.1566493183999546e-006 -9.6499812180506919e-022 1.2602499755577901e-021 ;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_ringA_R1" -p "bind_jnt_wrist_R1";
-	rename -uid "E688EBC6-41F7-7F40-4CC6-A5BADDAB2971";
+createNode joint -n "bind_jnt_ringA_R" -p "bind_jnt_wrist_R";
+	rename -uid "1F92E89E-4EF9-F893-B0C6-3496D9594EC2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" -0.031489245056759929 -0.0018690100208274885 -0.0009533152193081574 ;
+	setAttr ".t" -type "double3" -0.031489245056759999 -0.0018690100208273463 -0.00095331521930903669 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 4.9325151361199187e-012 1.0159931459270755 0.7439422385180563 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -42.716000000000001 89.738199999999978 -3.2700900000000002 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -5.0316512020628634e-011 1.0159931459270328 0.74394223851860508 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 42.715963743621607 89.7381606652107 -3.2700933890593076 1;
 	setAttr ".radi" 0.56705375879702213;
-createNode joint -n "bind_jnt_ringB_R1" -p "bind_jnt_ringA_R1";
-	rename -uid "44B8457F-478F-B319-180A-1491ECBEAFBE";
+createNode joint -n "bind_jnt_ringB_R" -p "bind_jnt_ringA_R";
+	rename -uid "A538826B-4019-8414-17C7-EEA779D7C703";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" -0.022963000000000022 -5.6843418860808016e-016 9.7699626167013776e-017 ;
+	setAttr ".t" -type "double3" -0.022962999999999952 0 -1.3322676295501878e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -45.012300000000003 89.73820000000002 -3.2700899999999988 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2074182697257336e-006 -1.892517177436998e-022 2.4715534250814302e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 45.012336413697369 89.7381606652107 -3.2700933890593076 1;
 	setAttr ".radi" 0.55841536630770872;
-createNode joint -n "bind_jnt_ringC_R1" -p "bind_jnt_ringB_R1";
-	rename -uid "7F822590-45F4-CFCF-DA30-F8B961A35A49";
+createNode joint -n "bind_jnt_ringC_R" -p "bind_jnt_ringB_R";
+	rename -uid "55D9BC56-4DBD-984B-7FF4-3C89CBA4AA09";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -0.025677999999999982 0 1.2878587085651815e-016 ;
+	setAttr ".t" -type "double3" -0.025678000000000055 -1.4210854715202004e-016 -1.3322676295501878e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -47.580100000000002 89.738200000000006 -3.2700899999999993 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.7075472925031882e-006 -2.6764234009524973e-022 3.4953044186001266e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 47.58009858114572 89.7381606652107 -3.2700933890593076 1;
 	setAttr ".radi" 0.53897898320675441;
-createNode joint -n "bind_jnt_ringD_R1" -p "bind_jnt_ringC_R1";
-	rename -uid "118E1A96-430F-91CE-1AD1-AE90FABDE04D";
+createNode joint -n "bind_jnt_ringD_R" -p "bind_jnt_ringC_R";
+	rename -uid "E8F882E8-4B00-E851-122F-8B8CCCAE1731";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.02004100000000001 -2.8421709430404008e-016 9.3258734068513146e-017 ;
+	setAttr ".t" -type "double3" -0.02004100000000001 0 4.4408920985006263e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -49.584200000000003 89.73820000000002 -3.2700899999999988 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 3.1945284701301998e-006 -5.0071295841273487e-022 6.5391158826891623e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 49.58420563866639 89.7381606652107 -3.2700933890593076 1;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_ringE_R1" -p "bind_jnt_ringD_R1";
-	rename -uid "2B33E95D-42B1-2F5E-3D43-CD9A48B8AA7B";
+createNode joint -n "bind_jnt_ringE_R" -p "bind_jnt_ringD_R";
+	rename -uid "740EEE66-4CA3-1B21-A4D5-82B8D4E80133";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" -0.018788999999999875 0 9.3258734068513146e-017 ;
+	setAttr ".t" -type "double3" -0.018788999999999875 0 -1.3322676295501878e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 6.1566493183999546e-006 -9.6499812180506919e-022 1.2602499755577901e-021 ;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_middleA_R1" -p "bind_jnt_wrist_R1";
-	rename -uid "675D3EC6-4457-89B5-AA96-19A707A4A794";
+createNode joint -n "bind_jnt_middleA_R" -p "bind_jnt_wrist_R";
+	rename -uid "BF14C4DB-4B55-28B5-D693-B0B467D9F5FC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" -0.031709128959782548 -0.0023919090435968828 -0.013733905598519064 ;
+	setAttr ".t" -type "double3" -0.031709128959782687 -0.0023919090435904878 -0.013733905598520196 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 4.9325151361199187e-012 1.0159931459270755 0.7439422385180563 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -42.715999999999994 89.790199999999984 -1.9918300000000004 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -5.0316512020628634e-011 1.0159931459270328 0.74394223851860508 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 42.715963743621607 89.790246569182585 -1.9918262531465893 1;
 	setAttr ".radi" 0.56705375879702213;
-createNode joint -n "bind_jnt_middleB_R1" -p "bind_jnt_middleA_R1";
-	rename -uid "9FBE8698-43FD-1C73-4FA1-CFA8D6B5D12D";
+createNode joint -n "bind_jnt_middleB_R" -p "bind_jnt_middleA_R";
+	rename -uid "F490C6E4-4B44-1CAF-CC7D-90B277BCBDEA";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" -0.022963000000000094 -4.263256414560601e-016 1.0658141036401502e-016 ;
+	setAttr ".t" -type "double3" -0.022962999999999952 1.4210854715202004e-016 0 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -45.012300000000003 89.790200000000013 -1.9918300000000002 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2074182697257336e-006 -1.892517177436998e-022 2.4715534250814302e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 45.012336413697369 89.790246569182585 -1.9918262531465896 1;
 	setAttr ".radi" 0.55841536630770872;
-createNode joint -n "bind_jnt_middleC_R1" -p "bind_jnt_middleB_R1";
-	rename -uid "AC91513C-418B-2B7E-620C-E799B5ABD953";
+createNode joint -n "bind_jnt_middleC_R" -p "bind_jnt_middleB_R";
+	rename -uid "56F1E18F-4EAA-C26E-E7A2-05B762376A03";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -0.027974000000000034 0 1.3322676295501878e-016 ;
+	setAttr ".t" -type "double3" -0.027974000000000103 -1.4210854715202004e-016 -8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -47.809700000000007 89.790199999999999 -1.9918300000000002 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.7075472925031882e-006 -2.6764234009524973e-022 3.4953044186001266e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 47.809735848153295 89.790246569182585 -1.9918262531465898 1;
 	setAttr ".radi" 0.53897898320675441;
-createNode joint -n "bind_jnt_middleD_R1" -p "bind_jnt_middleC_R1";
-	rename -uid "93301A10-4F6C-0E23-F40A-05B962123948";
+createNode joint -n "bind_jnt_middleD_R" -p "bind_jnt_middleC_R";
+	rename -uid "5FEE0C19-4C8B-E4B5-EC5B-089384E2D189";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.020667999999999936 -2.8421709430404008e-016 9.7699626167013776e-017 ;
+	setAttr ".t" -type "double3" -0.020667999999999936 0 -8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -49.8765 89.790200000000013 -1.9918300000000002 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 3.1945284701301998e-006 -5.0071295841273487e-022 6.5391158826891623e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 49.876471251221481 89.790246569182585 -1.99182625314659 1;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_middleE_R1" -p "bind_jnt_middleD_R1";
-	rename -uid "64DA35A2-4E45-8086-A972-86AFC5CF1D3B";
+createNode joint -n "bind_jnt_middleE_R" -p "bind_jnt_middleD_R";
+	rename -uid "64E0D559-498C-739C-3D8F-0F8C4263947D";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" -0.021710999999999956 0 1.0214051826551441e-016 ;
+	setAttr ".t" -type "double3" -0.021710999999999887 0 -1.1102230246251566e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 6.1566493183999546e-006 -9.6499812180506919e-022 1.2602499755577901e-021 ;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_indexA_R1" -p "bind_jnt_wrist_R1";
-	rename -uid "D71BCC34-422E-BFB9-6F22-E0B8131D1DB6";
+createNode joint -n "bind_jnt_indexA_R" -p "bind_jnt_wrist_R";
+	rename -uid "AE1DB8CA-4E68-808B-4388-11A6386EC52A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" -0.031966661105559735 0.00098803209981213058 -0.025779821497988187 ;
+	setAttr ".t" -type "double3" -0.031966661105559811 0.00098803209982406765 -0.025779821497987711 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 4.9325151361199187e-012 1.0159931459270755 0.7439422385180563 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -42.716000000000001 89.451899999999981 -0.78704900000000055 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -5.0316512020628634e-011 1.0159931459270328 0.74394223851860508 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 42.715963743621607 89.451851191343181 -0.78704921434325836 1;
 	setAttr ".radi" 0.56705375879702213;
-createNode joint -n "bind_jnt_indexB_R1" -p "bind_jnt_indexA_R1";
-	rename -uid "6ACAA05B-4BCD-90AE-7AC8-5E992EEFA5C9";
+createNode joint -n "bind_jnt_indexB_R" -p "bind_jnt_indexA_R";
+	rename -uid "477FDA9F-4990-6332-69FA-02BB5C943FF3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" -0.022963000000000022 -4.263256414560601e-016 1.0325074129013956e-016 ;
+	setAttr ".t" -type "double3" -0.022962999999999952 1.4210854715202004e-016 -3.3306690738754695e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -45.012300000000003 89.451900000000009 -0.78704899999999989 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2074182697257336e-006 -1.892517177436998e-022 2.4715534250814302e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 45.012336413697369 89.451851191343181 -0.78704921434325847 1;
 	setAttr ".radi" 0.55841536630770872;
-createNode joint -n "bind_jnt_indexC_R1" -p "bind_jnt_indexB_R1";
-	rename -uid "C153821D-4C36-A596-BE7C-01BA80B04DCB";
+createNode joint -n "bind_jnt_indexC_R" -p "bind_jnt_indexB_R";
+	rename -uid "209C3341-489D-185D-1661-9FBBCB36D708";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -0.02317300000000003 0 1.1102230246251565e-016 ;
+	setAttr ".t" -type "double3" -0.023173000000000103 -1.4210854715202004e-016 -9.9920072216264085e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -47.329600000000006 89.451899999999995 -0.787049 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.7075472925031882e-006 -2.6764234009524973e-022 3.4953044186001266e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 47.329585198955634 89.451851191343181 -0.78704921434325847 1;
 	setAttr ".radi" 0.53897898320675441;
-createNode joint -n "bind_jnt_indexD_R1" -p "bind_jnt_indexC_R1";
-	rename -uid "6BAB9EFC-4145-D2A6-3E35-EAB3F2361EBE";
+createNode joint -n "bind_jnt_indexD_R" -p "bind_jnt_indexC_R";
+	rename -uid "6EAD5BFA-46DB-14DB-7FD3-029DEDB84D3B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.019831999999999964 -2.8421709430404008e-016 9.4368957093138303e-017 ;
+	setAttr ".t" -type "double3" -0.019831999999999964 0 -8.8817841970012525e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".bps" -type "matrix" 1.0000000000000002 3.6544313403880717e-015 -4.7670201119842659e-015 0
-		 3.9378220501607669e-015 -1 1.390836637504976e-013 0 -4.8086534754077093e-015 -1.3923556756235828e-013 -1.0000000000000002 0
-		 -49.312800000000003 89.451900000000009 -0.787049 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 3.1945284701301998e-006 -5.0071295841273487e-022 6.5391158826891623e-022 ;
+	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.7875361163121943e-017 -6.2450045135165055e-017 0
+		 1.9081958235744878e-016 1 -1.3831985687037807e-013 0 -1.0755285551056204e-016 1.3834048177203217e-013 1 0
+		 49.312816141293794 89.451851191343181 -0.78704921434325859 1;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_indexE_R1" -p "bind_jnt_indexD_R1";
-	rename -uid "BF361724-491D-D6BA-C607-008ECB149F2C";
+createNode joint -n "bind_jnt_indexE_R" -p "bind_jnt_indexD_R";
+	rename -uid "3ECE21A7-4AF7-8C9A-C4FA-4889D28D7B01";
 	setAttr ".oc" 5;
-	setAttr ".t" -type "double3" -0.02045899999999989 0 9.7699626167013776e-017 ;
+	setAttr ".t" -type "double3" -0.02045899999999989 0 -7.7715611723760965e-018 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 6.1566493183999546e-006 -9.6499812180506919e-022 1.2602499755577901e-021 ;
 	setAttr ".radi" 0.54545777757373914;
-createNode joint -n "bind_jnt_thumbA_R1" -p "bind_jnt_wrist_R1";
-	rename -uid "1983EB12-4398-A0B2-58D8-039E716E4957";
+createNode joint -n "bind_jnt_thumbA_R" -p "bind_jnt_wrist_R";
+	rename -uid "FD149650-45CE-BF83-3A7D-5B828B21E3C1";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
-	setAttr ".t" -type "double3" -0.015392612641242706 0.0025593599546826339 -0.020227858307270696 ;
+	setAttr ".t" -type "double3" -0.015392612641242849 0.0025593599546918709 -0.020227858307269479 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 89.72199382574513 -72.697154016420001 -3.6582311055390524 ;
-	setAttr ".bps" -type "matrix" 0.27956915838921875 0.022829198233776271 -0.9598541104696835 0
-		 -0.95666981982511856 -0.078120222870409872 -0.2804997087600149 0 -0.081387600488769932 0.99668252642788957 1.6046192152785466e-016 0
-		 -41.066799999999994 89.31629999999997 -1.3715800000000007 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 89.721993825836762 -72.69715401641821 -3.6582311056266934 ;
+	setAttr ".bps" -type "matrix" 0.27956915838921942 -0.022829198233776094 0.95985411046968305 0
+		 -0.95666981982511812 0.078120222870410483 0.28049970876001568 0 -0.081387600488770265 -0.99668252642788946 3.4629417389187012e-016 0
+		 41.066750644203559 89.316325380241977 -1.3715804394534548 1;
 	setAttr ".radi" 0.5641167134028483;
-createNode joint -n "bind_jnt_thumbB_R1" -p "bind_jnt_thumbA_R1";
-	rename -uid "DE533B63-4A67-719C-E6F6-D3A5C5D6E0C5";
+createNode joint -n "bind_jnt_thumbB_R" -p "bind_jnt_thumbA_R";
+	rename -uid "E7C23964-4DDA-755F-E2CB-8D84E39D1306";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
-	setAttr ".t" -type "double3" -0.022401485216553 -8.2828701245318822e-007 3.4438325599239764e-007 ;
+	setAttr ".t" -type "double3" -0.022401485216552965 -8.2828701266635105e-007 3.4438325585028907e-007 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -0.94480699287930947 -1.4332372468634567 -40.311491603786934 ;
-	setAttr ".bps" -type "matrix" 0.82979686247992068 0.092855320838958977 -0.55028634038141822 0
-		 -0.54687304925841651 -0.061195787479004726 -0.83497601378101072 0 -0.11120717159105165 0.99379724541111447 4.1398455655906687e-015 0
-		 -41.693000000000005 89.265199999999965 0.77865900000000021 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.94480699287906889 -1.4332372468634396 -40.311491603786941 ;
+	setAttr ".bps" -type "matrix" 0.82979686247992079 -0.092855320838958755 0.55028634038141766 0
+		 -0.54687304925841618 0.06119578747900551 0.83497601378101061 0 -0.11120717159105169 -0.99379724541111436 -3.2291263150899589e-015 0
+		 41.693034099678741 89.265184012438908 0.77865942434476176 1;
 	setAttr ".radi" 0.57136348275564486;
-createNode joint -n "bind_jnt_thumbC_R1" -p "bind_jnt_thumbB_R1";
-	rename -uid "05171AAA-4817-3765-088B-D98C75238D82";
+createNode joint -n "bind_jnt_thumbC_R" -p "bind_jnt_thumbB_R";
+	rename -uid "3603FB6B-44DA-554D-9507-019AE13DF16B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 3;
-	setAttr ".t" -type "double3" -0.023900723553431612 3.9725295142289951e-007 3.3574659866530967e-007 ;
+	setAttr ".t" -type "double3" -0.023900723553431646 3.9725295152948093e-007 3.3574659795476692e-007 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -0.59713060099952842 -0.73715680853112764 5.6241772468802331 ;
-	setAttr ".bps" -type "matrix" 0.77071257260648685 0.099189471730943571 -0.62941526762863609 0
-		 -0.6242665500572514 -0.080342103555013589 -0.77706912232823477 0 -0.12764562235309238 0.99181984003854862 -2.3684819061058172e-014 0
-		 -43.676300000000005 89.043300000000016 2.0938500000000007 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.59713060099627835 -0.73715680853110377 5.6241772468802367 ;
+	setAttr ".bps" -type "matrix" 0.77071257260648707 -0.099189471730943307 0.62941526762863553 0
+		 -0.62426655005725706 0.08034210355496936 0.77706912232823466 0 -0.12764562235306415 -0.99181984003855217 -1.0681055763174494e-014 0
+		 43.676265042016901 89.043257955863808 2.0938546808426937 1;
 	setAttr ".radi" 0.53192370747432172;
-createNode joint -n "bind_jnt_thumbD_R1" -p "bind_jnt_thumbC_R1";
-	rename -uid "59A66FA5-44FA-05A8-3E44-61BB602D726B";
+createNode joint -n "bind_jnt_thumbD_R" -p "bind_jnt_thumbC_R";
+	rename -uid "C2D895D6-4C22-B640-3684-E7855C8E782F";
 	setAttr ".oc" 4;
-	setAttr ".t" -type "double3" -0.016251545997480115 -4.2316263446195992e-007 -5.2162170049996347e-008 ;
+	setAttr ".t" -type "double3" -0.016251545997480223 -4.2316263446195992e-007 -5.2162169623670708e-008 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.53192370747432172;
-createNode joint -n "fk_jnt_shoulder_R" -p "bind_jnt_clavicle_R";
-	rename -uid "4C295EBF-41C7-FB5B-3FE0-F4B8AD409C67";
+createNode joint -n "fk_jnt_shoulder_R1" -p "bind_jnt_clavicle_R";
+	rename -uid "9730D642-4AC6-BC6E-4A55-E99D40EECF5B";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".v" no;
 	setAttr ".oc" 6;
-	setAttr ".t" -type "double3" -0.063901527893750795 -8.7102241749903444e-007 5.5675773351637759e-008 ;
+	setAttr ".t" -type "double3" -0.063901527893750726 -8.7102241735692593e-007 5.5675773409369355e-008 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.3702075773546116 -27.130946182912346 -24.220599411104928 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2341679488086219 -24.808986847035232 -24.157314974024718 ;
+	setAttr ".bps" -type "matrix" 0.99891288640808606 -0.046615934699052869 2.7755575615628914e-016 0
+		 0.046615934699053022 0.99891288640808606 1.1032841307212493e-015 0 -4.9960036108132044e-016 -1.0683725173649505e-015 1 0
+		 10.272718973694467 90.459460844143749 -3.6844527492300823 1;
 	setAttr ".radi" 1.1967339237109775;
-createNode joint -n "fk_jnt_elbow_R1" -p "fk_jnt_shoulder_R";
-	rename -uid "4B235BB9-494A-0177-6619-D1B501032B20";
+createNode joint -n "fk_jnt_elbow_R" -p "fk_jnt_shoulder_R1";
+	rename -uid "F024D3EB-4B87-512A-70E3-34A05C5D6FA9";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 7;
-	setAttr ".t" -type "double3" -0.14470233426133669 5.6605063434744808e-007 1.3322676295501878e-016 ;
+	setAttr ".t" -type "double3" -0.14492528607606819 5.7345134152342325e-007 3.1360110614997436e-008 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.013192912283739323 -1.0159074947440281 1.9278053903834638 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.072985188671504136 -5.60717284694993 1.9208138452188226 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 24.727177426092119 89.784919449698393 -3.6844527492300805 1;
 	setAttr ".radi" 1.2159221772393805;
-createNode joint -n "fk_jnt_wrist_R1" -p "fk_jnt_elbow_R1";
-	rename -uid "34B902AB-4E1B-896A-F747-71BBA55ABAE6";
-	setAttr ".t" -type "double3" -0.14843484218612563 -2.5970684021103806e-007 5.0062232999081856e-008 ;
+createNode joint -n "fk_jnt_wrist_R" -p "fk_jnt_elbow_R";
+	rename -uid "1CD43283-4434-354A-8C0F-3884D4509499";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.14855119346522011 -2.6178426864476024e-007 1.3215995835480499e-008 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.029443008205627903 2.2662853794063609 -0.0011642893689728735 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 39.567088103887016 89.5921933369996 -3.4212775528565027 1;
 	setAttr ".radi" 1.2159221772393805;
-createNode joint -n "ik_jnt_shoulder_R" -p "bind_jnt_clavicle_R";
-	rename -uid "AE2B269D-4F96-7E48-B7C0-618AB0D7A2FA";
+createNode joint -n "ik_jnt_shoulder_R2" -p "bind_jnt_clavicle_R";
+	rename -uid "E4EA5368-4D75-2F6D-16AF-83871D390A8F";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 6;
-	setAttr ".t" -type "double3" -0.063901527893750795 -8.7102241749903444e-007 5.5675773351637759e-008 ;
+	setAttr ".t" -type "double3" -0.063901527893750726 -8.7102241735692593e-007 5.5675773409369355e-008 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.3702075773546127 -27.130946182912346 -24.220599411104931 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2341679488086217 -24.808986847035222 -24.157314974024715 ;
+	setAttr ".bps" -type "matrix" 0.99891288640808606 -0.046615934699052869 2.7755575615628914e-016 0
+		 0.046615934699053022 0.99891288640808606 1.1032841307212493e-015 0 -4.9960036108132044e-016 -1.0683725173649505e-015 1 0
+		 10.272718973694467 90.459460844143749 -3.6844527492300823 1;
 	setAttr ".radi" 1.1967339237109775;
-createNode joint -n "ik_jnt_elbow_R1" -p "ik_jnt_shoulder_R";
-	rename -uid "8932A89E-4CBF-D4B7-25D3-80866B3908E2";
+createNode joint -n "ik_jnt_elbow_R" -p "ik_jnt_shoulder_R2";
+	rename -uid "E415F1F2-4EB5-3FBB-B586-D08D6E3F1CC8";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 7;
-	setAttr ".t" -type "double3" -0.14470233426133669 5.6605063434744808e-007 1.1990408665951691e-016 ;
+	setAttr ".t" -type "double3" -0.14492528607606819 5.7345134152342325e-007 3.1360110614997436e-008 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0.013192912283739287 -1.0159074947440314 1.9278053903834613 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.072985188671504136 -5.60717284694993 1.9208138452188226 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 24.727177426092119 89.784919449698393 -3.6844527492300805 1;
 	setAttr ".radi" 1.2159221772393805;
-createNode joint -n "ik_jnt_wrist_R1" -p "ik_jnt_elbow_R1";
-	rename -uid "640EC6DB-4AE1-E400-E632-BA95BFC344DE";
-	setAttr ".t" -type "double3" -0.14843484218612565 -2.5970684021103806e-007 5.0062232999081856e-008 ;
+createNode joint -n "ik_jnt_wrist_R" -p "ik_jnt_elbow_R";
+	rename -uid "E8A511C6-49D6-D752-02F1-E3BFBAEAD4DF";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.14855119346522011 -2.6178426864476024e-007 1.3215995835480499e-008 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -0.029443008205627917 2.2662853794063609 -0.0011642893689728739 ;
+	setAttr ".bps" -type "matrix" 0.99975850383408971 -0.012983876673183506 0.017730001634467998 0
+		 0.012981835408616589 0.99991570592052192 0.00023022356098214458 0 -0.017731496294624297 1.3831942882713269e-013 0.99984278466124554 0
+		 39.567088103887016 89.5921933369996 -3.4212775528565027 1;
 	setAttr ".radi" 1.2159221772393805;
 createNode joint -n "bind_jnt_hips" -p "bind_jnt_root";
 	rename -uid "1582C579-450B-F63C-C7F5-2DAD59F5D5F3";
@@ -1017,6 +1170,7 @@ createNode joint -n "bind_jnt_hips" -p "bind_jnt_root";
 	setAttr ".ro" 4;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr -av ".is" -type "double3" 1 1 1 ;
 	setAttr -av ".is";
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 62.908755312860812 0 1;
@@ -1024,21 +1178,24 @@ createNode joint -n "bind_jnt_hips" -p "bind_jnt_root";
 createNode joint -n "bind_jnt_thigh_L" -p "bind_jnt_hips";
 	rename -uid "7025CB76-447C-BD93-32F3-BFBE54058758";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" 0.055981778179149587 -0.074630177948626447 -0.023662545438162784 ;
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" 0.046444851954240647 -0.074142531648118168 -0.023662545438162784 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 89.999999999999972 0 -92.92712372544689 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 90 0.1991232867290065 -89.849152062484436 ;
 	setAttr ".bps" -type "matrix" -0.051065726450268967 -0.99869529466304496 0 0 4.4408920985006252e-016 0 0.99999999999999978 0
 		 -0.99869529466304496 0.051065726450269064 5.5511151231257827e-016 0 5.5981778179149586 55.445737517998168 -2.3662545438162783 1;
 	setAttr ".radi" 1.7802999159981105;
 createNode joint -n "bind_jnt_knee_L" -p "bind_jnt_thigh_L";
 	rename -uid "0D529B1C-4E0D-9A92-6B89-BA978584BC52";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" 0.25786108315769013 9.7738845548918184e-017 -9.0757053432052598e-019 ;
+	setAttr ".t" -type "double3" 0.25801474911158656 -1.9679223384788306e-017 -3.5896496436592463e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -11.951526524572921 1.9428021499106167 -4.6920522617958103 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.16448796063504709 -2.0955840760144953 -4.2899815226937026 ;
 	setAttr ".bps" -type "matrix" -0.01700777134921052 -0.99650747296134989 -0.081753238748794074 0
 		 0.20296568083840752 -0.083503630652710881 0.97561881699238295 0 -0.97903813414776375 -5.5511151231257827e-017 0.20367702836713167 0
 		 4.2813914644448925 29.69327247536804 -2.3662545438162685 1;
@@ -1046,11 +1203,12 @@ createNode joint -n "bind_jnt_knee_L" -p "bind_jnt_thigh_L";
 createNode joint -n "bind_jnt_heel_L" -p "bind_jnt_knee_L";
 	rename -uid "25F09F49-4A55-2FD6-EA60-7A9A1541C0BE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" 0.2544273655274038 -8.2609643287915985e-018 7.6788062504588326e-017 ;
+	setAttr ".t" -type "double3" 0.25446545243694196 5.4262150328554528e-017 -2.1094237467877975e-017 ;
 	setAttr ".ro" 2;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 3.7912375580297688 -11.131886773810983 75.846338735967649 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.8496199169730669 0.62140117827167873 75.922075477379366 ;
 	setAttr ".bps" -type "matrix" -2.2759572004815709e-015 -0.3185300518959342 0.94791276288441917 0
 		 -5.8286708792820718e-016 0.94791276288441928 0.31853005189593409 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
 		 3.8486672186576758 4.3393953679753565 -4.4462806596351214 1;
@@ -1058,10 +1216,11 @@ createNode joint -n "bind_jnt_heel_L" -p "bind_jnt_knee_L";
 createNode joint -n "bind_jnt_ball_L" -p "bind_jnt_heel_L";
 	rename -uid "ACBDAD0C-49F5-BF40-6CF1-2F89CAFAF01F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" 0.11074938034189559 1.5723843167666495e-017 -5.9995187894671787e-017 ;
+	setAttr ".t" -type "double3" 0.11074938034189562 1.3322676295501878e-017 -6.2172489379008772e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 0 0 16.491300268282885 ;
 	setAttr ".bps" -type "matrix" -2.3477891416998043e-015 -0.036342868879513657 0.99933937973123332 0
 		 8.7185817254382543e-017 0.99933937973123343 0.036342868879513601 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
@@ -1069,192 +1228,224 @@ createNode joint -n "bind_jnt_ball_L" -p "bind_jnt_heel_L";
 	setAttr ".radi" 0.68635988821681759;
 createNode joint -n "bind_jnt_toe_L" -p "bind_jnt_ball_L";
 	rename -uid "4E3DE38A-486B-951B-3C05-A9957FD185AD";
-	setAttr ".t" -type "double3" 0.046029578388584749 9.9348541399932456e-018 -3.3210373573790352e-018 ;
+	setAttr ".t" -type "double3" 0.046029578388584742 1.3322676295501878e-017 -2.2204460492503132e-017 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 	setAttr ".radi" 0.68635988821681759;
-createNode joint -n "fk_jnt_thigh_L" -p "bind_jnt_hips";
-	rename -uid "564523F3-4ADA-CF1F-2A16-26ABFC875745";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.055981778179149587 -0.074630177948626447 -0.023662545438162784 ;
-	setAttr ".ro" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 89.999999999999972 0 -92.92712372544689 ;
-	setAttr ".radi" 1.7802999159981105;
-createNode joint -n "fk_jnt_knee_L" -p "fk_jnt_thigh_L";
-	rename -uid "0760BBF1-4314-3026-7463-B7A8ADD67EDB";
-	setAttr ".t" -type "double3" 0.25786108315769013 9.7738845548918184e-017 -9.0757053432052598e-019 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -11.951526524572925 1.9428021499106178 -4.6920522617958085 ;
-	setAttr ".radi" 1.7640891266763294;
-createNode joint -n "fk_jnt_heel_L" -p "fk_jnt_knee_L";
-	rename -uid "663339D3-4AB8-9AA7-7359-26A7FF767312";
-	setAttr ".t" -type "double3" 0.2544273655274038 -8.2609643287915985e-018 7.6788062504588326e-017 ;
-	setAttr ".ro" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 3.7912375580297706 -11.131886773810981 75.846338735967649 ;
-	setAttr ".radi" 1.0211174845270463;
-createNode joint -n "ik_jnt_thigh_L" -p "bind_jnt_hips";
-	rename -uid "E21FBE1A-4275-3999-14B0-A9807185FDDA";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.055981778179149587 -0.074630177948626447 -0.023662545438162784 ;
-	setAttr ".ro" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 89.999999999999972 0 -92.92712372544689 ;
-	setAttr ".radi" 1.7802999159981105;
-createNode joint -n "ik_jnt_knee_L" -p "ik_jnt_thigh_L";
-	rename -uid "207055C3-4A56-012F-4DB8-34B15D6917BA";
-	setAttr ".t" -type "double3" 0.25786108315769013 9.7738845548918184e-017 -9.0757053432052598e-019 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -11.951526524572929 1.9428021499106187 -4.6920522617958085 ;
-	setAttr ".radi" 1.7640891266763294;
-createNode joint -n "ik_jnt_heel_L" -p "ik_jnt_knee_L";
-	rename -uid "A32E6EAD-4A9C-2C61-C513-D480ED4D3B8D";
-	setAttr ".t" -type "double3" 0.2544273655274038 -8.2609643287915985e-018 7.6788062504588326e-017 ;
-	setAttr ".ro" 3;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 3.7912375580297706 -11.131886773810981 75.846338735967649 ;
-	setAttr ".radi" 1.0211174845270463;
 createNode joint -n "bind_jnt_thigh_R" -p "bind_jnt_hips";
-	rename -uid "63A36477-4A30-FE2F-74B4-6190CE2210DD";
+	rename -uid "32F66B80-4718-4C8E-5346-FEB81DA12FF4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -0.055981800000000005 -0.074630553128608168 -0.0236625 ;
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" -0.046444899999999997 -0.074142553128608166 -0.0236625 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90.000000000000043 3.180554681463516e-015 92.92712372544689 ;
-	setAttr ".bps" -type "matrix" -0.051065726450269189 0.99869529466304507 -5.5511151231257827e-017 0
-		 4.4408920985006262e-016 0 -1 0 -0.99869529466304496 -0.051065726450269189 -4.4408920985006262e-016 0
-		 -5.5981800000000002 55.445699999999995 -2.36625 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -90.000000000000057 -0.19912328672899071 89.849152062484407 ;
+	setAttr ".bps" -type "matrix" -0.051065726450268967 -0.99869529466304496 0 0 4.4408920985006252e-016 0 0.99999999999999978 0
+		 -0.99869529466304496 0.051065726450269064 5.5511151231257827e-016 0 5.5981778179149586 55.445737517998168 -2.3662545438162783 1;
 	setAttr ".radi" 1.7802999159981105;
-createNode joint -n "bind_jnt_knee_R1" -p "bind_jnt_thigh_R";
-	rename -uid "43729663-4942-DF52-2217-AC80C274BBF8";
+createNode joint -n "bind_jnt_knee_R" -p "bind_jnt_thigh_R";
+	rename -uid "3FD02591-4E85-1396-54A3-33827F823040";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -0.25786043544213044 1.7763568394002505e-017 -6.9632214394488304e-008 ;
+	setAttr ".t" -type "double3" -0.25801445216793778 9.4802012062800139e-009 -9.380303309214355e-008 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -11.951526524572934 1.9428021499106267 -4.6920522617957898 ;
-	setAttr ".bps" -type "matrix" -0.017007771349210568 0.99650747296135 0.081753238748793686 0
-		 0.20296568083840774 0.083503630652710506 -0.97561881699238318 0 -0.97903813414776375 4.8572257327350599e-017 -0.20367702836713183 0
-		 -4.28139 29.693299999999997 -2.3662500000000004 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.16448796065200061 -2.0955840760144855 -4.289981522693707 ;
+	setAttr ".bps" -type "matrix" -0.01700777134921052 -0.99650747296134989 -0.081753238748794074 0
+		 0.20296568083840752 -0.083503630652710881 0.97561881699238295 0 -0.97903813414776375 -5.5511151231257827e-017 0.20367702836713167 0
+		 4.2813914644448925 29.69327247536804 -2.3662545438162685 1;
 	setAttr ".radi" 1.7640891266763294;
-createNode joint -n "bind_jnt_heel_R1" -p "bind_jnt_knee_R1";
-	rename -uid "BB5DF42B-4416-20B9-6E81-EC98170FCAD9";
+createNode joint -n "bind_jnt_heel_R" -p "bind_jnt_knee_R";
+	rename -uid "B1279A1D-420E-C334-423E-85A8AA068B00";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -0.25442759610727655 1.0161153065624263e-008 4.9479060644230802e-008 ;
+	setAttr ".t" -type "double3" -0.25446568038286255 1.2602975436593057e-008 8.2103590366422456e-008 ;
 	setAttr ".ro" 2;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 3.7912375580297755 -11.131886773810985 75.846338735967606 ;
-	setAttr ".bps" -type "matrix" -2.1926904736346842e-015 0.31853005189593442 -0.9479127628844195 0
-		 -4.4408920985006262e-016 -0.9479127628844195 -0.31853005189593431 0 -1.0000000000000002 -3.3408507252978322e-016 2.248201624865942e-015 0
-		 -3.8486700000000007 4.3393999999999977 -4.4462800000000007 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.8496199169703225 0.62140117828810792 75.922075477379323 ;
+	setAttr ".bps" -type "matrix" -2.2759572004815709e-015 -0.3185300518959342 0.94791276288441917 0
+		 -5.8286708792820718e-016 0.94791276288441928 0.31853005189593409 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
+		 3.8486672186576758 4.3393953679753565 -4.4462806596351214 1;
 	setAttr ".radi" 1.0211174845270463;
-createNode joint -n "bind_jnt_ball_R1" -p "bind_jnt_heel_R1";
-	rename -uid "CB2B925F-4815-570A-628F-3BA4D0916429";
+createNode joint -n "bind_jnt_ball_R" -p "bind_jnt_heel_R";
+	rename -uid "D104F895-4EB4-6929-AEAF-7EA0E80ED0F3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" -0.11074934595377584 5.8112840259916256e-008 2.2648549702353194e-016 ;
+	setAttr ".t" -type "double3" -0.11074934595377579 5.8112840335411423e-008 2.3092638912203257e-016 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 0 16.491300268282913 ;
-	setAttr ".bps" -type "matrix" -2.2285529285352681e-015 0.036342868879513379 -0.99933937973123377 0
-		 1.9661786335536673e-016 -0.99933937973123377 -0.036342868879513268 0 -1.0000000000000002 -3.3408507252978322e-016 2.248201624865942e-015 0
-		 -3.8486699999999989 0.81169500000000028 6.0517900000000031 1;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.2074183262899577e-006 3.903253373312082e-013 16.49130026828286 ;
+	setAttr ".bps" -type "matrix" -2.3477891416998043e-015 -0.036342868879513657 0.99933937973123332 0
+		 8.7185817254382543e-017 0.99933937973123343 0.036342868879513601 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
+		 3.8486672186576567 0.81169478120070204 6.0517944511272415 1;
 	setAttr ".radi" 0.68635988821681759;
-createNode joint -n "bind_jnt_toe_R1" -p "bind_jnt_ball_R1";
-	rename -uid "6AF17DCA-4CF8-13C1-333C-808C37CFE6B1";
-	setAttr ".t" -type "double3" -0.04602950823040005 5.6215077726129442e-009 1.0658141036401502e-016 ;
+createNode joint -n "bind_jnt_toe_R" -p "bind_jnt_ball_R";
+	rename -uid "91DADC95-4E6E-5BB6-A8C3-438FBFB6E29B";
+	setAttr ".t" -type "double3" -0.046029508230400085 5.6215077703924978e-009 2.8421709430404008e-016 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 1.2074182697257329e-006 -2.8485700806282387e-022 7.9700025930888363e-023 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.4787793334710982e-006 -1.6417735643149261e-022 -1.0074128443983381e-020 ;
 	setAttr ".radi" 0.68635988821681759;
-createNode joint -n "fk_jnt_thigh_R" -p "bind_jnt_hips";
-	rename -uid "110322C5-4EA8-957A-AA2A-C49A61F9FE30";
+createNode joint -n "fk_jnt_thigh_L1" -p "bind_jnt_hips";
+	rename -uid "B6FFEB75-4AFB-F1A1-5C48-29935A0DDEC4";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.055981800000000005 -0.074630553128608168 -0.0236625 ;
+	setAttr ".t" -type "double3" 0.046444851954240647 -0.074142531648118168 -0.023662545438162784 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90.000000000000043 3.180554681463516e-015 92.92712372544689 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 90 0.19912328672899701 -89.849152062484436 ;
+	setAttr ".bps" -type "matrix" -0.051065726450268967 -0.99869529466304496 0 0 4.4408920985006252e-016 0 0.99999999999999978 0
+		 -0.99869529466304496 0.051065726450269064 5.5511151231257827e-016 0 5.5981778179149586 55.445737517998168 -2.3662545438162783 1;
 	setAttr ".radi" 1.7802999159981105;
-createNode joint -n "fk_jnt_knee_R1" -p "fk_jnt_thigh_R";
-	rename -uid "D6F3B0B7-471A-ABCD-F3A0-2AB9B40E2534";
-	setAttr ".t" -type "double3" -0.25786043544213044 1.7763568394002505e-017 -6.9632214394488304e-008 ;
+createNode joint -n "fk_jnt_knee_L" -p "fk_jnt_thigh_L1";
+	rename -uid "ADFC1718-49FE-F837-14F2-4E9633DBF686";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.25801474911158656 -1.9679223384788306e-017 -3.5896496436592463e-018 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -11.951526524572934 1.9428021499106267 -4.6920522617957898 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.16448796063504714 -2.0955840760144966 -4.2899815226937053 ;
+	setAttr ".bps" -type "matrix" -0.01700777134921052 -0.99650747296134989 -0.081753238748794074 0
+		 0.20296568083840752 -0.083503630652710881 0.97561881699238295 0 -0.97903813414776375 -5.5511151231257827e-017 0.20367702836713167 0
+		 4.2813914644448925 29.69327247536804 -2.3662545438162685 1;
 	setAttr ".radi" 1.7640891266763294;
-createNode joint -n "fk_jnt_heel_R1" -p "fk_jnt_knee_R1";
-	rename -uid "38B7BA39-4A96-0736-A9D7-F1A259AEC791";
-	setAttr ".t" -type "double3" -0.25442759610727655 1.0161153065624263e-008 4.9479060644230802e-008 ;
+createNode joint -n "fk_jnt_heel_L" -p "fk_jnt_knee_L";
+	rename -uid "730F8F36-42F9-245C-463A-E897ECAFEE3F";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.25446545243694196 5.4262150328554528e-017 -2.1094237467877975e-017 ;
+	setAttr ".ro" 2;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.8496199169730669 0.62140117827167884 75.922075477379366 ;
+	setAttr ".bps" -type "matrix" -2.2759572004815709e-015 -0.3185300518959342 0.94791276288441917 0
+		 -5.8286708792820718e-016 0.94791276288441928 0.31853005189593409 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
+		 3.8486672186576758 4.3393953679753565 -4.4462806596351214 1;
+	setAttr ".radi" 1.0211174845270463;
+createNode joint -n "ik_jnt_thigh_L2" -p "bind_jnt_hips";
+	rename -uid "51697D17-4868-BF63-D4C9-C4B5079D1318";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.046444851954240647 -0.074142531648118168 -0.023662545438162784 ;
+	setAttr ".r" -type "double3" 142.85374933841774 52.85401146404913 -89.750189888200055 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 3.7912375580297768 -11.131886773810983 75.846338735967606 ;
+	setAttr ".dla" yes;
+	setAttr ".bps" -type "matrix" -0.051065726450268967 -0.99869529466304496 0 0 4.4408920985006252e-016 0 0.99999999999999978 0
+		 -0.99869529466304496 0.051065726450269064 5.5511151231257827e-016 0 5.5981778179149586 55.445737517998168 -2.3662545438162783 1;
+	setAttr ".radi" 1.7802999159981105;
+createNode joint -n "ik_jnt_knee_L" -p "ik_jnt_thigh_L2";
+	rename -uid "1836BE95-4B16-E9F0-D251-6B8A1B275B0B";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.25801474911158656 -1.9679223384788306e-017 -3.5896496436592463e-018 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.16448796063504717 -2.0955840760144975 -4.2899815226937061 ;
+	setAttr ".bps" -type "matrix" -0.01700777134921052 -0.99650747296134989 -0.081753238748794074 0
+		 0.20296568083840752 -0.083503630652710881 0.97561881699238295 0 -0.97903813414776375 -5.5511151231257827e-017 0.20367702836713167 0
+		 4.2813914644448925 29.69327247536804 -2.3662545438162685 1;
+	setAttr ".radi" 1.7640891266763294;
+createNode joint -n "ik_jnt_heel_L" -p "ik_jnt_knee_L";
+	rename -uid "5860BC0E-4553-8020-4314-9EB72C3BF8E0";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.25446545243694196 5.4262150328554528e-017 -2.1094237467877975e-017 ;
+	setAttr ".ro" 2;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.8496199169730669 0.62140117827167884 75.922075477379366 ;
+	setAttr ".bps" -type "matrix" -2.2759572004815709e-015 -0.3185300518959342 0.94791276288441917 0
+		 -5.8286708792820718e-016 0.94791276288441928 0.31853005189593409 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
+		 3.8486672186576758 4.3393953679753565 -4.4462806596351214 1;
 	setAttr ".radi" 1.0211174845270463;
-createNode joint -n "ik_jnt_thigh_R" -p "bind_jnt_hips";
-	rename -uid "8C2C66A5-42A5-88EF-DF7B-7B858B778C89";
+createNode joint -n "fk_jnt_thigh_R1" -p "bind_jnt_hips";
+	rename -uid "66148C5E-44C2-EA71-9170-FD8D6C391DE6";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.055981800000000005 -0.074630553128608168 -0.0236625 ;
+	setAttr ".t" -type "double3" -0.046444899999999997 -0.074142553128608166 -0.0236625 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90.000000000000043 3.180554681463516e-015 92.92712372544689 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" -90.000000000000057 -0.19912328672899066 89.849152062484407 ;
+	setAttr ".bps" -type "matrix" -0.051065726450268967 -0.99869529466304496 0 0 4.4408920985006252e-016 0 0.99999999999999978 0
+		 -0.99869529466304496 0.051065726450269064 5.5511151231257827e-016 0 5.5981778179149586 55.445737517998168 -2.3662545438162783 1;
 	setAttr ".radi" 1.7802999159981105;
-createNode joint -n "ik_jnt_knee_R1" -p "ik_jnt_thigh_R";
-	rename -uid "4323EF03-4B67-908A-BE86-29A080B759F7";
-	setAttr ".t" -type "double3" -0.25786043544213044 1.7763568394002505e-017 -6.9632214394488304e-008 ;
+createNode joint -n "fk_jnt_knee_R" -p "fk_jnt_thigh_R1";
+	rename -uid "FA442818-4E6A-AA2E-201D-FBAA566FBE0C";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.25801445216793778 9.4802012062800139e-009 -9.380303309214355e-008 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -11.951526524572934 1.9428021499106278 -4.6920522617957889 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.16448796065200072 -2.0955840760144877 -4.2899815226937097 ;
+	setAttr ".bps" -type "matrix" -0.01700777134921052 -0.99650747296134989 -0.081753238748794074 0
+		 0.20296568083840752 -0.083503630652710881 0.97561881699238295 0 -0.97903813414776375 -5.5511151231257827e-017 0.20367702836713167 0
+		 4.2813914644448925 29.69327247536804 -2.3662545438162685 1;
 	setAttr ".radi" 1.7640891266763294;
-createNode joint -n "ik_jnt_heel_R1" -p "ik_jnt_knee_R1";
-	rename -uid "FA5E6AC4-4F2B-7CA4-1D24-F783B56142EF";
-	setAttr ".t" -type "double3" -0.25442759610727655 1.0161153065624263e-008 4.9479060635349013e-008 ;
+createNode joint -n "fk_jnt_heel_R" -p "fk_jnt_knee_R";
+	rename -uid "27B3B044-47BA-4085-3C0C-608BEA7233F7";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.25446568038286255 1.2602975436593057e-008 8.2103590366422456e-008 ;
+	setAttr ".ro" 2;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.8496199169703225 0.62140117828810792 75.922075477379366 ;
+	setAttr ".bps" -type "matrix" -2.2759572004815709e-015 -0.3185300518959342 0.94791276288441917 0
+		 -5.8286708792820718e-016 0.94791276288441928 0.31853005189593409 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
+		 3.8486672186576758 4.3393953679753565 -4.4462806596351214 1;
+	setAttr ".radi" 1.0211174845270463;
+createNode joint -n "ik_jnt_thigh_R2" -p "bind_jnt_hips";
+	rename -uid "81B90212-43AC-12DD-BCD4-6F8C521883BD";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.046444899999999997 -0.074142553128608166 -0.0236625 ;
+	setAttr ".r" -type "double3" -37.146250661588077 -52.854011464041271 89.750189888200026 ;
 	setAttr ".ro" 3;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 3.7912375580297786 -11.131886773810981 75.846338735967606 ;
+	setAttr ".dla" yes;
+	setAttr ".bps" -type "matrix" -0.051065726450268967 -0.99869529466304496 0 0 4.4408920985006252e-016 0 0.99999999999999978 0
+		 -0.99869529466304496 0.051065726450269064 5.5511151231257827e-016 0 5.5981778179149586 55.445737517998168 -2.3662545438162783 1;
+	setAttr ".radi" 1.7802999159981105;
+createNode joint -n "ik_jnt_knee_R" -p "ik_jnt_thigh_R2";
+	rename -uid "2E844EA0-4E20-82AF-737F-B1BC0BE0CBF8";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.25801445216793778 9.4802012062800139e-009 -9.380303309214355e-008 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 0.1644879606520008 -2.0955840760144895 -4.2899815226937115 ;
+	setAttr ".bps" -type "matrix" -0.01700777134921052 -0.99650747296134989 -0.081753238748794074 0
+		 0.20296568083840752 -0.083503630652710881 0.97561881699238295 0 -0.97903813414776375 -5.5511151231257827e-017 0.20367702836713167 0
+		 4.2813914644448925 29.69327247536804 -2.3662545438162685 1;
+	setAttr ".radi" 1.7640891266763294;
+createNode joint -n "ik_jnt_heel_R" -p "ik_jnt_knee_R";
+	rename -uid "D6366497-40C7-E98F-F314-FC88AE423C50";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -0.25446568038286255 1.2602975436593057e-008 8.2103590366422456e-008 ;
+	setAttr ".ro" 2;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 1.8496199169703225 0.6214011782881077 75.922075477379423 ;
+	setAttr ".bps" -type "matrix" -2.2759572004815709e-015 -0.3185300518959342 0.94791276288441917 0
+		 -5.8286708792820718e-016 0.94791276288441928 0.31853005189593409 0 -1 2.8565826736560922e-016 -2.2204460492503131e-015 0
+		 3.8486672186576758 4.3393953679753565 -4.4462806596351214 1;
 	setAttr ".radi" 1.0211174845270463;
-createNode transform -n "elbowpointer_L";
-	rename -uid "E33EE4A2-4A76-4A30-3EF0-858E5B6EF0A2";
-	setAttr ".t" -type "double3" 0.24727177426092101 0.89784919449698397 -0.31703870245737703 ;
-	setAttr ".s" -type "double3" 0.24723851810493896 0.24723851810493896 0.24723851810493896 ;
-createNode locator -n "elbowpointer_LShape" -p "elbowpointer_L";
-	rename -uid "1F2215A6-4CCD-6435-AE09-D9B06D3D4136";
-	setAttr -k off ".v";
-createNode transform -n "elbowpointer_R";
-	rename -uid "8F7AEA12-4650-F9EE-2823-E7996B4957A7";
-	setAttr ".t" -type "double3" -0.24727200000000005 0.89784900000000012 -0.31703867496507626 ;
-	setAttr ".s" -type "double3" 0.24723851810493896 0.24723851810493896 0.24723851810493896 ;
-createNode locator -n "elbowpointer_RShape" -p "elbowpointer_R";
-	rename -uid "CF111420-4C0D-15EA-23A7-A1A7E65639A0";
-	setAttr -k off ".v";
-createNode transform -n "kneepointer_L";
-	rename -uid "9B8D53EB-4F10-D08D-3EBA-83BBCE6F8D77";
-	setAttr ".t" -type "double3" 0.042813914644448933 0.29693272475368043 0.24079038374235828 ;
-	setAttr ".s" -type "double3" 0.24723851810493896 0.24723851810493896 0.24723851810493896 ;
-createNode locator -n "kneepointer_LShape" -p "kneepointer_L";
-	rename -uid "58AE89EA-4AB1-2583-C145-43A7B3AAE2A8";
-	setAttr -k off ".v";
-createNode transform -n "kneepointer_R";
-	rename -uid "6348896E-4920-B669-E09D-9380730593B3";
-	setAttr ".t" -type "double3" -0.042813899999999995 0.296933 0.24079042918052096 ;
-	setAttr ".s" -type "double3" 0.24723851810493896 0.24723851810493896 0.24723851810493896 ;
-createNode locator -n "kneepointer_RShape" -p "kneepointer_R";
-	rename -uid "E5A62ECD-4887-F078-3880-3189BABB8574";
-	setAttr -k off ".v";
 createNode fosterParent -n "KR_PilotModel_Maya_0010RNfosterParent1";
-	rename -uid "E20BA982-4389-6479-0610-158CAF409377";
+	rename -uid "0BE38EA8-4F2F-258C-982C-60B46A07B462";
 createNode mesh -n "brush77MainShapeDeformed" -p "KR_PilotModel_Maya_0010RNfosterParent1";
 	rename -uid "393E89CD-4E9F-2B8F-C3D3-A891F88FEA91";
 	setAttr -k off ".v";
@@ -1756,7 +1947,7 @@ createNode mesh -n "MeshShapeDeformed" -p "KR_PilotModel_Maya_0010RNfosterParent
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "fosterParent1" -p "KR_PilotModel_Maya_0010RNfosterParent1";
-	rename -uid "4C1A349B-40DD-FB10-0620-17B1E6A45A99";
+	rename -uid "42646421-45C1-AA49-FC22-BA9BAFD0789A";
 createNode mesh -n "MeshShapeDeformed" -p "fosterParent1";
 	rename -uid "4F13445B-4E4D-C540-64F1-8EA3AF8F05F8";
 	setAttr -k off ".v";
@@ -1780,15 +1971,15 @@ createNode mesh -n "CleareyePartShapeDeformed" -p "KR_PilotModel_Maya_0010RNfost
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B4EFCE6B-476D-07C1-166B-64BDFE52DCC8";
-	setAttr -s 4 ".lnk";
-	setAttr -s 4 ".slnk";
+	rename -uid "3E881F85-4F49-2C06-DFFC-FDB9B50AD303";
+	setAttr -s 3 ".lnk";
+	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9D003718-46DB-FD55-01BE-6BB4608E5450";
+	rename -uid "D81BAB6D-4242-7180-A459-E2A668BA7D77";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "532FF6B1-436D-C905-D53F-0594AB09138F";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8EFBBE9B-4C4E-CD9A-120E-FAA6C85E47E1";
+	rename -uid "9FB6528F-4322-1667-0C6B-78B6347ED65E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "49CAFB39-4F8D-274F-68BE-03830ADDB833";
 	setAttr ".g" yes;
@@ -2265,8 +2456,944 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 	setAttr ".phl[210]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"KR_PilotModel_Maya_0010RN"
-		"KR_PilotModel_Maya_0010RN" 0
-		"KR_PilotModel_Maya_0010RN" 790
+		"KR_PilotModel_Maya_0010RN" 468
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
+		"scaleZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"translateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"translateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"translateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"rotateX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"rotateY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"rotateZ"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"scaleX"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"scaleY"
+		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
+		"scaleZ"
+		"KR_PilotModel_Maya_0010RN" 322
 		0 "|KR_PilotModel_Maya_0010RNfosterParent1|CleareyePartShapeDeformed" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
 		"-s -r "
 		0 "|KR_PilotModel_Maya_0010RNfosterParent1|fosterParent1|MeshShapeDeformed" 
@@ -2582,40 +3709,40 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		"intermediateObject" " 1"
 		2 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main|KR_PilotModel_Maya_0010:brush77MainShape" 
 		"vertexColorSource" " 2"
-		2 "KR_PilotModel_Maya_0010:BaseMesh" "displayType" " 0"
+		2 "KR_PilotModel_Maya_0010:BaseMesh" "displayType" " 2"
 		2 "KR_PilotModel_Maya_0010:BaseMesh" "visibility" " 0"
 		2 "KR_PilotModel_Maya_0010:file6" "fileTextureName" " -type \"string\" \"C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion/PilotRig/PilotMasks/free_dark_hair_texture_0001_transparency_map.jpg\""
 		
 		2 "KR_PilotModel_Maya_0010:file6" "colorSpace" " -type \"string\" \"sRGB\""
 		
-		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.drawOverride" 
-		""
 		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh.drawOverride" 
 		""
-		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.drawOverride" 
+		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.drawOverride" 
 		""
 		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart.drawOverride" 
 		""
-		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.drawOverride" 
+		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.drawOverride" 
+		""
+		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.drawOverride" 
 		""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[1]" "KR_PilotModel_Maya_0010RN.placeHolderList[2]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart|KR_PilotModel_Maya_0010:CleareyePartShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[3]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[4]" "KR_PilotModel_Maya_0010RN.placeHolderList[5]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[6]" "KR_PilotModel_Maya_0010RN.placeHolderList[7]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[8]" "KR_PilotModel_Maya_0010RN.placeHolderList[9]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:MeshShape.instObjGroups" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[10]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:MeshShape.worldMesh" 
@@ -2623,301 +3750,301 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[12]" "KR_PilotModel_Maya_0010RN.placeHolderList[13]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:MeshShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[14]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[15]" "KR_PilotModel_Maya_0010RN.placeHolderList[16]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main|KR_PilotModel_Maya_0010:brush125MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[17]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[18]" "KR_PilotModel_Maya_0010RN.placeHolderList[19]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main|KR_PilotModel_Maya_0010:brush124MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[20]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[21]" "KR_PilotModel_Maya_0010RN.placeHolderList[22]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main|KR_PilotModel_Maya_0010:brush123MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[23]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[24]" "KR_PilotModel_Maya_0010RN.placeHolderList[25]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main|KR_PilotModel_Maya_0010:brush122MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[26]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[27]" "KR_PilotModel_Maya_0010RN.placeHolderList[28]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main|KR_PilotModel_Maya_0010:brush121MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[29]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[30]" "KR_PilotModel_Maya_0010RN.placeHolderList[31]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main|KR_PilotModel_Maya_0010:brush120MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[32]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[33]" "KR_PilotModel_Maya_0010RN.placeHolderList[34]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main|KR_PilotModel_Maya_0010:brush119MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[35]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[36]" "KR_PilotModel_Maya_0010RN.placeHolderList[37]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main|KR_PilotModel_Maya_0010:brush118MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[38]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[39]" "KR_PilotModel_Maya_0010RN.placeHolderList[40]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main|KR_PilotModel_Maya_0010:brush117MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[41]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[42]" "KR_PilotModel_Maya_0010RN.placeHolderList[43]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main|KR_PilotModel_Maya_0010:brush116MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[44]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[45]" "KR_PilotModel_Maya_0010RN.placeHolderList[46]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main|KR_PilotModel_Maya_0010:brush115MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[47]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[48]" "KR_PilotModel_Maya_0010RN.placeHolderList[49]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main|KR_PilotModel_Maya_0010:brush114MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[50]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[51]" "KR_PilotModel_Maya_0010RN.placeHolderList[52]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main|KR_PilotModel_Maya_0010:brush113MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[53]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[54]" "KR_PilotModel_Maya_0010RN.placeHolderList[55]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main|KR_PilotModel_Maya_0010:brush112MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[56]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[57]" "KR_PilotModel_Maya_0010RN.placeHolderList[58]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main|KR_PilotModel_Maya_0010:brush111MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[59]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[60]" "KR_PilotModel_Maya_0010RN.placeHolderList[61]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main|KR_PilotModel_Maya_0010:brush110MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[62]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[63]" "KR_PilotModel_Maya_0010RN.placeHolderList[64]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main|KR_PilotModel_Maya_0010:brush109MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[65]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[66]" "KR_PilotModel_Maya_0010RN.placeHolderList[67]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main|KR_PilotModel_Maya_0010:brush108MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[68]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[69]" "KR_PilotModel_Maya_0010RN.placeHolderList[70]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main|KR_PilotModel_Maya_0010:brush107MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[71]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[72]" "KR_PilotModel_Maya_0010RN.placeHolderList[73]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main|KR_PilotModel_Maya_0010:brush106MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[74]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[75]" "KR_PilotModel_Maya_0010RN.placeHolderList[76]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main|KR_PilotModel_Maya_0010:brush105MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[77]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[78]" "KR_PilotModel_Maya_0010RN.placeHolderList[79]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main|KR_PilotModel_Maya_0010:brush104MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[80]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[81]" "KR_PilotModel_Maya_0010RN.placeHolderList[82]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main|KR_PilotModel_Maya_0010:brush103MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[83]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[84]" "KR_PilotModel_Maya_0010RN.placeHolderList[85]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main|KR_PilotModel_Maya_0010:brush102MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[86]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[87]" "KR_PilotModel_Maya_0010RN.placeHolderList[88]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main|KR_PilotModel_Maya_0010:brush101MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[89]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[90]" "KR_PilotModel_Maya_0010RN.placeHolderList[91]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main|KR_PilotModel_Maya_0010:brush100MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[92]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[93]" "KR_PilotModel_Maya_0010RN.placeHolderList[94]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main|KR_PilotModel_Maya_0010:brush99MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[95]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[96]" "KR_PilotModel_Maya_0010RN.placeHolderList[97]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main|KR_PilotModel_Maya_0010:brush98MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[98]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[99]" "KR_PilotModel_Maya_0010RN.placeHolderList[100]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main|KR_PilotModel_Maya_0010:brush97MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[101]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[102]" "KR_PilotModel_Maya_0010RN.placeHolderList[103]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main|KR_PilotModel_Maya_0010:brush96MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[104]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[105]" "KR_PilotModel_Maya_0010RN.placeHolderList[106]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main|KR_PilotModel_Maya_0010:brush95MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[107]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[108]" "KR_PilotModel_Maya_0010RN.placeHolderList[109]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main|KR_PilotModel_Maya_0010:brush94MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[110]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[111]" "KR_PilotModel_Maya_0010RN.placeHolderList[112]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main|KR_PilotModel_Maya_0010:brush93MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[113]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[114]" "KR_PilotModel_Maya_0010RN.placeHolderList[115]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main|KR_PilotModel_Maya_0010:brush92MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[116]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[117]" "KR_PilotModel_Maya_0010RN.placeHolderList[118]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main|KR_PilotModel_Maya_0010:brush91MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[119]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[120]" "KR_PilotModel_Maya_0010RN.placeHolderList[121]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main|KR_PilotModel_Maya_0010:brush90MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[122]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[123]" "KR_PilotModel_Maya_0010RN.placeHolderList[124]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main|KR_PilotModel_Maya_0010:brush89MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[125]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[126]" "KR_PilotModel_Maya_0010RN.placeHolderList[127]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main|KR_PilotModel_Maya_0010:brush88MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[128]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[129]" "KR_PilotModel_Maya_0010RN.placeHolderList[130]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main|KR_PilotModel_Maya_0010:brush87MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[131]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[132]" "KR_PilotModel_Maya_0010RN.placeHolderList[133]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main|KR_PilotModel_Maya_0010:brush86MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[134]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[135]" "KR_PilotModel_Maya_0010RN.placeHolderList[136]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main|KR_PilotModel_Maya_0010:brush85MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[137]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[138]" "KR_PilotModel_Maya_0010RN.placeHolderList[139]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main|KR_PilotModel_Maya_0010:brush84MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[140]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[141]" "KR_PilotModel_Maya_0010RN.placeHolderList[142]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main|KR_PilotModel_Maya_0010:brush83MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[143]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[144]" "KR_PilotModel_Maya_0010RN.placeHolderList[145]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main|KR_PilotModel_Maya_0010:brush82MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[146]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[147]" "KR_PilotModel_Maya_0010RN.placeHolderList[148]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main|KR_PilotModel_Maya_0010:brush81MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[149]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[150]" "KR_PilotModel_Maya_0010RN.placeHolderList[151]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main|KR_PilotModel_Maya_0010:brush80MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[152]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[153]" "KR_PilotModel_Maya_0010RN.placeHolderList[154]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main|KR_PilotModel_Maya_0010:brush79MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[155]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[156]" "KR_PilotModel_Maya_0010RN.placeHolderList[157]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main|KR_PilotModel_Maya_0010:brush78MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[158]" ""
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[159]" "KR_PilotModel_Maya_0010RN.placeHolderList[160]" 
-		"KR_PilotModel_Maya_0010:CleareyePart.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main|KR_PilotModel_Maya_0010:brush77MainShape.worldMesh" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[161]" ""
 		5 4 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:phongE4SG.dagSetMembers" 
@@ -3017,943 +4144,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 4 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:phongE4SG.dagSetMembers" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[209]" ""
 		5 4 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:phongE4SG.dagSetMembers" 
-		"KR_PilotModel_Maya_0010RN.placeHolderList[210]" ""
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main" 
-		"scaleZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"translateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"translateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"translateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"rotateX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"rotateY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"rotateZ"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"scaleX"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"scaleY"
-		9 "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main" 
-		"scaleZ";
+		"KR_PilotModel_Maya_0010RN.placeHolderList[210]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
@@ -3981,13 +4172,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -width 570\n                -height 362\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 570\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 570\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
 		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 675\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 590\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 675\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 590\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -4009,13 +4200,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
 		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n"
-		+ "                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
-		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"profilerPanel\" -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
@@ -4025,12 +4213,15 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
 		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n"
-		+ "                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 41 100 -ps 2 59 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
+		+ "                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 49 100 -ps 2 51 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"side\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 675\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"side\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 675\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 590\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 590\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -4384,61 +4575,61 @@ connectAttr "ik_jnt_shoulder_L.s" "ik_jnt_elbow_L.is";
 connectAttr "ik_jnt_elbow_L.s" "ik_jnt_wrist_L.is";
 connectAttr "bind_jnt_spineE.s" "bind_jnt_clavicle_R.is";
 connectAttr "bind_jnt_clavicle_R.s" "bind_jnt_shoulder_R.is";
-connectAttr "bind_jnt_shoulder_R.s" "bind_jnt_elbow_R1.is";
-connectAttr "bind_jnt_elbow_R1.s" "bind_jnt_wrist_R1.is";
-connectAttr "bind_jnt_wrist_R1.s" "bind_jnt_pinkyA_R1.is";
-connectAttr "bind_jnt_pinkyA_R1.s" "bind_jnt_pinkyB_R1.is";
-connectAttr "bind_jnt_pinkyB_R1.s" "bind_jnt_pinkyC_R1.is";
-connectAttr "bind_jnt_pinkyC_R1.s" "bind_jnt_pinkyD_R1.is";
-connectAttr "bind_jnt_pinkyD_R1.s" "bind_jnt_pinkyE_R1.is";
-connectAttr "bind_jnt_wrist_R1.s" "bind_jnt_ringA_R1.is";
-connectAttr "bind_jnt_ringA_R1.s" "bind_jnt_ringB_R1.is";
-connectAttr "bind_jnt_ringB_R1.s" "bind_jnt_ringC_R1.is";
-connectAttr "bind_jnt_ringC_R1.s" "bind_jnt_ringD_R1.is";
-connectAttr "bind_jnt_ringD_R1.s" "bind_jnt_ringE_R1.is";
-connectAttr "bind_jnt_wrist_R1.s" "bind_jnt_middleA_R1.is";
-connectAttr "bind_jnt_middleA_R1.s" "bind_jnt_middleB_R1.is";
-connectAttr "bind_jnt_middleB_R1.s" "bind_jnt_middleC_R1.is";
-connectAttr "bind_jnt_middleC_R1.s" "bind_jnt_middleD_R1.is";
-connectAttr "bind_jnt_middleD_R1.s" "bind_jnt_middleE_R1.is";
-connectAttr "bind_jnt_wrist_R1.s" "bind_jnt_indexA_R1.is";
-connectAttr "bind_jnt_indexA_R1.s" "bind_jnt_indexB_R1.is";
-connectAttr "bind_jnt_indexB_R1.s" "bind_jnt_indexC_R1.is";
-connectAttr "bind_jnt_indexC_R1.s" "bind_jnt_indexD_R1.is";
-connectAttr "bind_jnt_indexD_R1.s" "bind_jnt_indexE_R1.is";
-connectAttr "bind_jnt_wrist_R1.s" "bind_jnt_thumbA_R1.is";
-connectAttr "bind_jnt_thumbA_R1.s" "bind_jnt_thumbB_R1.is";
-connectAttr "bind_jnt_thumbB_R1.s" "bind_jnt_thumbC_R1.is";
-connectAttr "bind_jnt_thumbC_R1.s" "bind_jnt_thumbD_R1.is";
-connectAttr "bind_jnt_clavicle_R.s" "fk_jnt_shoulder_R.is";
-connectAttr "fk_jnt_shoulder_R.s" "fk_jnt_elbow_R1.is";
-connectAttr "fk_jnt_elbow_R1.s" "fk_jnt_wrist_R1.is";
-connectAttr "bind_jnt_clavicle_R.s" "ik_jnt_shoulder_R.is";
-connectAttr "ik_jnt_shoulder_R.s" "ik_jnt_elbow_R1.is";
-connectAttr "ik_jnt_elbow_R1.s" "ik_jnt_wrist_R1.is";
+connectAttr "bind_jnt_shoulder_R.s" "bind_jnt_elbow_R.is";
+connectAttr "bind_jnt_elbow_R.s" "bind_jnt_wrist_R.is";
+connectAttr "bind_jnt_wrist_R.s" "bind_jnt_pinkyA_R.is";
+connectAttr "bind_jnt_pinkyA_R.s" "bind_jnt_pinkyB_R.is";
+connectAttr "bind_jnt_pinkyB_R.s" "bind_jnt_pinkyC_R.is";
+connectAttr "bind_jnt_pinkyC_R.s" "bind_jnt_pinkyD_R.is";
+connectAttr "bind_jnt_pinkyD_R.s" "bind_jnt_pinkyE_R.is";
+connectAttr "bind_jnt_wrist_R.s" "bind_jnt_ringA_R.is";
+connectAttr "bind_jnt_ringA_R.s" "bind_jnt_ringB_R.is";
+connectAttr "bind_jnt_ringB_R.s" "bind_jnt_ringC_R.is";
+connectAttr "bind_jnt_ringC_R.s" "bind_jnt_ringD_R.is";
+connectAttr "bind_jnt_ringD_R.s" "bind_jnt_ringE_R.is";
+connectAttr "bind_jnt_wrist_R.s" "bind_jnt_middleA_R.is";
+connectAttr "bind_jnt_middleA_R.s" "bind_jnt_middleB_R.is";
+connectAttr "bind_jnt_middleB_R.s" "bind_jnt_middleC_R.is";
+connectAttr "bind_jnt_middleC_R.s" "bind_jnt_middleD_R.is";
+connectAttr "bind_jnt_middleD_R.s" "bind_jnt_middleE_R.is";
+connectAttr "bind_jnt_wrist_R.s" "bind_jnt_indexA_R.is";
+connectAttr "bind_jnt_indexA_R.s" "bind_jnt_indexB_R.is";
+connectAttr "bind_jnt_indexB_R.s" "bind_jnt_indexC_R.is";
+connectAttr "bind_jnt_indexC_R.s" "bind_jnt_indexD_R.is";
+connectAttr "bind_jnt_indexD_R.s" "bind_jnt_indexE_R.is";
+connectAttr "bind_jnt_wrist_R.s" "bind_jnt_thumbA_R.is";
+connectAttr "bind_jnt_thumbA_R.s" "bind_jnt_thumbB_R.is";
+connectAttr "bind_jnt_thumbB_R.s" "bind_jnt_thumbC_R.is";
+connectAttr "bind_jnt_thumbC_R.s" "bind_jnt_thumbD_R.is";
+connectAttr "bind_jnt_clavicle_R.s" "fk_jnt_shoulder_R1.is";
+connectAttr "fk_jnt_shoulder_R1.s" "fk_jnt_elbow_R.is";
+connectAttr "fk_jnt_elbow_R.s" "fk_jnt_wrist_R.is";
+connectAttr "bind_jnt_clavicle_R.s" "ik_jnt_shoulder_R2.is";
+connectAttr "ik_jnt_shoulder_R2.s" "ik_jnt_elbow_R.is";
+connectAttr "ik_jnt_elbow_R.s" "ik_jnt_wrist_R.is";
 connectAttr "bind_jnt_root.s" "bind_jnt_hips.is";
 connectAttr "bind_jnt_hips.s" "bind_jnt_thigh_L.is";
 connectAttr "bind_jnt_thigh_L.s" "bind_jnt_knee_L.is";
 connectAttr "bind_jnt_knee_L.s" "bind_jnt_heel_L.is";
 connectAttr "bind_jnt_heel_L.s" "bind_jnt_ball_L.is";
 connectAttr "bind_jnt_ball_L.s" "bind_jnt_toe_L.is";
-connectAttr "bind_jnt_hips.s" "fk_jnt_thigh_L.is";
-connectAttr "fk_jnt_thigh_L.s" "fk_jnt_knee_L.is";
-connectAttr "fk_jnt_knee_L.s" "fk_jnt_heel_L.is";
-connectAttr "bind_jnt_hips.s" "ik_jnt_thigh_L.is";
-connectAttr "ik_jnt_thigh_L.s" "ik_jnt_knee_L.is";
-connectAttr "ik_jnt_knee_L.s" "ik_jnt_heel_L.is";
 connectAttr "bind_jnt_hips.s" "bind_jnt_thigh_R.is";
-connectAttr "bind_jnt_thigh_R.s" "bind_jnt_knee_R1.is";
-connectAttr "bind_jnt_knee_R1.s" "bind_jnt_heel_R1.is";
-connectAttr "bind_jnt_heel_R1.s" "bind_jnt_ball_R1.is";
-connectAttr "bind_jnt_ball_R1.s" "bind_jnt_toe_R1.is";
-connectAttr "bind_jnt_hips.s" "fk_jnt_thigh_R.is";
-connectAttr "fk_jnt_thigh_R.s" "fk_jnt_knee_R1.is";
-connectAttr "fk_jnt_knee_R1.s" "fk_jnt_heel_R1.is";
-connectAttr "bind_jnt_hips.s" "ik_jnt_thigh_R.is";
-connectAttr "ik_jnt_thigh_R.s" "ik_jnt_knee_R1.is";
-connectAttr "ik_jnt_knee_R1.s" "ik_jnt_heel_R1.is";
+connectAttr "bind_jnt_thigh_R.s" "bind_jnt_knee_R.is";
+connectAttr "bind_jnt_knee_R.s" "bind_jnt_heel_R.is";
+connectAttr "bind_jnt_heel_R.s" "bind_jnt_ball_R.is";
+connectAttr "bind_jnt_ball_R.s" "bind_jnt_toe_R.is";
+connectAttr "bind_jnt_hips.s" "fk_jnt_thigh_L1.is";
+connectAttr "fk_jnt_thigh_L1.s" "fk_jnt_knee_L.is";
+connectAttr "fk_jnt_knee_L.s" "fk_jnt_heel_L.is";
+connectAttr "bind_jnt_hips.s" "ik_jnt_thigh_L2.is";
+connectAttr "ik_jnt_thigh_L2.s" "ik_jnt_knee_L.is";
+connectAttr "ik_jnt_knee_L.s" "ik_jnt_heel_L.is";
+connectAttr "bind_jnt_hips.s" "fk_jnt_thigh_R1.is";
+connectAttr "fk_jnt_thigh_R1.s" "fk_jnt_knee_R.is";
+connectAttr "fk_jnt_knee_R.s" "fk_jnt_heel_R.is";
+connectAttr "bind_jnt_hips.s" "ik_jnt_thigh_R2.is";
+connectAttr "ik_jnt_thigh_R2.s" "ik_jnt_knee_R.is";
+connectAttr "ik_jnt_knee_R.s" "ik_jnt_heel_R.is";
 connectAttr "groupId2.id" "|KR_PilotModel_Maya_0010RNfosterParent1|fosterParent1|MeshShapeDeformed.iog.og[1].gid"
 		;
 connectAttr "tweakSet1.mwc" "|KR_PilotModel_Maya_0010RNfosterParent1|fosterParent1|MeshShapeDeformed.iog.og[1].gco"
@@ -4475,4 +4666,4 @@ connectAttr "|KR_PilotModel_Maya_0010RNfosterParent1|fosterParent1|MeshShapeDefo
 connectAttr "|KR_PilotModel_Maya_0010RNfosterParent1|MeshShapeDeformed.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "CleareyePartShapeDeformed.iog" ":initialShadingGroup.dsm" -na;
-// End of KR_PilotRig_Maya.0003.ma
+// End of KR_PilotRig_Maya.0007.ma
