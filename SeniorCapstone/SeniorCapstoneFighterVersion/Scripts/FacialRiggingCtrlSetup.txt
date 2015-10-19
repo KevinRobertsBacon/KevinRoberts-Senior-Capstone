@@ -1,3 +1,5 @@
+source generateChannelMenu.mel;
+
 string $sel_curves[] = `ls -sl`;  //gets curves selected by user.  Assume naming convention of curve_itemIdentifier.
 int $numOfLocators = 3;  //declare variable for how many locators per curve we'll be using
 int $i = 0; //declare variable for for loops.
