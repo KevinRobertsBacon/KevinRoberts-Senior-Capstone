@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: KR_PilotRig_Maya.0045.ma
-//Last modified: Thu, Oct 22, 2015 10:14:12 AM
+//Last modified: Thu, Oct 22, 2015 10:39:23 AM
 //Codeset: 1252
 file -rdi 1 -ns "KR_PilotModel_Maya_0010" -rfn "KR_PilotModel_Maya_0010RN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/10479701/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion/PilotRig/KR_PilotModel_Maya.0011.ma";
@@ -21,8 +21,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "86A2ADA8-49A3-E3C7-2E8F-A098B08CF83F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.4370862352182741 56.148457627002131 38.769490519652415 ;
-	setAttr ".r" -type "double3" -2.7383527332982975 -7.7999999999874507 -7.5240386404806429e-017 ;
+	setAttr ".t" -type "double3" -44.954765816434602 64.229989446150299 -63.477371491894644 ;
+	setAttr ".r" -type "double3" -14.138352733291521 220.99999999999582 0 ;
 	setAttr ".rp" -type "double3" 0 7.1054273576010019e-015 0 ;
 	setAttr ".rpt" -type "double3" -1.7658494666952851e-015 -1.5631108377498789e-015 
 		-4.0806373508193642e-015 ;
@@ -30,7 +30,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "65A93CA8-4ED4-12CD-3A33-45B7B709211D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 47.839516250392762;
+	setAttr ".coi" 75.048413878547507;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -6870,7 +6870,7 @@ createNode nurbsCurve -n "eyebrow_Ctrl_RShape" -p "eyebrow_Ctrl_R";
 		-2.2396027199549926 104.67378099948223 8.4733287397321551
 		;
 createNode fosterParent -n "KR_PilotModel_Maya_0010RNfosterParent1";
-	rename -uid "FE3563A8-4AEA-41EE-C72C-FD93A90E78BE";
+	rename -uid "A45FEB5B-4E04-FA58-80F4-5CA24EA8F2DD";
 createNode mesh -n "brush77MainShapeDeformed" -p "KR_PilotModel_Maya_0010RNfosterParent1";
 	rename -uid "393E89CD-4E9F-2B8F-C3D3-A891F88FEA91";
 	setAttr -k off ".v";
@@ -7472,7 +7472,7 @@ createNode mesh -n "MeshShapeDeformed" -p "KR_PilotModel_Maya_0010RNfosterParent
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".vcs" 2;
 createNode fosterParent -n "fosterParent1" -p "KR_PilotModel_Maya_0010RNfosterParent1";
-	rename -uid "637BFCBB-489B-78C2-CF20-95BA843FF7E0";
+	rename -uid "DC8673CC-4C18-7F6A-F875-8EA7B2C258BB";
 createNode mesh -n "MeshShapeDeformed" -p "fosterParent1";
 	rename -uid "4F13445B-4E4D-C540-64F1-8EA3AF8F05F8";
 	setAttr -k off ".v";
@@ -7757,15 +7757,15 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "16D2BD66-40BC-EBD6-A786-2E85D5D95007";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CB6B6643-4A7C-A5A3-11E4-1B949F9583A2";
+	rename -uid "13B2BDD0-4FB3-C000-9661-0986491BF497";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F363B1CC-42AD-CF14-852E-32B01A0F6DC1";
+	rename -uid "9764782F-4175-A75F-1FB8-838F6201D7E3";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "532FF6B1-436D-C905-D53F-0594AB09138F";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C618144F-4D78-A663-3DAD-2CA736C6D6EE";
+	rename -uid "3EC5F586-4EDB-4E3B-039B-F5B3AC607783";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "49CAFB39-4F8D-274F-68BE-03830ADDB833";
 	setAttr ".g" yes;
@@ -9463,13 +9463,13 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		
 		2 "KR_PilotModel_Maya_0010:file6" "colorSpace" " -type \"string\" \"sRGB\""
 		
-		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.drawOverride" 
-		""
 		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh.drawOverride" 
+		""
+		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.drawOverride" 
 		""
 		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart.drawOverride" 
 		""
-		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.drawOverride" 
+		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.drawOverride" 
 		""
 		3 "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.drawOverride" 
 		""
@@ -9480,7 +9480,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[3]" "KR_PilotModel_Maya_0010RN.placeHolderList[4]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[5]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:CleareyePart|KR_PilotModel_Maya_0010:CleareyePartShape.worldMesh" 
@@ -9490,7 +9490,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[8]" "KR_PilotModel_Maya_0010RN.placeHolderList[9]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[10]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" 
@@ -9498,7 +9498,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[12]" "KR_PilotModel_Maya_0010RN.placeHolderList[13]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[14]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" 
@@ -9506,7 +9506,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[16]" "KR_PilotModel_Maya_0010RN.placeHolderList[17]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[18]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:MeshShape.instObjGroups" 
@@ -9522,7 +9522,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[24]" "KR_PilotModel_Maya_0010RN.placeHolderList[25]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[26]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:Meshes|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:Mesh|KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Eyes:MeshShape.worldMesh" 
@@ -9538,7 +9538,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[32]" "KR_PilotModel_Maya_0010RN.placeHolderList[33]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[34]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush125Main|KR_PilotModel_Maya_0010:brush125MainShape.worldMesh" 
@@ -9548,7 +9548,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[37]" "KR_PilotModel_Maya_0010RN.placeHolderList[38]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[39]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush124Main|KR_PilotModel_Maya_0010:brush124MainShape.worldMesh" 
@@ -9558,7 +9558,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[42]" "KR_PilotModel_Maya_0010RN.placeHolderList[43]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[44]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush123Main|KR_PilotModel_Maya_0010:brush123MainShape.worldMesh" 
@@ -9568,7 +9568,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[47]" "KR_PilotModel_Maya_0010RN.placeHolderList[48]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[49]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush122Main|KR_PilotModel_Maya_0010:brush122MainShape.worldMesh" 
@@ -9578,7 +9578,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[52]" "KR_PilotModel_Maya_0010RN.placeHolderList[53]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[54]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush121Main|KR_PilotModel_Maya_0010:brush121MainShape.worldMesh" 
@@ -9588,7 +9588,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[57]" "KR_PilotModel_Maya_0010RN.placeHolderList[58]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[59]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush120Main|KR_PilotModel_Maya_0010:brush120MainShape.worldMesh" 
@@ -9598,7 +9598,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[62]" "KR_PilotModel_Maya_0010RN.placeHolderList[63]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[64]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush119Main|KR_PilotModel_Maya_0010:brush119MainShape.worldMesh" 
@@ -9608,7 +9608,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[67]" "KR_PilotModel_Maya_0010RN.placeHolderList[68]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[69]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush118Main|KR_PilotModel_Maya_0010:brush118MainShape.worldMesh" 
@@ -9618,7 +9618,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[72]" "KR_PilotModel_Maya_0010RN.placeHolderList[73]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[74]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush117Main|KR_PilotModel_Maya_0010:brush117MainShape.worldMesh" 
@@ -9628,7 +9628,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[77]" "KR_PilotModel_Maya_0010RN.placeHolderList[78]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[79]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush116Main|KR_PilotModel_Maya_0010:brush116MainShape.worldMesh" 
@@ -9638,7 +9638,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[82]" "KR_PilotModel_Maya_0010RN.placeHolderList[83]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[84]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush115Main|KR_PilotModel_Maya_0010:brush115MainShape.worldMesh" 
@@ -9648,7 +9648,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[87]" "KR_PilotModel_Maya_0010RN.placeHolderList[88]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[89]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush114Main|KR_PilotModel_Maya_0010:brush114MainShape.worldMesh" 
@@ -9658,7 +9658,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[92]" "KR_PilotModel_Maya_0010RN.placeHolderList[93]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[94]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush113Main|KR_PilotModel_Maya_0010:brush113MainShape.worldMesh" 
@@ -9668,7 +9668,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[97]" "KR_PilotModel_Maya_0010RN.placeHolderList[98]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[99]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush112Main|KR_PilotModel_Maya_0010:brush112MainShape.worldMesh" 
@@ -9678,7 +9678,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[102]" "KR_PilotModel_Maya_0010RN.placeHolderList[103]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[104]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush111Main|KR_PilotModel_Maya_0010:brush111MainShape.worldMesh" 
@@ -9688,7 +9688,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[107]" "KR_PilotModel_Maya_0010RN.placeHolderList[108]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[109]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush110Main|KR_PilotModel_Maya_0010:brush110MainShape.worldMesh" 
@@ -9698,7 +9698,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[112]" "KR_PilotModel_Maya_0010RN.placeHolderList[113]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[114]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush109Main|KR_PilotModel_Maya_0010:brush109MainShape.worldMesh" 
@@ -9708,7 +9708,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[117]" "KR_PilotModel_Maya_0010RN.placeHolderList[118]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[119]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush108Main|KR_PilotModel_Maya_0010:brush108MainShape.worldMesh" 
@@ -9718,7 +9718,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[122]" "KR_PilotModel_Maya_0010RN.placeHolderList[123]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[124]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush107Main|KR_PilotModel_Maya_0010:brush107MainShape.worldMesh" 
@@ -9728,7 +9728,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[127]" "KR_PilotModel_Maya_0010RN.placeHolderList[128]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[129]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush106Main|KR_PilotModel_Maya_0010:brush106MainShape.worldMesh" 
@@ -9738,7 +9738,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[132]" "KR_PilotModel_Maya_0010RN.placeHolderList[133]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[134]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush105Main|KR_PilotModel_Maya_0010:brush105MainShape.worldMesh" 
@@ -9748,7 +9748,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[137]" "KR_PilotModel_Maya_0010RN.placeHolderList[138]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[139]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush104Main|KR_PilotModel_Maya_0010:brush104MainShape.worldMesh" 
@@ -9758,7 +9758,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[142]" "KR_PilotModel_Maya_0010RN.placeHolderList[143]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[144]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush103Main|KR_PilotModel_Maya_0010:brush103MainShape.worldMesh" 
@@ -9768,7 +9768,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[147]" "KR_PilotModel_Maya_0010RN.placeHolderList[148]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[149]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush102Main|KR_PilotModel_Maya_0010:brush102MainShape.worldMesh" 
@@ -9778,7 +9778,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[152]" "KR_PilotModel_Maya_0010RN.placeHolderList[153]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[154]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush101Main|KR_PilotModel_Maya_0010:brush101MainShape.worldMesh" 
@@ -9788,7 +9788,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[157]" "KR_PilotModel_Maya_0010RN.placeHolderList[158]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[159]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush100Main|KR_PilotModel_Maya_0010:brush100MainShape.worldMesh" 
@@ -9798,7 +9798,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[162]" "KR_PilotModel_Maya_0010RN.placeHolderList[163]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[164]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush99Main|KR_PilotModel_Maya_0010:brush99MainShape.worldMesh" 
@@ -9808,7 +9808,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[167]" "KR_PilotModel_Maya_0010RN.placeHolderList[168]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[169]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush98Main|KR_PilotModel_Maya_0010:brush98MainShape.worldMesh" 
@@ -9818,7 +9818,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[172]" "KR_PilotModel_Maya_0010RN.placeHolderList[173]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[174]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush97Main|KR_PilotModel_Maya_0010:brush97MainShape.worldMesh" 
@@ -9828,7 +9828,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[177]" "KR_PilotModel_Maya_0010RN.placeHolderList[178]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[179]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush96Main|KR_PilotModel_Maya_0010:brush96MainShape.worldMesh" 
@@ -9838,7 +9838,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[182]" "KR_PilotModel_Maya_0010RN.placeHolderList[183]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[184]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush95Main|KR_PilotModel_Maya_0010:brush95MainShape.worldMesh" 
@@ -9848,7 +9848,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[187]" "KR_PilotModel_Maya_0010RN.placeHolderList[188]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[189]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush94Main|KR_PilotModel_Maya_0010:brush94MainShape.worldMesh" 
@@ -9858,7 +9858,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[192]" "KR_PilotModel_Maya_0010RN.placeHolderList[193]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[194]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush93Main|KR_PilotModel_Maya_0010:brush93MainShape.worldMesh" 
@@ -9868,7 +9868,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[197]" "KR_PilotModel_Maya_0010RN.placeHolderList[198]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[199]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush92Main|KR_PilotModel_Maya_0010:brush92MainShape.worldMesh" 
@@ -9878,7 +9878,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[202]" "KR_PilotModel_Maya_0010RN.placeHolderList[203]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[204]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush91Main|KR_PilotModel_Maya_0010:brush91MainShape.worldMesh" 
@@ -9888,7 +9888,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[207]" "KR_PilotModel_Maya_0010RN.placeHolderList[208]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[209]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush90Main|KR_PilotModel_Maya_0010:brush90MainShape.worldMesh" 
@@ -9898,7 +9898,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[212]" "KR_PilotModel_Maya_0010RN.placeHolderList[213]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[214]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush89Main|KR_PilotModel_Maya_0010:brush89MainShape.worldMesh" 
@@ -9908,7 +9908,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[217]" "KR_PilotModel_Maya_0010RN.placeHolderList[218]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[219]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush88Main|KR_PilotModel_Maya_0010:brush88MainShape.worldMesh" 
@@ -9918,7 +9918,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[222]" "KR_PilotModel_Maya_0010RN.placeHolderList[223]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[224]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush87Main|KR_PilotModel_Maya_0010:brush87MainShape.worldMesh" 
@@ -9928,7 +9928,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[227]" "KR_PilotModel_Maya_0010RN.placeHolderList[228]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[229]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush86Main|KR_PilotModel_Maya_0010:brush86MainShape.worldMesh" 
@@ -9938,7 +9938,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[232]" "KR_PilotModel_Maya_0010RN.placeHolderList[233]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[234]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush85Main|KR_PilotModel_Maya_0010:brush85MainShape.worldMesh" 
@@ -9948,7 +9948,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[237]" "KR_PilotModel_Maya_0010RN.placeHolderList[238]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[239]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush84Main|KR_PilotModel_Maya_0010:brush84MainShape.worldMesh" 
@@ -9958,7 +9958,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[242]" "KR_PilotModel_Maya_0010RN.placeHolderList[243]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[244]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush83Main|KR_PilotModel_Maya_0010:brush83MainShape.worldMesh" 
@@ -9968,7 +9968,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[247]" "KR_PilotModel_Maya_0010RN.placeHolderList[248]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[249]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush82Main|KR_PilotModel_Maya_0010:brush82MainShape.worldMesh" 
@@ -9978,7 +9978,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[252]" "KR_PilotModel_Maya_0010RN.placeHolderList[253]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[254]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush81Main|KR_PilotModel_Maya_0010:brush81MainShape.worldMesh" 
@@ -9988,7 +9988,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[257]" "KR_PilotModel_Maya_0010RN.placeHolderList[258]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[259]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush80Main|KR_PilotModel_Maya_0010:brush80MainShape.worldMesh" 
@@ -9998,7 +9998,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[262]" "KR_PilotModel_Maya_0010RN.placeHolderList[263]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[264]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush79Main|KR_PilotModel_Maya_0010:brush79MainShape.worldMesh" 
@@ -10008,7 +10008,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[267]" "KR_PilotModel_Maya_0010RN.placeHolderList[268]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[269]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush78Main|KR_PilotModel_Maya_0010:brush78MainShape.worldMesh" 
@@ -10018,7 +10018,7 @@ createNode reference -n "KR_PilotModel_Maya_0010RN";
 		5 0 "KR_PilotModel_Maya_0010RN" "KR_PilotModel_Maya_0010:BaseMesh.drawInfo" 
 		"|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main.drawOverride" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[272]" "KR_PilotModel_Maya_0010RN.placeHolderList[273]" 
-		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh.do"
+		"KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Pilot:Mesh.do"
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main.message" 
 		"KR_PilotModel_Maya_0010RN.placeHolderList[274]" ""
 		5 3 "KR_PilotModel_Maya_0010RN" "|KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotModel_Maya_0010:PolygonalHair|KR_PilotModel_Maya_0010:brush77Main|KR_PilotModel_Maya_0010:brush77MainShape.worldMesh" 
@@ -20974,8 +20974,8 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[2076].w[49]"  1;
 	setAttr ".wl[2077].w[49]"  1;
 	setAttr -s 2 ".wl[2078].w";
-	setAttr ".wl[2078].w[113]" 0.98879998922348022;
-	setAttr ".wl[2078].w[119]" 0.052090747680135698;
+	setAttr ".wl[2078].w[113]" 0.95700769786501816;
+	setAttr ".wl[2078].w[119]" 0.042992302134981793;
 	setAttr -s 2 ".wl[2079].w";
 	setAttr ".wl[2079].w[48]" 0.80610196484403818;
 	setAttr ".wl[2079].w[113]" 0.1938980351559618;
@@ -20986,23 +20986,23 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[2081].w[48]" 0.39978024047585753;
 	setAttr ".wl[2081].w[113]" 0.60021975952414242;
 	setAttr -s 2 ".wl[2082].w";
-	setAttr ".wl[2082].w[113]" 0.97626781463623047;
-	setAttr ".wl[2082].w[119]" 0.055662269530654125;
+	setAttr ".wl[2082].w[113]" 0.95391172574058891;
+	setAttr ".wl[2082].w[119]" 0.04608827425941104;
 	setAttr -s 2 ".wl[2083].w";
 	setAttr ".wl[2083].w[48]" 0.7730947149332309;
 	setAttr ".wl[2083].w[113]" 0.22690528506676905;
 	setAttr -s 2 ".wl[2084].w";
 	setAttr ".wl[2084].w[48]" 0.60729528273345312;
 	setAttr ".wl[2084].w[113]" 0.39270471726654688;
-	setAttr ".wl[2085].w[113]"  1;
+	setAttr ".wl[2085].w[113]"  0.99999999999999989;
 	setAttr -s 2 ".wl[2086].w";
-	setAttr ".wl[2086].w[113]" 0.9525221586227417;
-	setAttr ".wl[2086].w[119]" 0.34518422779293151;
+	setAttr ".wl[2086].w[113]" 0.65509113812762265;
+	setAttr ".wl[2086].w[119]" 0.34490886187237729;
 	setAttr -s 2 ".wl[2087].w";
-	setAttr ".wl[2087].w[113]" 0.95753931999206543;
+	setAttr ".wl[2087].w[113]" 0.61344165162910802;
 	setAttr ".wl[2087].w[119]" 0.38655834837089204;
 	setAttr -s 2 ".wl[2088].w";
-	setAttr ".wl[2088].w[113]" 0.9159204363822937;
+	setAttr ".wl[2088].w[113]" 0.79839792083893035;
 	setAttr ".wl[2088].w[119]" 0.20160207916106965;
 	setAttr ".wl[2089].w[113]"  1;
 	setAttr ".wl[2090].w[113]"  1;
@@ -21030,107 +21030,108 @@ createNode skinCluster -n "skinCluster53";
 	setAttr -s 2 ".wl[2098].w";
 	setAttr ".wl[2098].w[48]" 0.88657297704395022;
 	setAttr ".wl[2098].w[113]" 0.11342702295604974;
-	setAttr -s 2 ".wl[2099].w";
-	setAttr ".wl[2099].w[113]" 0.75959277153015137;
-	setAttr ".wl[2099].w[119]" 0.52258998155593872;
+	setAttr -s 3 ".wl[2099].w";
+	setAttr ".wl[2099].w[113]" 0.57454722550391457;
+	setAttr ".wl[2099].w[114]" 0.0027271466562445099;
+	setAttr ".wl[2099].w[119]" 0.42272562783984091;
 	setAttr -s 2 ".wl[2100].w";
 	setAttr ".wl[2100].w[113]" 0.57915595650110818;
 	setAttr ".wl[2100].w[119]" 0.42084404349889176;
 	setAttr -s 2 ".wl[2101].w";
-	setAttr ".wl[2101].w[113]" 0.81161141395568848;
-	setAttr ".wl[2101].w[119]" 0.67985773086547852;
+	setAttr ".wl[2101].w[113]" 0.56061542087757643;
+	setAttr ".wl[2101].w[119]" 0.43938457912242362;
 	setAttr -s 2 ".wl[2102].w";
 	setAttr ".wl[2102].w[48]" 0.37700522224298383;
-	setAttr ".wl[2102].w[113]" 0.81387293338775635;
+	setAttr ".wl[2102].w[113]" 0.62299477775701617;
 	setAttr ".wl[2103].w[113]"  1;
 	setAttr -s 2 ".wl[2104].w";
-	setAttr ".wl[2104].w[113]" 0.91561669111251831;
+	setAttr ".wl[2104].w[113]" 0.83300724487341171;
 	setAttr ".wl[2104].w[119]" 0.16699275512658823;
 	setAttr -s 2 ".wl[2105].w";
-	setAttr ".wl[2105].w[113]" 0.98681521415710449;
+	setAttr ".wl[2105].w[113]" 0.58734692175316094;
 	setAttr ".wl[2105].w[119]" 0.41265307824683917;
 	setAttr -s 2 ".wl[2106].w";
 	setAttr ".wl[2106].w[48]" 0.18757231670456656;
-	setAttr ".wl[2106].w[113]" 0.92264294624328613;
+	setAttr ".wl[2106].w[113]" 0.81242768329543347;
 	setAttr -s 2 ".wl[2107].w";
 	setAttr ".wl[2107].w[48]" 0.55117678029253481;
-	setAttr ".wl[2107].w[113]" 0.76628756523132324;
+	setAttr ".wl[2107].w[113]" 0.44882321970746508;
 	setAttr -s 2 ".wl[2108].w";
-	setAttr ".wl[2108].w[113]" 0.98586839437484741;
+	setAttr ".wl[2108].w[113]" 0.71095400679661358;
 	setAttr ".wl[2108].w[119]" 0.28904599320338648;
 	setAttr ".wl[2109].w[113]"  1;
 	setAttr -s 2 ".wl[2110].w";
-	setAttr ".wl[2110].w[113]" 0.96342408657073975;
-	setAttr ".wl[2110].w[119]" 0.78069168329238892;
+	setAttr ".wl[2110].w[113]" 0.48282759359226318;
+	setAttr ".wl[2110].w[119]" 0.51717240640773676;
 	setAttr -s 2 ".wl[2111].w";
-	setAttr ".wl[2111].w[113]" 0.99335181713104248;
-	setAttr ".wl[2111].w[119]" 0.034624986350536346;
+	setAttr ".wl[2111].w[113]" 0.95830619510252746;
+	setAttr ".wl[2111].w[119]" 0.041693804897472687;
 	setAttr -s 2 ".wl[2112].w";
-	setAttr ".wl[2112].w[113]" 0.53503584861755371;
-	setAttr ".wl[2112].w[119]" 0.65664964914321899;
+	setAttr ".wl[2112].w[113]" 0.46552221442283287;
+	setAttr ".wl[2112].w[119]" 0.53447778557716707;
 	setAttr -s 2 ".wl[2113].w";
-	setAttr ".wl[2113].w[113]" 0.72313475608825684;
-	setAttr ".wl[2113].w[119]" 0.82981699705123901;
+	setAttr ".wl[2113].w[113]" 0.30973995321375031;
+	setAttr ".wl[2113].w[119]" 0.69026004678624975;
 	setAttr -s 2 ".wl[2114].w";
-	setAttr ".wl[2114].w[113]" 0.95530223846435547;
+	setAttr ".wl[2114].w[113]" 0.78679692257186584;
 	setAttr ".wl[2114].w[119]" 0.21320307742813421;
 	setAttr -s 2 ".wl[2115].w";
 	setAttr ".wl[2115].w[113]" 0.49663032808941077;
 	setAttr ".wl[2115].w[119]" 0.50336967191058934;
 	setAttr -s 2 ".wl[2116].w";
-	setAttr ".wl[2116].w[113]" 0.67407488822937012;
-	setAttr ".wl[2116].w[119]" 0.79643350839614868;
+	setAttr ".wl[2116].w[113]" 0.44154958093457441;
+	setAttr ".wl[2116].w[119]" 0.55845041906542559;
 	setAttr -s 2 ".wl[2117].w";
-	setAttr ".wl[2117].w[113]" 0.90441513061523438;
-	setAttr ".wl[2117].w[119]" 0.81409049034118652;
+	setAttr ".wl[2117].w[113]" 0.49416963592997631;
+	setAttr ".wl[2117].w[119]" 0.50583036407002357;
 	setAttr -s 2 ".wl[2118].w";
-	setAttr ".wl[2118].w[113]" 0.95993667840957642;
-	setAttr ".wl[2118].w[119]" 0.11006706953048706;
+	setAttr ".wl[2118].w[113]" 0.84740504741202238;
+	setAttr ".wl[2118].w[119]" 0.15259495258797756;
 	setAttr -s 2 ".wl[2119].w";
-	setAttr ".wl[2119].w[113]" 0.71216857433319092;
-	setAttr ".wl[2119].w[119]" 0.89513152837753296;
+	setAttr ".wl[2119].w[113]" 0.31959271961822089;
+	setAttr ".wl[2119].w[119]" 0.68040728038177911;
 	setAttr -s 2 ".wl[2120].w";
-	setAttr ".wl[2120].w[113]" 0.46076655387878418;
+	setAttr ".wl[2120].w[113]" 0.45443118476334399;
 	setAttr ".wl[2120].w[119]" 0.54556881523665601;
 	setAttr -s 2 ".wl[2121].w";
-	setAttr ".wl[2121].w[113]" 0.51537936925888062;
-	setAttr ".wl[2121].w[119]" 0.85035616159439087;
+	setAttr ".wl[2121].w[113]" 0.34908920412562799;
+	setAttr ".wl[2121].w[119]" 0.65091079587437195;
 	setAttr -s 2 ".wl[2122].w";
-	setAttr ".wl[2122].w[113]" 0.99780678749084473;
-	setAttr ".wl[2122].w[119]" 0.026347363367676735;
+	setAttr ".wl[2122].w[113]" 0.95868329538811559;
+	setAttr ".wl[2122].w[119]" 0.041316704611884483;
 	setAttr -s 2 ".wl[2123].w";
 	setAttr ".wl[2123].w[113]" 0.2475233909960497;
-	setAttr ".wl[2123].w[119]" 0.81571221351623535;
+	setAttr ".wl[2123].w[119]" 0.7524766090039503;
 	setAttr -s 2 ".wl[2124].w";
-	setAttr ".wl[2124].w[113]" 0.53608995676040649;
-	setAttr ".wl[2124].w[119]" 0.94732081890106201;
+	setAttr ".wl[2124].w[113]" 0.11839967929225699;
+	setAttr ".wl[2124].w[119]" 0.88160032070774297;
 	setAttr -s 2 ".wl[2125].w";
 	setAttr ".wl[2125].w[113]" 0.28668959782446746;
 	setAttr ".wl[2125].w[119]" 0.71331040217553254;
 	setAttr -s 2 ".wl[2126].w";
 	setAttr ".wl[2126].w[113]" 0.14777420086350945;
-	setAttr ".wl[2126].w[119]" 0.88894855976104736;
+	setAttr ".wl[2126].w[119]" 0.85222579913649055;
 	setAttr -s 2 ".wl[2127].w";
-	setAttr ".wl[2127].w[113]" 0.59726274013519287;
-	setAttr ".wl[2127].w[119]" 0.98982906341552734;
+	setAttr ".wl[2127].w[113]" 0.034334994026582369;
+	setAttr ".wl[2127].w[119]" 0.96566500597341765;
 	setAttr -s 2 ".wl[2128].w";
 	setAttr ".wl[2128].w[113]" 0.33134344154814893;
-	setAttr ".wl[2128].w[119]" 0.77100527286529541;
+	setAttr ".wl[2128].w[119]" 0.66865655845185112;
 	setAttr -s 2 ".wl[2129].w";
 	setAttr ".wl[2129].w[113]" 0.05634436305247506;
-	setAttr ".wl[2129].w[119]" 0.97008907794952393;
+	setAttr ".wl[2129].w[119]" 0.94365563694752497;
 	setAttr -s 2 ".wl[2130].w";
 	setAttr ".wl[2130].w[113]" 0.32528169940759716;
 	setAttr ".wl[2130].w[119]" 0.6747183005924029;
 	setAttr -s 2 ".wl[2131].w";
 	setAttr ".wl[2131].w[113]" 0.32009335970723862;
-	setAttr ".wl[2131].w[119]" 0.81595093011856079;
+	setAttr ".wl[2131].w[119]" 0.67990664029276138;
 	setAttr -s 2 ".wl[2132].w";
 	setAttr ".wl[2132].w[113]" 0.28350523840098552;
-	setAttr ".wl[2132].w[119]" 0.87847000360488892;
+	setAttr ".wl[2132].w[119]" 0.71649476159901448;
 	setAttr -s 2 ".wl[2133].w";
-	setAttr ".wl[2133].w[113]" 0.37076523900032043;
-	setAttr ".wl[2133].w[119]" 0.98441332578659058;
+	setAttr ".wl[2133].w[113]" 0.037793945770433476;
+	setAttr ".wl[2133].w[119]" 0.96220605422956651;
 	setAttr -s 2 ".wl[2134].w";
 	setAttr ".wl[2134].w[113]" 0.24261840650129035;
 	setAttr ".wl[2134].w[119]" 0.75738159349870959;
@@ -26432,13 +26433,13 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7305].w[49]"  1;
 	setAttr ".wl[7306].w[49]"  1;
 	setAttr -s 2 ".wl[7307].w";
-	setAttr ".wl[7307].w[113]" 0.9356415867805481;
-	setAttr ".wl[7307].w[119]" 0.17496944989819152;
+	setAttr ".wl[7307].w[113]" 0.82778336752083348;
+	setAttr ".wl[7307].w[119]" 0.17221663247916658;
 	setAttr -s 2 ".wl[7308].w";
-	setAttr ".wl[7308].w[113]" 0.97415131330490112;
+	setAttr ".wl[7308].w[113]" 0.82001259879476673;
 	setAttr ".wl[7308].w[119]" 0.17998740120523329;
 	setAttr -s 2 ".wl[7309].w";
-	setAttr ".wl[7309].w[113]" 0.99003118276596069;
+	setAttr ".wl[7309].w[113]" 0.95771652511934813;
 	setAttr ".wl[7309].w[119]" 0.042283474880651789;
 	setAttr ".wl[7310].w[113]"  1;
 	setAttr -s 2 ".wl[7311].w";
@@ -26446,10 +26447,10 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7311].w[113]" 0.78460187062461784;
 	setAttr -s 2 ".wl[7312].w";
 	setAttr ".wl[7312].w[48]" 0.57694719665114269;
-	setAttr ".wl[7312].w[113]" 0.64950430393218994;
+	setAttr ".wl[7312].w[113]" 0.42305280334885731;
 	setAttr -s 2 ".wl[7313].w";
 	setAttr ".wl[7313].w[48]" 0.63688892742406822;
-	setAttr ".wl[7313].w[113]" 0.40156933665275574;
+	setAttr ".wl[7313].w[113]" 0.36311107257593184;
 	setAttr -s 2 ".wl[7314].w";
 	setAttr ".wl[7314].w[48]" 0.64861671710839974;
 	setAttr ".wl[7314].w[113]" 0.35138328289160026;
@@ -26473,54 +26474,54 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7321].w[48]" 0.92592592745896718;
 	setAttr ".wl[7321].w[113]" 0.074074072541032793;
 	setAttr -s 2 ".wl[7322].w";
-	setAttr ".wl[7322].w[113]" 0.81109142303466797;
-	setAttr ".wl[7322].w[119]" 0.40800585058966166;
+	setAttr ".wl[7322].w[113]" 0.59276275772459874;
+	setAttr ".wl[7322].w[119]" 0.4072372422754012;
 	setAttr -s 2 ".wl[7323].w";
-	setAttr ".wl[7323].w[113]" 0.95456194877624512;
-	setAttr ".wl[7323].w[119]" 0.39542440659462835;
+	setAttr ".wl[7323].w[113]" 0.6059000018902263;
+	setAttr ".wl[7323].w[119]" 0.3940999981097737;
 	setAttr -s 2 ".wl[7324].w";
-	setAttr ".wl[7324].w[113]" 0.74666905403137207;
+	setAttr ".wl[7324].w[113]" 0.50953851816613827;
 	setAttr ".wl[7324].w[119]" 0.49046148183386179;
 	setAttr -s 2 ".wl[7325].w";
-	setAttr ".wl[7325].w[113]" 0.87974768877029419;
+	setAttr ".wl[7325].w[113]" 0.70157486069644881;
 	setAttr ".wl[7325].w[119]" 0.2984251393035513;
 	setAttr -s 2 ".wl[7326].w";
-	setAttr ".wl[7326].w[113]" 0.74405169486999512;
+	setAttr ".wl[7326].w[113]" 0.63089644189777017;
 	setAttr ".wl[7326].w[119]" 0.36910355810222983;
 	setAttr -s 2 ".wl[7327].w";
-	setAttr ".wl[7327].w[113]" 0.99726265668869019;
-	setAttr ".wl[7327].w[119]" 0.01382219884544611;
+	setAttr ".wl[7327].w[113]" 0.9607842969681214;
+	setAttr ".wl[7327].w[119]" 0.039215703031878539;
 	setAttr ".wl[7328].w[113]"  1;
 	setAttr -s 2 ".wl[7329].w";
-	setAttr ".wl[7329].w[113]" 0.99100786447525024;
-	setAttr ".wl[7329].w[119]" 0.021439610049128532;
+	setAttr ".wl[7329].w[113]" 0.92406319218387556;
+	setAttr ".wl[7329].w[119]" 0.075936807816124469;
 	setAttr ".wl[7330].w[113]"  1;
 	setAttr ".wl[7331].w[113]"  1;
 	setAttr -s 2 ".wl[7332].w";
-	setAttr ".wl[7332].w[113]" 0.5538560152053833;
-	setAttr ".wl[7332].w[119]" 0.49937847256660461;
+	setAttr ".wl[7332].w[113]" 0.50178691471250669;
+	setAttr ".wl[7332].w[119]" 0.4982130852874932;
 	setAttr -s 2 ".wl[7333].w";
-	setAttr ".wl[7333].w[113]" 0.6857527494430542;
-	setAttr ".wl[7333].w[119]" 0.66056990623474121;
+	setAttr ".wl[7333].w[113]" 0.4911804892349792;
+	setAttr ".wl[7333].w[119]" 0.50881951076502085;
 	setAttr -s 2 ".wl[7334].w";
-	setAttr ".wl[7334].w[113]" 0.7401764988899231;
-	setAttr ".wl[7334].w[119]" 0.80437040328979492;
+	setAttr ".wl[7334].w[113]" 0.4544414806556894;
+	setAttr ".wl[7334].w[119]" 0.54555851934431066;
 	setAttr ".wl[7335].w[113]"  1;
 	setAttr -s 2 ".wl[7336].w";
-	setAttr ".wl[7336].w[113]" 0.99628955125808716;
-	setAttr ".wl[7336].w[119]" 0.067590847611427307;
+	setAttr ".wl[7336].w[113]" 0.9245206736202608;
+	setAttr ".wl[7336].w[119]" 0.075479326379739239;
 	setAttr -s 2 ".wl[7337].w";
-	setAttr ".wl[7337].w[113]" 0.99271982908248901;
-	setAttr ".wl[7337].w[119]" 0.47207915782928467;
+	setAttr ".wl[7337].w[113]" 0.60523094555331813;
+	setAttr ".wl[7337].w[119]" 0.39476905444668192;
 	setAttr -s 2 ".wl[7338].w";
-	setAttr ".wl[7338].w[113]" 0.86886775493621826;
-	setAttr ".wl[7338].w[119]" 0.80592125654220581;
+	setAttr ".wl[7338].w[113]" 0.4384927930907222;
+	setAttr ".wl[7338].w[119]" 0.5615072069092778;
 	setAttr -s 2 ".wl[7339].w";
-	setAttr ".wl[7339].w[113]" 0.94470185041427612;
-	setAttr ".wl[7339].w[119]" 0.77547764778137207;
+	setAttr ".wl[7339].w[113]" 0.42109966391294879;
+	setAttr ".wl[7339].w[119]" 0.57890033608705127;
 	setAttr -s 2 ".wl[7340].w";
-	setAttr ".wl[7340].w[113]" 0.97414296865463257;
-	setAttr ".wl[7340].w[119]" 0.05377926497119738;
+	setAttr ".wl[7340].w[113]" 0.95433112150088328;
+	setAttr ".wl[7340].w[119]" 0.045668878499116647;
 	setAttr -s 2 ".wl[7341].w";
 	setAttr ".wl[7341].w[48]" 0.98859496604033736;
 	setAttr ".wl[7341].w[113]" 0.011405033959662646;
@@ -26536,7 +26537,7 @@ createNode skinCluster -n "skinCluster53";
 	setAttr -s 2 ".wl[7345].w";
 	setAttr ".wl[7345].w[48]" 0.6059922343425912;
 	setAttr ".wl[7345].w[113]" 0.39400776565740875;
-	setAttr ".wl[7346].w[113]"  1;
+	setAttr ".wl[7346].w[113]"  0.99999999999999989;
 	setAttr -s 2 ".wl[7347].w";
 	setAttr ".wl[7347].w[48]" 0.75987901334669516;
 	setAttr ".wl[7347].w[113]" 0.24012098665330484;
@@ -26547,8 +26548,8 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7349].w[48]" 0.90654105909590077;
 	setAttr ".wl[7349].w[113]" 0.093458940904099203;
 	setAttr -s 2 ".wl[7350].w";
-	setAttr ".wl[7350].w[48]" 0.75301785626202111;
-	setAttr ".wl[7350].w[113]" 0.2469821437379788;
+	setAttr ".wl[7350].w[48]" 0.71840123804755895;
+	setAttr ".wl[7350].w[113]" 0.28159876195244099;
 	setAttr -s 2 ".wl[7351].w";
 	setAttr ".wl[7351].w[48]" 0.75802852318385505;
 	setAttr ".wl[7351].w[113]" 0.241971476816145;
@@ -26559,43 +26560,43 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7353].w[48]" 0.93513312324693976;
 	setAttr ".wl[7353].w[113]" 0.064866876753060285;
 	setAttr -s 2 ".wl[7354].w";
-	setAttr ".wl[7354].w[48]" 0.705619142964938;
-	setAttr ".wl[7354].w[113]" 0.38615298271179199;
+	setAttr ".wl[7354].w[48]" 0.68216403701244221;
+	setAttr ".wl[7354].w[113]" 0.31783596298755784;
 	setAttr -s 2 ".wl[7355].w";
-	setAttr ".wl[7355].w[113]" 0.81990295648574829;
-	setAttr ".wl[7355].w[119]" 0.57911878824234009;
+	setAttr ".wl[7355].w[113]" 0.57154534645441568;
+	setAttr ".wl[7355].w[119]" 0.42845465354558437;
 	setAttr -s 2 ".wl[7356].w";
-	setAttr ".wl[7356].w[113]" 0.82807964086532593;
-	setAttr ".wl[7356].w[119]" 0.47534587979316711;
+	setAttr ".wl[7356].w[113]" 0.57985197634431873;
+	setAttr ".wl[7356].w[119]" 0.42014802365568138;
 	setAttr -s 2 ".wl[7357].w";
-	setAttr ".wl[7357].w[113]" 0.92837232351303101;
-	setAttr ".wl[7357].w[119]" 0.44773557782173157;
+	setAttr ".wl[7357].w[113]" 0.56912425177867931;
+	setAttr ".wl[7357].w[119]" 0.43087574822132074;
 	setAttr -s 2 ".wl[7358].w";
-	setAttr ".wl[7358].w[113]" 0.98748195171356201;
-	setAttr ".wl[7358].w[119]" 0.67973834276199341;
+	setAttr ".wl[7358].w[113]" 0.50039697867009603;
+	setAttr ".wl[7358].w[119]" 0.49960302132990392;
 	setAttr -s 2 ".wl[7359].w";
-	setAttr ".wl[7359].w[113]" 0.93481111526489258;
+	setAttr ".wl[7359].w[113]" 0.7566898508925104;
 	setAttr ".wl[7359].w[119]" 0.24331014910748966;
-	setAttr ".wl[7360].w[113]"  1;
+	setAttr ".wl[7360].w[113]"  0.99999999999999989;
 	setAttr -s 2 ".wl[7361].w";
 	setAttr ".wl[7361].w[48]" 0.55420519122739853;
-	setAttr ".wl[7361].w[113]" 0.74827075004577637;
+	setAttr ".wl[7361].w[113]" 0.44579480877260141;
 	setAttr ".wl[7362].w[113]"  1;
 	setAttr -s 2 ".wl[7363].w";
-	setAttr ".wl[7363].w[113]" 0.96320754289627075;
-	setAttr ".wl[7363].w[119]" 0.038490932985684498;
+	setAttr ".wl[7363].w[113]" 0.96150906706233008;
+	setAttr ".wl[7363].w[119]" 0.03849093293766994;
 	setAttr -s 2 ".wl[7364].w";
-	setAttr ".wl[7364].w[113]" 0.92564171552658081;
-	setAttr ".wl[7364].w[119]" 0.43678238987922668;
+	setAttr ".wl[7364].w[113]" 0.65652344474053015;
+	setAttr ".wl[7364].w[119]" 0.34347655525946991;
 	setAttr -s 2 ".wl[7365].w";
-	setAttr ".wl[7365].w[113]" 0.99282902479171753;
+	setAttr ".wl[7365].w[113]" 0.89228638403757177;
 	setAttr ".wl[7365].w[119]" 0.10771361596242822;
 	setAttr -s 2 ".wl[7366].w";
 	setAttr ".wl[7366].w[48]" 0.33340951709175104;
-	setAttr ".wl[7366].w[113]" 0.90035778284072876;
+	setAttr ".wl[7366].w[113]" 0.66659048290824896;
 	setAttr ".wl[7367].w[113]"  1;
 	setAttr -s 2 ".wl[7368].w";
-	setAttr ".wl[7368].w[113]" 0.98478579521179199;
+	setAttr ".wl[7368].w[113]" 0.54459576710619984;
 	setAttr ".wl[7368].w[119]" 0.45540423289380022;
 	setAttr -s 2 ".wl[7369].w";
 	setAttr ".wl[7369].w[113]" 0.41684808029672965;
@@ -26608,67 +26609,67 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7371].w[119]" 0.37651470694628641;
 	setAttr -s 2 ".wl[7372].w";
 	setAttr ".wl[7372].w[113]" 0.71590999013557133;
-	setAttr ".wl[7372].w[119]" 0.46864840388298035;
+	setAttr ".wl[7372].w[119]" 0.28409000986442856;
 	setAttr -s 2 ".wl[7373].w";
-	setAttr ".wl[7373].w[113]" 0.46583232283592224;
-	setAttr ".wl[7373].w[119]" 0.79582387208938599;
+	setAttr ".wl[7373].w[113]" 0.40037976055242269;
+	setAttr ".wl[7373].w[119]" 0.59962023944757736;
 	setAttr -s 2 ".wl[7374].w";
-	setAttr ".wl[7374].w[113]" 0.66087782382965088;
-	setAttr ".wl[7374].w[119]" 0.89057362079620361;
+	setAttr ".wl[7374].w[113]" 0.26835522948108881;
+	setAttr ".wl[7374].w[119]" 0.73164477051891119;
 	setAttr -s 2 ".wl[7375].w";
-	setAttr ".wl[7375].w[113]" 0.63320624828338623;
-	setAttr ".wl[7375].w[119]" 0.96382588148117065;
+	setAttr ".wl[7375].w[113]" 0.13968225162516401;
+	setAttr ".wl[7375].w[119]" 0.86031774837483599;
 	setAttr -s 2 ".wl[7376].w";
-	setAttr ".wl[7376].w[113]" 0.78859591484069824;
-	setAttr ".wl[7376].w[119]" 0.36948412656784058;
+	setAttr ".wl[7376].w[113]" 0.68285087210695017;
+	setAttr ".wl[7376].w[119]" 0.31714912789304978;
 	setAttr -s 2 ".wl[7377].w";
-	setAttr ".wl[7377].w[113]" 0.78731822967529297;
-	setAttr ".wl[7377].w[119]" 0.70047837495803833;
+	setAttr ".wl[7377].w[113]" 0.5126375297758976;
+	setAttr ".wl[7377].w[119]" 0.4873624702241024;
 	setAttr -s 2 ".wl[7378].w";
-	setAttr ".wl[7378].w[113]" 0.36376899480819702;
-	setAttr ".wl[7378].w[119]" 0.91661185026168823;
+	setAttr ".wl[7378].w[113]" 0.32621234489799866;
+	setAttr ".wl[7378].w[119]" 0.67378765510200134;
 	setAttr -s 2 ".wl[7379].w";
 	setAttr ".wl[7379].w[113]" 0.18602300579780726;
-	setAttr ".wl[7379].w[119]" 0.92284983396530151;
+	setAttr ".wl[7379].w[119]" 0.81397699420219272;
 	setAttr -s 2 ".wl[7380].w";
-	setAttr ".wl[7380].w[113]" 0.4903998076915741;
-	setAttr ".wl[7380].w[119]" 0.93706095218658447;
+	setAttr ".wl[7380].w[113]" 0.1414593557407578;
+	setAttr ".wl[7380].w[119]" 0.85854064425924226;
 	setAttr -s 2 ".wl[7381].w";
-	setAttr ".wl[7381].w[113]" 0.99428117275238037;
-	setAttr ".wl[7381].w[119]" 0.023777123540639877;
+	setAttr ".wl[7381].w[113]" 0.95864266512945751;
+	setAttr ".wl[7381].w[119]" 0.041357334870542481;
 	setAttr -s 2 ".wl[7382].w";
-	setAttr ".wl[7382].w[113]" 0.97450029850006104;
-	setAttr ".wl[7382].w[119]" 0.11483382433652878;
+	setAttr ".wl[7382].w[113]" 0.8832684233810344;
+	setAttr ".wl[7382].w[119]" 0.11673157661896554;
 	setAttr -s 2 ".wl[7383].w";
-	setAttr ".wl[7383].w[113]" 0.74483829736709595;
-	setAttr ".wl[7383].w[119]" 0.73987710475921631;
+	setAttr ".wl[7383].w[113]" 0.45992906835696362;
+	setAttr ".wl[7383].w[119]" 0.54007093164303643;
 	setAttr -s 2 ".wl[7384].w";
 	setAttr ".wl[7384].w[113]" 0.47403492749349602;
 	setAttr ".wl[7384].w[119]" 0.52596507250650404;
 	setAttr -s 2 ".wl[7385].w";
-	setAttr ".wl[7385].w[113]" 0.55635851621627808;
-	setAttr ".wl[7385].w[119]" 0.86815494298934937;
+	setAttr ".wl[7385].w[113]" 0.3143813595372475;
+	setAttr ".wl[7385].w[119]" 0.68561864046275245;
 	setAttr -s 2 ".wl[7386].w";
-	setAttr ".wl[7386].w[113]" 0.71200454235076904;
-	setAttr ".wl[7386].w[119]" 0.86684185266494751;
+	setAttr ".wl[7386].w[113]" 0.29372539481692378;
+	setAttr ".wl[7386].w[119]" 0.70627460518307617;
 	setAttr -s 2 ".wl[7387].w";
-	setAttr ".wl[7387].w[113]" 0.93831491470336914;
+	setAttr ".wl[7387].w[113]" 0.63470774152609666;
 	setAttr ".wl[7387].w[119]" 0.3652922584739034;
 	setAttr -s 2 ".wl[7388].w";
 	setAttr ".wl[7388].w[113]" 0.45307999869178905;
 	setAttr ".wl[7388].w[119]" 0.54692000130821083;
 	setAttr -s 2 ".wl[7389].w";
-	setAttr ".wl[7389].w[113]" 0.75666671991348267;
+	setAttr ".wl[7389].w[113]" 0.6762008028049562;
 	setAttr ".wl[7389].w[119]" 0.32379919719504385;
 	setAttr -s 2 ".wl[7390].w";
-	setAttr ".wl[7390].w[113]" 0.7129586935043335;
-	setAttr ".wl[7390].w[119]" 0.91291207075119019;
+	setAttr ".wl[7390].w[113]" 0.42943770393207481;
+	setAttr ".wl[7390].w[119]" 0.57056229606792519;
 	setAttr -s 2 ".wl[7391].w";
-	setAttr ".wl[7391].w[113]" 0.72781217098236084;
-	setAttr ".wl[7391].w[119]" 0.77266472578048706;
+	setAttr ".wl[7391].w[113]" 0.39378485704881394;
+	setAttr ".wl[7391].w[119]" 0.60621514295118606;
 	setAttr -s 2 ".wl[7392].w";
-	setAttr ".wl[7392].w[113]" 0.99476391077041626;
-	setAttr ".wl[7392].w[119]" 0.0242295041680336;
+	setAttr ".wl[7392].w[113]" 0.95836520059689034;
+	setAttr ".wl[7392].w[119]" 0.04163479940310965;
 	setAttr -s 2 ".wl[7393].w";
 	setAttr ".wl[7393].w[113]" 0.18108436125805241;
 	setAttr ".wl[7393].w[119]" 0.81891563874194762;
@@ -26683,13 +26684,11 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7396].w[119]" 0.89933810094818878;
 	setAttr -s 2 ".wl[7397].w";
 	setAttr ".wl[7397].w[113]" 0.13603933928845025;
-	setAttr ".wl[7397].w[119]" 0.89934694766998291;
+	setAttr ".wl[7397].w[119]" 0.86396066071154975;
 	setAttr -s 2 ".wl[7398].w";
 	setAttr ".wl[7398].w[113]" 0.026609633863807308;
-	setAttr ".wl[7398].w[119]" 0.98692464828491211;
-	setAttr -s 2 ".wl[7399].w";
-	setAttr ".wl[7399].w[113]" 0.22295831143856049;
-	setAttr ".wl[7399].w[119]" 1;
+	setAttr ".wl[7398].w[119]" 0.97339036613619268;
+	setAttr ".wl[7399].w[119]"  1;
 	setAttr -s 2 ".wl[7400].w";
 	setAttr ".wl[7400].w[113]" 0.088193738337627559;
 	setAttr ".wl[7400].w[119]" 0.91180626166237244;
@@ -26704,19 +26703,19 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7403].w[119]" 0.99721231412203448;
 	setAttr -s 2 ".wl[7404].w";
 	setAttr ".wl[7404].w[113]" 0.002877967759281997;
-	setAttr ".wl[7404].w[119]" 0.99823158979415894;
+	setAttr ".wl[7404].w[119]" 0.99712203224071805;
 	setAttr -s 2 ".wl[7405].w";
 	setAttr ".wl[7405].w[113]" 0.2840658238517702;
-	setAttr ".wl[7405].w[119]" 0.80829751491546631;
+	setAttr ".wl[7405].w[119]" 0.71593417614822974;
 	setAttr -s 2 ".wl[7406].w";
 	setAttr ".wl[7406].w[113]" 0.20287469645131459;
-	setAttr ".wl[7406].w[119]" 0.84850788116455078;
+	setAttr ".wl[7406].w[119]" 0.79712530354868549;
 	setAttr -s 2 ".wl[7407].w";
-	setAttr ".wl[7407].w[113]" 0.59995502233505249;
-	setAttr ".wl[7407].w[119]" 0.9843030571937561;
+	setAttr ".wl[7407].w[113]" 0.061691257781446004;
+	setAttr ".wl[7407].w[119]" 0.93830874221855398;
 	setAttr -s 2 ".wl[7408].w";
 	setAttr ".wl[7408].w[113]" 0.19966039552424769;
-	setAttr ".wl[7408].w[119]" 0.91673022508621216;
+	setAttr ".wl[7408].w[119]" 0.80033960447575225;
 	setAttr -s 2 ".wl[7409].w";
 	setAttr ".wl[7409].w[113]" 0.26624445429094751;
 	setAttr ".wl[7409].w[119]" 0.73375554570905244;
@@ -26725,16 +26724,16 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[7410].w[119]" 0.67632411039199192;
 	setAttr -s 2 ".wl[7411].w";
 	setAttr ".wl[7411].w[113]" 0.09055813287814303;
-	setAttr ".wl[7411].w[119]" 0.94982320070266724;
+	setAttr ".wl[7411].w[119]" 0.90944186712185693;
 	setAttr -s 2 ".wl[7412].w";
-	setAttr ".wl[7412].w[113]" 0.54396647214889526;
-	setAttr ".wl[7412].w[119]" 0.99148100614547729;
+	setAttr ".wl[7412].w[113]" 0.025884726532965242;
+	setAttr ".wl[7412].w[119]" 0.97411527346703475;
 	setAttr -s 2 ".wl[7413].w";
 	setAttr ".wl[7413].w[113]" 0.33070910445301382;
-	setAttr ".wl[7413].w[119]" 0.81599152088165283;
+	setAttr ".wl[7413].w[119]" 0.66929089554698618;
 	setAttr -s 2 ".wl[7414].w";
 	setAttr ".wl[7414].w[113]" 0.035618449740403305;
-	setAttr ".wl[7414].w[119]" 0.98440057039260864;
+	setAttr ".wl[7414].w[119]" 0.96438155025959671;
 	setAttr -s 2 ".wl[7415].w";
 	setAttr ".wl[7415].w[113]" 0.33110389441074467;
 	setAttr ".wl[7415].w[119]" 0.66889610558925527;
@@ -30825,15 +30824,15 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[11420].w[113]" 0.0076878411534820109;
 	setAttr -s 2 ".wl[11421].w";
 	setAttr ".wl[11421].w[49]" 0.99915365806504386;
-	setAttr ".wl[11421].w[113]" 0.9611811637878418;
+	setAttr ".wl[11421].w[113]" 0.00084634193495611092;
 	setAttr -s 2 ".wl[11422].w[113:114]"  0.95004749298095703 0.079999998211860657;
 	setAttr -s 2 ".wl[11423].w";
-	setAttr ".wl[11423].w[113]" 0.94448709487915039;
-	setAttr ".wl[11423].w[119]" 0.23412393258609801;
+	setAttr ".wl[11423].w[113]" 0.76739475563520954;
+	setAttr ".wl[11423].w[119]" 0.23260524436479044;
 	setAttr ".wl[11424].w[113]"  0.98367422819137573;
 	setAttr -s 2 ".wl[11425].w";
 	setAttr ".wl[11425].w[113]" 0.88297545779584763;
-	setAttr ".wl[11425].w[119]" 0.051404103636741638;
+	setAttr ".wl[11425].w[119]" 0.1170245422041523;
 	setAttr ".wl[11426].w[113]"  1;
 	setAttr ".wl[11427].w[113]"  1;
 	setAttr -s 2 ".wl[11428].w";
@@ -30844,51 +30843,45 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[11429].w[113]" 0.39059235933905273;
 	setAttr -s 2 ".wl[11430].w";
 	setAttr ".wl[11430].w[48]" 0.65166695753133697;
-	setAttr ".wl[11430].w[113]" 0.60566097497940063;
+	setAttr ".wl[11430].w[113]" 0.34833304246866303;
 	setAttr -s 2 ".wl[11431].w[113:114]"  0.96872574090957642 0.2800000011920929;
 	setAttr -s 2 ".wl[11432].w";
 	setAttr ".wl[11432].w[113]" 0.50779284086889187;
 	setAttr ".wl[11432].w[119]" 0.49220715913110813;
 	setAttr ".wl[11433].w[113]"  0.96632707118988037;
 	setAttr -s 2 ".wl[11434].w";
-	setAttr ".wl[11434].w[113]" 0.96563130617141724;
-	setAttr ".wl[11434].w[119]" 0.15439942479133606;
+	setAttr ".wl[11434].w[113]" 0.53071286412657925;
+	setAttr ".wl[11434].w[119]" 0.46928713587342069;
 	setAttr -s 2 ".wl[11435].w";
-	setAttr ".wl[11435].w[113]" 0.91220188140869141;
-	setAttr ".wl[11435].w[119]" 0.026835221797227859;
-	setAttr -s 2 ".wl[11436].w";
-	setAttr ".wl[11436].w[113]" 0.99999999999999989;
-	setAttr ".wl[11436].w[119]" 0.18115362524986267;
-	setAttr -s 2 ".wl[11437].w";
-	setAttr ".wl[11437].w[113]" 0.99999999999999989;
-	setAttr ".wl[11437].w[119]" 0.4969068169593811;
+	setAttr ".wl[11435].w[113]" 0.79642838165717256;
+	setAttr ".wl[11435].w[119]" 0.20357161834282747;
+	setAttr ".wl[11436].w[113]"  0.99999999999999989;
+	setAttr ".wl[11437].w[113]"  0.99999999999999989;
 	setAttr -s 2 ".wl[11438].w";
-	setAttr ".wl[11438].w[113]" 0.87305909395217896;
-	setAttr ".wl[11438].w[119]" 0.5059870208095496;
+	setAttr ".wl[11438].w[113]" 0.50102342677468092;
+	setAttr ".wl[11438].w[119]" 0.49897657322531908;
 	setAttr -s 2 ".wl[11439].w";
-	setAttr ".wl[11439].w[113]" 0.93308895826339722;
-	setAttr ".wl[11439].w[119]" 0.062828078866004944;
+	setAttr ".wl[11439].w[113]" 0.47983897807153936;
+	setAttr ".wl[11439].w[119]" 0.52016102192846059;
 	setAttr -s 2 ".wl[11440].w";
-	setAttr ".wl[11440].w[113]" 0.98695886135101318;
+	setAttr ".wl[11440].w[113]" 0.43804353204404017;
 	setAttr ".wl[11440].w[119]" 0.56195646795595988;
-	setAttr -s 2 ".wl[11441].w";
-	setAttr ".wl[11441].w[113]" 1;
-	setAttr ".wl[11441].w[119]" 0.56668567657470703;
+	setAttr ".wl[11441].w[113]"  1;
 	setAttr -s 2 ".wl[11442].w";
-	setAttr ".wl[11442].w[113]" 0.94593560695648193;
-	setAttr ".wl[11442].w[119]" 0.66808652877807617;
+	setAttr ".wl[11442].w[113]" 0.80030369071455998;
+	setAttr ".wl[11442].w[119]" 0.19969630928544005;
 	setAttr -s 2 ".wl[11443].w";
-	setAttr ".wl[11443].w[113]" 0.5517084002494812;
+	setAttr ".wl[11443].w[113]" 0.49546308232365804;
 	setAttr ".wl[11443].w[119]" 0.50453691767634201;
 	setAttr -s 2 ".wl[11444].w";
-	setAttr ".wl[11444].w[113]" 0.46666437387466431;
+	setAttr ".wl[11444].w[113]" 0.41503902507991819;
 	setAttr ".wl[11444].w[119]" 0.58496097492008192;
 	setAttr -s 2 ".wl[11445].w";
 	setAttr ".wl[11445].w[48]" 1;
 	setAttr ".wl[11445].w[113]" 0.082331761717796326;
 	setAttr -s 2 ".wl[11446].w";
-	setAttr ".wl[11446].w[48]" 0.74406459020162441;
-	setAttr ".wl[11446].w[113]" 0.25593540979837559;
+	setAttr ".wl[11446].w[48]" 0.71488843919006573;
+	setAttr ".wl[11446].w[113]" 0.28511156080993427;
 	setAttr -s 2 ".wl[11447].w";
 	setAttr ".wl[11447].w[48]" 0.93075960561975835;
 	setAttr ".wl[11447].w[113]" 0.069240394380241613;
@@ -30904,14 +30897,12 @@ createNode skinCluster -n "skinCluster53";
 	setAttr -s 2 ".wl[11451].w";
 	setAttr ".wl[11451].w[48]" 0.76263398851418085;
 	setAttr ".wl[11451].w[113]" 0.23736601148581912;
-	setAttr -s 3 ".wl[11452].w";
+	setAttr -s 2 ".wl[11452].w";
 	setAttr ".wl[11452].w[48]" 0.74242641982688906;
-	setAttr ".wl[11452].w[113]" 0.66967463493347168;
-	setAttr ".wl[11452].w[119]" 0.085931852459907532;
-	setAttr -s 3 ".wl[11453].w";
-	setAttr ".wl[11453].w[48]" 0.75766389266591971;
-	setAttr ".wl[11453].w[113]" 0.69104969501495361;
-	setAttr ".wl[11453].w[119]" 0.14399389922618866;
+	setAttr ".wl[11452].w[113]" 0.25757358017311099;
+	setAttr -s 2 ".wl[11453].w";
+	setAttr ".wl[11453].w[48]" 0.69986747032682728;
+	setAttr ".wl[11453].w[113]" 0.30013252967317272;
 	setAttr ".wl[11454].w[113]"  0.98039567470550537;
 	setAttr ".wl[11455].w[113]"  0.99980491399765015;
 	setAttr -s 2 ".wl[11456].w[113:114]"  0.99955475330352783 0.20000000298023224;
@@ -30921,8 +30912,8 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[11458].w[119]" 0.58062058687210083;
 	setAttr ".wl[11459].w[113]"  0.98778426647186279;
 	setAttr -s 2 ".wl[11460].w";
-	setAttr ".wl[11460].w[113]" 0.94590383768081665;
-	setAttr ".wl[11460].w[119]" 0.052113234996795654;
+	setAttr ".wl[11460].w[113]" 0.5910808913438238;
+	setAttr ".wl[11460].w[119]" 0.40891910865617614;
 	setAttr -s 2 ".wl[11461].w";
 	setAttr ".wl[11461].w[113]" 0.96143818527471803;
 	setAttr ".wl[11461].w[119]" 0.038561814725281952;
@@ -30935,28 +30926,28 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[11464].w[119]" 0.62393762385060025;
 	setAttr -s 2 ".wl[11465].w";
 	setAttr ".wl[11465].w[113]" 0.46923559551371413;
-	setAttr ".wl[11465].w[119]" 0.5808948278427124;
+	setAttr ".wl[11465].w[119]" 0.53076440448628592;
 	setAttr -s 2 ".wl[11466].w";
 	setAttr ".wl[11466].w[113]" 0.68209381790254042;
-	setAttr ".wl[11466].w[119]" 0.70602315664291382;
+	setAttr ".wl[11466].w[119]" 0.31790618209745963;
 	setAttr -s 2 ".wl[11467].w";
-	setAttr ".wl[11467].w[113]" 0.87876474857330322;
-	setAttr ".wl[11467].w[119]" 0.87139177322387695;
+	setAttr ".wl[11467].w[113]" 0.71564173957416355;
+	setAttr ".wl[11467].w[119]" 0.28435826042583634;
 	setAttr -s 2 ".wl[11468].w";
-	setAttr ".wl[11468].w[113]" 0.72309917211532593;
-	setAttr ".wl[11468].w[119]" 0.88686978816986084;
+	setAttr ".wl[11468].w[113]" 0.33973674580003083;
+	setAttr ".wl[11468].w[119]" 0.66026325419996912;
 	setAttr -s 2 ".wl[11469].w";
-	setAttr ".wl[11469].w[113]" 0.64228063821792603;
-	setAttr ".wl[11469].w[119]" 0.84442871809005737;
+	setAttr ".wl[11469].w[113]" 0.20020967708565632;
+	setAttr ".wl[11469].w[119]" 0.79979032291434371;
 	setAttr -s 2 ".wl[11470].w";
-	setAttr ".wl[11470].w[113]" 0.42989835143089294;
-	setAttr ".wl[11470].w[119]" 0.96263962984085083;
+	setAttr ".wl[11470].w[113]" 0.1374088095791994;
+	setAttr ".wl[11470].w[119]" 0.86259119042080057;
 	setAttr -s 2 ".wl[11471].w";
 	setAttr ".wl[11471].w[113]" 0.62494083887974505;
-	setAttr ".wl[11471].w[119]" 0.73500984907150269;
+	setAttr ".wl[11471].w[119]" 0.37505916112025489;
 	setAttr -s 2 ".wl[11472].w";
 	setAttr ".wl[11472].w[113]" 0.42275353613531996;
-	setAttr ".wl[11472].w[119]" 0.82761508226394653;
+	setAttr ".wl[11472].w[119]" 0.57724646386468004;
 	setAttr -s 2 ".wl[11473].w";
 	setAttr ".wl[11473].w[113]" 0.24807857350012386;
 	setAttr ".wl[11473].w[119]" 0.75192142649987614;
@@ -30974,13 +30965,13 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[11477].w[119]" 0.91477161546580488;
 	setAttr -s 2 ".wl[11478].w";
 	setAttr ".wl[11478].w[113]" 0.090379637563816867;
-	setAttr ".wl[11478].w[119]" 0.94845283031463623;
+	setAttr ".wl[11478].w[119]" 0.90962036243618316;
 	setAttr -s 2 ".wl[11479].w";
-	setAttr ".wl[11479].w[113]" 0.23569200932979584;
-	setAttr ".wl[11479].w[119]" 0.95328038930892944;
+	setAttr ".wl[11479].w[113]" 0.099795975950389013;
+	setAttr ".wl[11479].w[119]" 0.90020402404961097;
 	setAttr -s 2 ".wl[11480].w";
-	setAttr ".wl[11480].w[113]" 0.19897082448005676;
-	setAttr ".wl[11480].w[119]" 0.9630618691444397;
+	setAttr ".wl[11480].w[113]" 0.071780147786831089;
+	setAttr ".wl[11480].w[119]" 0.92821985221316894;
 	setAttr -s 2 ".wl[11481].w";
 	setAttr ".wl[11481].w[113]" 0.0071159659793312378;
 	setAttr ".wl[11481].w[119]" 0.99288403402066872;
@@ -30992,7 +30983,7 @@ createNode skinCluster -n "skinCluster53";
 	setAttr ".wl[11483].w[119]" 0.92119252511008765;
 	setAttr -s 2 ".wl[11484].w";
 	setAttr ".wl[11484].w[113]" 0.055096734120516362;
-	setAttr ".wl[11484].w[119]" 0.96205008029937744;
+	setAttr ".wl[11484].w[119]" 0.94490326587948359;
 	setAttr -s 2 ".wl[11485].w";
 	setAttr ".wl[11485].w[113]" 0.015707865538842295;
 	setAttr ".wl[11485].w[119]" 0.98429213446115771;
@@ -32322,7 +32313,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "KR_PilotModel_Maya_0010RN.phl[1]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
 		;
 connectAttr "KR_PilotModel_Maya_0010RN.phl[2]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
