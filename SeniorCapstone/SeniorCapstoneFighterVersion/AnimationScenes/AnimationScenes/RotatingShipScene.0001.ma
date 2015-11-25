@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: RotatingShipScene.0001.ma
-//Last modified: Fri, Nov 20, 2015 08:12:53 AM
+//Last modified: Wed, Nov 25, 2015 01:04:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "NewFighterMaya_0002" -rfn "NewFighterMaya_0002RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion//NewFighter/NewFighterMaya.0002.ma";
@@ -9,6 +9,7 @@ file -r -ns "NewFighterMaya_0002" -dr 1 -rfn "NewFighterMaya_0002RN" -op "v=0;"
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
+requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -20,17 +21,20 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "8C7629C2-47D2-AF5C-B777-3FBBF27B4AD0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 542.10438308913695 303.11840697669754 556.29478010704361 ;
-	setAttr ".r" -type "double3" -20.138352729601944 38.200000000001445 0 ;
+	setAttr ".t" -type "double3" 428.88973573666675 306.15914707554464 486.18033153200628 ;
+	setAttr ".r" -type "double3" -24.338352729597887 37.399999999999785 -2.0018228512208681e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B91C6A13-4D03-489E-5812-84930CA16EF6";
 	setAttr -k off ".v" no;
+	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 832.49016602423444;
+	setAttr ".coi" 760.98931573583559;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 0 -18.481472658171565 -52.426618187638041 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
+	setAttr ".dr" yes;
 createNode transform -s -n "top";
 	rename -uid "AE4C6D95-4935-C450-E639-588B2F9FF547";
 	setAttr ".v" no;
@@ -82,324 +86,6 @@ createNode transform -n "RotatingGroup";
 	rename -uid "9F325E9D-4F19-833E-03E3-8CAFCD968ABE";
 	setAttr ".rp" -type "double3" 0 0 -109.69292130406484 ;
 	setAttr ".sp" -type "double3" 0 0 -109.69292130406484 ;
-createNode lightLinker -s -n "lightLinker1";
-	rename -uid "07A4B19A-485F-658C-D423-DD95D7962094";
-	setAttr -s 11 ".lnk";
-	setAttr -s 11 ".slnk";
-createNode displayLayerManager -n "layerManager";
-	rename -uid "23FB4628-4D67-804B-AE04-FA8250C26D31";
-createNode displayLayer -n "defaultLayer";
-	rename -uid "F1BEE9EA-4001-A0BA-DF4A-3ABA8560E943";
-createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "208145E5-436A-3206-8A84-52B10CE4CCDC";
-createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "BCCD234D-499E-79E1-F563-96AB92C00920";
-	setAttr ".g" yes;
-createNode reference -n "NewFighterMaya_0002RN";
-	rename -uid "D4243700-4763-DF85-D5D3-B18FA17B36B4";
-	setAttr -s 69 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"NewFighterMaya_0002RN"
-		"NewFighterMaya_0002RN" 2
-		3 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01|NewFighterMaya_0002:MISSILELAUNCHERS01Shape.instObjGroups" 
-		"NewFighterMaya_0002:ProceduralStuffComboSG.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:Canopy|NewFighterMaya_0002:CanopyShape.instObjGroups" 
-		"NewFighterMaya_0002:phongE2SG.dagSetMembers" "-na"
-		"NewFighterMaya_0002RN" 123
-		0 "|NewFighterMaya_0002:Cockpit" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:FORWARDGUNS2" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:MISSILELAUNCHERS01" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:FORWARDGUNS1" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:EXTERNALFUELTANKS1" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:FighterChassis" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:Canopy" "|RotatingGroup" "-s -r "
-		0 "|NewFighterMaya_0002:AIRINTAKESBONUS1" "|RotatingGroup" "-s -r "
-		2 "|NewFighterMaya_0002:Switchoutables_Textured" "visibility" " 0"
-		2 "|NewFighterMaya_0002:Thrusters" "visibility" " 0"
-		2 "|RotatingGroup|NewFighterMaya_0002:Cockpit" "visibility" " 1"
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "visibility" " -av 1"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translateX" " -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translateY" " -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translateZ" " -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "visibility" " -av 0"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translate" " -type \"double3\" 0 116.30742373179976 -1.8948884577728492e-005"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translateX" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translateY" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translateZ" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "visibility" " -av 1"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translateX" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translateY" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translateZ" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "visibility" " -av 1"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translateX" " -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translateY" " -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translateZ" " -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "visibility" 
-		" -av 1"
-		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translateX" 
-		" -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translateY" 
-		" -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translateZ" 
-		" -av"
-		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "visibility" " -av 1"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translate" " -type \"double3\" 0 0 0"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translateX" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translateY" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translateZ" " -av"
-		
-		2 "|RotatingGroup|NewFighterMaya_0002:FighterChassis" "visibility" " 1"
-		2 "|RotatingGroup|NewFighterMaya_0002:Canopy" "visibility" " 1"
-		2 "|NewFighterMaya_0002:LandingGear" "visibility" " 0"
-		2 "|NewFighterMaya_0002:LandingGear1" "visibility" " 0"
-		2 "|NewFighterMaya_0002:LandingGear2" "visibility" " 0"
-		3 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1|NewFighterMaya_0002:REINFORCEMENTSTRUTS1Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1|NewFighterMaya_0002:AIRINTAKESBONUS1Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1|NewFighterMaya_0002:FORWARDGUNS1Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1|NewFighterMaya_0002:EXTERNALFUELTANKS1Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2|NewFighterMaya_0002:FORWARDGUNS2Shape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:Cockpit|NewFighterMaya_0002:CockpitShape.instObjGroups" 
-		"NewFighterMaya_0002:phongE3SG.dagSetMembers" "-na"
-		3 "|RotatingGroup|NewFighterMaya_0002:FighterChassis|NewFighterMaya_0002:FighterChassisShape.instObjGroups" 
-		"NewFighterMaya_0002:phongE1SG.dagSetMembers" "-na"
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:Cockpit|NewFighterMaya_0002:CockpitShape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[1]" "NewFighterMaya_0002:phongE3SG.dsm"
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.visibility" 
-		"NewFighterMaya_0002RN.placeHolderList[2]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.translateX" 
-		"NewFighterMaya_0002RN.placeHolderList[3]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.translateY" 
-		"NewFighterMaya_0002RN.placeHolderList[4]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.translateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[5]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.rotateX" 
-		"NewFighterMaya_0002RN.placeHolderList[6]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.rotateY" 
-		"NewFighterMaya_0002RN.placeHolderList[7]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.rotateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[8]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.scaleX" 
-		"NewFighterMaya_0002RN.placeHolderList[9]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.scaleY" 
-		"NewFighterMaya_0002RN.placeHolderList[10]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.scaleZ" 
-		"NewFighterMaya_0002RN.placeHolderList[11]" ""
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2|NewFighterMaya_0002:FORWARDGUNS2Shape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[12]" ":initialShadingGroup.dsm"
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.visibility" 
-		"NewFighterMaya_0002RN.placeHolderList[13]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.translateX" 
-		"NewFighterMaya_0002RN.placeHolderList[14]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.translateY" 
-		"NewFighterMaya_0002RN.placeHolderList[15]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.translateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[16]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.rotateX" 
-		"NewFighterMaya_0002RN.placeHolderList[17]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.rotateY" 
-		"NewFighterMaya_0002RN.placeHolderList[18]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.rotateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[19]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.scaleX" 
-		"NewFighterMaya_0002RN.placeHolderList[20]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.scaleY" 
-		"NewFighterMaya_0002RN.placeHolderList[21]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.scaleZ" 
-		"NewFighterMaya_0002RN.placeHolderList[22]" ""
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01|NewFighterMaya_0002:MISSILELAUNCHERS01Shape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[23]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.visibility" 
-		"NewFighterMaya_0002RN.placeHolderList[24]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.translateX" 
-		"NewFighterMaya_0002RN.placeHolderList[25]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.translateY" 
-		"NewFighterMaya_0002RN.placeHolderList[26]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.translateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[27]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.rotateX" 
-		"NewFighterMaya_0002RN.placeHolderList[28]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.rotateY" 
-		"NewFighterMaya_0002RN.placeHolderList[29]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.rotateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[30]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.scaleX" 
-		"NewFighterMaya_0002RN.placeHolderList[31]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.scaleY" 
-		"NewFighterMaya_0002RN.placeHolderList[32]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.scaleZ" 
-		"NewFighterMaya_0002RN.placeHolderList[33]" ""
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1|NewFighterMaya_0002:FORWARDGUNS1Shape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[34]" ":initialShadingGroup.dsm"
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.visibility" 
-		"NewFighterMaya_0002RN.placeHolderList[35]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.translateX" 
-		"NewFighterMaya_0002RN.placeHolderList[36]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.translateY" 
-		"NewFighterMaya_0002RN.placeHolderList[37]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.translateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[38]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.rotateX" 
-		"NewFighterMaya_0002RN.placeHolderList[39]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.rotateY" 
-		"NewFighterMaya_0002RN.placeHolderList[40]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.rotateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[41]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.scaleX" 
-		"NewFighterMaya_0002RN.placeHolderList[42]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.scaleY" 
-		"NewFighterMaya_0002RN.placeHolderList[43]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.scaleZ" 
-		"NewFighterMaya_0002RN.placeHolderList[44]" ""
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1|NewFighterMaya_0002:REINFORCEMENTSTRUTS1Shape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[45]" ":initialShadingGroup.dsm"
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.visibility" 
-		"NewFighterMaya_0002RN.placeHolderList[46]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.translateX" 
-		"NewFighterMaya_0002RN.placeHolderList[47]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.translateY" 
-		"NewFighterMaya_0002RN.placeHolderList[48]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.translateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[49]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.rotateX" 
-		"NewFighterMaya_0002RN.placeHolderList[50]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.rotateY" 
-		"NewFighterMaya_0002RN.placeHolderList[51]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.rotateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[52]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.scaleX" 
-		"NewFighterMaya_0002RN.placeHolderList[53]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.scaleY" 
-		"NewFighterMaya_0002RN.placeHolderList[54]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.scaleZ" 
-		"NewFighterMaya_0002RN.placeHolderList[55]" ""
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1|NewFighterMaya_0002:EXTERNALFUELTANKS1Shape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[56]" ":initialShadingGroup.dsm"
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FighterChassis|NewFighterMaya_0002:FighterChassisShape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[57]" "NewFighterMaya_0002:phongE1SG.dsm"
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:Canopy|NewFighterMaya_0002:CanopyShape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[58]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.visibility" 
-		"NewFighterMaya_0002RN.placeHolderList[59]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.translateX" 
-		"NewFighterMaya_0002RN.placeHolderList[60]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.translateY" 
-		"NewFighterMaya_0002RN.placeHolderList[61]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.translateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[62]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.rotateX" 
-		"NewFighterMaya_0002RN.placeHolderList[63]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.rotateY" 
-		"NewFighterMaya_0002RN.placeHolderList[64]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.rotateZ" 
-		"NewFighterMaya_0002RN.placeHolderList[65]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.scaleX" 
-		"NewFighterMaya_0002RN.placeHolderList[66]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.scaleY" 
-		"NewFighterMaya_0002RN.placeHolderList[67]" ""
-		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.scaleZ" 
-		"NewFighterMaya_0002RN.placeHolderList[68]" ""
-		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1|NewFighterMaya_0002:AIRINTAKESBONUS1Shape.instObjGroups" 
-		"NewFighterMaya_0002RN.placeHolderList[69]" ":initialShadingGroup.dsm";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "907F4D38-427A-03CC-46A5-2B816F125FC3";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
@@ -659,6 +345,351 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[80].type" -type "string" "scalar";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "E959CA1E-4E7C-6D8D-A867-8681574D3548";
+createNode lightLinker -s -n "lightLinker1";
+	rename -uid "80F867A5-4C9C-09FE-256E-EF819F0B7303";
+	setAttr -s 11 ".lnk";
+	setAttr -s 11 ".slnk";
+createNode displayLayerManager -n "layerManager";
+	rename -uid "7292E49A-49D5-884A-4A38-2282F128928B";
+createNode displayLayer -n "defaultLayer";
+	rename -uid "F1BEE9EA-4001-A0BA-DF4A-3ABA8560E943";
+createNode renderLayerManager -n "renderLayerManager";
+	rename -uid "3DCD33D5-4CEA-F8E9-C90F-8CB30517264B";
+createNode renderLayer -n "defaultRenderLayer";
+	rename -uid "BCCD234D-499E-79E1-F563-96AB92C00920";
+	setAttr ".g" yes;
+createNode reference -n "NewFighterMaya_0002RN";
+	rename -uid "D4243700-4763-DF85-D5D3-B18FA17B36B4";
+	setAttr -s 78 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"NewFighterMaya_0002RN"
+		"NewFighterMaya_0002RN" 2
+		3 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01|NewFighterMaya_0002:MISSILELAUNCHERS01Shape.instObjGroups" 
+		"NewFighterMaya_0002:ProceduralStuffComboSG.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:Canopy|NewFighterMaya_0002:CanopyShape.instObjGroups" 
+		"NewFighterMaya_0002:phongE2SG.dagSetMembers" "-na"
+		"NewFighterMaya_0002RN" 132
+		0 "|NewFighterMaya_0002:Cockpit" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:FORWARDGUNS2" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:MISSILELAUNCHERS01" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:FORWARDGUNS1" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:EXTERNALFUELTANKS1" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:FighterChassis" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:Canopy" "|RotatingGroup" "-s -r "
+		0 "|NewFighterMaya_0002:AIRINTAKESBONUS1" "|RotatingGroup" "-s -r "
+		2 "|NewFighterMaya_0002:Switchoutables_Textured" "visibility" " 0"
+		2 "|NewFighterMaya_0002:Thrusters" "visibility" " 0"
+		2 "|RotatingGroup|NewFighterMaya_0002:Cockpit" "visibility" " 1"
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "visibility" " -av 1"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translateX" " -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translateY" " -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2" "translateZ" " -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "visibility" " -av 0"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translate" " -type \"double3\" 0 116.30742373179976 -1.8948884577728492e-005"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translateX" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translateY" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1" "translateZ" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "visibility" " -av 1"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translateX" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translateY" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01" "translateZ" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "visibility" " -av 1"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translateX" " -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translateY" " -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1" "translateZ" " -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "visibility" 
+		" -av 1"
+		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translateX" 
+		" -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translateY" 
+		" -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "translateZ" 
+		" -av"
+		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "visibility" " -av 1"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translateX" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translateY" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1" "translateZ" " -av"
+		
+		2 "|RotatingGroup|NewFighterMaya_0002:FighterChassis" "visibility" " 1"
+		2 "|RotatingGroup|NewFighterMaya_0002:Canopy" "visibility" " 0"
+		2 "|NewFighterMaya_0002:LandingGear" "visibility" " 0"
+		2 "|NewFighterMaya_0002:LandingGear1" "visibility" " 0"
+		2 "|NewFighterMaya_0002:LandingGear2" "visibility" " 0"
+		3 "|RotatingGroup|NewFighterMaya_0002:Cockpit|NewFighterMaya_0002:CockpitShape.instObjGroups" 
+		"NewFighterMaya_0002:phongE3SG.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1|NewFighterMaya_0002:FORWARDGUNS1Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2|NewFighterMaya_0002:FORWARDGUNS2Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:FighterChassis|NewFighterMaya_0002:FighterChassisShape.instObjGroups" 
+		"NewFighterMaya_0002:phongE1SG.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1|NewFighterMaya_0002:REINFORCEMENTSTRUTS1Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1|NewFighterMaya_0002:EXTERNALFUELTANKS1Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1|NewFighterMaya_0002:AIRINTAKESBONUS1Shape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:Cockpit|NewFighterMaya_0002:CockpitShape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[1]" "NewFighterMaya_0002:phongE3SG.dsm"
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.visibility" 
+		"NewFighterMaya_0002RN.placeHolderList[2]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.translateX" 
+		"NewFighterMaya_0002RN.placeHolderList[3]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.translateY" 
+		"NewFighterMaya_0002RN.placeHolderList[4]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.translateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[5]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.rotateX" 
+		"NewFighterMaya_0002RN.placeHolderList[6]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.rotateY" 
+		"NewFighterMaya_0002RN.placeHolderList[7]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.rotateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[8]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.scaleX" 
+		"NewFighterMaya_0002RN.placeHolderList[9]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.scaleY" 
+		"NewFighterMaya_0002RN.placeHolderList[10]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2.scaleZ" 
+		"NewFighterMaya_0002RN.placeHolderList[11]" ""
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS2|NewFighterMaya_0002:FORWARDGUNS2Shape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[12]" ":initialShadingGroup.dsm"
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.visibility" 
+		"NewFighterMaya_0002RN.placeHolderList[13]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.translateX" 
+		"NewFighterMaya_0002RN.placeHolderList[14]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.translateY" 
+		"NewFighterMaya_0002RN.placeHolderList[15]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.translateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[16]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.rotateX" 
+		"NewFighterMaya_0002RN.placeHolderList[17]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.rotateY" 
+		"NewFighterMaya_0002RN.placeHolderList[18]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.rotateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[19]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.scaleX" 
+		"NewFighterMaya_0002RN.placeHolderList[20]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.scaleY" 
+		"NewFighterMaya_0002RN.placeHolderList[21]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01.scaleZ" 
+		"NewFighterMaya_0002RN.placeHolderList[22]" ""
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:MISSILELAUNCHERS01|NewFighterMaya_0002:MISSILELAUNCHERS01Shape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[23]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.visibility" 
+		"NewFighterMaya_0002RN.placeHolderList[24]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.translateX" 
+		"NewFighterMaya_0002RN.placeHolderList[25]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.translateY" 
+		"NewFighterMaya_0002RN.placeHolderList[26]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.translateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[27]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.rotateX" 
+		"NewFighterMaya_0002RN.placeHolderList[28]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.rotateY" 
+		"NewFighterMaya_0002RN.placeHolderList[29]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.rotateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[30]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.scaleX" 
+		"NewFighterMaya_0002RN.placeHolderList[31]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.scaleY" 
+		"NewFighterMaya_0002RN.placeHolderList[32]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1.scaleZ" 
+		"NewFighterMaya_0002RN.placeHolderList[33]" ""
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FORWARDGUNS1|NewFighterMaya_0002:FORWARDGUNS1Shape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[34]" ":initialShadingGroup.dsm"
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.visibility" 
+		"NewFighterMaya_0002RN.placeHolderList[35]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.translateX" 
+		"NewFighterMaya_0002RN.placeHolderList[36]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.translateY" 
+		"NewFighterMaya_0002RN.placeHolderList[37]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.translateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[38]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.rotateX" 
+		"NewFighterMaya_0002RN.placeHolderList[39]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.rotateY" 
+		"NewFighterMaya_0002RN.placeHolderList[40]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.rotateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[41]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.scaleX" 
+		"NewFighterMaya_0002RN.placeHolderList[42]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.scaleY" 
+		"NewFighterMaya_0002RN.placeHolderList[43]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1.scaleZ" 
+		"NewFighterMaya_0002RN.placeHolderList[44]" ""
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:REINFORCEMENTSTRUTS1|NewFighterMaya_0002:REINFORCEMENTSTRUTS1Shape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[45]" ":initialShadingGroup.dsm"
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.visibility" 
+		"NewFighterMaya_0002RN.placeHolderList[46]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.translateX" 
+		"NewFighterMaya_0002RN.placeHolderList[47]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.translateY" 
+		"NewFighterMaya_0002RN.placeHolderList[48]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.translateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[49]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.rotateX" 
+		"NewFighterMaya_0002RN.placeHolderList[50]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.rotateY" 
+		"NewFighterMaya_0002RN.placeHolderList[51]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.rotateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[52]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.scaleX" 
+		"NewFighterMaya_0002RN.placeHolderList[53]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.scaleY" 
+		"NewFighterMaya_0002RN.placeHolderList[54]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1.scaleZ" 
+		"NewFighterMaya_0002RN.placeHolderList[55]" ""
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:EXTERNALFUELTANKS1|NewFighterMaya_0002:EXTERNALFUELTANKS1Shape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[56]" ":initialShadingGroup.dsm"
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:FighterChassis|NewFighterMaya_0002:FighterChassisShape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[57]" "NewFighterMaya_0002:phongE1SG.dsm"
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:Canopy|NewFighterMaya_0002:CanopyShape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[58]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.visibility" 
+		"NewFighterMaya_0002RN.placeHolderList[59]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.translateX" 
+		"NewFighterMaya_0002RN.placeHolderList[60]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.translateY" 
+		"NewFighterMaya_0002RN.placeHolderList[61]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.translateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[62]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.rotateX" 
+		"NewFighterMaya_0002RN.placeHolderList[63]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.rotateY" 
+		"NewFighterMaya_0002RN.placeHolderList[64]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.rotateZ" 
+		"NewFighterMaya_0002RN.placeHolderList[65]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.scaleX" 
+		"NewFighterMaya_0002RN.placeHolderList[66]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.scaleY" 
+		"NewFighterMaya_0002RN.placeHolderList[67]" ""
+		5 4 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1.scaleZ" 
+		"NewFighterMaya_0002RN.placeHolderList[68]" ""
+		5 3 "NewFighterMaya_0002RN" "|RotatingGroup|NewFighterMaya_0002:AIRINTAKESBONUS1|NewFighterMaya_0002:AIRINTAKESBONUS1Shape.instObjGroups" 
+		"NewFighterMaya_0002RN.placeHolderList[69]" ":initialShadingGroup.dsm"
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:phongE_canopy.message" 
+		"NewFighterMaya_0002RN.placeHolderList[70]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:phongE2SG.message" 
+		"NewFighterMaya_0002RN.placeHolderList[71]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:file_FighterCanopy_specular1.message" 
+		"NewFighterMaya_0002RN.placeHolderList[72]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:file_FighterCanopy_normal1.message" 
+		"NewFighterMaya_0002RN.placeHolderList[73]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:file_FighterCanopy_color1.message" 
+		"NewFighterMaya_0002RN.placeHolderList[74]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:place2dTexture_FighterCanopy.message" 
+		"NewFighterMaya_0002RN.placeHolderList[75]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:bump2d_FighterChassis1.message" 
+		"NewFighterMaya_0002RN.placeHolderList[76]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:phongE_Glass.message" 
+		"NewFighterMaya_0002RN.placeHolderList[77]" ""
+		5 3 "NewFighterMaya_0002RN" "NewFighterMaya_0002:phongE4SG.message" 
+		"NewFighterMaya_0002RN.placeHolderList[78]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 createNode rampShader -n "rampShader1";
 	rename -uid "70242997-45E8-5FDF-D041-1297DB91B093";
 	setAttr ".dc" 1;
@@ -733,12 +764,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
 		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n                -hulls 0\n                -grid 0\n                -imagePlane 0\n                -joints 1\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 1\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 631\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 1\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 722\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 631\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 1\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 722\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -776,70 +807,18 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 42 100 -ps 2 58 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 34 100 -ps 2 66 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 631\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 631\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 722\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 0\\n    -imagePlane 0\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 722\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "AF1D1815-435E-89C1-E7C3-9CBB7E11D4FF";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 400 -ast 1 -aet 400 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 250 -ast 1 -aet 400 ";
 	setAttr ".st" 6;
-createNode animCurveTL -n "RotatingGroup_translateX";
-	rename -uid "4FCD84CE-4D8C-E841-928A-98838AFF8EBE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 96 0;
-createNode animCurveTL -n "RotatingGroup_translateY";
-	rename -uid "5C92C4A4-46B1-4719-89F2-AD8FBFA9FBB2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 96 0;
-createNode animCurveTL -n "RotatingGroup_translateZ";
-	rename -uid "CA0AB12C-41A8-6833-EB5D-3D9E357FB2E9";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 96 0;
-createNode animCurveTU -n "RotatingGroup_visibility";
-	rename -uid "E0A6AED5-4855-BB1C-4B7C-D7B7BC00709A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 96 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTA -n "RotatingGroup_rotateX";
-	rename -uid "67E36397-449A-FFD1-616A-C3B8F9799A4F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 96 0;
-createNode animCurveTA -n "RotatingGroup_rotateY";
-	rename -uid "990461D7-4370-D993-52EC-459011F93D04";
-	setAttr ".tan" 2;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 96 360;
-	setAttr ".pst" 4;
-createNode animCurveTA -n "RotatingGroup_rotateZ";
-	rename -uid "C68BEC16-4AF2-4105-5B20-4AA5D3F33DCF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 96 0;
-createNode animCurveTU -n "RotatingGroup_scaleX";
-	rename -uid "CEF6C15F-4B72-D604-C568-57AE1AAF3425";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 96 1;
-createNode animCurveTU -n "RotatingGroup_scaleY";
-	rename -uid "F9CCB8D2-477D-B20E-63A0-958C664C8488";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 96 1;
-createNode animCurveTU -n "RotatingGroup_scaleZ";
-	rename -uid "1EFEE768-42A4-9722-57EB-35BCBD8236A3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 96 1;
 createNode animCurveTL -n "AIRINTAKESBONUS1_translateX";
 	rename -uid "64F61B16-4BC9-9B5F-802E-29AF40597172";
 	setAttr ".tan" 18;
@@ -1512,9 +1491,48 @@ createNode animCurveTU -n "FORWARDGUNS2_scaleZ";
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 	setAttr -s 4 ".kox[2:3]"  1 1;
 	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "159C9371-43A9-8D05-60C9-6CA15894EEAB";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" 230.24134052955642 -973.91717736951159 ;
+	setAttr ".tgi[0].vh" -type "double2" 1401.7871650096258 -28.257639308801817 ;
+	setAttr -s 11 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 65.714286804199219;
+	setAttr ".tgi[0].ni[0].y" -757.14288330078125;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 844.28570556640625;
+	setAttr ".tgi[0].ni[1].y" -118.57142639160156;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[2].y" -267.14285278320313;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 582.85711669921875;
+	setAttr ".tgi[0].ni[3].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 974.28570556640625;
+	setAttr ".tgi[0].ni[4].y" -617.14288330078125;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 1235.7142333984375;
+	setAttr ".tgi[0].ni[5].y" -734.28570556640625;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[6].y" -271.42855834960937;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" 694.28570556640625;
+	setAttr ".tgi[0].ni[7].y" -528.5714111328125;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 347.14285278320312;
+	setAttr ".tgi[0].ni[8].y" -524.28570556640625;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 675.71429443359375;
+	setAttr ".tgi[0].ni[9].y" -965.71429443359375;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" 675.71429443359375;
+	setAttr ".tgi[0].ni[10].y" -745.71429443359375;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
 select -ne :time1;
-	setAttr ".o" 400;
-	setAttr ".unw" 400;
+	setAttr ".o" 250;
+	setAttr ".unw" 250;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1612,16 +1630,29 @@ connectAttr "AIRINTAKESBONUS1_scaleX.o" "NewFighterMaya_0002RN.phl[66]";
 connectAttr "AIRINTAKESBONUS1_scaleY.o" "NewFighterMaya_0002RN.phl[67]";
 connectAttr "AIRINTAKESBONUS1_scaleZ.o" "NewFighterMaya_0002RN.phl[68]";
 connectAttr "NewFighterMaya_0002RN.phl[69]" "rampShader1SG.dsm" -na;
-connectAttr "RotatingGroup_translateX.o" "RotatingGroup.tx";
-connectAttr "RotatingGroup_translateY.o" "RotatingGroup.ty";
-connectAttr "RotatingGroup_translateZ.o" "RotatingGroup.tz";
-connectAttr "RotatingGroup_visibility.o" "RotatingGroup.v";
-connectAttr "RotatingGroup_rotateX.o" "RotatingGroup.rx";
-connectAttr "RotatingGroup_rotateY.o" "RotatingGroup.ry";
-connectAttr "RotatingGroup_rotateZ.o" "RotatingGroup.rz";
-connectAttr "RotatingGroup_scaleX.o" "RotatingGroup.sx";
-connectAttr "RotatingGroup_scaleY.o" "RotatingGroup.sy";
-connectAttr "RotatingGroup_scaleZ.o" "RotatingGroup.sz";
+connectAttr "NewFighterMaya_0002RN.phl[70]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[71]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[72]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[73]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[74]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[75]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[76]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[77]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "NewFighterMaya_0002RN.phl[78]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
+connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
+connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
+connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
+connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "rampShader1SG.message" ":defaultLightSet.message";
@@ -1634,6 +1665,10 @@ connectAttr "rampShader1.oc" "rampShader1SG.ss";
 connectAttr "rampShader1SG.msg" "materialInfo1.sg";
 connectAttr "rampShader1.msg" "materialInfo1.m";
 connectAttr "rampShader1.msg" "materialInfo1.t" -na;
+connectAttr "rampShader1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "rampShader1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
 connectAttr "rampShader1SG.pa" ":renderPartition.st" -na;
 connectAttr "rampShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
