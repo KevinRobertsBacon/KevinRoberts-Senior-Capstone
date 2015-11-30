@@ -1,0 +1,21 @@
+# Written by MakeHuman 1.0.2
+version v1.0.2
+tags MIniatureRigs
+face head-angle-in-out -0.290000
+eyes HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6
+clothesHideFaces True
+gendered BreastFirmness 0.500000
+gendered BreastSize 0.500000
+macro Weight 0.581000
+macro Gender 1.000000
+macro Age 0.516000
+macro Height 0.613000
+macro Asian 0.209500
+macro African 0.581000
+macro Caucasian 0.209500
+macro Muscle 1.000000
+macro BodyProportions 0.847000
+background enabled False
+skinMaterial skins/default.mhmat
+material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/brown.mhmat
+subdivide False
