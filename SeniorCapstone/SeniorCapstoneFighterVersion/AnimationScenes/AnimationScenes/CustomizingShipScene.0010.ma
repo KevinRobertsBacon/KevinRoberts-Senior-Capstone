@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: CustomizingShipScene.0010.ma
-//Last modified: Tue, Nov 24, 2015 03:07:28 PM
+//Last modified: Fri, Nov 27, 2015 12:01:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Enviroment_Maya_0005" -rfn "Enviroment_Maya_0005RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/10479701/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion//HangarMaya/Enviroment_Maya.0005.ma";
@@ -24,6 +24,7 @@ requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType
 requires -nodeType "substance" -nodeType "substanceOutput" "Substance" "1.2.1.0-c0221b3";
 requires "stereoCamera" "10.0";
 requires -dataType "ngSkinLayerDataStorage" "ngSkinTools" "1.0.960";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
@@ -34,17 +35,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1B79B51F-416D-1A58-1FBA-98BB6A919999";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1881.2914763628605 719.2185307966804 689.63811426426832 ;
-	setAttr ".r" -type "double3" -22.538352761483214 2478.9999999986039 2.1071381395424087e-015 ;
+	setAttr ".t" -type "double3" 234.68582294958435 616.68520551543156 767.62273864606709 ;
+	setAttr ".r" -type "double3" -12.938352760340946 2176.9999999972811 -8.3146995285368834e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EF71CF15-4C23-CE1F-AF5A-86B060722C47";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 367.04167121314941;
+	setAttr ".coi" 823.60688340786908;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1817.9483145831443 606.5069687577419 620.4536280313298 ;
+	setAttr ".tp" -type "double3" 0 432.27752124814708 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "007B711D-4EDA-A816-B7E5-63A1519ED28C";
@@ -204,11 +205,121 @@ createNode spotLight -n "CharacterMainLight1Shape" -p "CharacterMainLight1";
 	setAttr ".sc" -type "float3" 0.031006332 0.031006332 0.031006332 ;
 	setAttr ".ca" 79.535549970416142;
 	setAttr ".pa" 10;
+createNode transform -n "CharacterMainLight2" -p "CharacterLights";
+	rename -uid "199C4447-4FD4-2498-D9AE-E686352C9333";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+createNode spotLight -n "CharacterMainLight2Shape" -p "CharacterMainLight2";
+	rename -uid "9DA3E47B-4359-FAA3-F49F-34BAF41289B6";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 0.59000003 1 0.93692148 ;
+	setAttr ".in" 32.826087951660156;
+	setAttr ".sc" -type "float3" 0.031006332 0.031006332 0.031006332 ;
+	setAttr ".de" 1;
+	setAttr ".ca" 79.535549970416142;
+	setAttr ".pa" 10;
+createNode transform -n "areaLight_Fighter";
+	rename -uid "9183AA1E-484C-3B3D-8C50-6EAF3F700961";
+	setAttr ".t" -type "double3" -859.17559271612413 172.03268176183886 217.75918366615406 ;
+	setAttr ".r" -type "double3" 0 -43.610093673886929 0 ;
+	setAttr ".s" -type "double3" 626.90879032696387 239.23002047170081 425.33556509111321 ;
+createNode areaLight -n "areaLight_FighterShape" -p "areaLight_Fighter";
+	rename -uid "35495016-42BE-9C13-B73D-0EB682306B05";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 0.06974899 0.12478828 0.14129855 ;
+	setAttr ".in" 5;
+	setAttr ".de" 1;
+createNode transform -n "DustParticles";
+	rename -uid "CF0E64DB-4D43-08FE-0086-95A1958BED57";
+createNode pointEmitter -n "emitter1" -p "DustParticles";
+	rename -uid "D4EA27BC-426E-E25A-FF49-2D8B6B1EA005";
+	setAttr ".t" -type "double3" 0 393.18971571882059 0 ;
+	setAttr ".s" -type "double3" 2067.976909198188 421.76547536347118 805.8310929140863 ;
+	setAttr ".emt" 4;
+	setAttr ".rat" 500;
+	setAttr ".sro" no;
+	setAttr -l on ".urpp";
+createNode transform -n "nParticle1" -p "DustParticles";
+	rename -uid "8FD16EEB-4BD2-FB10-BD7C-2C80ADB90427";
+createNode nParticle -n "nParticleShape1" -p "nParticle1";
+	rename -uid "86AFE9DB-4A9C-DB85-0075-1290781BE4DF";
+	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
+	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
+	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
+	addAttr -is true -ci true -sn "colorAccum" -ln "colorAccum" -min 0 -max 1 -at "bool";
+	addAttr -is true -ci true -sn "useLighting" -ln "useLighting" -min 0 -max 1 -at "bool";
+	addAttr -is true -ci true -sn "pointSize" -ln "pointSize" -dv 2 -min 1 -max 60 -at "long";
+	addAttr -is true -ci true -sn "normalDir" -ln "normalDir" -dv 2 -min 1 -max 3 -at "long";
+	addAttr -is true -ci true -sn "multiCount" -ln "multiCount" -dv 10 -min 1 -max 60 
+		-at "long";
+	addAttr -is true -ci true -sn "multiRadius" -ln "multiRadius" -dv 0.3 -min 0 -max 
+		10 -at "float";
+	addAttr -is true -ci true -sn "selectedOnly" -ln "selectedOnly" -min 0 -max 1 -at "bool";
+	addAttr -is true -ci true -sn "attributeName" -ln "attributeName" -dt "string";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr ".lfm" 2;
+	setAttr ".lfr" 1;
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr ".cts" -50;
+	setAttr ".chw" 214;
+	setAttr ".prt" 4;
+	setAttr ".cofl" 1;
+	setAttr ".scld" no;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+	setAttr ".igsg" yes;
+	setAttr ".igsw" yes;
+	setAttr ".vssc[0]"  0 1 1;
+	setAttr ".stns[0]"  0 1 1;
+	setAttr ".ra" 0.30000001192092896;
+	setAttr ".rdc[0]"  0 1 1;
+	setAttr ".mssc[0]"  0 1 1;
+	setAttr ".pfsc[0]"  0 1 1;
+	setAttr ".frsc[0]"  0 1 1;
+	setAttr ".stsc[0]"  0 1 1;
+	setAttr ".clsc[0]"  0 1 1;
+	setAttr ".bosc[0]"  0 1 1;
+	setAttr ".opc[0]"  0 1 1;
+	setAttr ".osr" 0.2;
+	setAttr ".cl[0].clp" 0;
+	setAttr ".cl[0].clc" -type "float3" 1 1 1 ;
+	setAttr ".cl[0].cli" 1;
+	setAttr ".inca[0].incap" 0;
+	setAttr ".inca[0].incac" -type "float3" 0.70200002 0.51162016 0.25201803 ;
+	setAttr ".inca[0].incai" 1;
+	setAttr ".icar" 0.5;
+	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
+	setAttr -k on ".lifespan" 3;
+	setAttr ".attributeName" -type "string" "particleId";
+createNode nucleus -n "nucleus1" -p "DustParticles";
+	rename -uid "FF89B9AD-4A28-D3B5-51D8-71928B8F335F";
+	setAttr ".stf" -50;
+	setAttr ".wisp" 500;
+	setAttr ".widi" -type "float3" 0 0 0 ;
+	setAttr ".wnoi" 1;
+createNode turbulenceField -n "turbulenceField1" -p "DustParticles";
+	rename -uid "6C554B97-4664-432E-5111-9989EA934035";
+	setAttr ".t" -type "double3" 0 432.27752124814708 0 ;
+	setAttr ".mag" 500;
+	setAttr ".fc[0]"  0 1 1;
+	setAttr ".amag[0]"  0 1 1;
+	setAttr ".crad[0]"  0 1 1;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "22CE7989-4BD2-B842-558B-F4B2FF94A298";
 	setAttr -s 3 ".opt";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	rename -uid "63C280C0-4C79-79FA-BE36-4C88E5A7B5C6";
+	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
 	setAttr ".ivb" no;
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -370,7 +481,7 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[49].value" -type "string" "0";
 	setAttr ".stringOptions[49].type" -type "string" "integer";
 	setAttr ".stringOptions[50].name" -type "string" "light importance sampling";
-	setAttr ".stringOptions[50].value" -type "string" "all";
+	setAttr ".stringOptions[50].value" -type "string" "on";
 	setAttr ".stringOptions[50].type" -type "string" "string";
 	setAttr ".stringOptions[51].name" -type "string" "light importance sampling quality";
 	setAttr ".stringOptions[51].value" -type "string" "1.0";
@@ -465,15 +576,15 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "5A33220B-4F50-8793-ADA3-6E943EDFDE56";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9E28A69E-4B54-0DDB-6672-4892F1063C11";
-	setAttr -s 666 ".lnk";
-	setAttr -s 26 ".slnk";
+	rename -uid "58CFD6D5-4E26-E670-6CD3-87851175DF83";
+	setAttr -s 836 ".lnk";
+	setAttr -s 27 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "206DD1A6-4600-939C-6DC9-C3B29CB91243";
+	rename -uid "96FBA73A-4706-F4EE-1BDC-93995CFBF7CF";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "D4060024-43B0-FE5E-2529-7580C9523FB4";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7D73B16C-45CB-178E-86D3-C5BF6074B739";
+	rename -uid "8C82C405-4346-6CE1-7E1E-379ADC3BFEA2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "020C4FDC-4D50-E8D5-FE65-D9BCDAC58FA9";
 	setAttr ".g" yes;
@@ -588,10 +699,6 @@ createNode reference -n "Enviroment_Maya_0005RN";
 		2 "Enviroment_Maya_0005:phongE_glowey" "incandescenceR" " -av"
 		2 "Enviroment_Maya_0005:phongE_glowey" "incandescenceG" " -av"
 		2 "Enviroment_Maya_0005:phongE_glowey" "incandescenceB" " -av"
-		3 "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube4|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[0]" 
-		"Enviroment_Maya_0005:phongE2SG3.dagSetMembers" "-na"
-		3 "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube5|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[0]" 
-		"Enviroment_Maya_0005:phongE2SG3.dagSetMembers" "-na"
 		3 "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube4|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[1]" 
 		"Enviroment_Maya_0005:phongE2SG4.dagSetMembers" "-na"
 		3 "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube5|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[1]" 
@@ -604,6 +711,10 @@ createNode reference -n "Enviroment_Maya_0005RN";
 		""
 		3 "Enviroment_Maya_0005:phongE2SG4.memberWireframeColor" "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube5|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[1].objectGrpColor" 
 		""
+		3 "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube4|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[0]" 
+		"Enviroment_Maya_0005:phongE2SG3.dagSetMembers" "-na"
+		3 "|Enviroment_Maya_0005:Panel|Enviroment_Maya_0005:pCube5|Enviroment_Maya_0005:pCubeShape4.instObjGroups.objectGroups[0]" 
+		"Enviroment_Maya_0005:phongE2SG3.dagSetMembers" "-na"
 		3 "|Enviroment_Maya_0005:Hangar|Enviroment_Maya_0005:CubeFBXASC046002|Enviroment_Maya_0005:CubeFBXASC046002Shape.instObjGroups" 
 		"Enviroment_Maya_0005:phongE2SG2.dagSetMembers" "-na"
 		3 "|Enviroment_Maya_0005:Hangar|Enviroment_Maya_0005:CubeFBXASC046001|Enviroment_Maya_0005:CubeFBXASC046001Shape.instObjGroups" 
@@ -1315,7 +1426,7 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		"KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RN" 0
 		"KR_PilotRig_Maya_0066RN" 0
 		"KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RN" 0
-		"KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RN" 33
+		"KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RN" 38
 		2 "KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Hair_phongE" "reflectivity" 
 		" 0"
 		2 "KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:phongE_wetsuit" "ambientColor" 
@@ -1342,47 +1453,57 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		"KR_PilotRig_Maya_0066RN.placeHolderList[7]" ""
 		5 3 "KR_PilotRig_Maya_0066RN" "KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:bump2d_wetsuit.message" 
 		"KR_PilotRig_Maya_0066RN.placeHolderList[8]" ""
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePart|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePartShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
-		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePart|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePartShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePart|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePartShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePart|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePartShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePart|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePartShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePart|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:CleareyePartShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		"KR_PilotRig_Maya_0066RN" 1621
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
+		0
+		"KR_PilotRig_Maya_0066RN" 1772
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl" 
 		"visibility" " -av 1"
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl" 
@@ -1741,7 +1862,7 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R" 
 		"rotateZ" " -av"
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R|KR_PilotRig_Maya_0066:fk_shoulderCtrl_R" 
-		"rotate" " -type \"double3\" -17.380024312859259 10.225894216330833 46.678799269094284"
+		"rotate" " -type \"double3\" -17.380024312859259 5.7182849841653498 46.678799269094284"
 		
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R|KR_PilotRig_Maya_0066:fk_shoulderCtrl_R" 
 		"rotateX" " -av"
@@ -1752,7 +1873,7 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R|KR_PilotRig_Maya_0066:fk_shoulderCtrl_R|KR_PilotRig_Maya_0066:fk_elbowCtrl_R" 
 		"visibility" " -av 1"
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R|KR_PilotRig_Maya_0066:fk_shoulderCtrl_R|KR_PilotRig_Maya_0066:fk_elbowCtrl_R" 
-		"rotate" " -type \"double3\" 0 7.8737019200978189 11.026695843744585"
+		"rotate" " -type \"double3\" 0 24.777236540718373 11.026695843744585"
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R|KR_PilotRig_Maya_0066:fk_shoulderCtrl_R|KR_PilotRig_Maya_0066:fk_elbowCtrl_R" 
 		"rotateX" " -av"
 		2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:root_Ctrl|KR_PilotRig_Maya_0066:FKChest_Ctrl|KR_PilotRig_Maya_0066:fk_Chest_lowerMid|KR_PilotRig_Maya_0066:bellyCtrl|KR_PilotRig_Maya_0066:fk_Chest_upperMid|KR_PilotRig_Maya_0066:chest_Ctrl|KR_PilotRig_Maya_0066:clavicleCtrl_R|KR_PilotRig_Maya_0066:fk_shoulderCtrl_R|KR_PilotRig_Maya_0066:fk_elbowCtrl_R" 
@@ -3420,1215 +3541,1517 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		"KR_PilotRig_Maya_0066RN.placeHolderList[642]" ""
 		5 4 "KR_PilotRig_Maya_0066RN" "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2.rotateZ" 
 		"KR_PilotRig_Maya_0066RN.placeHolderList[643]" ""
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
-		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_L2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L0|KR_PilotRig_Maya_0066:joint_Offset_nose_L0|KR_PilotRig_Maya_0066:joint_Control_nose_L0|KR_PilotRig_Maya_0066:nurbsSphere_nose_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_L2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_L2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L0|KR_PilotRig_Maya_0066:joint_Offset_nose_L0|KR_PilotRig_Maya_0066:joint_Control_nose_L0|KR_PilotRig_Maya_0066:nurbsSphere_nose_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L0|KR_PilotRig_Maya_0066:joint_Offset_nose_L0|KR_PilotRig_Maya_0066:joint_Control_nose_L0|KR_PilotRig_Maya_0066:nurbsSphere_nose_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L0|KR_PilotRig_Maya_0066:joint_Offset_nose_L0|KR_PilotRig_Maya_0066:joint_Control_nose_L0|KR_PilotRig_Maya_0066:nurbsSphere_nose_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L0|KR_PilotRig_Maya_0066:joint_Offset_nose_L0|KR_PilotRig_Maya_0066:joint_Control_nose_L0|KR_PilotRig_Maya_0066:nurbsSphere_nose_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L1|KR_PilotRig_Maya_0066:joint_Offset_nose_L1|KR_PilotRig_Maya_0066:joint_Control_nose_L1|KR_PilotRig_Maya_0066:nurbsSphere_nose_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L0|KR_PilotRig_Maya_0066:joint_Offset_nose_L0|KR_PilotRig_Maya_0066:joint_Control_nose_L0|KR_PilotRig_Maya_0066:nurbsSphere_nose_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L1|KR_PilotRig_Maya_0066:joint_Offset_nose_L1|KR_PilotRig_Maya_0066:joint_Control_nose_L1|KR_PilotRig_Maya_0066:nurbsSphere_nose_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L1|KR_PilotRig_Maya_0066:joint_Offset_nose_L1|KR_PilotRig_Maya_0066:joint_Control_nose_L1|KR_PilotRig_Maya_0066:nurbsSphere_nose_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L1|KR_PilotRig_Maya_0066:joint_Offset_nose_L1|KR_PilotRig_Maya_0066:joint_Control_nose_L1|KR_PilotRig_Maya_0066:nurbsSphere_nose_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L1|KR_PilotRig_Maya_0066:joint_Offset_nose_L1|KR_PilotRig_Maya_0066:joint_Control_nose_L1|KR_PilotRig_Maya_0066:nurbsSphere_nose_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L2|KR_PilotRig_Maya_0066:joint_Offset_nose_L2|KR_PilotRig_Maya_0066:joint_Control_nose_L2|KR_PilotRig_Maya_0066:nurbsSphere_nose_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L1|KR_PilotRig_Maya_0066:joint_Offset_nose_L1|KR_PilotRig_Maya_0066:joint_Control_nose_L1|KR_PilotRig_Maya_0066:nurbsSphere_nose_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L2|KR_PilotRig_Maya_0066:joint_Offset_nose_L2|KR_PilotRig_Maya_0066:joint_Control_nose_L2|KR_PilotRig_Maya_0066:nurbsSphere_nose_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L2|KR_PilotRig_Maya_0066:joint_Offset_nose_L2|KR_PilotRig_Maya_0066:joint_Control_nose_L2|KR_PilotRig_Maya_0066:nurbsSphere_nose_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L2|KR_PilotRig_Maya_0066:joint_Offset_nose_L2|KR_PilotRig_Maya_0066:joint_Control_nose_L2|KR_PilotRig_Maya_0066:nurbsSphere_nose_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L2|KR_PilotRig_Maya_0066:joint_Offset_nose_L2|KR_PilotRig_Maya_0066:joint_Control_nose_L2|KR_PilotRig_Maya_0066:nurbsSphere_nose_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_L2|KR_PilotRig_Maya_0066:joint_Offset_nose_L2|KR_PilotRig_Maya_0066:joint_Control_nose_L2|KR_PilotRig_Maya_0066:nurbsSphere_nose_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_L2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_L2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_L2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L0|KR_PilotRig_Maya_0066:joint_Offset_topLip_L0|KR_PilotRig_Maya_0066:joint_Control_topLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_L2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L0|KR_PilotRig_Maya_0066:joint_Offset_topLip_L0|KR_PilotRig_Maya_0066:joint_Control_topLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L0|KR_PilotRig_Maya_0066:joint_Offset_topLip_L0|KR_PilotRig_Maya_0066:joint_Control_topLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L0|KR_PilotRig_Maya_0066:joint_Offset_topLip_L0|KR_PilotRig_Maya_0066:joint_Control_topLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L0|KR_PilotRig_Maya_0066:joint_Offset_topLip_L0|KR_PilotRig_Maya_0066:joint_Control_topLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L1|KR_PilotRig_Maya_0066:joint_Offset_topLip_L1|KR_PilotRig_Maya_0066:joint_Control_topLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L0|KR_PilotRig_Maya_0066:joint_Offset_topLip_L0|KR_PilotRig_Maya_0066:joint_Control_topLip_L0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L1|KR_PilotRig_Maya_0066:joint_Offset_topLip_L1|KR_PilotRig_Maya_0066:joint_Control_topLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L1|KR_PilotRig_Maya_0066:joint_Offset_topLip_L1|KR_PilotRig_Maya_0066:joint_Control_topLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L1|KR_PilotRig_Maya_0066:joint_Offset_topLip_L1|KR_PilotRig_Maya_0066:joint_Control_topLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L1|KR_PilotRig_Maya_0066:joint_Offset_topLip_L1|KR_PilotRig_Maya_0066:joint_Control_topLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L2|KR_PilotRig_Maya_0066:joint_Offset_topLip_L2|KR_PilotRig_Maya_0066:joint_Control_topLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L1|KR_PilotRig_Maya_0066:joint_Offset_topLip_L1|KR_PilotRig_Maya_0066:joint_Control_topLip_L1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L2|KR_PilotRig_Maya_0066:joint_Offset_topLip_L2|KR_PilotRig_Maya_0066:joint_Control_topLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L2|KR_PilotRig_Maya_0066:joint_Offset_topLip_L2|KR_PilotRig_Maya_0066:joint_Control_topLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L2|KR_PilotRig_Maya_0066:joint_Offset_topLip_L2|KR_PilotRig_Maya_0066:joint_Control_topLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L2|KR_PilotRig_Maya_0066:joint_Offset_topLip_L2|KR_PilotRig_Maya_0066:joint_Control_topLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R0|KR_PilotRig_Maya_0066:joint_Offset_topLip_R0|KR_PilotRig_Maya_0066:joint_Control_topLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_L2|KR_PilotRig_Maya_0066:joint_Offset_topLip_L2|KR_PilotRig_Maya_0066:joint_Control_topLip_L2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_L2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R0|KR_PilotRig_Maya_0066:joint_Offset_topLip_R0|KR_PilotRig_Maya_0066:joint_Control_topLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R0|KR_PilotRig_Maya_0066:joint_Offset_topLip_R0|KR_PilotRig_Maya_0066:joint_Control_topLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R0|KR_PilotRig_Maya_0066:joint_Offset_topLip_R0|KR_PilotRig_Maya_0066:joint_Control_topLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R0|KR_PilotRig_Maya_0066:joint_Offset_topLip_R0|KR_PilotRig_Maya_0066:joint_Control_topLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R1|KR_PilotRig_Maya_0066:joint_Offset_topLip_R1|KR_PilotRig_Maya_0066:joint_Control_topLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R0|KR_PilotRig_Maya_0066:joint_Offset_topLip_R0|KR_PilotRig_Maya_0066:joint_Control_topLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R1|KR_PilotRig_Maya_0066:joint_Offset_topLip_R1|KR_PilotRig_Maya_0066:joint_Control_topLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R1|KR_PilotRig_Maya_0066:joint_Offset_topLip_R1|KR_PilotRig_Maya_0066:joint_Control_topLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R1|KR_PilotRig_Maya_0066:joint_Offset_topLip_R1|KR_PilotRig_Maya_0066:joint_Control_topLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R1|KR_PilotRig_Maya_0066:joint_Offset_topLip_R1|KR_PilotRig_Maya_0066:joint_Control_topLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R2|KR_PilotRig_Maya_0066:joint_Offset_topLip_R2|KR_PilotRig_Maya_0066:joint_Control_topLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R1|KR_PilotRig_Maya_0066:joint_Offset_topLip_R1|KR_PilotRig_Maya_0066:joint_Control_topLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R2|KR_PilotRig_Maya_0066:joint_Offset_topLip_R2|KR_PilotRig_Maya_0066:joint_Control_topLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R2|KR_PilotRig_Maya_0066:joint_Offset_topLip_R2|KR_PilotRig_Maya_0066:joint_Control_topLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R2|KR_PilotRig_Maya_0066:joint_Offset_topLip_R2|KR_PilotRig_Maya_0066:joint_Control_topLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R2|KR_PilotRig_Maya_0066:joint_Offset_topLip_R2|KR_PilotRig_Maya_0066:joint_Control_topLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_topLip_R2|KR_PilotRig_Maya_0066:joint_Offset_topLip_R2|KR_PilotRig_Maya_0066:joint_Control_topLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_topLip_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R0|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R0|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R1|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R1|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Offset_bottomLip_R2|KR_PilotRig_Maya_0066:joint_Control_bottomLip_R2|KR_PilotRig_Maya_0066:nurbsSphere_bottomLip_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R0|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R1|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Offset_cheek_In_R2|KR_PilotRig_Maya_0066:joint_Control_cheek_In_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheek_In_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R0|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R0|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R1|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R1|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R0|KR_PilotRig_Maya_0066:joint_Offset_nose_R0|KR_PilotRig_Maya_0066:joint_Control_nose_R0|KR_PilotRig_Maya_0066:nurbsSphere_nose_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Offset_cheekOut_R2|KR_PilotRig_Maya_0066:joint_Control_cheekOut_R2|KR_PilotRig_Maya_0066:nurbsSphere_cheekOut_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R0|KR_PilotRig_Maya_0066:joint_Offset_nose_R0|KR_PilotRig_Maya_0066:joint_Control_nose_R0|KR_PilotRig_Maya_0066:nurbsSphere_nose_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R0|KR_PilotRig_Maya_0066:joint_Offset_nose_R0|KR_PilotRig_Maya_0066:joint_Control_nose_R0|KR_PilotRig_Maya_0066:nurbsSphere_nose_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R0|KR_PilotRig_Maya_0066:joint_Offset_nose_R0|KR_PilotRig_Maya_0066:joint_Control_nose_R0|KR_PilotRig_Maya_0066:nurbsSphere_nose_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R0|KR_PilotRig_Maya_0066:joint_Offset_nose_R0|KR_PilotRig_Maya_0066:joint_Control_nose_R0|KR_PilotRig_Maya_0066:nurbsSphere_nose_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R1|KR_PilotRig_Maya_0066:joint_Offset_nose_R1|KR_PilotRig_Maya_0066:joint_Control_nose_R1|KR_PilotRig_Maya_0066:nurbsSphere_nose_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R0|KR_PilotRig_Maya_0066:joint_Offset_nose_R0|KR_PilotRig_Maya_0066:joint_Control_nose_R0|KR_PilotRig_Maya_0066:nurbsSphere_nose_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R1|KR_PilotRig_Maya_0066:joint_Offset_nose_R1|KR_PilotRig_Maya_0066:joint_Control_nose_R1|KR_PilotRig_Maya_0066:nurbsSphere_nose_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R1|KR_PilotRig_Maya_0066:joint_Offset_nose_R1|KR_PilotRig_Maya_0066:joint_Control_nose_R1|KR_PilotRig_Maya_0066:nurbsSphere_nose_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R1|KR_PilotRig_Maya_0066:joint_Offset_nose_R1|KR_PilotRig_Maya_0066:joint_Control_nose_R1|KR_PilotRig_Maya_0066:nurbsSphere_nose_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R1|KR_PilotRig_Maya_0066:joint_Offset_nose_R1|KR_PilotRig_Maya_0066:joint_Control_nose_R1|KR_PilotRig_Maya_0066:nurbsSphere_nose_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R2|KR_PilotRig_Maya_0066:joint_Offset_nose_R2|KR_PilotRig_Maya_0066:joint_Control_nose_R2|KR_PilotRig_Maya_0066:nurbsSphere_nose_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R1|KR_PilotRig_Maya_0066:joint_Offset_nose_R1|KR_PilotRig_Maya_0066:joint_Control_nose_R1|KR_PilotRig_Maya_0066:nurbsSphere_nose_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R2|KR_PilotRig_Maya_0066:joint_Offset_nose_R2|KR_PilotRig_Maya_0066:joint_Control_nose_R2|KR_PilotRig_Maya_0066:nurbsSphere_nose_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R2|KR_PilotRig_Maya_0066:joint_Offset_nose_R2|KR_PilotRig_Maya_0066:joint_Control_nose_R2|KR_PilotRig_Maya_0066:nurbsSphere_nose_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R2|KR_PilotRig_Maya_0066:joint_Offset_nose_R2|KR_PilotRig_Maya_0066:joint_Control_nose_R2|KR_PilotRig_Maya_0066:nurbsSphere_nose_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R2|KR_PilotRig_Maya_0066:joint_Offset_nose_R2|KR_PilotRig_Maya_0066:joint_Control_nose_R2|KR_PilotRig_Maya_0066:nurbsSphere_nose_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_nose_R2|KR_PilotRig_Maya_0066:joint_Offset_nose_R2|KR_PilotRig_Maya_0066:joint_Control_nose_R2|KR_PilotRig_Maya_0066:nurbsSphere_nose_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashBot_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashBot_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashBot_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R0|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R1|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Offset_eyelashTop_R2|KR_PilotRig_Maya_0066:joint_Control_eyelashTop_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyelashTop_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R0Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R0Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R0Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R0Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R0|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R0|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R0Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R1Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R1Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R1Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R1Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R1|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R1|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R1Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R2Shape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R2Shape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R2Shape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R2Shape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:faceCtrl_joints|KR_PilotRig_Maya_0066:locator_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Offset_eyebrow_R2|KR_PilotRig_Maya_0066:joint_Control_eyebrow_R2|KR_PilotRig_Maya_0066:nurbsSphere_eyebrow_R2Shape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:CleareyePartShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:CleareyePartShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:CleareyePartShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:CleareyePartShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:CleareyePartShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RNfosterParent1|KR_PilotRig_Maya_0066:CleareyePartShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush77MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush78MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush79MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush80MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush81MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush82MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush83MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush84MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush85MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush86MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush87MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush88MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush89MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush90MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush91MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush92MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush93MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush94MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush95MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush96MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush97MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush98MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush99MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush100MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush101MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush102MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush103MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush104MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush105MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush106MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush107MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush108MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush109MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush110MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush111MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush112MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush113MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush114MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush115MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush116MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush117MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush118MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush119MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush120MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush121MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush122MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush123MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush124MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:brush125MainShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent2|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent2|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent2|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent2|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent2|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
-		"KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RN" 16
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0012RNfosterParent1|KR_PilotRig_Maya_0066:fosterParent2|KR_PilotRig_Maya_0066:MeshShapeDeformed.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
+		0
+		"KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010RN" 20
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
@@ -4636,6 +5059,8 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Tongue:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
 		0
@@ -4645,6 +5070,8 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Teeth:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
+		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
@@ -4653,6 +5080,8 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
 		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Helmet:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
+		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterShadowLight|CharacterShadowLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterShadowLight1|CharacterShadowLight1Shape.message" 
@@ -4660,6 +5089,8 @@ createNode reference -n "KR_PilotRig_Maya_0066RN";
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterMainLight|CharacterMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterMainLight1|CharacterMainLight1Shape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|KR_PilotRig_Maya_0066:PilotRig_DONTDIVEINHERE|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Pilot_Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:Meshes|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:Mesh|KR_PilotRig_Maya_0066:KR_PilotModel_Maya_0010:FemalePilotLowPolyUVUnrapped_002Armor:MeshShape.message" "|CharacterLights|CharacterMainLight2|CharacterMainLight2Shape.message" 
 		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -4669,7 +5100,7 @@ createNode reference -n "NewFighterMaya_0002RN";
 		"NewFighterMaya_0002RN"
 		"NewFighterMaya_0002RN" 1
 		0 "|NewFighterMaya_0002:ProceduralStuffCombo" "|NewFighter" "-s -r "
-		"NewFighterMaya_0002RN" 15
+		"NewFighterMaya_0002RN" 24
 		0 "|NewFighterMaya_0002:Cockpit" "|NewFighter" "-s -r "
 		0 "|NewFighterMaya_0002:FORWARDGUNS2" "|NewFighter" "-s -r "
 		0 "|NewFighterMaya_0002:AIRINTAKESBONUS1" "|NewFighter" "-s -r "
@@ -4685,7 +5116,25 @@ createNode reference -n "NewFighterMaya_0002RN";
 		2 "|NewFighter|NewFighterMaya_0002:FORWARDGUNS1" "visibility" " 0"
 		2 "|NewFighter|NewFighterMaya_0002:REINFORCEMENTSTRUTS1" "visibility" " 0"
 		
-		2 "|NewFighter|NewFighterMaya_0002:EXTERNALFUELTANKS1" "visibility" " 0";
+		2 "|NewFighter|NewFighterMaya_0002:EXTERNALFUELTANKS1" "visibility" " 0"
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:Cockpit|NewFighterMaya_0002:CockpitShape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:FORWARDGUNS2|NewFighterMaya_0002:FORWARDGUNS2Shape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:AIRINTAKESBONUS1|NewFighterMaya_0002:AIRINTAKESBONUS1Shape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:MISSILELAUNCHERS01|NewFighterMaya_0002:MISSILELAUNCHERS01Shape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:FORWARDGUNS1|NewFighterMaya_0002:FORWARDGUNS1Shape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:REINFORCEMENTSTRUTS1|NewFighterMaya_0002:REINFORCEMENTSTRUTS1Shape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:EXTERNALFUELTANKS1|NewFighterMaya_0002:EXTERNALFUELTANKS1Shape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:FighterChassis|NewFighterMaya_0002:FighterChassisShape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighter|NewFighterMaya_0002:Canopy|NewFighterMaya_0002:CanopyShape.message" "|areaLight_Fighter|areaLight_FighterShape.message" 
+		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -4711,29 +5160,29 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"RenderCam\" \n                -useInteractiveMode 0\n                -displayLights \"all\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 1\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
-		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 0\n                -planes 0\n                -lights 1\n                -cameras 1\n                -controlVertices 0\n                -hulls 0\n                -grid 1\n                -imagePlane 0\n                -joints 0\n"
-		+ "                -ikHandles 0\n                -deformers 0\n                -dynamics 0\n                -particleInstancers 0\n                -fluids 0\n                -hairSystems 0\n                -follicles 0\n                -nCloths 0\n                -nParticles 0\n                -nRigids 0\n                -dynamicConstraints 0\n                -locators 0\n                -manipulators 1\n                -pluginShapes 0\n                -dimensions 0\n                -handles 0\n                -pivots 0\n                -textures 0\n                -strokes 0\n                -motionTrails 0\n                -clipGhosts 0\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 873\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 0 \n                $editorName;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"RenderCam\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
-		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 0\n"
-		+ "            -planes 0\n            -lights 1\n            -cameras 1\n            -controlVertices 0\n            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 873\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n"
+		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"RenderCam\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 1\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 1\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 0\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 0\n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 700\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"RenderCam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
+		+ "            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 700\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
 		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
 		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
 		+ "                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
-		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n"
-		+ "                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n"
-		+ "                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n"
-		+ "                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
-		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
-		+ "                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n"
+		+ "                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n"
+		+ "                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n"
+		+ "                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n"
+		+ "                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n"
+		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n"
 		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
@@ -4755,20 +5204,19 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
 		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 20 100 -ps 2 80 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 21 100 -ps 2 79 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RenderCam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 873\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RenderCam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 873\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RenderCam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 700\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RenderCam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 700\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "B260BFDF-4FDF-C451-0A1A-B1AFCD31A2BB";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 163 -ast 1 -aet 400 ";
+	setAttr ".b" -type "string" "playbackOptions -min -50 -max 163 -ast -50 -aet 400 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "root_Ctrl_translateX";
 	rename -uid "949F70FC-415E-A8F5-071B-FEA0314A3DBB";
@@ -6839,10 +7287,10 @@ createNode animCurveTA -n "fk_shoulderCtrl_R_rotateY";
 	rename -uid "7E963819-4086-A259-F722-3097B1F6F146";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 10.225894216330833 5 15.733089663641072
-		 9 4.7514715438869999 13 -12.060330860526729 17 -12.183416896964726 21 -7.3126097987799028
-		 25 -0.66046699895373739 29 7.5611790073774596 33 8.4753300983323161 39 -8.1309457002096206
-		 43 2.9030826618106471 52 5.5415787060826576 57 33.815717485462621 62 42.994911195349005
+	setAttr -s 23 ".ktv[0:22]"  1 5.7182849841653498 5 11.225480431475589
+		 9 0.24386231172151365 13 -10.933428552485365 17 -16.691026129130211 21 -11.820219030945387
+		 25 -5.1680762311192225 29 3.0535697752119741 33 3.9677208661668324 39 -12.638554932375104
+		 43 -1.6045265703548388 52 5.5415787060826576 57 33.815717485462621 62 42.994911195349005
 		 67 39.020971262294616 80 44.74143548230807 89 61.531731605448854 96 61.531731605448854
 		 100 38.247697914725869 104 6.7986638808625877 109 9.4002421339962741 115 9.4472846152521868
 		 163 11.903558106687484;
@@ -6850,24 +7298,24 @@ createNode animCurveTA -n "fk_shoulderCtrl_R_rotateY";
 		18 18 18 18 18 1 1 1 18 18 18 18;
 	setAttr -s 23 ".kot[3:22]"  1 1 18 18 1 1 18 18 
 		18 18 18 18 18 1 1 1 18 18 18 18;
-	setAttr -s 23 ".kix[3:22]"  0.94500112533569336 0.95745080709457397 
+	setAttr -s 23 ".kix[3:22]"  0.72452205419540405 0.95745080709457397 
 		0.85622859001159668 0.78896516561508179 0.80016928911209106 0.90047216415405273 1 
-		0.93834847211837769 0.93834847211837769 0.53750503063201904 1 1 0.91913414001464844 
+		0.86285465955734253 0.70789062976837158 0.53750503063201904 1 1 0.91913414001464844 
 		0.72307556867599487 0.69806593656539917 0.19779285788536072 1 0.99995142221450806 
 		0.99995148181915283 1;
-	setAttr -s 23 ".kiy[3:22]"  -0.3270670473575592 0.28859668970108032 
+	setAttr -s 23 ".kiy[3:22]"  -0.68925166130065918 0.28859668970108032 
 		0.51659715175628662 0.61443793773651123 0.59977418184280396 -0.43491366505622864 
-		0 0.34569078683853149 0.34569078683853149 0.84326052665710449 0 0 0.39394453167915344 
+		0 0.50545203685760498 0.7063220739364624 0.84326052665710449 0 0 0.39394453167915344 
 		0.69076889753341675 -0.71603351831436157 -0.98024386167526245 0 0.0098520759493112564 
 		0.009852076880633831 0;
-	setAttr -s 23 ".kox[3:22]"  0.94500112533569336 0.9574507474899292 
-		0.8562285304069519 0.78896516561508179 0.80016928911209106 0.90047216415405273 1 
-		0.93834847211837769 0.93834841251373291 0.53750503063201904 1 1 0.91913419961929321 
-		0.72307544946670532 0.69806599617004395 0.19779303669929504 1 0.99995148181915283 
-		0.99995148181915283 1;
-	setAttr -s 23 ".koy[3:22]"  -0.32706707715988159 0.28859665989875793 
+	setAttr -s 23 ".kox[3:22]"  0.7245221734046936 0.9574507474899292 0.8562285304069519 
+		0.78896516561508179 0.80016928911209106 0.90047216415405273 1 0.8628547191619873 
+		0.70789062976837158 0.53750503063201904 1 1 0.91913419961929321 0.72307544946670532 
+		0.69806599617004395 0.19779303669929504 1 0.99995148181915283 0.99995148181915283 
+		1;
+	setAttr -s 23 ".koy[3:22]"  -0.68925154209136963 0.28859665989875793 
 		0.51659715175628662 0.61443793773651123 0.59977418184280396 -0.43491372466087341 
-		0 0.34569078683853149 0.34569078683853149 0.84326052665710449 0 0 0.39394456148147583 
+		0 0.50545197725296021 0.7063220739364624 0.84326052665710449 0 0 0.39394456148147583 
 		0.69076913595199585 -0.7160334587097168 -0.98024380207061768 0 0.009852076880633831 
 		0.009852076880633831 0;
 createNode animCurveTA -n "fk_shoulderCtrl_R_rotateZ";
@@ -6925,12 +7373,13 @@ createNode animCurveTA -n "fk_elbowCtrl_R_rotateY";
 	rename -uid "AD349F8F-4EE5-14CA-3FBD-28904BC12AE3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 7.8737019200978189 5 14.116459579961093
-		 9 7.8737019200978189 13 4.0989517716060426 17 -7.874 21 -17.044948599884826 25 -21.352750239633036
-		 29 -15.960250027501925 33 7.8737019200978189 39 -6.2553052763691666 43 -20.052965690295615
-		 52 23.270633199889684 57 52.51138421947968 62 70.372885289404309 67 78.941555176048965
-		 80 72.02756512027986 89 76.341565289984743 96 76.341565289984743 100 23.306732880708736
-		 104 -2.0338711837585808 109 -8.9690131882838351 115 8.1359827164186154 120 3.4311306800720609;
+	setAttr -s 23 ".ktv[0:22]"  1 24.777236540718373 5 31.01999420058165
+		 9 24.777236540718373 13 21.002486392226601 17 9.0295346206205629 21 -0.14141397926426172
+		 25 -4.4492156190124703 29 0.94328459311863944 33 24.777236540718373 39 10.648229344251396
+		 43 -3.1494310696750518 52 23.270633199889684 57 52.51138421947968 62 70.372885289404309
+		 67 78.941555176048965 80 72.02756512027986 89 76.341565289984743 96 76.341565289984743
+		 100 23.306732880708736 104 -2.0338711837585808 109 -8.9690131882838351 115 8.1359827164186154
+		 120 3.4311306800720609;
 	setAttr -s 23 ".kit[8:22]"  1 1 1 1 18 18 18 18 
 		18 1 18 18 18 18 18;
 	setAttr -s 23 ".kot[8:22]"  1 1 1 1 18 18 18 18 
@@ -11182,38 +11631,124 @@ createNode animCurveTU -n "CharacterLights_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 1 44 1;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "AF3E0A3C-4C8F-A04E-3178-5193F6527E52";
+	rename -uid "40AD67D4-4BB1-EFC7-B6F0-66842E42D6DC";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -113.95796732442575 -897.85174167319371 ;
-	setAttr ".tgi[0].vh" -type "double2" 1380.6414527534298 308.57328041579439 ;
+	setAttr ".tgi[0].vl" -type "double2" -114.28570974440814 -899.18880647299511 ;
+	setAttr ".tgi[0].vh" -type "double2" 1382.1428022214368 308.71263946021952 ;
 	setAttr -s 8 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 261.42855834960937;
-	setAttr ".tgi[0].ni[0].y" -11.428571701049805;
+	setAttr ".tgi[0].ni[0].x" 807.557861328125;
+	setAttr ".tgi[0].ni[0].y" -107.14286041259766;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 548.5714111328125;
-	setAttr ".tgi[0].ni[1].y" -461.42855834960937;
+	setAttr ".tgi[0].ni[1].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[1].y" -242.85714721679687;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 548.5714111328125;
-	setAttr ".tgi[0].ni[2].y" -1.4285714626312256;
+	setAttr ".tgi[0].ni[2].x" 261.42855834960937;
+	setAttr ".tgi[0].ni[2].y" -11.428571701049805;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
 	setAttr ".tgi[0].ni[3].x" 548.5714111328125;
 	setAttr ".tgi[0].ni[3].y" -241.42857360839844;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 1.4285714626312256;
-	setAttr ".tgi[0].ni[4].y" -242.85714721679687;
+	setAttr ".tgi[0].ni[4].x" 548.5714111328125;
+	setAttr ".tgi[0].ni[4].y" -461.42855834960937;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 274.28570556640625;
-	setAttr ".tgi[0].ni[5].y" -471.42855834960937;
+	setAttr ".tgi[0].ni[5].x" 1071.4285888671875;
+	setAttr ".tgi[0].ni[5].y" -220;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 807.557861328125;
-	setAttr ".tgi[0].ni[6].y" -107.14286041259766;
+	setAttr ".tgi[0].ni[6].x" 548.5714111328125;
+	setAttr ".tgi[0].ni[6].y" -1.4285714626312256;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" 1071.4285888671875;
-	setAttr ".tgi[0].ni[7].y" -220;
+	setAttr ".tgi[0].ni[7].x" 274.28570556640625;
+	setAttr ".tgi[0].ni[7].y" -471.42855834960937;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
+createNode animCurveTL -n "CharacterMainLight2_translateX";
+	rename -uid "C321339D-461B-89F1-3B03-C2AF7DAEE336";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -1773.8745086023521 30 -1730.3427265243606
+		 46 -1710.6864851860494;
+createNode animCurveTL -n "CharacterMainLight2_translateY";
+	rename -uid "44A95488-4413-9ED7-00A9-A1BCD4E2A17F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 644.10768757656217 30 648.91348472033087
+		 46 643.80267616196977;
+createNode animCurveTL -n "CharacterMainLight2_translateZ";
+	rename -uid "9FFC42F8-4880-FEAB-8DC4-48A08F445A56";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 316.55081160784852 30 327.22205109936255
+		 46 329.6708514611467;
+createNode animCurveTU -n "CharacterMainLight2_visibility";
+	rename -uid "3044926C-4B2D-E9FE-7E93-95BADD1FE575";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 1 30 1 46 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTA -n "CharacterMainLight2_rotateX";
+	rename -uid "2858A689-4B62-CF71-E733-8DB674BC904D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -29.163759245082929 30 -29.163759245082929
+		 46 -29.163759245082929;
+createNode animCurveTA -n "CharacterMainLight2_rotateY";
+	rename -uid "B101F394-4581-5D50-8B7B-9F9EE074A341";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 219.03289927590697 30 197.54865466263269
+		 46 191.21244956931602;
+createNode animCurveTA -n "CharacterMainLight2_rotateZ";
+	rename -uid "37302365-42B8-A368-4508-A8B436A704D7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 30 0 46 0;
+createNode animCurveTU -n "CharacterMainLight2_scaleX";
+	rename -uid "A31B2EF1-452E-57B9-8723-3BBC4BF1CA91";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 79.711425502879919 30 79.711425502879919
+		 46 79.711425502879919;
+createNode animCurveTU -n "CharacterMainLight2_scaleY";
+	rename -uid "5182CDA5-4C44-57D2-BFB0-4E91BAC56495";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 79.711425502879919 30 79.711425502879919
+		 46 79.711425502879919;
+createNode animCurveTU -n "CharacterMainLight2_scaleZ";
+	rename -uid "415D7518-4446-681B-41A0-CDB988B91EC3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 79.711425502879919 30 79.711425502879919
+		 46 79.711425502879919;
+createNode shadingEngine -n "nParticlePointsSE";
+	rename -uid "DB766B90-4F68-895D-A9D6-5F81E992D4FC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "C65BDACE-49AA-665B-3BD8-8BB35AB4ABD6";
+createNode particleSamplerInfo -n "particleSamplerInfo1";
+	rename -uid "A7718327-423C-96F3-FC3E-CCB8CC604801";
+createNode blinn -n "npPointsBlinn";
+	rename -uid "9C901BC4-4F88-045E-DA60-53BF6551590C";
+createNode particleCloud -n "npPointsVolume";
+	rename -uid "5F2BC208-4C26-54D9-5CC2-27821C67EDFE";
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "3FA80B88-42C9-4E68-93DB-BFBBDC4C89DC";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -278.50473093688834 -466.66001344240004 ;
+	setAttr ".tgi[0].vh" -type "double2" 597.35692136053547 411.57846830494879 ;
+	setAttr -s 3 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -217.05882263183594;
+	setAttr ".tgi[0].ni[0].y" -2.8571431636810303;
+	setAttr ".tgi[0].ni[0].nvs" 18306;
+	setAttr ".tgi[0].ni[1].x" 337.18130493164062;
+	setAttr ".tgi[0].ni[1].y" -111.82654571533203;
+	setAttr ".tgi[0].ni[1].nvs" 18305;
+	setAttr ".tgi[0].ni[2].x" 90.51434326171875;
+	setAttr ".tgi[0].ni[2].y" 300.16387939453125;
+	setAttr ".tgi[0].ni[2].nvs" 18305;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" -50;
+	setAttr ".unw" -50;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -11221,10 +11756,10 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 26 ".st";
+	setAttr -s 27 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 27 ".s";
+	setAttr -s 29 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
@@ -11232,11 +11767,11 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 	setAttr -s 6 ".r";
 select -ne :lightList1;
-	setAttr -s 14 ".l";
+	setAttr -s 16 ".l";
 select -ne :defaultTextureList1;
 	setAttr -s 91 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 67 ".dsm";
+	setAttr -s 66 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -11249,6 +11784,7 @@ select -ne :defaultResolution;
 select -ne :defaultLightSet;
 	setAttr -s 10 ".dsm";
 select -ne :defaultColorMgtGlobals;
+	setAttr ".ote" yes;
 	setAttr ".ovt" no;
 	setAttr ".povt" no;
 select -ne :hardwareRenderGlobals;
@@ -11269,21 +11805,21 @@ connectAttr "Enviroment_Maya_0005RN.phl[11]" "Enviroment_Maya_0005RN.phl[12]";
 connectAttr "phongE_glowey_incandescenceR.o" "Enviroment_Maya_0005RN.phl[13]";
 connectAttr "phongE_glowey_incandescenceG.o" "Enviroment_Maya_0005RN.phl[14]";
 connectAttr "phongE_glowey_incandescenceB.o" "Enviroment_Maya_0005RN.phl[15]";
-connectAttr "KR_PilotRig_Maya_0066RN.phl[1]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[1]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "KR_PilotRig_Maya_0066RN.phl[2]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[2]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "KR_PilotRig_Maya_0066RN.phl[3]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[3]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "KR_PilotRig_Maya_0066RN.phl[4]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[4]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
 connectAttr "KR_PilotRig_Maya_0066RN.phl[5]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "KR_PilotRig_Maya_0066RN.phl[6]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[6]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "KR_PilotRig_Maya_0066RN.phl[7]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[7]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "KR_PilotRig_Maya_0066RN.phl[8]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "KR_PilotRig_Maya_0066RN.phl[8]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
 connectAttr "root_Ctrl_leftLegIkFk.o" "KR_PilotRig_Maya_0066RN.phl[9]";
 connectAttr "root_Ctrl_rightLegIkFk.o" "KR_PilotRig_Maya_0066RN.phl[10]";
@@ -12277,6 +12813,32 @@ connectAttr "CharacterLights_rotateZ.o" "CharacterLights.rz";
 connectAttr "CharacterLights_scaleX.o" "CharacterLights.sx";
 connectAttr "CharacterLights_scaleY.o" "CharacterLights.sy";
 connectAttr "CharacterLights_scaleZ.o" "CharacterLights.sz";
+connectAttr "CharacterMainLight2_translateX.o" "CharacterMainLight2.tx";
+connectAttr "CharacterMainLight2_translateY.o" "CharacterMainLight2.ty";
+connectAttr "CharacterMainLight2_translateZ.o" "CharacterMainLight2.tz";
+connectAttr "CharacterMainLight2_visibility.o" "CharacterMainLight2.v";
+connectAttr "CharacterMainLight2_rotateX.o" "CharacterMainLight2.rx";
+connectAttr "CharacterMainLight2_rotateY.o" "CharacterMainLight2.ry";
+connectAttr "CharacterMainLight2_rotateZ.o" "CharacterMainLight2.rz";
+connectAttr "CharacterMainLight2_scaleX.o" "CharacterMainLight2.sx";
+connectAttr "CharacterMainLight2_scaleY.o" "CharacterMainLight2.sy";
+connectAttr "CharacterMainLight2_scaleZ.o" "CharacterMainLight2.sz";
+connectAttr ":time1.o" "emitter1.ct";
+connectAttr "nParticleShape1.ifl" "emitter1.full[0]";
+connectAttr "nParticleShape1.tss" "emitter1.dt[0]";
+connectAttr "nParticleShape1.inh" "emitter1.inh[0]";
+connectAttr "nParticleShape1.stt" "emitter1.stt[0]";
+connectAttr "nParticleShape1.sd[0]" "emitter1.sd[0]";
+connectAttr ":time1.o" "nParticleShape1.cti";
+connectAttr "nucleus1.noao[0]" "nParticleShape1.nxst";
+connectAttr "nucleus1.stf" "nParticleShape1.stf";
+connectAttr "emitter1.ot[0]" "nParticleShape1.npt[0]";
+connectAttr "turbulenceField1.of[0]" "nParticleShape1.ifc[0]";
+connectAttr ":time1.o" "nucleus1.cti";
+connectAttr "nParticleShape1.cust" "nucleus1.niao[0]";
+connectAttr "nParticleShape1.stst" "nucleus1.nias[0]";
+connectAttr "nParticleShape1.fd" "turbulenceField1.ind[0]";
+connectAttr "nParticleShape1.ppfd[0]" "turbulenceField1.ppda[0]";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -12285,9 +12847,11 @@ connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phongE2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "nParticlePointsSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "phongE2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "nParticlePointsSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "KR_PilotRig_Maya_0066RN.sr";
@@ -12335,8 +12899,26 @@ connectAttr "substance_ConsoleMetal.outputdyn_Diffuse_Name" "Diffuse_substance_C
 connectAttr "Diffuse_substance_ConsoleMetal.oi" "file3.ftn";
 connectAttr "place2dTexture1.o" "file3.uv";
 connectAttr "place2dTexture1.ofs" "file3.fs";
+connectAttr "npPointsBlinn.oc" "nParticlePointsSE.ss";
+connectAttr "npPointsVolume.oi" "nParticlePointsSE.vs";
+connectAttr "nParticleShape1.iog" "nParticlePointsSE.dsm" -na;
+connectAttr "nParticlePointsSE.msg" "materialInfo2.sg";
+connectAttr "npPointsBlinn.msg" "materialInfo2.m";
+connectAttr "particleSamplerInfo1.msg" "materialInfo2.t" -na;
+connectAttr "particleSamplerInfo1.oc" "npPointsBlinn.c";
+connectAttr "particleSamplerInfo1.ot" "npPointsBlinn.it";
+connectAttr "particleSamplerInfo1.oi" "npPointsBlinn.ic";
+connectAttr "particleSamplerInfo1.ot" "npPointsVolume.t";
+connectAttr "particleSamplerInfo1.oc" "npPointsVolume.c";
+connectAttr "particleSamplerInfo1.oi" "npPointsVolume.i";
+connectAttr ":time1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
+connectAttr "nParticleShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
+connectAttr "emitter1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
 connectAttr "phongE2SG.pa" ":renderPartition.st" -na;
+connectAttr "nParticlePointsSE.pa" ":renderPartition.st" -na;
 connectAttr "substance_ConsoleMetal_Material.msg" ":defaultShaderList1.s" -na;
+connectAttr "npPointsBlinn.msg" ":defaultShaderList1.s" -na;
+connectAttr "npPointsVolume.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "substance_ConsoleMetal_bump2d.msg" ":defaultRenderUtilityList1.u" -na
 		;
@@ -12347,6 +12929,8 @@ connectAttr "CharacterMainLightShape.ltd" ":lightList1.l" -na;
 connectAttr "CharacterShadowLightShape.ltd" ":lightList1.l" -na;
 connectAttr "CharacterShadowLight1Shape.ltd" ":lightList1.l" -na;
 connectAttr "CharacterMainLight1Shape.ltd" ":lightList1.l" -na;
+connectAttr "areaLight_FighterShape.ltd" ":lightList1.l" -na;
+connectAttr "CharacterMainLight2Shape.ltd" ":lightList1.l" -na;
 connectAttr "substance_ConsoleMetal.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Normal_substance_ConsoleMetal.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
