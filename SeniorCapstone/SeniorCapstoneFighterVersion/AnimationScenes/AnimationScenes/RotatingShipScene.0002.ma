@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
-//Name: RotatingShipScene.0001.ma
-//Last modified: Tue, Dec 01, 2015 04:24:11 PM
+//Name: RotatingShipScene.0002.ma
+//Last modified: Tue, Dec 01, 2015 04:26:49 PM
 //Codeset: 1252
 file -rdi 1 -ns "NewFighterMaya_0002" -rfn "NewFighterMaya_0002RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion//NewFighter/NewFighterMaya.0002.ma";
@@ -9,6 +9,7 @@ file -r -ns "NewFighterMaya_0002" -dr 1 -rfn "NewFighterMaya_0002RN" -op "v=0;"
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
+requires "OpenEXRLoader" "2012";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
@@ -90,6 +91,7 @@ createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "907F4D38-427A-03CC-46A5-2B816F125FC3";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	rename -uid "D531EE60-44EE-5BE2-23CD-03851C2CC5A3";
+	addAttr -s false -ci true -h true -sn "sunAndSkyShader" -ln "sunAndSkyShader" -at "message";
 	setAttr ".rvb" 3;
 	setAttr ".ivb" no;
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -99,6 +101,9 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	addAttr -ci true -sn "name" -ln "name" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "value" -ln "value" -dt "string" -p "stringOptions";
 	addAttr -ci true -sn "type" -ln "type" -dt "string" -p "stringOptions";
+	setAttr ".cpd" yes;
+	setAttr ".mru" 2;
+	setAttr ".miSamplesMax" 50;
 	setAttr -s 81 ".stringOptions";
 	setAttr ".stringOptions[0].name" -type "string" "rast motion factor";
 	setAttr ".stringOptions[0].value" -type "string" "1.0";
@@ -188,16 +193,16 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[28].value" -type "string" "false";
 	setAttr ".stringOptions[28].type" -type "string" "boolean";
 	setAttr ".stringOptions[29].name" -type "string" "unified sampling";
-	setAttr ".stringOptions[29].value" -type "string" "true";
+	setAttr ".stringOptions[29].value" -type "string" "false";
 	setAttr ".stringOptions[29].type" -type "string" "boolean";
 	setAttr ".stringOptions[30].name" -type "string" "samples quality";
 	setAttr ".stringOptions[30].value" -type "string" "0.25 0.25 0.25 0.25";
 	setAttr ".stringOptions[30].type" -type "string" "color";
 	setAttr ".stringOptions[31].name" -type "string" "samples min";
-	setAttr ".stringOptions[31].value" -type "string" "1.0";
+	setAttr ".stringOptions[31].value" -type "string" "1";
 	setAttr ".stringOptions[31].type" -type "string" "scalar";
 	setAttr ".stringOptions[32].name" -type "string" "samples max";
-	setAttr ".stringOptions[32].value" -type "string" "100.0";
+	setAttr ".stringOptions[32].value" -type "string" "50";
 	setAttr ".stringOptions[32].type" -type "string" "scalar";
 	setAttr ".stringOptions[33].name" -type "string" "samples error cutoff";
 	setAttr ".stringOptions[33].value" -type "string" "0.0 0.0 0.0 0.0";
@@ -251,7 +256,7 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[49].value" -type "string" "0";
 	setAttr ".stringOptions[49].type" -type "string" "integer";
 	setAttr ".stringOptions[50].name" -type "string" "light importance sampling";
-	setAttr ".stringOptions[50].value" -type "string" "all";
+	setAttr ".stringOptions[50].value" -type "string" "on";
 	setAttr ".stringOptions[50].type" -type "string" "string";
 	setAttr ".stringOptions[51].name" -type "string" "light importance sampling quality";
 	setAttr ".stringOptions[51].value" -type "string" "1.0";
@@ -345,6 +350,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[80].type" -type "string" "scalar";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "E959CA1E-4E7C-6D8D-A867-8681574D3548";
+	setAttr ".ce" yes;
+	setAttr ".cs" 3;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "62C5C3B0-4BE9-242C-2464-C5B3044086D8";
 	setAttr -s 12 ".lnk";
@@ -1582,10 +1589,12 @@ createNode shadingEngine -n "surfaceShader1SG";
 	setAttr -s 15 ".dsm";
 	setAttr ".ro" yes;
 	setAttr ".mice" yes;
+	setAttr ".micw" 0.10000000149011612;
+	setAttr ".mirw" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "BF0DD785-4BB9-2A51-30C0-628767D1C868";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "CE9C47F7-4260-DCB7-B3F3-9A87908E1E4A";
+	rename -uid "0ADCFC08-4C7E-A244-111E-34831413281E";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -113.30582952714907 -368.56196992756958 ;
 	setAttr ".tgi[0].vh" -type "double2" 570.70973783442469 183.5682429427203 ;
@@ -1779,4 +1788,4 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Normal.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Wireframe.msg" ":defaultRenderingList1.r" -na;
 connectAttr ":perspShape.msg" ":defaultRenderGlobals.sc";
-// End of RotatingShipScene.0001.ma
+// End of RotatingShipScene.0002.ma
