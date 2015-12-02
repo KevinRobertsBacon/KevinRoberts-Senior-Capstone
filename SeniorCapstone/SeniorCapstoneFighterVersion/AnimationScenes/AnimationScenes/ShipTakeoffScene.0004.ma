@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: ShipTakeoffScene.0004.ma
-//Last modified: Tue, Dec 01, 2015 08:48:21 AM
+//Last modified: Wed, Dec 02, 2015 11:41:22 AM
 //Codeset: 1252
 file -rdi 1 -ns "Enviroment_Maya_0005" -rfn "Enviroment_Maya_0005RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/SeniorCapstoneFighterVersion//HangarMaya/Enviroment_Maya.0005.ma";
@@ -19,7 +19,7 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
 fileInfo "version" "2016";
 fileInfo "cutIdentifier" "201502261600-953408";
-fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
+fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C6527B1D-46EC-8224-E2BA-E19FCCBB7ED9";
@@ -125,8 +125,8 @@ createNode fluidShape -n "fluidShape2" -p "fluid1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".bres" 80;
-	setAttr ".rw" 60;
-	setAttr ".rh" 13;
+	setAttr ".rw" 80;
+	setAttr ".rh" 16;
 	setAttr ".rd" 80;
 	setAttr ".dw" 50;
 	setAttr ".dh" 10;
@@ -135,9 +135,8 @@ createNode fluidShape -n "fluidShape2" -p "fluid1";
 	setAttr ".rcbd" no;
 	setAttr ".aurt" 9.9999997473787516e-006;
 	setAttr ".mres" 600;
-	setAttr ".dofy" -0.9375;
 	setAttr ".hss" no;
-	setAttr ".ots" 0.2;
+	setAttr ".ots" 3;
 	setAttr ".bndx" 0;
 	setAttr ".bndy" 2;
 	setAttr ".dsc" 50;
@@ -214,14 +213,13 @@ createNode nParticle -n "nParticleShape1" -p "nParticle1";
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 365;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr ".lfm" 1;
 	setAttr ".irbx" -type "string" "";
 	setAttr ".irax" -type "string" "";
 	setAttr ".icx" -type "string" "";
-	setAttr ".cts" 72;
+	setAttr ".cts" -50;
 	setAttr ".chw" 326;
 	setAttr ".prt" 7;
 	setAttr ".cofl" 1;
@@ -304,14 +302,13 @@ createNode nParticle -n "ThrusterParticles:nParticleShape1" -p "ThrusterParticle
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 365;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr ".lfm" 1;
 	setAttr ".irbx" -type "string" "";
 	setAttr ".irax" -type "string" "";
 	setAttr ".icx" -type "string" "";
-	setAttr ".cts" 72;
+	setAttr ".cts" -50;
 	setAttr ".chw" 326;
 	setAttr ".prt" 7;
 	setAttr ".cofl" 1;
@@ -394,14 +391,13 @@ createNode nParticle -n "ThrusterParticles1:nParticleShape1" -p "ThrusterParticl
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 365;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr ".lfm" 1;
 	setAttr ".irbx" -type "string" "";
 	setAttr ".irax" -type "string" "";
 	setAttr ".icx" -type "string" "";
-	setAttr ".cts" 72;
+	setAttr ".cts" -50;
 	setAttr ".chw" 326;
 	setAttr ".prt" 7;
 	setAttr ".cofl" 1;
@@ -492,7 +488,6 @@ createNode nParticle -n "DustParticles:nParticleShape1" -p "DustParticles:nParti
 	setAttr ".acc0" -type "vectorArray" 0 ;
 	setAttr ".mas0" -type "doubleArray" 0 ;
 	setAttr ".id0" -type "doubleArray" 0 ;
-	setAttr ".nid" 2591;
 	setAttr ".bt0" -type "doubleArray" 0 ;
 	setAttr ".ag0" -type "doubleArray" 0 ;
 	setAttr ".lfm" 2;
@@ -500,7 +495,7 @@ createNode nParticle -n "DustParticles:nParticleShape1" -p "DustParticles:nParti
 	setAttr ".irbx" -type "string" "";
 	setAttr ".irax" -type "string" "";
 	setAttr ".icx" -type "string" "";
-	setAttr ".cts" 72;
+	setAttr ".cts" -50;
 	setAttr ".chw" 326;
 	setAttr ".prt" 4;
 	setAttr ".cofl" 1;
@@ -544,7 +539,7 @@ createNode turbulenceField -n "DustParticles:turbulenceField1" -p "DustParticles
 	setAttr ".amag[0]"  0 1 1;
 	setAttr ".crad[0]"  0 1 1;
 createNode fosterParent -n "NewFighterMaya_0003RNfosterParent1";
-	rename -uid "98F05976-4A7E-D596-37F4-6D91BD7774B6";
+	rename -uid "7034DD74-411E-60F7-CE36-7993D378D74D";
 createNode transform -n "spotLight1" -p "NewFighterMaya_0003RNfosterParent1";
 	rename -uid "688FB955-4154-8DD6-21C8-389E34ECC662";
 	setAttr -s 3 ".rlio";
@@ -881,17 +876,17 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "E959CA1E-4E7C-6D8D-A867-8681574D3548";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "44D4A261-4C2E-165C-8ABD-B186763C891E";
+	rename -uid "6A011363-4AC4-875B-E892-97A5B4181570";
 	setAttr -s 75 ".lnk";
 	setAttr -s 6 ".ign";
 	setAttr -s 23 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DDBC1A77-42C2-FC0E-4820-24B2E8494FD0";
+	rename -uid "E48E5EF6-4444-8E7C-58D1-4F8DB11A964B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E218A572-4A69-7F66-F802-73B887148E68";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "27148856-4B59-22A6-7935-A392820B1927";
-	setAttr -s 3 ".rlmi[1:3]"  1 2 3;
+	rename -uid "D90F60D0-41E8-8C75-AFD3-FF8D5863B9FE";
+	setAttr -s 4 ".rlmi[1:3]"  1 2 3;
 	setAttr -s 4 ".rlmi";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "AD2BF8F5-407F-D6AA-CEA1-70B077AD0819";
@@ -1372,10 +1367,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"Rendercam\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
 		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 1\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 728\n                -height 549\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 901\n                -height 730\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Rendercam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 728\n            -height 549\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 901\n            -height 730\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -1417,8 +1412,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Rendercam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 728\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Rendercam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 728\\n    -height 549\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Rendercam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 901\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Rendercam\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 901\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1514,7 +1509,7 @@ createNode reference -n "NewFighterMaya_0003RN";
 		0 "|NewFighterMaya_0003RNfosterParent1|spotLight1" "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" 
 		"-s -r "
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "translate" 
-		" -type \"double3\" -88.248412373634835 165.51980375722442 90.628500886167089"
+		" -type \"double3\" -87.511701593146043 74.223313447619418 91.326101101344676"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "translateX" 
 		" -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "translateY" 
@@ -1522,7 +1517,7 @@ createNode reference -n "NewFighterMaya_0003RN";
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "translateZ" 
 		" -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "rotate" 
-		" -type \"double3\" -2.6857599306915074 46.561945012978988 0"
+		" -type \"double3\" 0.70793578613116559 46.561945012978988 0"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "rotateX" 
 		" -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl" "rotateY" 
@@ -1530,7 +1525,7 @@ createNode reference -n "NewFighterMaya_0003RN";
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backL" 
 		"visibility" " -av 1"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backL" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -19.277417412168006 0"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backL" 
 		"translateX" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backL" 
@@ -1554,7 +1549,7 @@ createNode reference -n "NewFighterMaya_0003RN";
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backL" 
 		"scaleZ" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backR" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -13.173711920104763 0"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backR" 
 		"translateX" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backR" 
@@ -1566,11 +1561,11 @@ createNode reference -n "NewFighterMaya_0003RN";
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_backR" 
 		"rotateX" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_front" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -3.1449003747379418 0"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:nurbsCircle_front" 
 		"translateY" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 5.4165030607028388 -0.25914464000945886"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl" 
 		"translateX" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl" 
@@ -1578,7 +1573,7 @@ createNode reference -n "NewFighterMaya_0003RN";
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl" 
 		"translateZ" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -4.8839777306001553 0 0"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl" 
 		"rotateX" " -av"
 		2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe" 
@@ -1740,109 +1735,109 @@ createNode reference -n "NewFighterMaya_0003RN";
 		"NewFighterMaya_0003RN.placeHolderList[70]" ""
 		5 4 "NewFighterMaya_0003RN" "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe.scaleZ" 
 		"NewFighterMaya_0003RN.placeHolderList[71]" ""
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Switchoutables_Textured|NewFighterMaya_0003:Switchoutables_TexturedShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
-		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Switchoutables_Textured|NewFighterMaya_0003:Switchoutables_TexturedShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Thrusters|NewFighterMaya_0003:ThrustersShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Switchoutables_Textured|NewFighterMaya_0003:Switchoutables_TexturedShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Thrusters|NewFighterMaya_0003:ThrustersShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FighterChassis|NewFighterMaya_0003:FighterChassisShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Thrusters|NewFighterMaya_0003:ThrustersShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FighterChassis|NewFighterMaya_0003:FighterChassisShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Canopy|NewFighterMaya_0003:CanopyShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FighterChassis|NewFighterMaya_0003:FighterChassisShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Canopy|NewFighterMaya_0003:CanopyShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FrontJoint_A|NewFighterMaya_0003:FrontJoint_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:Canopy|NewFighterMaya_0003:CanopyShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FrontJoint_A|NewFighterMaya_0003:FrontJoint_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FrontJoint_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FrontJoint_A|NewFighterMaya_0003:FrontJoint_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FrontJoint_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointL_A|NewFighterMaya_0003:MiddleJointL_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:FrontJoint_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointL_A|NewFighterMaya_0003:MiddleJointL_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointL_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointL_A|NewFighterMaya_0003:MiddleJointL_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointL_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointR_A|NewFighterMaya_0003:MiddleJointR_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointL_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointR_A|NewFighterMaya_0003:MiddleJointR_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointR_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointR_A|NewFighterMaya_0003:MiddleJointR_B|NewFighterMaya_0003:LandingGearFBXASC032BottomLever|NewFighterMaya_0003:LandingGearFBXASC032BottomLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointR_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:ShipCtrl|NewFighterMaya_0003:MiddleJointR_A|NewFighterMaya_0003:LandingGearFBXASC032TopLever|NewFighterMaya_0003:LandingGearFBXASC032TopLeverShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear2|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear1|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFBXASC032ToeAxelShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFrontToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:EXTERNALFUELTANKS1|NewFighterMaya_0003:EXTERNALFUELTANKS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MainCtrl|NewFighterMaya_0003:LandingGear|NewFighterMaya_0003:LandingGearFBXASC032ToeAxel|NewFighterMaya_0003:LandingGearFrontToe|NewFighterMaya_0003:LandingGearFBXASC032BackToe|NewFighterMaya_0003:LandingGearFBXASC032BackToeShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:EXTERNALFUELTANKS1|NewFighterMaya_0003:EXTERNALFUELTANKS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:REINFORCEMENTSTRUTS1|NewFighterMaya_0003:REINFORCEMENTSTRUTS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:EXTERNALFUELTANKS1|NewFighterMaya_0003:EXTERNALFUELTANKS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:REINFORCEMENTSTRUTS1|NewFighterMaya_0003:REINFORCEMENTSTRUTS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:FORWARDGUNS1|NewFighterMaya_0003:FORWARDGUNS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:REINFORCEMENTSTRUTS1|NewFighterMaya_0003:REINFORCEMENTSTRUTS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:FORWARDGUNS1|NewFighterMaya_0003:FORWARDGUNS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MISSILELAUNCHERS01|NewFighterMaya_0003:MISSILELAUNCHERS01Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:FORWARDGUNS1|NewFighterMaya_0003:FORWARDGUNS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MISSILELAUNCHERS01|NewFighterMaya_0003:MISSILELAUNCHERS01Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:AIRINTAKESBONUS1|NewFighterMaya_0003:AIRINTAKESBONUS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:MISSILELAUNCHERS01|NewFighterMaya_0003:MISSILELAUNCHERS01Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:AIRINTAKESBONUS1|NewFighterMaya_0003:AIRINTAKESBONUS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:FORWARDGUNS2|NewFighterMaya_0003:FORWARDGUNS2Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:AIRINTAKESBONUS1|NewFighterMaya_0003:AIRINTAKESBONUS1Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:FORWARDGUNS2|NewFighterMaya_0003:FORWARDGUNS2Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:Cockpit|NewFighterMaya_0003:CockpitShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:FORWARDGUNS2|NewFighterMaya_0003:FORWARDGUNS2Shape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:Cockpit|NewFighterMaya_0003:CockpitShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight2|spotLightShape2.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|NewFighterMaya_0003:NewFighter|NewFighterMaya_0003:Cockpit|NewFighterMaya_0003:CockpitShape.message" "|NewFighterMaya_0003RNfosterParent1|spotLight1|spotLightShape1.message" 
 		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -1910,90 +1905,89 @@ createNode animCurveTA -n "MainCtrl_rotateX";
 	rename -uid "077D5B17-46C4-CAB9-5F89-B29878941648";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 0.70793578613116559 38 0.70399823349169988
+	setAttr -s 9 ".ktv[0:8]"  30 0.70793578613116559 38 0.70399823349169988
 		 56 -0.28266777516849079 84 -3.2055212400658353 114 -0.34011823939902092 170 3.9216377725492975
-		 214 -2.6906564760206741 231 0.94546738481165515 259 -0.065062061778615343 270 -0.78506208075612305;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 1 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 1 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  0.99598443508148193 1 0.99939799308776855 
-		1 0.99436426162719727 1 0.99982732534408569 1;
-	setAttr -s 10 ".kiy[2:9]"  -0.089526459574699402 0 0.034693256020545959 
-		0 0.10601761937141418 0 -0.018583521246910095 0;
-	setAttr -s 10 ".kox[2:9]"  0.99598443508148193 1 0.99939799308776855 
-		1 0.99436426162719727 1 0.99982732534408569 1;
-	setAttr -s 10 ".koy[2:9]"  -0.089526437222957611 0 0.034693256020545959 
-		0 0.10601755976676941 0 -0.018583521246910095 0;
+		 214 -2.6906564760206741 239 0.94546738481165515 270 -0.78506208075612305;
+	setAttr -s 9 ".kit[2:8]"  1 18 18 18 1 18 18;
+	setAttr -s 9 ".kot[2:8]"  1 18 18 18 1 18 18;
+	setAttr -s 9 ".kix[2:8]"  0.99598443508148193 1 0.99939799308776855 
+		1 0.99436426162719727 1 1;
+	setAttr -s 9 ".kiy[2:8]"  -0.089526459574699402 0 0.034693256020545959 
+		0 0.10601761937141418 0 0;
+	setAttr -s 9 ".kox[2:8]"  0.99598443508148193 1 0.99939799308776855 
+		1 0.99436426162719727 1 1;
+	setAttr -s 9 ".koy[2:8]"  -0.089526437222957611 0 0.034693256020545959 
+		0 0.10601755976676941 0 0;
 createNode animCurveTA -n "MainCtrl_rotateY";
 	rename -uid "45955857-4BC5-564B-A62B-8D8792797D17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 46.561945012978988 38 46.561945012978988
+	setAttr -s 9 ".ktv[0:8]"  30 46.561945012978988 38 46.561945012978988
 		 56 46.561945012978988 84 46.561945012978988 114 46.561945012978988 170 64.343249503682387
-		 214 90.420407118303771 231 90.420407118303771 259 90.420407118303771 270 90.420407118303771;
+		 214 90.420407118303771 239 90.420407118303771 270 90.420407118303771;
 createNode animCurveTA -n "MainCtrl_rotateZ";
 	rename -uid "BC4E40E2-448F-4CCD-5C66-EDA2172D33EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 0 38 0 56 0 84 0 114 0 170 0 214 0 231 0
-		 259 0 270 0;
+	setAttr -s 9 ".ktv[0:8]"  30 0 38 0 56 0 84 0 114 0 170 0 214 0 239 0
+		 270 0;
 createNode animCurveTU -n "MainCtrl_visibility";
 	rename -uid "5C1506BA-4E3E-ADA9-CF1C-64A9D9F8AA52";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 1 38 1 56 1 84 1 114 1 170 1 214 1 231 1
-		 259 1 270 1;
-	setAttr -s 10 ".kot[0:9]"  5 5 5 5 5 5 5 5 
-		5 5;
+	setAttr -s 9 ".ktv[0:8]"  30 1 38 1 56 1 84 1 114 1 170 1 214 1 239 1
+		 270 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTL -n "MainCtrl_translateX";
 	rename -uid "C5CC5DFA-4274-98D8-6D3A-7182E9570F1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 -87.511701593146043 38 -87.87942483749859
+	setAttr -s 9 ".ktv[0:8]"  30 -87.511701593146043 38 -87.87942483749859
 		 56 -88.043035358986728 84 -88.376760836973759 114 -88.468918244100507 170 -89.583241023842348
-		 214 -96.309981369606959 231 -103.97171131465593 259 -99.120530218551593 270 -99.132305010635378;
+		 214 -96.309981369606959 239 -103.52256035599365 270 -98.948290128458098;
 createNode animCurveTL -n "MainCtrl_translateY";
 	rename -uid "DE52D196-43BA-5326-48A2-B0A5628B54B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  30 74.223313447619418 38 105.62130165050378
+	setAttr -s 9 ".ktv[0:8]"  30 74.223313447619418 38 105.62130165050378
 		 56 113.1012606774964 84 206.2602728911161 114 227.6404135946128 170 209.607425516956
-		 214 307.19956074666425 231 269.40286308312403 243 264.57484102106474 259 291.1970002015558
-		 270 301.56654189857943;
-	setAttr -s 11 ".kit[6:10]"  1 18 18 18 18;
-	setAttr -s 11 ".kot[6:10]"  1 18 18 18 18;
-	setAttr -s 11 ".kix[6:10]"  0.015273293480277061 0.034500140696763992 
-		1 0.0303981713950634 1;
-	setAttr -s 11 ".kiy[6:10]"  0.99988335371017456 -0.99940472841262817 
-		0 0.99953782558441162 0;
-	setAttr -s 11 ".kox[6:10]"  0.015273295342922211 0.034500144422054291 
-		1 0.030398173257708549 1;
-	setAttr -s 11 ".koy[6:10]"  0.99988335371017456 -0.99940472841262817 
-		0 0.9995378851890564 0;
+		 214 307.19956074666425 239 296.61988986034612 270 288.13715794761924;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  0.015273293480277061 0.12149816006422043 
+		1;
+	setAttr -s 9 ".kiy[6:8]"  0.99988335371017456 -0.99259161949157715 
+		0;
+	setAttr -s 9 ".kox[6:8]"  0.015273295342922211 0.12149816751480103 
+		1;
+	setAttr -s 9 ".koy[6:8]"  0.99988335371017456 -0.99259167909622192 
+		0;
 createNode animCurveTL -n "MainCtrl_translateZ";
 	rename -uid "65F9713E-446D-218D-CE9B-1896286CA779";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 91.326101101344676 38 90.977899577864903
+	setAttr -s 9 ".ktv[0:8]"  30 91.326101101344676 38 90.977899577864903
 		 56 90.822974824767584 84 90.50696619152572 114 90.419701244165708 170 89.884449497116563
-		 214 89.933807762261097 231 89.990026625879267 259 89.954430501977086 270 89.954516900928112;
+		 214 89.933807762261097 239 89.986730926778648 270 89.953166669630605;
 createNode animCurveTU -n "MainCtrl_scaleX";
 	rename -uid "663AFFD2-4B6D-AA48-C96B-7DBE8A54CDAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 1.8 38 1.8 56 1.8 84 1.8 114 1.8 170 1.8
-		 214 1.8 231 1.8 259 1.8 270 1.8;
+	setAttr -s 9 ".ktv[0:8]"  30 1.8 38 1.8 56 1.8 84 1.8 114 1.8 170 1.8
+		 214 1.8 239 1.8 270 1.8;
 createNode animCurveTU -n "MainCtrl_scaleY";
 	rename -uid "8D12300A-4837-C44F-0420-FA9258A117E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 1.8 38 1.8 56 1.8 84 1.8 114 1.8 170 1.8
-		 214 1.8 231 1.8 259 1.8 270 1.8;
+	setAttr -s 9 ".ktv[0:8]"  30 1.8 38 1.8 56 1.8 84 1.8 114 1.8 170 1.8
+		 214 1.8 239 1.8 270 1.8;
 createNode animCurveTU -n "MainCtrl_scaleZ";
 	rename -uid "4ADCE3C1-4C4E-4379-A18B-228610D83218";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  30 1.8 38 1.8 56 1.8 84 1.8 114 1.8 170 1.8
-		 214 1.8 231 1.8 259 1.8 270 1.8;
+	setAttr -s 9 ".ktv[0:8]"  30 1.8 38 1.8 56 1.8 84 1.8 114 1.8 170 1.8
+		 214 1.8 239 1.8 270 1.8;
 createNode animCurveTL -n "Rendercam_translateX";
 	rename -uid "BD71708F-4EBE-79EF-D0B9-FF9BC526D667";
 	setAttr ".tan" 18;
@@ -2540,8 +2534,8 @@ createNode renderLayer -n "Dust";
 	rename -uid "203939F1-4D6F-8553-CA1A-42B809EE41DB";
 	setAttr ".do" 3;
 select -ne :time1;
-	setAttr ".o" 72;
-	setAttr ".unw" 72;
+	setAttr ".o" -50;
+	setAttr ".unw" -50;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
