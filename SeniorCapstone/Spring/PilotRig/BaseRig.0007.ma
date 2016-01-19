@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
-//Name: BaseRig.0006.ma
-//Last modified: Tue, Jan 19, 2016 12:02:02 PM
+//Name: BaseRig.0007.ma
+//Last modified: Tue, Jan 19, 2016 12:24:20 PM
 //Codeset: 1252
 file -rdi 1 -ns "PilotModel_Maya_0003" -rfn "PilotModel_Maya_0003RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/10479701/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/Spring//PilotModelMaya/PilotModel_Maya.0003.ma";
@@ -859,6 +859,104 @@ createNode joint -n "jnt_toeL_bnd" -p "jnt_ballL_bnd";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.5;
+createNode orientConstraint -n "jnt_toeL_bnd_orientConstraint1" -p "jnt_toeL_bnd";
+	rename -uid "3FA19ADF-4882-E721-CB72-B8A6A2A708BA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "jnt_toeL_ikW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "jnt_toeL_fkW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode orientConstraint -n "jnt_ballL_bnd_orientConstraint1" -p "jnt_ballL_bnd";
+	rename -uid "D87C2892-492A-59F8-19FA-5EA618E3C820";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "jnt_ballL_ikW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "jnt_ballL_fkW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode orientConstraint -n "jnt_heelL_bnd_orientConstraint1" -p "jnt_heelL_bnd";
+	rename -uid "A60A8A9D-403E-F2DE-4547-35A7D010464D";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "jnt_heelL_ikW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "jnt_heelL_fkW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode orientConstraint -n "jnt_kneeL_bnd_orientConstraint1" -p "jnt_kneeL_bnd";
+	rename -uid "0D75DC0A-419B-8585-554D-65A8E4112721";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "jnt_kneeL_ikW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "jnt_kneeL_fkW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode orientConstraint -n "jnt_thighL_bnd_orientConstraint1" -p "jnt_thighL_bnd";
+	rename -uid "FBD10BC6-4AF4-BD00-1E5D-C58246CE3406";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "jnt_thighL_ikW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "jnt_thighL_fkW1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" -2.2263882770244611e-014 3.1805546814635155e-014 3.1805546814635097e-015 ;
+	setAttr ".rsrr" -type "double3" -2.2263882770244611e-014 3.1805546814635155e-014 
+		3.1805546814635097e-015 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
 createNode joint -n "jnt_thighL_fk" -p "jnt_hips_bnd";
 	rename -uid "23A26F8E-4611-B2B5-159B-6789546D4947";
 	setAttr ".t" -type "double3" 0.55268682651058398 -0.48182954106051135 0 ;
@@ -1754,10 +1852,105 @@ connectAttr "hand_ctrl_fk_LShape1_controlPoints_6__yValue.o" "hand_ctrl_fk_LShap
 connectAttr "hand_ctrl_fk_LShape1_controlPoints_6__zValue.o" "hand_ctrl_fk_LShape1.cp[6].zv"
 		;
 connectAttr "jnt_hips_bnd.s" "jnt_thighL_bnd.is";
+connectAttr "jnt_thighL_bnd_orientConstraint1.crx" "jnt_thighL_bnd.rx";
+connectAttr "jnt_thighL_bnd_orientConstraint1.cry" "jnt_thighL_bnd.ry";
+connectAttr "jnt_thighL_bnd_orientConstraint1.crz" "jnt_thighL_bnd.rz";
 connectAttr "jnt_thighL_bnd.s" "jnt_kneeL_bnd.is";
+connectAttr "jnt_kneeL_bnd_orientConstraint1.crx" "jnt_kneeL_bnd.rx";
+connectAttr "jnt_kneeL_bnd_orientConstraint1.cry" "jnt_kneeL_bnd.ry";
+connectAttr "jnt_kneeL_bnd_orientConstraint1.crz" "jnt_kneeL_bnd.rz";
 connectAttr "jnt_kneeL_bnd.s" "jnt_heelL_bnd.is";
+connectAttr "jnt_heelL_bnd_orientConstraint1.crx" "jnt_heelL_bnd.rx";
+connectAttr "jnt_heelL_bnd_orientConstraint1.cry" "jnt_heelL_bnd.ry";
+connectAttr "jnt_heelL_bnd_orientConstraint1.crz" "jnt_heelL_bnd.rz";
 connectAttr "jnt_heelL_bnd.s" "jnt_ballL_bnd.is";
+connectAttr "jnt_ballL_bnd_orientConstraint1.crx" "jnt_ballL_bnd.rx";
+connectAttr "jnt_ballL_bnd_orientConstraint1.cry" "jnt_ballL_bnd.ry";
+connectAttr "jnt_ballL_bnd_orientConstraint1.crz" "jnt_ballL_bnd.rz";
 connectAttr "jnt_ballL_bnd.s" "jnt_toeL_bnd.is";
+connectAttr "jnt_toeL_bnd_orientConstraint1.crx" "jnt_toeL_bnd.rx";
+connectAttr "jnt_toeL_bnd_orientConstraint1.cry" "jnt_toeL_bnd.ry";
+connectAttr "jnt_toeL_bnd_orientConstraint1.crz" "jnt_toeL_bnd.rz";
+connectAttr "jnt_toeL_bnd.ro" "jnt_toeL_bnd_orientConstraint1.cro";
+connectAttr "jnt_toeL_bnd.pim" "jnt_toeL_bnd_orientConstraint1.cpim";
+connectAttr "jnt_toeL_bnd.jo" "jnt_toeL_bnd_orientConstraint1.cjo";
+connectAttr "jnt_toeL_bnd.is" "jnt_toeL_bnd_orientConstraint1.is";
+connectAttr "jnt_toeL_ik.r" "jnt_toeL_bnd_orientConstraint1.tg[0].tr";
+connectAttr "jnt_toeL_ik.ro" "jnt_toeL_bnd_orientConstraint1.tg[0].tro";
+connectAttr "jnt_toeL_ik.pm" "jnt_toeL_bnd_orientConstraint1.tg[0].tpm";
+connectAttr "jnt_toeL_ik.jo" "jnt_toeL_bnd_orientConstraint1.tg[0].tjo";
+connectAttr "jnt_toeL_bnd_orientConstraint1.w0" "jnt_toeL_bnd_orientConstraint1.tg[0].tw"
+		;
+connectAttr "jnt_toeL_fk.r" "jnt_toeL_bnd_orientConstraint1.tg[1].tr";
+connectAttr "jnt_toeL_fk.ro" "jnt_toeL_bnd_orientConstraint1.tg[1].tro";
+connectAttr "jnt_toeL_fk.pm" "jnt_toeL_bnd_orientConstraint1.tg[1].tpm";
+connectAttr "jnt_toeL_fk.jo" "jnt_toeL_bnd_orientConstraint1.tg[1].tjo";
+connectAttr "jnt_toeL_bnd_orientConstraint1.w1" "jnt_toeL_bnd_orientConstraint1.tg[1].tw"
+		;
+connectAttr "jnt_ballL_bnd.ro" "jnt_ballL_bnd_orientConstraint1.cro";
+connectAttr "jnt_ballL_bnd.pim" "jnt_ballL_bnd_orientConstraint1.cpim";
+connectAttr "jnt_ballL_bnd.jo" "jnt_ballL_bnd_orientConstraint1.cjo";
+connectAttr "jnt_ballL_bnd.is" "jnt_ballL_bnd_orientConstraint1.is";
+connectAttr "jnt_ballL_ik.r" "jnt_ballL_bnd_orientConstraint1.tg[0].tr";
+connectAttr "jnt_ballL_ik.ro" "jnt_ballL_bnd_orientConstraint1.tg[0].tro";
+connectAttr "jnt_ballL_ik.pm" "jnt_ballL_bnd_orientConstraint1.tg[0].tpm";
+connectAttr "jnt_ballL_ik.jo" "jnt_ballL_bnd_orientConstraint1.tg[0].tjo";
+connectAttr "jnt_ballL_bnd_orientConstraint1.w0" "jnt_ballL_bnd_orientConstraint1.tg[0].tw"
+		;
+connectAttr "jnt_ballL_fk.r" "jnt_ballL_bnd_orientConstraint1.tg[1].tr";
+connectAttr "jnt_ballL_fk.ro" "jnt_ballL_bnd_orientConstraint1.tg[1].tro";
+connectAttr "jnt_ballL_fk.pm" "jnt_ballL_bnd_orientConstraint1.tg[1].tpm";
+connectAttr "jnt_ballL_fk.jo" "jnt_ballL_bnd_orientConstraint1.tg[1].tjo";
+connectAttr "jnt_ballL_bnd_orientConstraint1.w1" "jnt_ballL_bnd_orientConstraint1.tg[1].tw"
+		;
+connectAttr "jnt_heelL_bnd.ro" "jnt_heelL_bnd_orientConstraint1.cro";
+connectAttr "jnt_heelL_bnd.pim" "jnt_heelL_bnd_orientConstraint1.cpim";
+connectAttr "jnt_heelL_bnd.jo" "jnt_heelL_bnd_orientConstraint1.cjo";
+connectAttr "jnt_heelL_bnd.is" "jnt_heelL_bnd_orientConstraint1.is";
+connectAttr "jnt_heelL_ik.r" "jnt_heelL_bnd_orientConstraint1.tg[0].tr";
+connectAttr "jnt_heelL_ik.ro" "jnt_heelL_bnd_orientConstraint1.tg[0].tro";
+connectAttr "jnt_heelL_ik.pm" "jnt_heelL_bnd_orientConstraint1.tg[0].tpm";
+connectAttr "jnt_heelL_ik.jo" "jnt_heelL_bnd_orientConstraint1.tg[0].tjo";
+connectAttr "jnt_heelL_bnd_orientConstraint1.w0" "jnt_heelL_bnd_orientConstraint1.tg[0].tw"
+		;
+connectAttr "jnt_heelL_fk.r" "jnt_heelL_bnd_orientConstraint1.tg[1].tr";
+connectAttr "jnt_heelL_fk.ro" "jnt_heelL_bnd_orientConstraint1.tg[1].tro";
+connectAttr "jnt_heelL_fk.pm" "jnt_heelL_bnd_orientConstraint1.tg[1].tpm";
+connectAttr "jnt_heelL_fk.jo" "jnt_heelL_bnd_orientConstraint1.tg[1].tjo";
+connectAttr "jnt_heelL_bnd_orientConstraint1.w1" "jnt_heelL_bnd_orientConstraint1.tg[1].tw"
+		;
+connectAttr "jnt_kneeL_bnd.ro" "jnt_kneeL_bnd_orientConstraint1.cro";
+connectAttr "jnt_kneeL_bnd.pim" "jnt_kneeL_bnd_orientConstraint1.cpim";
+connectAttr "jnt_kneeL_bnd.jo" "jnt_kneeL_bnd_orientConstraint1.cjo";
+connectAttr "jnt_kneeL_bnd.is" "jnt_kneeL_bnd_orientConstraint1.is";
+connectAttr "jnt_kneeL_ik.r" "jnt_kneeL_bnd_orientConstraint1.tg[0].tr";
+connectAttr "jnt_kneeL_ik.ro" "jnt_kneeL_bnd_orientConstraint1.tg[0].tro";
+connectAttr "jnt_kneeL_ik.pm" "jnt_kneeL_bnd_orientConstraint1.tg[0].tpm";
+connectAttr "jnt_kneeL_ik.jo" "jnt_kneeL_bnd_orientConstraint1.tg[0].tjo";
+connectAttr "jnt_kneeL_bnd_orientConstraint1.w0" "jnt_kneeL_bnd_orientConstraint1.tg[0].tw"
+		;
+connectAttr "jnt_kneeL_fk.r" "jnt_kneeL_bnd_orientConstraint1.tg[1].tr";
+connectAttr "jnt_kneeL_fk.ro" "jnt_kneeL_bnd_orientConstraint1.tg[1].tro";
+connectAttr "jnt_kneeL_fk.pm" "jnt_kneeL_bnd_orientConstraint1.tg[1].tpm";
+connectAttr "jnt_kneeL_fk.jo" "jnt_kneeL_bnd_orientConstraint1.tg[1].tjo";
+connectAttr "jnt_kneeL_bnd_orientConstraint1.w1" "jnt_kneeL_bnd_orientConstraint1.tg[1].tw"
+		;
+connectAttr "jnt_thighL_bnd.ro" "jnt_thighL_bnd_orientConstraint1.cro";
+connectAttr "jnt_thighL_bnd.pim" "jnt_thighL_bnd_orientConstraint1.cpim";
+connectAttr "jnt_thighL_bnd.jo" "jnt_thighL_bnd_orientConstraint1.cjo";
+connectAttr "jnt_thighL_bnd.is" "jnt_thighL_bnd_orientConstraint1.is";
+connectAttr "jnt_thighL_ik.r" "jnt_thighL_bnd_orientConstraint1.tg[0].tr";
+connectAttr "jnt_thighL_ik.ro" "jnt_thighL_bnd_orientConstraint1.tg[0].tro";
+connectAttr "jnt_thighL_ik.pm" "jnt_thighL_bnd_orientConstraint1.tg[0].tpm";
+connectAttr "jnt_thighL_ik.jo" "jnt_thighL_bnd_orientConstraint1.tg[0].tjo";
+connectAttr "jnt_thighL_bnd_orientConstraint1.w0" "jnt_thighL_bnd_orientConstraint1.tg[0].tw"
+		;
+connectAttr "jnt_thighL_fk.r" "jnt_thighL_bnd_orientConstraint1.tg[1].tr";
+connectAttr "jnt_thighL_fk.ro" "jnt_thighL_bnd_orientConstraint1.tg[1].tro";
+connectAttr "jnt_thighL_fk.pm" "jnt_thighL_bnd_orientConstraint1.tg[1].tpm";
+connectAttr "jnt_thighL_fk.jo" "jnt_thighL_bnd_orientConstraint1.tg[1].tjo";
+connectAttr "jnt_thighL_bnd_orientConstraint1.w1" "jnt_thighL_bnd_orientConstraint1.tg[1].tw"
+		;
 connectAttr "jnt_hips_bnd.s" "jnt_thighL_fk.is";
 connectAttr "jnt_thighL_fk.s" "jnt_kneeL_fk.is";
 connectAttr "jnt_kneeL_fk.s" "jnt_heelL_fk.is";
@@ -1882,4 +2075,4 @@ connectAttr "pasted__place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pasted__file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file1.oc" ":internal_standInShader.ic";
-// End of BaseRig.0006.ma
+// End of BaseRig.0007.ma
