@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: BaseRig.0038.ma
-//Last modified: Thu, Feb 04, 2016 10:57:38 AM
+//Last modified: Thu, Feb 04, 2016 04:29:15 PM
 //Codeset: 1252
 file -rdi 1 -ns "PilotModel_Maya_0003" -rfn "PilotModel_Maya_0003RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/10479701/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/Spring//PilotModelMaya/PilotModel_Maya.0003.ma";
@@ -21,14 +21,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F098952E-4579-E9DB-3EB7-E9B4CBDFF9C7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.5900608523366699 10.40498222089958 18.068532467492922 ;
+	setAttr ".t" -type "double3" 3.7624329367964462 8.0765725216378357 8.335773340814491 ;
 	setAttr ".r" -type "double3" -12.938352727659623 1096.1999999953175 4.1400806972217073e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "023E8188-412E-56E7-B7C3-3D94DA035E30";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 21.789937433926394;
+	setAttr ".coi" 11.390727292079047;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -343,8 +343,8 @@ createNode parentConstraint -n "jnt_thighL_fk_parentConstraint1" -p "jnt_thighL_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.7763568394002505e-015 4.163336342344337e-016 
 		3.3306690738754696e-016 ;
-	setAttr ".tg[0].tor" -type "double3" -3.4986101496135821e-014 5.0888853168994027e-014 
-		0.00019576627192201306 ;
+	setAttr ".tg[0].tor" -type "double3" -3.4986101496135821e-014 5.0888853168994033e-014 
+		0.00019576627192201309 ;
 	setAttr ".lr" -type "double3" 3.4986101496098681e-014 -4.4527765540489235e-014 -3.1805546814635302e-015 ;
 	setAttr ".rst" -type "double3" 0.55268682651058398 -0.48182954106051135 1.1102230246251565e-016 ;
 	setAttr ".rsrr" -type "double3" 3.4986101496098681e-014 -4.4527765540489235e-014 
@@ -1024,6 +1024,7 @@ createNode parentConstraint -n "jnt_wristL_fk_parentConstraint1" -p "jnt_wristL_
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-016 -1.7763568394002505e-015 
 		-7.7715611723760958e-016 ;
 	setAttr ".tg[0].tor" -type "double3" -0.023499300744467825 0 0 ;
+	setAttr ".lr" -type "double3" -3.1060104311167156e-018 0 0 ;
 	setAttr ".rst" -type "double3" 1.4413455033492228 0 -4.4408920985006262e-016 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "jnt_elbowL_fk_parentConstraint1" -p "jnt_elbowL_fk";
@@ -1614,7 +1615,7 @@ createNode parentConstraint -n "jnt_head_bnd_parentConstraint1" -p "jnt_head_bnd
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.8667349940694837e-016 0 2.2204460492503131e-016 ;
-	setAttr ".tg[0].tor" -type "double3" -90 -3.3395824155366934e-014 89.999999999999972 ;
+	setAttr ".tg[0].tor" -type "double3" -90 -3.339582415536694e-014 89.999999999999972 ;
 	setAttr ".lr" -type "double3" -3.1615381681563489e-015 3.4728157605910139e-016 4.7708320221952755e-014 ;
 	setAttr ".rst" -type "double3" 0.56677272941782419 0 0 ;
 	setAttr ".rsrr" -type "double3" -3.1615381681563489e-015 3.4728157605910139e-016 
@@ -3627,18 +3628,18 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "D76E86B3-4F05-6497-B2B0-19841B54DF6F";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EED94F72-4A24-4F50-47C0-1A9791599A10";
+	rename -uid "AD8F0A76-47C7-1A06-73A4-979A36A65932";
 	setAttr -s 10 ".lnk";
 	setAttr -s 10 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "45187812-468F-1BF7-9EAD-418A22B90EC1";
+	rename -uid "073A7FE6-4DB4-903F-17DE-4FB7014D2132";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "146E7F29-40A8-930C-AF6E-53A5C2BDD7A5";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B7948624-4708-364E-BA5D-5B84D98E11F9";
+	rename -uid "A95632F2-4541-2C1F-2B9C-73B154623472";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DB7D77EC-46FB-8D12-FD26-28925D155A34";
 	setAttr ".g" yes;
@@ -3771,69 +3772,6 @@ createNode unitConversion -n "unitConversion3";
 createNode unitConversion -n "unitConversion4";
 	rename -uid "F35BCF22-4FB0-404B-98F9-CE997BACD5D9";
 	setAttr ".cf" 0.017453292519943295;
-createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "FF7D26F5-471B-AA4D-6B17-F28E7CB42135";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -389.74127531045059 -383.55208735909679 ;
-	setAttr ".tgi[0].vh" -type "double2" 717.40153783850349 711.68596435814811 ;
-	setAttr -s 19 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 296.66665649414062;
-	setAttr ".tgi[0].ni[0].y" -86.190475463867188;
-	setAttr ".tgi[0].ni[0].nvs" 18306;
-	setAttr ".tgi[0].ni[1].x" 297.85711669921875;
-	setAttr ".tgi[0].ni[1].y" 493.80950927734375;
-	setAttr ".tgi[0].ni[1].nvs" 18306;
-	setAttr ".tgi[0].ni[2].x" -609.5238037109375;
-	setAttr ".tgi[0].ni[2].y" 17.380947113037109;
-	setAttr ".tgi[0].ni[2].nvs" 18306;
-	setAttr ".tgi[0].ni[3].x" -141.8333740234375;
-	setAttr ".tgi[0].ni[3].y" 257.7060546875;
-	setAttr ".tgi[0].ni[3].nvs" 18306;
-	setAttr ".tgi[0].ni[4].x" -172.61903381347656;
-	setAttr ".tgi[0].ni[4].y" -121.90476226806641;
-	setAttr ".tgi[0].ni[4].nvs" 18306;
-	setAttr ".tgi[0].ni[5].x" -326.42855834960937;
-	setAttr ".tgi[0].ni[5].y" 93.571418762207031;
-	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" -387.142822265625;
-	setAttr ".tgi[0].ni[6].y" -214.76190185546875;
-	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" 75.000030517578125;
-	setAttr ".tgi[0].ni[7].y" 397.142822265625;
-	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" 65.476219177246094;
-	setAttr ".tgi[0].ni[8].y" -218.33332824707031;
-	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" 1.4285714626312256;
-	setAttr ".tgi[0].ni[9].y" -1180;
-	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" 262.85714721679687;
-	setAttr ".tgi[0].ni[10].y" -1180;
-	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" 524.28570556640625;
-	setAttr ".tgi[0].ni[11].y" -1180;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" 785.71429443359375;
-	setAttr ".tgi[0].ni[12].y" -1180;
-	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 1047.142822265625;
-	setAttr ".tgi[0].ni[13].y" -1180;
-	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 1.4285714626312256;
-	setAttr ".tgi[0].ni[14].y" -1180;
-	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" 262.85714721679687;
-	setAttr ".tgi[0].ni[15].y" -1180;
-	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" 524.28570556640625;
-	setAttr ".tgi[0].ni[16].y" -1180;
-	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" 785.71429443359375;
-	setAttr ".tgi[0].ni[17].y" -1180;
-	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" 1047.142822265625;
-	setAttr ".tgi[0].ni[18].y" -1180;
-	setAttr ".tgi[0].ni[18].nvs" 18304;
 createNode animCurveTL -n "hand_ctrl_fk_LShape1_controlPoints_6__xValue";
 	rename -uid "FEA20151-4A45-BF6B-FC5A-4184C866F780";
 	setAttr ".tan" 18;
@@ -4156,6 +4094,54 @@ createNode unitConversion -n "unitConversion19";
 createNode unitConversion -n "unitConversion20";
 	rename -uid "C7CBD93B-4A68-5BFB-D9F7-1AB106B0D277";
 	setAttr ".cf" 0.017453292519943295;
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "513720E5-4586-1ADA-0F42-09B906155878";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -433.68781345462531 -384.52379424420673 ;
+	setAttr ".tgi[0].vh" -type "double2" 763.44970511296981 711.90473361620946 ;
+	setAttr -s 14 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 297.85711669921875;
+	setAttr ".tgi[0].ni[0].y" 493.80950927734375;
+	setAttr ".tgi[0].ni[0].nvs" 18306;
+	setAttr ".tgi[0].ni[1].x" 785.71429443359375;
+	setAttr ".tgi[0].ni[1].y" -1180;
+	setAttr ".tgi[0].ni[1].nvs" 18304;
+	setAttr ".tgi[0].ni[2].x" 262.85714721679687;
+	setAttr ".tgi[0].ni[2].y" -1180;
+	setAttr ".tgi[0].ni[2].nvs" 18304;
+	setAttr ".tgi[0].ni[3].x" -326.42855834960937;
+	setAttr ".tgi[0].ni[3].y" 93.571418762207031;
+	setAttr ".tgi[0].ni[3].nvs" 18304;
+	setAttr ".tgi[0].ni[4].x" -609.5238037109375;
+	setAttr ".tgi[0].ni[4].y" 17.380947113037109;
+	setAttr ".tgi[0].ni[4].nvs" 18306;
+	setAttr ".tgi[0].ni[5].x" 296.66665649414062;
+	setAttr ".tgi[0].ni[5].y" -86.190475463867188;
+	setAttr ".tgi[0].ni[5].nvs" 18306;
+	setAttr ".tgi[0].ni[6].x" 1.4285714626312256;
+	setAttr ".tgi[0].ni[6].y" -1180;
+	setAttr ".tgi[0].ni[6].nvs" 18304;
+	setAttr ".tgi[0].ni[7].x" 65.476219177246094;
+	setAttr ".tgi[0].ni[7].y" -218.33332824707031;
+	setAttr ".tgi[0].ni[7].nvs" 18304;
+	setAttr ".tgi[0].ni[8].x" 1047.142822265625;
+	setAttr ".tgi[0].ni[8].y" -1180;
+	setAttr ".tgi[0].ni[8].nvs" 18304;
+	setAttr ".tgi[0].ni[9].x" -141.8333740234375;
+	setAttr ".tgi[0].ni[9].y" 257.7060546875;
+	setAttr ".tgi[0].ni[9].nvs" 18306;
+	setAttr ".tgi[0].ni[10].x" 524.28570556640625;
+	setAttr ".tgi[0].ni[10].y" -1180;
+	setAttr ".tgi[0].ni[10].nvs" 18304;
+	setAttr ".tgi[0].ni[11].x" -172.61903381347656;
+	setAttr ".tgi[0].ni[11].y" -121.90476226806641;
+	setAttr ".tgi[0].ni[11].nvs" 18306;
+	setAttr ".tgi[0].ni[12].x" 75.000030517578125;
+	setAttr ".tgi[0].ni[12].y" 397.142822265625;
+	setAttr ".tgi[0].ni[12].nvs" 18304;
+	setAttr ".tgi[0].ni[13].x" -387.142822265625;
+	setAttr ".tgi[0].ni[13].y" -214.76190185546875;
+	setAttr ".tgi[0].ni[13].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -4187,7 +4173,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "ModelReferenceLayer.di" "PilotModel.do";
 connectAttr "jnt_root_bnd_parentConstraint1.ctx" "jnt_root_bnd.tx";
 connectAttr "jnt_root_bnd_parentConstraint1.cty" "jnt_root_bnd.ty";
@@ -4195,6 +4181,7 @@ connectAttr "jnt_root_bnd_parentConstraint1.ctz" "jnt_root_bnd.tz";
 connectAttr "jnt_root_bnd_parentConstraint1.crx" "jnt_root_bnd.rx";
 connectAttr "jnt_root_bnd_parentConstraint1.cry" "jnt_root_bnd.ry";
 connectAttr "jnt_root_bnd_parentConstraint1.crz" "jnt_root_bnd.rz";
+connectAttr "center_ctrl_fk.rotationOrder" "jnt_root_bnd.ro";
 connectAttr "jnt_root_bnd.s" "jnt_hips_bnd.is";
 connectAttr "jnt_hips_bnd_parentConstraint1.ctx" "jnt_hips_bnd.tx";
 connectAttr "jnt_hips_bnd_parentConstraint1.cty" "jnt_hips_bnd.ty";
@@ -5227,6 +5214,7 @@ connectAttr "center_ctrl_fk.s" "jnt_root_bnd_parentConstraint1.tg[0].ts";
 connectAttr "center_ctrl_fk.pm" "jnt_root_bnd_parentConstraint1.tg[0].tpm";
 connectAttr "jnt_root_bnd_parentConstraint1.w0" "jnt_root_bnd_parentConstraint1.tg[0].tw"
 		;
+connectAttr "center_ctrl_fk.rotationOrder" "center_ctrl_fk.ro";
 connectAttr "thigh_ctrl_fk_L_visibility.o" "thigh_ctrl_fk_L.v";
 connectAttr "knee_ctrl_fk_L_visibility.o" "knee_ctrl_fk_L.v";
 connectAttr "heel_ctrl_fk_L_visibility.o" "heel_ctrl_fk_L.v";
@@ -5314,24 +5302,6 @@ connectAttr "jnt_wristL_bnd.rx" "unitConversion1.i";
 connectAttr "jnt_wristL_bnd.rx" "unitConversion2.i";
 connectAttr "multiplyDivide_helper1.ox" "unitConversion3.i";
 connectAttr "multiplyDivide_helper2.ox" "unitConversion4.i";
-connectAttr "jnt_elbow_Helper_2L_LINKEDTOWRIST.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "jnt_elbow_Helper_1L_LINKEDTOWRIST.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "jnt_wristL_bnd.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
-connectAttr "multiplyDivide_helper1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "multiplyDivide_helper2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "unitConversion1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn";
-connectAttr "unitConversion2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn";
-connectAttr "unitConversion3.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn";
-connectAttr "unitConversion4.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
-connectAttr "jnt_thighL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn";
-connectAttr "jnt_kneeL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn";
-connectAttr "jnt_heelL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn";
-connectAttr "jnt_ballL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn";
-connectAttr "jnt_toeL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn";
 connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1.cmcp";
@@ -5453,6 +5423,26 @@ connectAttr "foot_ctrl_ik_L.legTwist" "unitConversion17.i";
 connectAttr "foot_ctrl_ik_R.legTwist" "unitConversion18.i";
 connectAttr "hand_ctrl_ik_R.armTwist" "unitConversion19.i";
 connectAttr "hand_ctrl_ik_L.armTwist" "unitConversion20.i";
+connectAttr "jnt_elbow_Helper_1L_LINKEDTOWRIST.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "jnt_ballL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
+connectAttr "jnt_kneeL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
+connectAttr "unitConversion1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn";
+connectAttr "jnt_wristL_bnd.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
+connectAttr "jnt_elbow_Helper_2L_LINKEDTOWRIST.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "jnt_thighL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn";
+connectAttr "unitConversion4.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn";
+connectAttr "jnt_toeL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
+connectAttr "multiplyDivide_helper1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "jnt_heelL_fk.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn";
+connectAttr "multiplyDivide_helper2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "unitConversion3.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "unitConversion2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
 connectAttr "PilotModel_035:None.pa" ":renderPartition.st" -na;
 connectAttr "PilotModel_035:None1.msg" ":defaultShaderList1.s" -na;
 connectAttr "multiplyDivide_helper1.msg" ":defaultRenderUtilityList1.u" -na;
