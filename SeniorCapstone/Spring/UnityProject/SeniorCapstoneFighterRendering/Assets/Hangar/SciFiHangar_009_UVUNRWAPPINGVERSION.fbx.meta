@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 7179a528a63fbdc458ae7b93ac9b0278
+timeCreated: 1457457735
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackWall
+    100002: Ceiling
+    100004: Door
+    100006: Door.001
+    100008: Door.002
+    100010: Door.003
+    100012: DoorCeilingConnector
+    100014: DoorRail
+    100016: DoorwaySuppourts
+    100018: DoorwaySuppourts.001
+    100020: Floor
+    100022: Lights1
+    100024: Lights2
+    100026: Pipe Large
+    100028: Pipes
+    100030: PipeSmall
+    100032: //RootNode
+    100034: Stairs Object
+    100036: Storage Box
+    100038: Storage Crate
+    100040: WallBase
+    100042: WallCeilingSuppourt
+    400000: BackWall
+    400002: Ceiling
+    400004: Door
+    400006: Door.001
+    400008: Door.002
+    400010: Door.003
+    400012: DoorCeilingConnector
+    400014: DoorRail
+    400016: DoorwaySuppourts
+    400018: DoorwaySuppourts.001
+    400020: Floor
+    400022: Lights1
+    400024: Lights2
+    400026: Pipe Large
+    400028: Pipes
+    400030: PipeSmall
+    400032: //RootNode
+    400034: Stairs Object
+    400036: Storage Box
+    400038: Storage Crate
+    400040: WallBase
+    400042: WallCeilingSuppourt
+    2300000: BackWall
+    2300002: Ceiling
+    2300004: Door
+    2300006: Door.001
+    2300008: Door.002
+    2300010: Door.003
+    2300012: DoorCeilingConnector
+    2300014: DoorRail
+    2300016: DoorwaySuppourts
+    2300018: DoorwaySuppourts.001
+    2300020: Floor
+    2300022: Lights1
+    2300024: Lights2
+    2300026: Pipe Large
+    2300028: Pipes
+    2300030: PipeSmall
+    2300032: Stairs Object
+    2300034: Storage Box
+    2300036: Storage Crate
+    2300038: WallBase
+    2300040: WallCeilingSuppourt
+    3300000: BackWall
+    3300002: Ceiling
+    3300004: Door
+    3300006: Door.001
+    3300008: Door.002
+    3300010: Door.003
+    3300012: DoorCeilingConnector
+    3300014: DoorRail
+    3300016: DoorwaySuppourts
+    3300018: DoorwaySuppourts.001
+    3300020: Floor
+    3300022: Lights1
+    3300024: Lights2
+    3300026: Pipe Large
+    3300028: Pipes
+    3300030: PipeSmall
+    3300032: Stairs Object
+    3300034: Storage Box
+    3300036: Storage Crate
+    3300038: WallBase
+    3300040: WallCeilingSuppourt
+    4300000: Storage Box
+    4300002: Stairs Object
+    4300004: Storage Crate
+    4300006: PipeSmall
+    4300008: Pipe Large
+    4300010: DoorwaySuppourts.001
+    4300012: DoorwaySuppourts
+    4300014: DoorCeilingConnector
+    4300016: Door.003
+    4300018: Door.002
+    4300020: Door.001
+    4300022: DoorRail
+    4300024: Door
+    4300026: Ceiling
+    4300028: Floor
+    4300030: Lights2
+    4300032: Lights1
+    4300034: Pipes
+    4300036: BackWall
+    4300038: WallCeilingSuppourt
+    4300040: WallBase
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
