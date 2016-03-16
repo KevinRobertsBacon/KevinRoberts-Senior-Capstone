@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: TestAnimation_003.0005.ma
-//Last modified: Wed, Mar 16, 2016 10:33:32 AM
+//Last modified: Wed, Mar 16, 2016 01:08:50 PM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "BaseRig_0133RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/Spring//PilotRig/BaseRig.0133.ma";
 file -rdi 2 -ns ":" -rfn "PilotModel_Maya_0005RN" -op "v=0;" -typ "mayaAscii"
@@ -26,17 +26,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1AAB4D8D-4587-5280-6740-D2B98E0F6455";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -49.470806744587776 13.843035899630838 -7.4693395527700099 ;
-	setAttr ".r" -type "double3" 0.26164727216898825 1422.5999999999597 6.5099123109727658e-018 ;
+	setAttr ".t" -type "double3" -46.612869052017437 24.709811907841399 68.17489641618171 ;
+	setAttr ".r" -type "double3" -8.1383527266874509 1418.1999999999371 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "953F2F1E-4814-8E8E-2185-1884BA3E931A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.031706623900973;
+	setAttr ".coi" 102.59552389427311;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 28.051518323153253 9.2316635037644179 -21.365951507072836 ;
+	setAttr ".tp" -type "double3" 9.2741248649863017 8.2393751574210672 -19.830756278454189 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "DF2C535F-4BFE-0FEE-B8B8-99977F11F389";
@@ -393,7 +393,7 @@ createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 15 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "3CCD50FF-4CDC-5720-8BAE-88B9083A05DD";
-	setAttr ".cdl" 1;
+	setAttr ".cdl" 2;
 	setAttr -s 2 ".dli[1:2]"  1 2;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
@@ -679,39 +679,85 @@ createNode reference -n "BaseRig_0133RN";
 		"BaseRig_0133RN"
 		"PilotModel_Maya_0005RN" 0
 		"BaseRig_0133RN" 0
-		"BaseRig_0133RN" 324
-		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translate" " -type \"double3\" -0.18627536370575776 7.220143315821498 6.4811377022938146"
+		"BaseRig_0133RN" 427
+		2 "|Ctrl_Main_Grp|MainCtrl" "visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl" "translate" " -type \"double3\" -39.256871918761462 0 -26.705788076625254"
+		
+		2 "|Ctrl_Main_Grp|MainCtrl" "translateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "translateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "translateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "rotate" " -type \"double3\" 0 -134.24605943034678 0"
+		
+		2 "|Ctrl_Main_Grp|MainCtrl" "rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "scale" " -type \"double3\" 1 1 1"
+		2 "|Ctrl_Main_Grp|MainCtrl" "scaleX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "scaleY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl" "scaleZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "visibility" " -av 1"
+		
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translate" " -type \"double3\" -13.660065953314197 -0.35803069216438321 -24.151508364629741"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translateZ" " -av"
-		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotate" " -type \"double3\" 6.613590997144092 0 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotate" " -type \"double3\" 3.9683184257060664 40.977814586196232 12.148269327886901"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "scaleX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "scaleY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "scaleZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotationOrder" " -av -k 1 2"
 		
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "visibility" 
+		" -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotate" 
-		" -type \"double3\" 0 14.249150881519254 13.909351209662709"
+		" -type \"double3\" 0 14.249150881519254 -0.7775410353770188"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotateX" 
+		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotateY" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotateZ" 
 		" -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "ikFkSwitchLeftLeg" 
+		" -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "ikFkSwitchRightLeg" 
+		" -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotationOrder" 
+		" -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "visibility" 
+		" -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotate" 
-		" -type \"double3\" 38.510875482684085 0 0"
+		" -type \"double3\" 23.395477707105186 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotateX" 
+		" -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotateY" 
+		" -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotateZ" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotationOrder" 
 		" -av -k 1 5"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
-		"rotate" " -type \"double3\" 20.800307323796382 0 0"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
+		"rotate" " -type \"double3\" 35.478073825159839 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
+		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
 		"rotationOrder" " -av -k 1 5"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
-		"rotate" " -type \"double3\" -33.36708852303142 -0.2674367605573465 0"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
@@ -719,11 +765,17 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
 		"rotateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
-		"ikFkSwitchLeftArm" " -av -k 1 0"
+		"ikFkSwitchLeftArm" " -av -k 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
-		"ikFkSwitchRightArm" " -av -k 1 0"
+		"ikFkSwitchRightArm" " -av -k 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
+		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
-		"rotate" " -type \"double3\" 0 -41.083260331740881 -40.593557094723181"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
+		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
 		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
@@ -731,7 +783,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
 		"rotationOrder" " -av -k 1 2"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L" 
-		"rotate" " -type \"double3\" -61.321450770582295 -54.105503629427439 -88.624227554518512"
+		"rotate" " -type \"double3\" -61.321450770582295 -54.105503629427439 -33.855457963653357"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L" 
 		"rotateX" " -av"
@@ -756,7 +808,11 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L|hand_rotatefix_grp_L_DONTFREEZE|hand_ctrl_fk_L" 
 		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
-		"rotate" " -type \"double3\" 0 -31.057209752958435 0"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
+		"rotate" " -type \"double3\" 0 21.317292136283999 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
+		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
 		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
@@ -764,7 +820,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
 		"rotationOrder" " -av -k 1 2"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R" 
-		"rotate" " -type \"double3\" -32.848642679678449 -51.369630378371959 -63.134372025061502"
+		"rotate" " -type \"double3\" -32.848642679678449 -35.620290183646738 -58.759050937709048"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R" 
 		"rotateX" " -av"
@@ -785,47 +841,149 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
 		"rotate" " -type \"double3\" 0 0 16.180292349210568"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
 		"rotateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
 		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
-		"rotate" " -type \"double3\" 10.400892905168263 0 0"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"translateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"translateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"translateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"rotate" " -type \"double3\" -27.629672485066209 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
 		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
 		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"scaleX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"scaleY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"scaleZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
+		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
-		"rotate" " -type \"double3\" -10.656365899273251 0 0"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
+		"rotate" " -type \"double3\" -21.735865824141033 -19.187013444767086 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
 		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
+		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
+		"rotationOrder" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
+		"eyeOpenLeft" " -av -k 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
+		"eyeOpenRight" " -av -k 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|jaw_Ctrl" 
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|jaw_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|jaw_Ctrl" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|jaw_Ctrl" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|jaw_Ctrl" 
+		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_L_ctrl" 
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_L_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_L_ctrl" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_L_ctrl" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_L_ctrl" 
+		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_R_ctrl" 
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_R_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_R_ctrl" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_R_ctrl" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk|eye_R_ctrl" 
+		"rotateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
-		"rotate" " -type \"double3\" 0 0 -33.263565721547224"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
+		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
 		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
+		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
-		"rotate" " -type \"double3\" 0 -13.522060078794318 28.710625180620035"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
+		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
 		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
 		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
+		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
-		"rotate" " -type \"double3\" 0 0 5.434574852292763"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
+		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
+		"rotationOrder" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
 		"rotateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
-		"rotate" " -type \"double3\" 0 0 5.434574852292763"
-		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
+		"rotationOrder" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
+		"rotateX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
+		"rotateY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
 		"rotateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
-		"rotate" " -type \"double3\" 0 0 5.434574852292763"
-		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
-		"rotateZ" " -av"
+		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
-		"translate" " -type \"double3\" 3.0943535439183747 -3.6858041380068043 -10.890158666374001"
+		"visibility" " -av 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
+		"translate" " -type \"double3\" 3.421463007670654 -1.0112369466412061 -7.3572085689579501"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"translateX" " -av"
@@ -834,7 +992,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"translateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
-		"rotate" " -type \"double3\" 0 -84.710168757788608 6.738681002147195"
+		"rotate" " -type \"double3\" 0 -84.710168757788608 28.134296134962973"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
+		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
@@ -842,9 +1002,11 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"armTwist" " -av -k 1 44.7"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
-		"rotationOrder" " -k 1"
+		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
-		"translate" " -type \"double3\" -0.17471052569230958 -10.807837273592861 -7.2932239788511612"
+		"visibility" " -av 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"translate" " -type \"double3\" -14.760624526834446 -2.2251180676758691 24.519956668131606"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"translateX" " -av"
@@ -853,21 +1015,41 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"translateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
-		"rotate" " -type \"double3\" -21.170268703904821 0 0"
+		"rotate" " -type \"double3\" 103.28307849361026 -50 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"rotateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"rotateZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"scaleX" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"scaleY" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"scaleZ" " -av"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"insideRoll" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"outsideRoll" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
-		"legTwist" " -av -k 1 0"
+		"tiptoe" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"toeBend" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"heelBack" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"heelRaise" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"legTwist" " -av -k 1 21.6"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
+		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "visibility" 
 		" -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translate" 
-		" -type \"double3\" -0.14218753767108855 7.7965767677126729 6.8489855854814925"
+		" -type \"double3\" -13.774212555960604 0 -24.533354931730351"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translateZ" 
@@ -875,7 +1057,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translateY" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotate" 
-		" -type \"double3\" -36.956258138381088 0 0"
+		" -type \"double3\" 0 28.411755328830594 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotateY" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotateX" 
@@ -906,8 +1088,10 @@ createNode reference -n "BaseRig_0133RN";
 		" -av -k 1 -13.000000000000007"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotationOrder" 
 		" -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "visibility" 
+		" -av 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translate" 
-		" -type \"double3\" -4.7820362047575715 3.5307404146499706 10.845252419029906"
+		" -type \"double3\" -4.6203942054044989 2.1513515211507932 8.5650493188382395"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translateY" 
@@ -915,7 +1099,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translateZ" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotate" 
-		" -type \"double3\" 0 -94.054874413476057 -9.7097870765038916"
+		" -type \"double3\" 0 -94.054874413476057 17.587037021919389"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotateX" 
+		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotateY" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotateZ" 
@@ -923,13 +1109,17 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "armTwist" 
 		" -av -k 1 -38.4"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotationOrder" 
-		" -k 1"
+		" -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleL_bnd|jnt_shoulderL_bnd|jnt_elbowL_bnd|jnt_wristL_bnd|FingersCtrl_L" 
 		"backFingers" " -av -k 1 -61.7"
 		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleL_bnd|jnt_shoulderL_bnd|jnt_elbowL_bnd|jnt_wristL_bnd|FingersCtrl_L" 
 		"indexFinger" " -av -k 1 -61.7"
 		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleL_bnd|jnt_shoulderL_bnd|jnt_elbowL_bnd|jnt_wristL_bnd|FingersCtrl_L" 
+		"thumbTwist" " -av -k 1 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleL_bnd|jnt_shoulderL_bnd|jnt_elbowL_bnd|jnt_wristL_bnd|FingersCtrl_L" 
 		"thumbBend" " -av -k 1 -26.400000000000002"
+		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleL_bnd|jnt_shoulderL_bnd|jnt_elbowL_bnd|jnt_wristL_bnd|FingersCtrl_L" 
+		"fingerSpread" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleR_bnd|jnt_shoulderR_bnd|jnt_elbowR_bnd|jnt_wristR_bnd|FingersCtrl_R" 
 		"backFingers" " -av -k 1 -64.2"
 		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleR_bnd|jnt_shoulderR_bnd|jnt_elbowR_bnd|jnt_wristR_bnd|FingersCtrl_R" 
@@ -938,6 +1128,8 @@ createNode reference -n "BaseRig_0133RN";
 		"thumbTwist" " -av -k 1 -21.300000000000004"
 		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleR_bnd|jnt_shoulderR_bnd|jnt_elbowR_bnd|jnt_wristR_bnd|FingersCtrl_R" 
 		"thumbBend" " -av -k 1 -28.3"
+		2 "|Ctrl_Main_Grp|MainCtrl|bind_jnt|jnt_root_bnd|jnt_botSpine_bnd|jnt_midSpine_bnd|jnt_topSpine_bnd|jnt_clavicleR_bnd|jnt_shoulderR_bnd|jnt_elbowR_bnd|jnt_wristR_bnd|FingersCtrl_R" 
+		"fingerSpread" " -av -k 1 0"
 		5 4 "BaseRig_0133RN" "|Ctrl_Main_Grp|MainCtrl.translateX" "BaseRig_0133RN.placeHolderList[1]" 
 		""
 		5 4 "BaseRig_0133RN" "|Ctrl_Main_Grp|MainCtrl.translateY" "BaseRig_0133RN.placeHolderList[2]" 
@@ -1330,7 +1522,7 @@ createNode reference -n "BaseRig_0133RN";
 lockNode -l 1 ;
 createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 	rename -uid "314C5360-4756-2399-B4C4-91AADC92AC17";
-	setAttr -s 1148 ".phl";
+	setAttr -s 1150 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -2479,16 +2671,20 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 	setAttr ".phl[1146]" 0;
 	setAttr ".phl[1147]" 0;
 	setAttr ".phl[1148]" 0;
+	setAttr ".phl[1149]" 0;
+	setAttr ".phl[1150]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"FighterModelMaya_RIGVERSION_0065RN"
 		"FighterModelMaya_RIGVERSION_0065RN" 0
-		"FighterModelMaya_RIGVERSION_0065RN" 1164
+		"FighterModelMaya_RIGVERSION_0065RN" 1166
 		2 "|fighter_Main_Ctrl" "translate" " -type \"double3\" -32.451490714892039 9.5118113200873431 -49.633680133339908"
 		
 		2 "|fighter_Main_Ctrl" "rotate" " -type \"double3\" 0 -52.324733766281447 0"
 		
-		2 "|fighter_Main_Ctrl|Text_LadderxControl_1" "ladderControl" " -k 1 20"
-		2 "|fighter_Main_Ctrl|Text_HatchxControl_1" "hatchControl" " -k 1 10"
+		2 "|fighter_Main_Ctrl|Text_LadderxControl_1" "ladderControl" " -av -k 1 20"
+		
+		2 "|fighter_Main_Ctrl|Text_HatchxControl_1" "hatchControl" " -av -k 1 10"
+		
 		2 "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1" "hatchControlLeft" 
 		" -k 1 10"
 		2 "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1" "hatchControlRight" 
@@ -4347,464 +4543,468 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[918]" ""
 		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Mesh_grp|Wing_grp|RightWing|mainHinge|mainWing|SecondaryHinge|SecondaryWing|polySurface221|polySurface215|polySurfaceShape215.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[919]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1.ladderControl" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[920]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[921]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape19.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[922]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape18.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape19.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[923]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape17.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape18.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[924]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape16.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape17.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[925]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape15.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape16.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[926]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape14.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape15.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[927]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape13.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape14.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[928]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape12.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape13.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[929]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape11.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape12.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[930]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape10.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape11.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[931]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape9.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape10.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[932]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape8.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape9.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[933]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape7.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape8.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[934]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape6.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape7.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[935]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape5.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape6.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[936]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape4.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape5.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[937]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape3.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape4.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[938]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape2.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape3.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[939]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_LadderxControl_1|curveShape2.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[940]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape34.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1.hatchControl" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[941]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape33.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[942]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape32.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape34.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[943]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape31.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape33.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[944]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape30.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape32.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[945]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape29.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape31.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[946]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape28.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape30.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[947]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape27.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape29.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[948]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape26.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape28.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[949]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape25.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape27.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[950]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape24.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape26.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[951]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape23.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape25.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[952]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape22.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape24.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[953]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape21.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape23.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[954]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape20.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape22.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[955]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape21.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[956]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape61.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_HatchxControl_1|curveShape20.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[957]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape60.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[958]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape59.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape61.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[959]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape58.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape60.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[960]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape57.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape59.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[961]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape56.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape58.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[962]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape55.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape57.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[963]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape54.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape56.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[964]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape53.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape55.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[965]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape52.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape54.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[966]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape51.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape53.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[967]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape50.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape52.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[968]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape49.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape51.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[969]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape48.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape50.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[970]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape47.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape49.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[971]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape46.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape48.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[972]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape45.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape47.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[973]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape44.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape46.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[974]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape43.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape45.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[975]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape42.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape44.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[976]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape41.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape43.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[977]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape40.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape42.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[978]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape39.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape41.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[979]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape38.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape40.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[980]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape37.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape39.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[981]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape36.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape38.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[982]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape35.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape37.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[983]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape36.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[984]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape82.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxHatchxControl_1|curveShape35.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[985]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape81.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[986]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape80.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape82.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[987]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape79.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape81.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[988]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape78.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape80.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[989]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape77.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape79.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[990]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape76.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape78.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[991]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape75.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape77.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[992]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape74.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape76.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[993]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape73.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape75.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[994]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape72.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape74.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[995]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape71.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape73.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[996]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape70.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape72.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[997]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape69.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape71.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[998]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape68.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape70.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[999]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape67.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape69.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1000]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape66.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape68.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1001]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape65.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape67.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1002]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape64.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape66.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1003]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape63.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape65.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1004]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape62.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape64.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1005]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape63.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1006]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape112.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_FrontxGearxControl_1|curveShape62.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1007]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape111.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1008]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape110.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape112.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1009]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape109.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape111.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1010]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape108.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape110.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1011]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape107.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape109.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1012]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape106.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape108.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1013]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape105.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape107.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1014]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape104.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape106.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1015]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape103.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape105.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1016]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape102.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape104.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1017]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape101.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape103.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1018]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape100.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape102.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1019]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape99.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape101.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1020]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape98.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape100.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1021]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape97.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape99.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1022]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape96.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape98.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1023]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape95.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape97.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1024]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape94.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape96.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1025]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape93.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape95.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1026]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape92.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape94.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1027]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape91.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape93.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1028]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape90.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape92.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1029]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape89.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape91.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1030]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape88.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape90.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1031]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape87.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape89.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1032]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape86.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape88.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1033]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape85.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape87.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1034]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape84.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape86.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1035]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape83.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape85.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1036]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape84.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1037]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape136.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxHatchxControl_1|curveShape83.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1038]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape135.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1039]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape134.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape136.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1040]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape133.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape135.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1041]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape132.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape134.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1042]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape131.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape133.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1043]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape130.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape132.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1044]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape129.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape131.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1045]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape128.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape130.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1046]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape127.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape129.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1047]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape126.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape128.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1048]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape125.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape127.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1049]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape124.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape126.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1050]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape123.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape125.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1051]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape122.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape124.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1052]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape121.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape123.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1053]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape120.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape122.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1054]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape119.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape121.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1055]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape118.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape120.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1056]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape117.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape119.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1057]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape116.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape118.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1058]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape115.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape117.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1059]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape114.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape116.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1060]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape113.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape115.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1061]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape114.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1062]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape158.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_MachinegunxControl_1|curveShape113.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1063]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape157.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1064]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape156.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape158.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1065]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape155.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape157.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1066]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape154.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape156.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1067]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape153.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape155.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1068]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape152.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape154.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1069]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape151.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape153.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1070]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape150.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape152.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1071]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape149.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape151.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1072]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape148.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape150.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1073]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape147.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape149.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1074]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape146.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape148.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1075]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape145.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape147.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1076]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape144.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape146.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1077]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape143.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape145.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1078]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape142.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape144.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1079]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape141.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape143.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1080]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape140.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape142.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1081]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape139.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape141.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1082]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape138.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape140.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1083]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape137.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape139.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1084]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape138.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1085]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape203.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_BackxGearxControl_1|curveShape137.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1086]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape202.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1087]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape201.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape203.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1088]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape200.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape202.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1089]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape199.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape201.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1090]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape198.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape200.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1091]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape197.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape199.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1092]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape196.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape198.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1093]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape195.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape197.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1094]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape194.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape196.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1095]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape193.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape195.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1096]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape192.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape194.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1097]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape191.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape193.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1098]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape190.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape192.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1099]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape189.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape191.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1100]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape188.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape190.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1101]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape187.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape189.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1102]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape186.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape188.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1103]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape185.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape187.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1104]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape184.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape186.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1105]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape183.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape185.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1106]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape182.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape184.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1107]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape181.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape183.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1108]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape180.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape182.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1109]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape179.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape181.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1110]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape180.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1111]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape219.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_SpinxEnginexControl_1|curveShape179.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1112]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape218.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1113]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape217.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape219.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1114]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape216.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape218.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1115]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape215.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape217.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1116]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape214.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape216.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1117]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape213.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape215.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1118]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape212.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape214.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1119]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape211.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape213.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1120]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape210.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape212.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1121]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape209.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape211.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1122]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape208.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape210.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1123]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape207.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape209.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1124]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape206.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape208.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1125]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape205.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape207.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1126]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape204.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape206.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1127]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape205.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1128]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape178.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_WingxControl_1|curveShape204.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1129]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape177.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1130]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape176.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape178.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1131]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape175.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape177.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1132]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape174.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape176.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1133]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape173.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape175.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1134]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape172.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape174.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1135]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape171.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape173.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1136]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape170.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape172.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1137]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape169.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape171.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1138]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape168.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape170.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1139]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape167.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape169.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1140]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape166.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape168.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1141]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape165.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape167.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1142]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape164.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape166.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1143]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape163.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape165.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1144]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape162.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape164.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1145]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape161.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape163.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1146]" ""
-		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape160.drawOverride" 
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape162.drawOverride" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1147]" ""
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape161.drawOverride" 
+		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1148]" ""
+		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape160.drawOverride" 
+		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1149]" ""
 		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl|Text_TopxModsxControl_1|curveShape159.drawOverride" 
-		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1148]" "";
+		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1150]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyPlane -n "polyPlane1";
@@ -4821,1996 +5021,2383 @@ createNode animCurveTL -n "foot_ctrl_ik_L_translateX";
 	rename -uid "93624CD2-4191-6B7B-C0B2-4A854418605A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -59.565782895266636 13 -45.755249909325762
-		 25 -34.026264251798217 32 -19.315302559561371 40 -13.774212555960604 49 -7.9101056642627672
-		 56 0.45724477366747435 64 0.45724477366747079 73 -0.14218753767108855 83 -0.14218753767108855;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.030846385285258293 0.061986763030290604 
-		0.046793267130851746 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0.99952411651611328 0.99807697534561157 
-		0.99890458583831787 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.030846387147903442 0.061986766755580902 
-		0.046793263405561447 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0.99952411651611328 0.99807703495025635 
-		0.99890458583831787 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -59.565782895266636 5 -57.58758010546164
+		 13 -45.755249909325762 19 -38.586878431883804 25 -34.026264251798217 29 -26.129604618746157
+		 32 -19.315302559561371 37 -13.774212555960604 40 -13.774212555960604 49 -7.9101056642627672
+		 56 0.45724477366747435 64 0.45724477366747079 73 -0.14218753767108855 83 -0.14218753767108855
+		 92 -0.14218753767108855 100 -0.23055857586170217 109 -1.3914626019488623 115 -1.3914626019488623;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 0.019822593778371811 0.026968954131007195 
+		0.047439508140087128 1 0.046793267130851746 1 1 1 1 1 0.78264492750167847 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0.99980342388153076 0.99963623285293579 
+		0.99887412786483765 0 0.99890458583831787 0 0 0 0 0 -0.62246841192245483 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 0.01982259564101696 0.026968954131007195 
+		0.047439504414796829 1 0.046793263405561447 1 1 1 1 1 0.78264492750167847 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0.99980354309082031 0.99963623285293579 
+		0.99887412786483765 0 0.99890458583831787 0 0 0 0 0 -0.62246841192245483 0 0;
 createNode animCurveTL -n "foot_ctrl_ik_L_translateY";
 	rename -uid "B2797587-4831-2976-095A-BEA2B815FBC5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1.1795038454895825 13 2.784074523947436
-		 25 1.7603152974771039 32 0.91348307966504716 40 0 49 2.4865218029080336 56 0 64 1.9576037614941932
-		 73 7.7965767677126729 83 7.7965767677126729;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.33458670973777771 1 1 1 0.090479210019111633 
-		1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 -0.94236493110656738 0 0 0 0.99589830636978149 
-		0 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.33458670973777771 1 1 1 0.090479210019111633 
-		1 1;
-	setAttr -s 10 ".koy[2:9]"  0 -0.94236499071121216 0 0 0 0.99589836597442627 
-		0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1.1795038454895825 5 2.7785336047743963
+		 13 2.784074523947436 19 0 25 1.7603152974771039 29 2.8118762657692211 32 0.91348307966504716
+		 37 0 40 0 49 2.4865218029080336 56 0 64 1.9576037614941932 73 7.7965767677126729
+		 83 7.7965767677126729 92 12.959090376808213 100 13.145420202527877 109 9.4492397064553071
+		 115 9.4492397064553071;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 0.11772050708532333 1 1 1 1 0.090479210019111633 
+		1 1 0.51216602325439453 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 -0.99304676055908203 0 0 0 0 0.99589830636978149 
+		0 0 0.8588864803314209 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 0.11772051453590393 1 1 1 1 0.090479210019111633 
+		1 1 0.51216602325439453 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 -0.99304682016372681 0 0 0 0 0.99589836597442627 
+		0 0 0.8588864803314209 0 0 0;
 createNode animCurveTL -n "foot_ctrl_ik_L_translateZ";
 	rename -uid "8D9A202E-40F7-1970-68C8-F9996FF6EFE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -66.75258468261552 13 -55.164171547750861
-		 25 -45.322384008435826 32 -33.42447041882707 40 -24.533354931730351 49 -14.475218572344996
-		 56 -2.042007289637064 64 3.2385842075459008 73 6.8489855854814925 83 6.8489855854814925;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.030050357803702354 0.037354458123445511 
-		0.02962801419198513 0.035261277109384537 0.079417027533054352 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0.99954843521118164 0.99930214881896973 
-		0.99956101179122925 0.99937808513641357 0.99684149026870728 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.030050355941057205 0.037354454398155212 
-		0.02962801419198513 0.035261280834674835 0.079417034983634949 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0.99954837560653687 0.99930202960968018 
-		0.99956107139587402 0.99937814474105835 0.99684154987335205 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -66.75258468261552 5 -65.092675451296259
+		 13 -55.164171547750861 19 -49.149193684887493 25 -45.322384008435826 29 -38.69629982280933
+		 32 -33.42447041882707 37 -24.533354931730351 40 -24.533354931730351 49 -14.475218572344996
+		 56 -2.042007289637064 64 3.2385842075459008 73 6.8489855854814925 83 6.8489855854814925
+		 92 11.185325012945855 100 11.901880138978088 109 13.892093011473769 115 13.892093011473769;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 0.024506745859980583 0.023529073223471642 
+		0.028573453426361084 1 0.02962801419198513 0.035261277109384537 0.079417027533054352 
+		1 1 0.15323162078857422 0.25316467881202698 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0.99969965219497681 0.99972319602966309 
+		0.9995916485786438 0 0.99956101179122925 0.99937808513641357 0.99684149026870728 
+		0 0 0.98819029331207275 0.96742326021194458 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 0.024506745859980583 0.023529073223471642 
+		0.028573453426361084 1 0.02962801419198513 0.035261280834674835 0.079417034983634949 
+		1 1 0.15323160588741302 0.25316467881202698 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0.99969965219497681 0.99972307682037354 
+		0.99959170818328857 0 0.99956107139587402 0.99937814474105835 0.99684154987335205 
+		0 0 0.98819029331207275 0.9674232006072998 0 0;
 createNode animCurveTL -n "foot_ctrl_ik_R_translateX";
 	rename -uid "28823FFF-4F8A-1EF6-61E1-9EB4B88E3662";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -57.480525780554302 13 -48.285871889362589
-		 25 -31.237638477471783 32 -21.129429852931313 40 -14.760624526834446 49 -5.2058571386173789
-		 56 -1.6694354611488003 64 -0.62018870995840192 73 -0.17471052569230958 83 -0.17471052569230958;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.037904374301433563 0.044439375400543213 
-		0.050858929753303528 0.13504566252231598 0.42823740839958191 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0.99928140640258789 0.99901211261749268 
-		0.99870586395263672 0.99083942174911499 0.90366631746292114 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.037904370576143265 0.044439371675252914 
-		0.050858929753303528 0.13504564762115479 0.42823734879493713 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0.99928134679794312 0.99901199340820313 
-		0.99870586395263672 0.99083942174911499 0.90366625785827637 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -57.480525780554302 5 -51.73013713500567
+		 13 -48.285871889362589 19 -41.539874112860844 25 -31.237638477471783 29 -21.129429852931313
+		 32 -21.129429852931313 37 -17.84722668844557 40 -14.760624526834446 49 -5.2058571386173789
+		 56 -1.6694354611488003 64 -0.62018870995840192 73 -0.17471052569230958 83 -0.17471052569230958
+		 92 -0.17471052569230958 100 -1.2714698893758773 109 0.54036390459351691 115 0.54036390459351691;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 0.030331343412399292 1 0.052266884595155716 
+		0.039521783590316772 0.050858929753303528 0.13504566252231598 0.42823740839958191 
+		1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0.99953991174697876 0 0.99863308668136597 
+		0.99921876192092896 0.99870586395263672 0.99083942174911499 0.90366631746292114 0 
+		0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 0.030331341549754143 1 0.052266888320446014 
+		0.039521787315607071 0.050858929753303528 0.13504564762115479 0.42823734879493713 
+		1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0.99953991174697876 0 0.99863314628601074 
+		0.99921876192092896 0.99870586395263672 0.99083942174911499 0.90366625785827637 0 
+		0 0 0 0 0;
 createNode animCurveTL -n "foot_ctrl_ik_R_translateY";
 	rename -uid "F92553BF-427E-4BFF-5C70-579A303CA4CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -2.6031428596831305 13 -1.3317394634770261
-		 25 -3.1686482361804966 32 4.6098386603691964e-016 40 -2.2251180676758691 49 -0.077083550430570955
-		 56 -1.0144685487185807 64 -5.5619810629307818 73 -5.5619810629307809 83 -10.807837273592861;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 0.11321660131216049 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 -0.99357038736343384 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 0.1132165938615799 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 -0.99357026815414429 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -2.6031428596831305 5 -0.056604716501979194
+		 13 -1.3317394634770261 19 -1.7016282306473334 25 -3.1686482361804966 29 0 32 4.6098386603691964e-016
+		 37 -2.297180602783734 40 -2.2251180676758691 49 -0.077083550430570955 56 -1.0144685487185807
+		 64 -5.5619810629307818 73 -5.5619810629307809 83 -10.807837273592861 92 -10.807837273592861
+		 100 -11.911329167742339 109 -9.2202217633771753 115 -9.2202217633771753;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 0.50055259466171265 1 0.11321660131216049 
+		1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0.86570614576339722 0 -0.99357038736343384 
+		0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 0.50055259466171265 1 0.1132165938615799 
+		1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0.86570614576339722 0 -0.99357026815414429 
+		0 0 0 0 0 0 0;
 createNode animCurveTL -n "foot_ctrl_ik_R_translateZ";
 	rename -uid "F318BEF1-40D9-49CA-B79E-9EBCE91F5D7F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 63.568937721380415 13 55.853707032478674
-		 25 41.54854066433694 32 33.025237838296057 40 24.519956668131606 49 7.7860116533937891
-		 56 4.1552737040726502 64 -6.3324648985729759 73 -6.5083068401796043 83 -7.2932239788511612;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.036678295582532883 0.028053736314177513 
-		0.032718885689973831 0.044224921613931656 0.57939094305038452 0.63592416048049927 
-		1;
-	setAttr -s 10 ".kiy[2:9]"  0 -0.99932712316513062 -0.99960637092590332 
-		-0.99946463108062744 -0.99902158975601196 -0.81504976749420166 -0.77175158262252808 
-		0;
-	setAttr -s 10 ".kox[2:9]"  1 0.036678299307823181 0.028053734451532364 
-		0.032718885689973831 0.044224921613931656 0.57939094305038452 0.63592410087585449 
-		1;
-	setAttr -s 10 ".koy[2:9]"  0 -0.99932712316513062 -0.99960637092590332 
-		-0.99946463108062744 -0.99902158975601196 -0.81504982709884644 -0.7717515230178833 
-		0;
+	setAttr -s 18 ".ktv[0:17]"  1 63.568937721380415 5 59.018436965004092
+		 13 55.853707032478674 19 50.193142786293301 25 41.54854066433694 29 33.025237838296057
+		 32 33.025237838296057 37 28.207215254873365 40 24.519956668131606 49 7.7860116533937891
+		 56 4.1552737040726502 64 -6.3324648985729759 73 -6.5083068401796043 83 -7.2932239788511612
+		 92 -7.2932239788511612 100 -15.827349948933858 109 -16.45321700630122 115 -16.45321700630122;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 0.029349742457270622 1 0.039161257445812225 
+		0.024477025493979454 0.032718885689973831 0.044224921613931656 0.57939094305038452 
+		0.63592416048049927 1 1 0.19585485756397247 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 -0.99956917762756348 0 -0.99923282861709595 
+		-0.99970036745071411 -0.99946463108062744 -0.99902158975601196 -0.81504976749420166 
+		-0.77175158262252808 0 0 -0.98063284158706665 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 0.029349746182560921 1 0.039161261171102524 
+		0.024477025493979454 0.032718885689973831 0.044224921613931656 0.57939094305038452 
+		0.63592410087585449 1 1 0.19585487246513367 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 -0.99956923723220825 0 -0.99923288822174072 
+		-0.99970042705535889 -0.99946463108062744 -0.99902158975601196 -0.81504982709884644 
+		-0.7717515230178833 0 0 -0.98063290119171143 0 0;
 createNode animCurveTL -n "center_ctrl_fk_translateX";
 	rename -uid "632082A5-4EBB-2651-FB79-68B5E450F213";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -56.543414483564767 13 -45.035734316239513
-		 25 -30.536683997374496 32 -20.997770291173623 40 -13.660065953314197 49 -6.4962756750446129
-		 56 -0.18627536370576842 64 -0.18627536370576842 73 -0.18627536370576486 83 -0.18627536370575776;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.037008117884397507 0.048787374049425125 
-		0.049418319016695023 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0.99931496381759644 0.99880915880203247 
-		0.99877816438674927 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.037008114159107208 0.048787374049425125 
-		0.049418319016695023 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0.99931496381759644 0.99880915880203247 
-		0.99877816438674927 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -56.543414483564767 5 -54.125236270810227
+		 13 -45.035734316239513 19 -38.181930319730682 25 -30.536683997374496 29 -24.089486696755682
+		 32 -20.997770291173623 37 -16.471388153700733 40 -13.660065953314197 49 -6.4962756750446129
+		 56 -0.18627536370576842 64 -0.18627536370576842 73 -0.18627536370576486 83 -0.18627536370575776
+		 92 -0.18627536370576486 100 -2.684145534398465 109 -2.481749962104161 115 -2.481749962104161;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 0.030562231317162514 0.043713614344596863 
+		0.04538065567612648 0.0500619076192379 0.049418319016695023 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0.99953281879425049 0.99904406070709229 
+		0.99896973371505737 0.99874609708786011 0.99877816438674927 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 0.030562231317162514 0.043713614344596863 
+		0.04538065567612648 0.050061911344528198 0.049418319016695023 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0.99953281879425049 0.99904412031173706 
+		0.99896979331970215 0.99874615669250488 0.99877816438674927 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "center_ctrl_fk_translateY";
 	rename -uid "F6955513-42D8-7EFD-945B-719B92390EE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -0.74944895477708506 13 -0.749 25 -0.749
-		 32 -1.1857967695068696 40 -0.35803069216438321 49 -1.0482096989123615 56 -1.582584853806329
-		 64 1.1637254771009691 73 5.5837353824123612 83 7.220143315821498;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 0.47814887762069702 1 0.09836268424987793 
-		0.12961268424987793 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 -0.87827879190444946 0 0.99515062570571899 
-		0.99156475067138672 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 0.47814884781837463 1 0.09836268424987793 
-		0.12961268424987793 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 -0.87827879190444946 0 0.99515062570571899 
-		0.99156469106674194 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -0.74944895477708506 5 -1.8418362365850314
+		 13 -0.749 19 -2.0557389499444154 25 -0.749 29 -1.5855416085463436 32 -1.1857967695068696
+		 37 -1.0787091415411929 40 -0.35803069216438321 49 -1.0482096989123615 56 -1.582584853806329
+		 64 1.1637254771009691 73 5.5837353824123612 83 7.5849562205258936 92 10.157927522211416
+		 100 10.271258937410851 109 5.8466264594042432 115 5.8466264594042432;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 0.54949092864990234 0.54409277439117432 
+		1 0.47814887762069702 1 0.09836268424987793 0.12236245721578598 0.17053712904453278 
+		0.7000773549079895 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0.83549970388412476 0.83902508020401001 
+		0 -0.87827879190444946 0 0.99515062570571899 0.99248552322387695 0.98535126447677612 
+		0.71406698226928711 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 0.54949092864990234 0.54409283399581909 
+		1 0.47814884781837463 1 0.09836268424987793 0.12236244976520538 0.17053711414337158 
+		0.7000773549079895 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0.83549970388412476 0.83902508020401001 
+		0 -0.87827879190444946 0 0.99515062570571899 0.99248546361923218 0.98535120487213135 
+		0.71406698226928711 0 0 0;
 createNode animCurveTL -n "center_ctrl_fk_translateZ";
 	rename -uid "C0964E1C-4BA3-6F32-0F26-CC9D9512DAF0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -63.700987611033092 13 -54.044897426924365
-		 25 -41.878749651943906 32 -32.240344269520115 40 -24.151508364629741 49 -10.977508762668734
-		 56 -2.4456206428519702 64 4.2329173131192785 73 6.112127974197425 83 6.4811377022938146;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.035234585404396057 0.033294744789600372 
-		0.030699156224727631 0.041055593639612198 0.082488924264907837 0.35225763916969299 
-		1;
-	setAttr -s 10 ".kiy[2:9]"  0 0.99937915802001953 0.99944561719894409 
-		0.99952870607376099 0.9991568922996521 0.99659198522567749 0.93590313196182251 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.03523457795381546 0.033294744789600372 
-		0.030699154362082481 0.041055589914321899 0.08248891681432724 0.35225763916969299 
-		1;
-	setAttr -s 10 ".koy[2:9]"  0 0.99937903881072998 0.99944555759429932 
-		0.99952870607376099 0.9991568922996521 0.99659192562103271 0.93590313196182251 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -63.700987611033092 5 -61.671895164589849
+		 13 -54.044897426924365 19 -48.293873021292399 25 -41.878749651943906 29 -35.54381855047518
+		 32 -32.240344269520115 37 -26.834042521167909 40 -24.151508364629741 49 -10.977508762668734
+		 56 -2.4456206428519702 64 4.2329173131192785 73 6.112127974197425 83 7.1420695437971586
+		 92 9.2173565731675016 100 13.045087742001831 109 14.394714355552855 115 14.394714355552855;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 0.030247047543525696 0.038243167102336884 
+		0.041174106299877167 0.031517084687948227 0.030699156224727631 0.041055593639612198 
+		0.082488924264907837 0.26258060336112976 0.24704404175281525 0.11914042383432388 
+		0.13555093109607697 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0.9995424747467041 0.99926847219467163 
+		0.99915194511413574 0.99950319528579712 0.99952870607376099 0.9991568922996521 0.99659198522567749 
+		0.96491008996963501 0.96900427341461182 0.99287736415863037 0.99077039957046509 0 
+		0;
+	setAttr -s 18 ".kox[4:17]"  1 0.030247047543525696 0.038243167102336884 
+		0.041174106299877167 0.031517084687948227 0.030699154362082481 0.041055589914321899 
+		0.08248891681432724 0.26258063316345215 0.24704402685165405 0.11914041638374329 0.13555091619491577 
+		1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0.99954253435134888 0.99926847219467163 
+		0.99915200471878052 0.99950319528579712 0.99952870607376099 0.9991568922996521 0.99659192562103271 
+		0.96491008996963501 0.96900421380996704 0.99287742376327515 0.99077033996582031 0 
+		0;
 createNode animCurveTL -n "neck_ctrl_fk_translateX";
 	rename -uid "39D872FF-490A-CF62-1C18-7EBBF71310A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "neck_ctrl_fk_translateY";
 	rename -uid "199F6BD0-4E97-58FC-BD45-B1A2C576874C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "neck_ctrl_fk_translateZ";
 	rename -uid "B460BDD0-4B4B-72AE-A813-5E9CD50C0199";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "center_ctrl_fk_visibility";
 	rename -uid "F7AF3FF3-4495-0B68-F565-569F6A8B9CD0";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "center_ctrl_fk_rotateX";
 	rename -uid "A0F701D7-4E3B-98CE-FE3A-85B35D6C4E38";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 30.377965398708369 13 30.377965398708369
-		 25 30.377965398708369 32 3.9683184257060664 40 3.9683184257060664 49 3.9683184257060664
-		 56 31.928514266926843 64 -9.9893363482313529 73 -2.486186796032849 83 6.613590997144092;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 0.93906861543655396 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0.34372973442077637 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 0.93906867504119873 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0.34372973442077637 0;
+	setAttr -s 18 ".ktv[0:17]"  1 30.377965398708369 5 35.740052711687092
+		 13 30.377965398708369 19 30.377965398708369 25 30.377965398708369 29 -5.438566078494226
+		 32 3.9683184257060664 37 3.9683184257060664 40 3.9683184257060664 49 3.9683184257060664
+		 56 31.928514266926843 64 -9.9893363482313529 73 -2.486186796032849 83 6.613590997144092
+		 92 6.613590997144092 100 6.613590997144092 109 -26.278366689440123 115 -26.278366689440123;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 0.93906861543655396 1 1 
+		1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0.34372973442077637 0 0 
+		0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 0.93906867504119873 1 1 
+		1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0.34372973442077637 0 0 
+		0 0 0;
 createNode animCurveTA -n "center_ctrl_fk_rotateY";
 	rename -uid "0679735E-48BE-19E8-8A69-E7A312C2CBDF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 50 13 50 25 46.552466951293113 32 40.977814586196232
-		 40 40.977814586196232 49 31.115687669888132 56 0 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 0.68185281753540039 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 -0.73148947954177856 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 0.68185281753540039 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 -0.73148941993713379 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 50 5 50 13 50 19 50 25 46.552466951293113
+		 29 46.552466951293113 32 40.977814586196232 37 40.977814586196232 40 40.977814586196232
+		 49 31.115687669888132 56 0 64 0 73 0 83 0 92 0 100 69.221106096800199 109 83.374297650052114
+		 115 83.374297650052114;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 0.68185281753540039 1 1 1 1 1 
+		0.45151436328887939 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 -0.73148947954177856 0 0 0 0 
+		0 0.89226388931274414 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 0.68185281753540039 1 1 1 1 1 
+		0.45151433348655701 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 -0.73148941993713379 0 0 0 0 
+		0 0.89226382970809937 0 0;
 createNode animCurveTA -n "center_ctrl_fk_rotateZ";
 	rename -uid "98A3379A-44C5-C80A-8EE3-B9824D0B87F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 2.4626835430013596 32 12.148269327886901
-		 40 12.148269327886901 49 4.0566669296030726 56 0 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 0.95296460390090942 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 -0.30308178067207336 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 0.95296454429626465 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 -0.30308175086975098 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 2.4626835430013596
+		 29 2.4626835430013596 32 12.148269327886901 37 12.148269327886901 40 12.148269327886901
+		 49 4.0566669296030726 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 0.95296460390090942 1 1 1 1 1 
+		1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 -0.30308178067207336 0 0 0 0 
+		0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 0.95296454429626465 1 1 1 1 1 
+		1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 -0.30308175086975098 0 0 0 0 
+		0 0 0 0;
 createNode animCurveTU -n "center_ctrl_fk_scaleX";
 	rename -uid "6A534569-4A63-F143-4497-6D95178C6671";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "center_ctrl_fk_scaleY";
 	rename -uid "E35C0B67-4197-4CC2-A9ED-55A9146A471A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "center_ctrl_fk_scaleZ";
 	rename -uid "E82B193C-479F-68C5-E016-81A3A4511AE0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "center_ctrl_fk_rotationOrder";
 	rename -uid "5BD5D0A7-4121-8843-BC18-188FDBD1884A";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 2 13 2 25 2 32 2 40 2 49 2 56 2 64 2 73 2
-		 83 2;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 2 5 2 13 2 19 2 25 2 29 2 32 2 37 2 40 2
+		 49 2 56 2 64 2 73 2 83 2 92 2 100 2 109 2 115 2;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "hips_ctrl_fk_visibility";
 	rename -uid "7CBBAB91-4F13-3E0D-AC26-10B7684333F3";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "hips_ctrl_fk_rotateX";
 	rename -uid "E7DF1FB2-4E44-6BE8-8439-509C43CF5093";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "hips_ctrl_fk_rotateY";
 	rename -uid "F4CB30CA-4CF1-63AE-4264-3EAF023BD9C3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 14.249150881519254 13 -5.0185211366369034
-		 25 14.249150881519254 32 14.249150881519254 40 14.249150881519254 49 14.249150881519254
-		 56 14.249150881519254 64 14.249150881519254 73 14.249150881519254 83 14.249150881519254;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 14.249150881519254 5 14.249150881519254
+		 13 -5.0185211366369034 19 -5.0185211366369034 25 14.249150881519254 29 14.249150881519254
+		 32 14.249150881519254 37 14.249150881519254 40 14.249150881519254 49 14.249150881519254
+		 56 14.249150881519254 64 14.249150881519254 73 14.249150881519254 83 14.249150881519254
+		 92 14.249150881519254 100 14.249150881519254 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "hips_ctrl_fk_rotateZ";
 	rename -uid "FD1B52C5-4F61-76F2-11F6-6DA98419A09D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 -24.135207057652277 40 -0.7775410353770188
-		 49 -17.014128425287215 56 13.909351209662709 64 13.909351209662709 73 13.909351209662709
-		 83 13.909351209662709;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 -24.135207057652277
+		 37 -24.135207057652277 40 -0.7775410353770188 49 -17.014128425287215 56 13.909351209662709
+		 64 13.909351209662709 73 13.909351209662709 83 13.909351209662709 92 13.909351209662709
+		 100 13.909351209662709 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "hips_ctrl_fk_ikFkSwitchLeftLeg";
 	rename -uid "864E1DD8-48CA-3D7B-1EB1-7E8679D6BACE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "hips_ctrl_fk_ikFkSwitchRightLeg";
 	rename -uid "9360CEF1-43F3-107E-AACC-15AFA33B5B21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "hips_ctrl_fk_rotationOrder";
 	rename -uid "25EBF997-45B5-90E3-665D-D2BA24CB8C12";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "botSpine_ctrl_fk_visibility";
 	rename -uid "256E2A0C-4A3E-C473-5530-6BA1698E20E9";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "botSpine_ctrl_fk_rotateX";
 	rename -uid "9802B1EE-412F-FE71-45AE-F284990F56EC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 15.629548295638955 13 15.629548295638955
-		 25 15.629548295638955 32 23.395477707105186 40 23.395477707105186 49 23.395477707105186
-		 56 38.806081565648491 64 26.341728212656307 73 26.341728212656307 83 38.510875482684085;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 15.629548295638955 5 15.629548295638955
+		 13 15.629548295638955 19 21.468925005875825 25 15.629548295638955 29 15.629548295638955
+		 32 23.395477707105186 37 23.395477707105186 40 23.395477707105186 49 23.395477707105186
+		 56 38.806081565648491 64 26.341728212656307 73 26.341728212656307 83 38.510875482684085
+		 92 38.510875482684085 100 15.410824691021359 109 15.767396984610755 115 15.767396984610755;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "botSpine_ctrl_fk_rotateY";
 	rename -uid "FAE58DD2-4696-8CA9-D459-E8ABE334F174";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "botSpine_ctrl_fk_rotateZ";
 	rename -uid "11921D08-4050-0918-54D8-5AA17AEA9883";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "botSpine_ctrl_fk_rotationOrder";
 	rename -uid "BA09942B-4459-1CE3-BA98-DBB386175966";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 5 13 5 25 5 32 5 40 5 49 5 56 5 64 5 73 5
-		 83 5;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 5 5 5 13 5 19 5 25 5 29 5 32 5 37 5 40 5
+		 49 5 56 5 64 5 73 5 83 5 92 5 100 5 109 5 115 5;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "topSpine_ctrl_fk_visibility";
 	rename -uid "A91EA7A5-4EF3-4166-5BBF-879BB2A7B779";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "topSpine_ctrl_fk_rotateX";
 	rename -uid "4E2FC449-462A-C118-704A-6EB9170B7799";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 21.430243295453288 13 21.430243295453288
-		 25 21.430243295453288 32 35.478073825159839 40 35.478073825159839 49 35.478073825159839
-		 56 35.478073825159839 64 24.237311080741076 73 24.237311080741076 83 20.800307323796382;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 21.430243295453288 5 21.430243295453288
+		 13 21.430243295453288 19 31.461792507179172 25 21.430243295453288 29 21.430243295453288
+		 32 35.478073825159839 37 35.478073825159839 40 35.478073825159839 49 35.478073825159839
+		 56 35.478073825159839 64 24.237311080741076 73 24.237311080741076 83 20.800307323796382
+		 92 20.800307323796382 100 20.800307323796382 109 44.034390118744142 115 44.034390118744142;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "topSpine_ctrl_fk_rotateY";
 	rename -uid "9CFE4AEB-40F3-AA01-4FEE-0CBBFB456ADB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "topSpine_ctrl_fk_rotateZ";
 	rename -uid "E08F9035-43A0-56ED-9256-E482507CFE8A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "topSpine_ctrl_fk_rotationOrder";
 	rename -uid "CD5E9AC8-4A91-DD60-401E-56BDC0E012A9";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 5 13 5 25 5 32 5 40 5 49 5 56 5 64 5 73 5
-		 83 5;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 5 5 5 13 5 19 5 25 5 29 5 32 5 37 5 40 5
+		 49 5 56 5 64 5 73 5 83 5 92 5 100 5 109 5 115 5;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "chest_ctrl_fk_visibility";
 	rename -uid "22108116-4710-C4F1-736C-57872C3F4988";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "chest_ctrl_fk_rotateX";
 	rename -uid "1C17741E-4BA1-1523-14E9-26BD592E6818";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 -33.36708852303142
-		 73 -33.36708852303142 83 -33.36708852303142;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 -33.36708852303142 73 -33.36708852303142 83 -33.36708852303142 92 -33.36708852303142
+		 100 -33.36708852303142 109 -33.36708852303142 115 -18.750838931912131;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "chest_ctrl_fk_rotateY";
 	rename -uid "66649CC5-4258-524C-BCC8-37B8E10D54F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 -0.2674367605573465;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 -0.2674367605573465 92 -11.309304871066729 100 -11.309304871066729
+		 109 -11.309304871066729 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 0.99943578243255615 1 
+		1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 -0.033588144928216934 
+		0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 0.99943572282791138 1 
+		1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 -0.033588144928216934 
+		0 0 0 0;
 createNode animCurveTA -n "chest_ctrl_fk_rotateZ";
 	rename -uid "62F67F8E-4C9E-389C-BEDA-8D8D66729FCB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 19.716361301484127
-		 73 19.716361301484127 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 19.716361301484127 73 19.716361301484127 83 0 92 6.958693150194657 100 6.958693150194657
+		 109 6.958693150194657 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "chest_ctrl_fk_ikFkSwitchLeftArm";
 	rename -uid "E80A53C8-45FA-69B4-889E-EEAFC40FFD36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 10 13 10 25 10 32 10 40 10 49 10 56 10
-		 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 10 5 10 13 10 19 10 25 10 29 10 32 10
+		 37 10 40 10 49 10 56 10 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "chest_ctrl_fk_ikFkSwitchRightArm";
 	rename -uid "2D168613-4324-CCBC-46C9-B7ABC6AB9DBB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 10 13 10 25 10 32 10 40 10 49 10 56 10
-		 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 10 5 10 13 10 19 10 25 10 29 10 32 10
+		 37 10 40 10 49 10 56 10 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "chest_ctrl_fk_rotationOrder";
 	rename -uid "59A8902D-49E4-C8D7-8D2C-B981AEBDF6AD";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "clavicle_ctrl_fk_L_visibility";
 	rename -uid "F198FA4A-4B93-8396-45A5-789BCD8F5177";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "clavicle_ctrl_fk_L_rotateX";
 	rename -uid "545FA983-4AA5-D510-5F88-19A15C27B25E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "clavicle_ctrl_fk_L_rotateY";
 	rename -uid "0807EA8B-4EE5-B1E9-581F-EDB5950BF3B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -29.779407102767106 13 6.831318785484096
-		 25 -29.779407102767106 32 0 40 0 49 0 56 0 64 -79.734569161843538 73 23.384810213072811
-		 83 -41.083260331740881;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -29.779407102767106 5 -29.779407102767106
+		 13 6.831318785484096 19 6.831318785484096 25 -29.779407102767106 29 -29.779407102767106
+		 32 0 37 0 40 0 49 0 56 0 64 -79.734569161843538 73 23.384810213072811 83 -41.083260331740881
+		 92 -41.083260331740881 100 -41.083260331740881 109 -41.083260331740881 115 -41.083260331740881;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "clavicle_ctrl_fk_L_rotateZ";
 	rename -uid "9934EA56-49F3-D360-844A-CCB1B59C31B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 -40.593557094723181
-		 83 -40.593557094723181;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 -40.593557094723181 83 13.490933628402365 92 13.490933628402365
+		 100 13.490933628402365 109 13.490933628402365 115 13.490933628402365;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "clavicle_ctrl_fk_L_rotationOrder";
 	rename -uid "13E3C31F-4160-DAD0-B876-7BAC595E2FBE";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 2 13 2 25 2 32 2 40 2 49 2 56 2 64 2 73 2
-		 83 2;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 2 5 2 13 2 19 2 25 2 29 2 32 2 37 2 40 2
+		 49 2 56 2 64 2 73 2 83 2 92 2 100 2 109 2 115 2;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "shoulder_ctrl_fk_L_rotateX";
 	rename -uid "183383F5-4BC2-7A69-0CD0-559F8D5D6BC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -61.287646392443712 13 -122.5122933278234
-		 25 -61.287646392443712 32 0 40 -61.321450770582295 49 -61.321450770582295 56 -61.321450770582295;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 -61.287646392443712 5 -61.287646392443712
+		 13 -122.5122933278234 19 -122.5122933278234 25 -61.287646392443712 29 -61.287646392443712
+		 32 0 37 0 40 -61.321450770582295 49 -61.321450770582295 56 -61.321450770582295;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "shoulder_ctrl_fk_L_rotateY";
 	rename -uid "12299F80-4E0C-9767-270E-B485884E9806";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -63.809313552278368 13 -97.922082375766493
-		 25 -63.809313552278368 32 0 40 -54.105503629427439 49 -54.105503629427439 56 -54.105503629427439;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 -63.809313552278368 5 -32.784042220861551
+		 13 -97.922082375766493 19 -97.922082375766493 25 -63.809313552278368 29 -53.067390182456357
+		 32 0 37 20.534205871377381 40 -54.105503629427439 49 -54.105503629427439 56 -54.105503629427439;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 0.28411361575126648 0.25116786360740662 
+		1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0.95879065990447998 0.96794354915618896 
+		0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 0.28411361575126648 0.25116786360740662 
+		1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0.95879060029983521 0.96794348955154419 
+		0 0 0 0;
 createNode animCurveTA -n "shoulder_ctrl_fk_L_rotateZ";
 	rename -uid "EF62AF65-4348-5B60-4F9F-6EBE04663966";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 58.913930221054017 13 -107.9310805239114
-		 25 58.913930221054017 32 -68.333326035806579 40 -33.855457963653357 49 -33.855457963653357
+	setAttr -s 11 ".ktv[0:10]"  1 58.913930221054017 5 20.467108617266277
+		 13 -107.9310805239114 19 -121.8682756839936 25 58.913930221054017 29 -27.137012280159748
+		 32 -68.333326035806579 37 -81.909085824908487 40 -33.855457963653357 49 -33.855457963653357
 		 56 -88.624227554518512;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 0.13021105527877808 0.32924997806549072 
+		1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 -0.9914863109588623 -0.94424277544021606 
+		0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 0.13021105527877808 0.32924997806549072 
+		1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 -0.9914863109588623 -0.94424283504486084 
+		0 0 0 0;
 createNode animCurveTU -n "shoulder_ctrl_fk_L_rotationOrder";
 	rename -uid "9EE75A15-4BCA-A8D9-52CD-DFA1DA01BC60";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3 13 3 25 3 32 3 40 3 49 3 56 3;
-	setAttr -s 7 ".kit[0:6]"  9 9 1 9 9 9 9;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 3 5 3 13 3 19 3 25 3 29 3 32 3 37 3 40 3
+		 49 3 56 3;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "elbow_ctrl_fk_L_rotateX";
 	rename -uid "01C35017-4C8D-BAE3-5DEF-9EBEE16C6C7D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "elbow_ctrl_fk_L_rotateY";
 	rename -uid "362216EA-4717-8965-0058-D9AB9AD99CCB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -33.692785592087176 13 -33.692785592087176
-		 25 -33.692785592087176 32 -33.692785592087176 40 -33.692785592087176 49 -33.692785592087176
+	setAttr -s 11 ".ktv[0:10]"  1 -33.692785592087176 5 -76.814915108911833
+		 13 -33.692785592087176 19 0.86493833334152115 25 -33.692785592087176 29 -33.692785592087176
+		 32 -33.692785592087176 37 -4.1187275231641118 40 -33.692785592087176 49 -33.692785592087176
 		 56 -33.692785592087176;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "elbow_ctrl_fk_L_rotateZ";
 	rename -uid "A47DD012-4655-7647-21B3-C3984BE368D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "elbow_ctrl_fk_L_rotationOrder";
 	rename -uid "57826DF4-410C-DA30-A6DD-E1BAEDCC5649";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3 13 3 25 3 32 3 40 3 49 3 56 3;
-	setAttr -s 7 ".kit[0:6]"  9 9 1 9 9 9 9;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 3 5 3 13 3 19 3 25 3 29 3 32 3 37 3 40 3
+		 49 3 56 3;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "hand_ctrl_fk_L_rotateX";
 	rename -uid "F55EDB04-43FD-C023-2B9B-AB9211844417";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "hand_ctrl_fk_L_rotateY";
 	rename -uid "FDC439F5-4219-D0FF-71C0-BCB535B5CE51";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -21.259089543289456 13 -21.259089543289456
-		 25 -21.259089543289456 32 -21.259089543289456 40 -21.259089543289456 49 -21.259089543289456
+	setAttr -s 11 ".ktv[0:10]"  1 -21.259089543289456 5 -21.259089543289456
+		 13 -21.259089543289456 19 33.818890672403228 25 -21.259089543289456 29 -21.259089543289456
+		 32 -21.259089543289456 37 -21.259089543289456 40 -21.259089543289456 49 -21.259089543289456
 		 56 -21.259089543289456;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "hand_ctrl_fk_L_rotateZ";
 	rename -uid "B5E0659F-487D-7830-DAD7-BCA2FF83D410";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "hand_ctrl_fk_L_rotationOrder";
 	rename -uid "F7A72A6C-42A2-B321-FF34-A3A67DAA9287";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3 13 3 25 3 32 3 40 3 49 3 56 3;
-	setAttr -s 7 ".kit[0:6]"  9 9 1 9 9 9 9;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 3 5 3 13 3 19 3 25 3 29 3 32 3 37 3 40 3
+		 49 3 56 3;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "clavicle_ctrl_fk_R_visibility";
 	rename -uid "E40CDCB2-4F7D-8E89-EF67-8EA5E2CE3C86";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "clavicle_ctrl_fk_R_rotateX";
 	rename -uid "F9BECBF0-4EEE-3454-E079-93998BA893E9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "clavicle_ctrl_fk_R_rotateY";
 	rename -uid "3E370C4F-4BA9-48AC-C177-65A2793FC7EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 21.317292136283999 13 -11.180164215372491
-		 25 21.317292136283999 32 21.317292136283999 40 21.317292136283999 49 21.317292136283999
-		 56 21.317292136283999 64 -31.057209752958435 73 -31.057209752958435 83 -31.057209752958435;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 21.317292136283999 5 21.317292136283999
+		 13 -11.180164215372491 19 -11.180164215372491 25 21.317292136283999 29 21.317292136283999
+		 32 21.317292136283999 37 21.317292136283999 40 21.317292136283999 49 21.317292136283999
+		 56 21.317292136283999 64 -31.057209752958435 73 -31.057209752958435 83 -31.057209752958435
+		 92 -31.057209752958435 100 -31.057209752958435 109 -31.057209752958435 115 -31.057209752958435;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "clavicle_ctrl_fk_R_rotateZ";
 	rename -uid "6959CBFC-4C98-AEB7-E0E3-A79FB0D7DFB0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "clavicle_ctrl_fk_R_rotationOrder";
 	rename -uid "67DF264C-4DF9-9EE6-A0F2-E6A260153994";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 2 13 2 25 2 32 2 40 2 49 2 56 2 64 2 73 2
-		 83 2;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 2 5 2 13 2 19 2 25 2 29 2 32 2 37 2 40 2
+		 49 2 56 2 64 2 73 2 83 2 92 2 100 2 109 2 115 2;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "shoulder_ctrl_fk_R_rotateX";
 	rename -uid "CA803604-4523-2A69-BF6B-04B51918EEB1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 40.731715866951369 13 -55.404908799250293
-		 25 40.731715866951369 32 0 40 -32.848642679678449 49 -32.848642679678449 56 -32.848642679678449;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 0.43760418891906738 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 -0.89916771650314331 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 0.437604159116745 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 -0.89916771650314331 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 40.731715866951369 5 40.731715866951369
+		 13 -55.404908799250293 19 -84.778142061187239 25 40.731715866951369 29 40.731715866951369
+		 32 0 37 -69.700588897201285 40 -32.848642679678449 49 -32.848642679678449 56 -32.848642679678449;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 0.17041411995887756 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 -0.98537248373031616 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 0.17041411995887756 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 -0.98537254333496094 0 0 0 0;
 createNode animCurveTA -n "shoulder_ctrl_fk_R_rotateY";
 	rename -uid "2D0F6AE3-406D-1B3F-2A34-979DC3EACC61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 41.163851838481087 13 -62.890601041017661
-		 25 41.163851838481087 32 -35.620290183646738 40 -35.620290183646738 49 -35.620290183646738
+	setAttr -s 11 ".ktv[0:10]"  1 41.163851838481087 5 41.163851838481087
+		 13 -62.890601041017661 19 -42.068201004140469 25 41.163851838481087 29 19.998810830578286
+		 32 -35.620290183646738 37 -87.949662514390965 40 -35.620290183646738 49 -35.620290183646738
 		 56 -51.369630378371959;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 0.21266135573387146 0.17421753704547882 
+		1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 -0.97712594270706177 -0.98470717668533325 
+		0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 0.21266134083271027 0.17421752214431763 
+		1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 -0.97712588310241699 -0.98470711708068848 
+		0 0 0 0;
 createNode animCurveTA -n "shoulder_ctrl_fk_R_rotateZ";
 	rename -uid "7DD7F784-47B5-874A-D8E1-32A069BFD367";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -28.505737866938659 13 29.505833909854964
-		 25 -28.505737866938659 32 -23.52411517820002 40 -58.759050937709048 49 -58.759050937709048
+	setAttr -s 11 ".ktv[0:10]"  1 -28.505737866938659 5 -48.010471264160749
+		 13 29.505833909854964 19 -5.1140406535240803 25 -28.505737866938659 29 -55.780259939745818
+		 32 -23.52411517820002 37 4.3334497505374214 40 -58.759050937709048 49 -58.759050937709048
 		 56 -63.134372025061502;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 0.30279329419136047 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0.9530562162399292 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 0.30279332399368286 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0.95305627584457397 0 0 0 0;
 createNode animCurveTU -n "shoulder_ctrl_fk_R_rotationOrder";
 	rename -uid "C8D5FFC7-4AE1-3DB3-A24B-D6B2D7562881";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3 13 3 25 3 32 3 40 3 49 3 56 3;
-	setAttr -s 7 ".kit[0:6]"  9 9 1 9 9 9 9;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 3 5 3 13 3 19 3 25 3 29 3 32 3 37 3 40 3
+		 49 3 56 3;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "elbow_ctrl_fk_R_rotateX";
 	rename -uid "D39786C0-4C0C-D727-3A19-499AD21CE576";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "elbow_ctrl_fk_R_rotateY";
 	rename -uid "F2721191-411A-7DE4-2D5D-9EA4B233D97F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -21.965853178120991 13 -69.424137641946544
-		 25 -21.965853178120991 32 -21.965853178120991 40 -21.965853178120991 49 -21.965853178120991
+	setAttr -s 11 ".ktv[0:10]"  1 -21.965853178120991 5 5.8820346447828467
+		 13 -69.424137641946544 19 -95.4337670152822 25 -21.965853178120991 29 17.226842786864129
+		 32 -21.965853178120991 37 -41.86077108202916 40 -21.965853178120991 49 -21.965853178120991
 		 56 -21.965853178120991;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 0.30755797028541565 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 -0.95152932405471802 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 0.30755800008773804 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 -0.95152938365936279 0 0 0 0;
 createNode animCurveTA -n "elbow_ctrl_fk_R_rotateZ";
 	rename -uid "40137DAC-4403-E6AE-D67B-B5989056019D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -16.621434172573299 13 -16.621434172573299
-		 25 -16.621434172573299 32 -16.621434172573299 40 -16.621434172573299 49 -16.621434172573299
+	setAttr -s 11 ".ktv[0:10]"  1 -16.621434172573299 5 -16.621434172573299
+		 13 -16.621434172573299 19 -16.621434172573299 25 -16.621434172573299 29 -16.621434172573299
+		 32 -16.621434172573299 37 -16.621434172573299 40 -16.621434172573299 49 -16.621434172573299
 		 56 -16.621434172573299;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "elbow_ctrl_fk_R_rotationOrder";
 	rename -uid "3D27ACC0-41BB-0A5A-8E7F-3292D39907BD";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3 13 3 25 3 32 3 40 3 49 3 56 3;
-	setAttr -s 7 ".kit[0:6]"  9 9 1 9 9 9 9;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 3 5 3 13 3 19 3 25 3 29 3 32 3 37 3 40 3
+		 49 3 56 3;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "hand_ctrl_fk_R_rotateX";
 	rename -uid "7FCFF680-4378-2DCE-56C8-699086590011";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "hand_ctrl_fk_R_rotateY";
 	rename -uid "5D40B839-439F-D071-2892-B48BE9CA214C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 5 18.686153409197857 13 0 19 -21.47330210659624
+		 25 0 29 0 32 0 37 0 40 0 49 0 56 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "hand_ctrl_fk_R_rotateZ";
 	rename -uid "4F30540B-43AC-22AD-BD05-85A504FE2831";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 16.180292349210568 13 16.180292349210568
-		 25 16.180292349210568 32 16.180292349210568 40 16.180292349210568 49 16.180292349210568
+	setAttr -s 11 ".ktv[0:10]"  1 16.180292349210568 5 16.180292349210568
+		 13 16.180292349210568 19 16.180292349210568 25 16.180292349210568 29 16.180292349210568
+		 32 16.180292349210568 37 16.180292349210568 40 16.180292349210568 49 16.180292349210568
 		 56 16.180292349210568;
-	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
-	setAttr -s 7 ".kox[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".kit[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kot[4:10]"  1 18 18 18 18 18 18;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "hand_ctrl_fk_R_rotationOrder";
 	rename -uid "F7195E25-4342-42C7-EC05-BFA2686EABC5";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3 13 3 25 3 32 3 40 3 49 3 56 3;
-	setAttr -s 7 ".kit[0:6]"  9 9 1 9 9 9 9;
-	setAttr -s 7 ".kix[2:6]"  1 1 1 1 1;
-	setAttr -s 7 ".kiy[2:6]"  0 0 0 0 0;
+	setAttr -s 11 ".ktv[0:10]"  1 3 5 3 13 3 19 3 25 3 29 3 32 3 37 3 40 3
+		 49 3 56 3;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 9 1 9 9 9 
+		9 9 9;
+	setAttr -s 11 ".kix[4:10]"  1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[4:10]"  0 0 0 0 0 0 0;
 createNode animCurveTU -n "neck_ctrl_fk_visibility";
 	rename -uid "C56D87FB-4EAB-C7D3-ED08-F98906AA303C";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "neck_ctrl_fk_rotateX";
 	rename -uid "A137C053-4523-9C98-73FA-F897693CC53F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -27.629672485066209 13 -27.629672485066209
-		 25 -27.629672485066209 32 -27.629672485066209 40 -27.629672485066209 49 -27.629672485066209
-		 56 30.426481975363828 64 7.2768088357486826 73 7.2768088357486826 83 10.400892905168263;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -27.629672485066209 5 -27.629672485066209
+		 13 -27.629672485066209 19 -27.629672485066209 25 -27.629672485066209 29 0.20079603660001227
+		 32 -27.629672485066209 37 -27.629672485066209 40 -27.629672485066209 49 -27.629672485066209
+		 56 30.426481975363828 64 7.2768088357486826 73 7.2768088357486826 83 10.400892905168263
+		 92 10.400892905168263 100 41.58142048300865 109 41.58142048300865 115 10.517454095431495;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "neck_ctrl_fk_rotateY";
 	rename -uid "D0EE3847-4A9D-73B6-C551-C39FCDCEE904";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 8.3710020355029204 100 8.3710020355029204 109 8.3710020355029204
+		 115 8.3710020355029204;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "neck_ctrl_fk_rotateZ";
 	rename -uid "4EE3CF25-4785-7984-9EF1-8A8D7F7A2CD9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 -18.11671067998396
-		 73 -18.11671067998396 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 -18.11671067998396 73 -18.11671067998396 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "neck_ctrl_fk_scaleX";
 	rename -uid "2B899710-4D53-BA56-FF49-9BA223F85CAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "neck_ctrl_fk_scaleY";
 	rename -uid "9412C1A2-4447-7AE6-9C94-B89C1AF94355";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "neck_ctrl_fk_scaleZ";
 	rename -uid "74811E00-446D-E5C0-290D-0999DB548C26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "neck_ctrl_fk_rotationOrder";
 	rename -uid "F634FBD1-4CD4-6713-622D-CABBEEA3F036";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_ctrl_fk_visibility";
 	rename -uid "8FBA12B3-440D-D837-4D47-30B06DB5E71E";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "head_ctrl_fk_rotateX";
 	rename -uid "573D524A-41C0-48A8-41F4-3EB8B0FFF0DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -21.735865824141033 13 -21.735865824141033
-		 25 -21.735865824141033 32 -21.735865824141033 40 -21.735865824141033 49 -21.735865824141033
-		 56 13.543881245102185 64 13.543881245102185 73 13.543881245102185 83 -10.656365899273251;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -21.735865824141033 5 -21.735865824141033
+		 13 -21.735865824141033 19 -21.735865824141033 25 -21.735865824141033 29 -21.735865824141033
+		 32 -21.735865824141033 37 -21.735865824141033 40 -21.735865824141033 49 -21.735865824141033
+		 56 13.543881245102185 64 13.543881245102185 73 13.543881245102185 83 -10.656365899273251
+		 92 -10.656365899273251 100 -10.656365899273251 109 -10.656365899273251 115 -10.656365899273251;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "head_ctrl_fk_rotateY";
 	rename -uid "4C437C09-4636-3AFD-E31E-9BBBFBD67BFA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 -19.187013444767086 40 -19.187013444767086
-		 49 -19.187013444767086 56 0 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 -19.187013444767086
+		 37 -19.187013444767086 40 -19.187013444767086 49 -19.187013444767086 56 0 64 0 73 0
+		 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "head_ctrl_fk_rotateZ";
 	rename -uid "AE5FC0AD-4636-C2AB-BCD4-5E985B4BC592";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_ctrl_fk_rotationOrder";
 	rename -uid "2821C4F9-4B23-3976-6DF8-198DDE8C438C";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_ctrl_fk_eyeOpenLeft";
 	rename -uid "634B8786-420B-C0BF-3A3C-C79FFDC09C3C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 10 13 10 25 10 32 10 40 10 49 10 56 10
-		 64 10 73 10 83 10;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 10 5 10 13 10 19 10 25 10 29 10 32 10
+		 37 10 40 10 49 10 56 10 64 10 73 10 83 10 92 10 100 10 109 10 115 10;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_ctrl_fk_eyeOpenRight";
 	rename -uid "51D48BDF-411D-44EE-0245-2BADB794822D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 10 13 10 25 10 32 10 40 10 49 10 56 10
-		 64 10 73 10 83 10;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 10 5 10 13 10 19 10 25 10 29 10 32 10
+		 37 10 40 10 49 10 56 10 64 10 73 10 83 10 92 10 100 10 109 10 115 10;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "jaw_Ctrl_visibility";
 	rename -uid "2306B24B-433D-BEB9-EB27-55A8AC9C44E6";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "jaw_Ctrl_rotateX";
 	rename -uid "ECD19652-416E-C0C6-EF80-73B13B3D014C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "jaw_Ctrl_rotateY";
 	rename -uid "95891E25-46A9-BFCE-50BB-23AD4B0A8EE5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "jaw_Ctrl_rotateZ";
 	rename -uid "4708A27F-40EF-713B-496F-FF92B8D0A80B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "eye_L_ctrl_visibility";
 	rename -uid "B0F727DA-4A17-AFA7-872F-AD8790B9E15B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_L_ctrl_rotateX";
 	rename -uid "723C6C64-4DFB-8097-C447-E3B38283792C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_L_ctrl_rotateY";
 	rename -uid "C9D579C5-4C41-4FFF-9544-8C8D8F016461";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_L_ctrl_rotateZ";
 	rename -uid "010EF7D5-45D9-870B-DBDC-ABBB949698F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "eye_R_ctrl_visibility";
 	rename -uid "2A002E74-4F31-DDEA-D3C4-E4A88C20F9F4";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_R_ctrl_rotateX";
 	rename -uid "C102A8C2-47E6-F00F-95D2-29B5C5AFBF56";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_R_ctrl_rotateY";
 	rename -uid "DA5E07FB-435B-6493-A69F-A1B3F654245C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_R_ctrl_rotateZ";
 	rename -uid "EB134225-441B-A8C0-AF2A-60945F8EEB51";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_a_visibility";
 	rename -uid "3869EDA0-420C-4B02-A619-6CB470AF4DA4";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_a_rotateX";
 	rename -uid "4F05C87E-415F-5375-698B-7889ECE670D5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_a_rotateY";
 	rename -uid "5FC4929D-433F-027E-4BC2-12A0614AD193";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_a_rotateZ";
 	rename -uid "0C768107-48CA-0173-845A-11ABF1871EE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -7.949021912646093 13 -7.949021912646093
-		 25 -7.949021912646093 32 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
-		 56 -7.949021912646093 64 -45.45780209568872 73 -33.263565721547224 83 -33.263565721547224;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -7.949021912646093 5 -7.949021912646093
+		 13 -7.949021912646093 19 10.476555152127796 25 -7.949021912646093 29 -7.949021912646093
+		 32 -7.949021912646093 37 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
+		 56 -7.949021912646093 64 -45.45780209568872 73 -33.263565721547224 83 -33.263565721547224
+		 92 -33.263565721547224 100 -33.263565721547224 109 -33.263565721547224 115 -33.263565721547224;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_a_rotationOrder";
 	rename -uid "2C80E590-4A86-286C-AEC5-B392E706F610";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_b_visibility";
 	rename -uid "CCC0EE81-4506-9DCA-CE63-9CAA2A1EDC99";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_b_rotateX";
 	rename -uid "DD5F3D08-42B7-70C1-064A-C2A835519BCE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_b_rotateY";
 	rename -uid "EF0A4387-45E8-F4D2-90BD-1B99AB737B51";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 -13.522060078794318
-		 83 -13.522060078794318;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 -13.522060078794318 83 -13.522060078794318 92 -13.522060078794318
+		 100 -13.522060078794318 109 -13.522060078794318 115 -13.522060078794318;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_b_rotateZ";
 	rename -uid "0C32E03B-48EA-C2DD-4673-86A213A164AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -7.949021912646093 13 -7.949021912646093
-		 25 -7.949021912646093 32 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
-		 56 -7.949021912646093 64 -7.949021912646093 73 28.710625180620035 83 28.710625180620035;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -7.949021912646093 5 -7.949021912646093
+		 13 -7.949021912646093 19 -7.949021912646093 25 -7.949021912646093 29 -7.949021912646093
+		 32 -7.949021912646093 37 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
+		 56 -7.949021912646093 64 -7.949021912646093 73 28.710625180620035 83 28.710625180620035
+		 92 28.710625180620035 100 28.710625180620035 109 28.710625180620035 115 28.710625180620035;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_b_rotationOrder";
 	rename -uid "06CCEF23-45F8-A47A-B599-8188915B170F";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_c_visibility";
 	rename -uid "5EF71E09-4F55-8009-9A7C-0C861538C36B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_c_rotateX";
 	rename -uid "3E35E027-46AC-94EB-047B-16AE23BE4619";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_c_rotateY";
 	rename -uid "8FC8D4F2-4975-4D69-750E-F29D6750716F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_c_rotateZ";
 	rename -uid "701B7A3B-4915-7686-8E1D-39B6B41DBA96";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -7.949021912646093 13 -7.949021912646093
-		 25 -7.949021912646093 32 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
-		 56 -7.949021912646093 64 -7.949021912646093 73 5.434574852292763 83 5.434574852292763;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -7.949021912646093 5 -7.949021912646093
+		 13 -7.949021912646093 19 -7.949021912646093 25 -7.949021912646093 29 -7.949021912646093
+		 32 -7.949021912646093 37 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
+		 56 -7.949021912646093 64 -7.949021912646093 73 5.434574852292763 83 5.434574852292763
+		 92 5.434574852292763 100 5.434574852292763 109 5.434574852292763 115 5.434574852292763;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_c_rotationOrder";
 	rename -uid "1DEE97B8-4FAB-E546-54FF-2F8F1607489C";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_d_visibility";
 	rename -uid "D0C23FAE-4FF1-E63B-B3BA-BBA0F0E37B39";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_d_rotateX";
 	rename -uid "EB10BB05-4274-DB8F-EF34-AC8C0B57EFDB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_d_rotateY";
 	rename -uid "A2784758-4D08-0580-1587-598645097283";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_d_rotateZ";
 	rename -uid "BEED2A92-43EC-425C-1BC1-8EA93D9D69A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -7.949021912646093 13 -7.949021912646093
-		 25 -7.949021912646093 32 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
-		 56 -7.949021912646093 64 -7.949021912646093 73 5.434574852292763 83 5.434574852292763;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -7.949021912646093 5 -7.949021912646093
+		 13 -7.949021912646093 19 -7.949021912646093 25 -7.949021912646093 29 -7.949021912646093
+		 32 -7.949021912646093 37 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
+		 56 -7.949021912646093 64 -7.949021912646093 73 5.434574852292763 83 5.434574852292763
+		 92 5.434574852292763 100 5.434574852292763 109 5.434574852292763 115 5.434574852292763;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_d_rotationOrder";
 	rename -uid "E7807278-4BA6-8B49-1709-4C8561C4EE5D";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_e_visibility";
 	rename -uid "2D8A2389-473A-9720-74B7-3B9E3EF27CFC";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_e_rotateX";
 	rename -uid "89144582-4C5D-E043-907E-4EBFEF315EB5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_e_rotateY";
 	rename -uid "70B65A2A-4940-F98A-E545-CF9F14328035";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "scarf_ctrl_e_rotateZ";
 	rename -uid "D18A4007-4DF9-662D-8B86-08A3E3CB6128";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -7.949021912646093 13 -7.949021912646093
-		 25 -7.949021912646093 32 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
-		 56 -7.949021912646093 64 -7.949021912646093 73 5.434574852292763 83 5.434574852292763;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -7.949021912646093 5 -7.949021912646093
+		 13 -7.949021912646093 19 -7.949021912646093 25 -7.949021912646093 29 -7.949021912646093
+		 32 -7.949021912646093 37 -7.949021912646093 40 -7.949021912646093 49 -7.949021912646093
+		 56 -7.949021912646093 64 -7.949021912646093 73 5.434574852292763 83 5.434574852292763
+		 92 5.434574852292763 100 5.434574852292763 109 5.434574852292763 115 5.434574852292763;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "scarf_ctrl_e_rotationOrder";
 	rename -uid "A3DAEE0D-4196-AC05-4AD5-8AADF7BD13B0";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "foot_ctrl_ik_R_rotateX";
 	rename -uid "331E5174-47A6-0549-4E6A-5B8FE022A6D0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 80.133204024541342 13 122.95102986970743
-		 25 80.133204024541342 32 0 40 103.28307849361026 49 0 56 87.475574244636704 64 -23.760558366156992
-		 73 -23.760558366156992 83 -21.170268703904821;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 80.133204024541342 5 0 13 122.95102986970743
+		 19 122.95102986970743 25 80.133204024541342 29 0 32 0 37 92.686763716809622 40 103.28307849361026
+		 49 0 56 87.475574244636704 64 -23.760558366156992 73 -23.760558366156992 83 -21.170268703904821
+		 92 -21.170268703904821 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 0.21978852152824402 1 1 1 1 1 1 1 
+		1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0.97554755210876465 0 0 0 0 0 0 0 
+		0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 0.21978852152824402 1 1 1 1 1 1 1 
+		1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0.97554761171340942 0 0 0 0 0 0 0 
+		0 0 0;
 createNode animCurveTA -n "foot_ctrl_ik_R_rotateY";
 	rename -uid "A2048B5E-4BE7-EB23-0F1E-818EE797C770";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -50 13 -50 25 -50 32 -50 40 -50 49 -32.176128122824977
-		 56 -32.176128122824977 64 0 73 21.540451791387387 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 0.60282039642333984 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0.79787683486938477 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 0.60282045602798462 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0.79787689447402954 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -50 5 -50 13 -50 19 -50 25 -50 29 -50
+		 32 -50 37 -50 40 -50 49 -32.176128122824977 56 -32.176128122824977 64 0 73 21.540451791387387
+		 83 0 92 0 100 -90 109 -90 115 -90;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 0.60282039642333984 1 1 1 
+		1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0.79787683486938477 0 0 0 
+		0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 0.60282045602798462 1 1 1 
+		1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0.79787689447402954 0 0 0 
+		0 0 0;
 createNode animCurveTA -n "foot_ctrl_ik_R_rotateZ";
 	rename -uid "E4668BF8-4A62-B9D1-F8F9-3FA10B8F2980";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_scaleX";
 	rename -uid "1E9A0FE6-4E34-F0E3-AF09-D8BE2A98EFF6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_scaleY";
 	rename -uid "477AA702-4AA2-5994-D522-8990A750FE8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_scaleZ";
 	rename -uid "11EBC982-41E4-6DE9-CFE6-D6ADF26D13B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_insideRoll";
 	rename -uid "129AA215-44A7-B026-90A7-F2B77DFF0F50";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_outsideRoll";
 	rename -uid "DD7B43B1-444B-4F1F-9ECA-CDB91DA2A65A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_tiptoe";
 	rename -uid "A0FD47EA-4A18-A428-2B7B-AFA4C3D00F96";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_toeBend";
 	rename -uid "BD0259C3-4373-B4BA-8FCD-E7BEF7CFA214";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_heelBack";
 	rename -uid "A426B647-426F-CBCF-1D41-56AA5F3736A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_heelRaise";
 	rename -uid "862DDDC2-4311-FD42-0B7D-439FF29A8FC8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_legTwist";
 	rename -uid "C32A0534-4099-BD5F-AE17-C5AA4ADBF2D4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 21.6 13 21.6 25 21.6 32 21.6 40 21.6 49 21.6
-		 56 0 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 21.6 5 21.6 13 21.6 19 21.6 25 21.6 29 21.6
+		 32 21.6 37 21.6 40 21.6 49 21.6 56 0 64 0 73 0 83 0 92 0 100 0 109 34.7 115 34.7;
+	setAttr -s 18 ".kit[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 1 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_R_rotationOrder";
 	rename -uid "4B452220-4625-67B8-EDB5-6A9E80B32EF9";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 1 9 9 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "foot_ctrl_ik_L_rotateX";
 	rename -uid "8661095F-45D5-A981-6CEF-0A86B098284E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 112.24856819173314 13 87.426210523404052
-		 25 112.24856819173314 32 81.248021488036869 40 0 49 72.633679855302873 56 0 64 58.812175228208773
-		 73 -36.956258138381088 83 -36.956258138381088;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 0.30393117666244507 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 -0.95269399881362915 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 0.30393117666244507 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 -0.95269393920898438 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 112.24856819173314 5 112.24856819173314
+		 13 87.426210523404052 19 0 25 112.24856819173314 29 112.24856819173314 32 81.248021488036869
+		 37 0 40 0 49 72.633679855302873 56 0 64 58.812175228208773 73 -36.956258138381088
+		 83 -36.956258138381088 92 2.1539455632441276 100 15.96743248114619 109 15.96743248114619
+		 115 15.96743248114619;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 0.16773489117622375 1 1 1 1 1 1 1 0.60852289199829102 
+		1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 -0.9858320951461792 0 0 0 0 0 0 0 0.79353624582290649 
+		0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 0.16773489117622375 1 1 1 1 1 1 1 0.60852289199829102 
+		1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 -0.9858320951461792 0 0 0 0 0 0 0 0.79353630542755127 
+		0 0 0;
 createNode animCurveTA -n "foot_ctrl_ik_L_rotateY";
 	rename -uid "5A2C2064-420A-9D06-18D3-17B14860AB36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 50 13 50 25 50 32 50 40 28.411755328830594
-		 49 28.411755328830594 56 0 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 50 5 50 13 50 19 50 25 50 29 50 32 50
+		 37 28.411755328830594 40 28.411755328830594 49 28.411755328830594 56 0 64 0 73 0
+		 83 0 92 0 100 60.55275736938836 109 87.068164188681635 115 87.068164188681635;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 0.42248106002807617 
+		1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0.90637177228927612 
+		0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 0.42248106002807617 
+		1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0.90637171268463135 
+		0 0;
 createNode animCurveTA -n "foot_ctrl_ik_L_rotateZ";
 	rename -uid "F1FAB95A-4AC3-90F9-845A-02B68191C868";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 19.080575440323344 40 0
-		 49 0 56 0 64 0 73 0 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 19.080575440323344
+		 37 0 40 0 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_scaleX";
 	rename -uid "E327EDBD-46EB-E076-34DA-6DA9A3E66184";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_scaleY";
 	rename -uid "BC73FFB3-4CDB-82F7-F260-C5A97DB3B836";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_scaleZ";
 	rename -uid "5374C710-4066-5DB2-B39A-7E84BD25597F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 13 1 25 1 32 1 40 1 49 1 56 1 64 1 73 1
-		 83 1;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 1 5 1 13 1 19 1 25 1 29 1 32 1 37 1 40 1
+		 49 1 56 1 64 1 73 1 83 1 92 1 100 1 109 1 115 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_insideRoll";
 	rename -uid "901A5D2A-4049-1E4D-BA47-5FAC1B206D9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_outsideRoll";
 	rename -uid "7B06F8B5-459F-256C-63E5-36A5DA54F74A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_tiptoe";
 	rename -uid "0B486D48-45DF-DA3F-C62B-59AF7431853B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_toeBend";
 	rename -uid "65A4220D-4BC2-6B65-A783-1AA67F273EE8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_heelBack";
 	rename -uid "55528956-4BDF-114C-CEDB-39814E9B2A18";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 -46.500000000000007
+		 40 0 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_heelRaise";
 	rename -uid "5EDFDFC4-4070-1746-DEF8-7898B438928F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_legTwist";
 	rename -uid "C37EAEAA-400D-7D74-A360-9CBBC1E8AE01";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 -28 25 0 32 -61.000000000000007 40 -13.000000000000007
-		 49 -13.000000000000007 56 -13.000000000000007 64 -13.000000000000007 73 -13.000000000000007
-		 83 -13.000000000000007;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 -28 19 -28 25 0 29 0 32 -61.000000000000007
+		 37 -13.000000000000007 40 -13.000000000000007 49 -13.000000000000007 56 -13.000000000000007
+		 64 -13.000000000000007 73 -13.000000000000007 83 -13.000000000000007 92 -13.000000000000007
+		 100 -13.000000000000007 109 -13.000000000000007 115 -13.000000000000007;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 1 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "foot_ctrl_ik_L_rotationOrder";
 	rename -uid "5FC9B0E1-4DB3-4714-6EA5-69A84D46CB68";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[0:9]"  9 9 1 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 1 
+		9 9 9 9 9 9 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_L_backFingers";
 	rename -uid "BB84844D-4C2D-149F-B89C-77A5C888E67E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -61.7 13 -61.7 25 -61.7 32 -61.7 40 -61.7
-		 49 -61.7 56 -61.7 64 -61.7 73 -61.7 83 -61.7;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -61.7 5 -61.7 13 -61.7 19 -61.7 25 -61.7
+		 29 -61.7 32 -61.7 37 -61.7 40 -61.7 49 -61.7 56 -61.7 64 -61.7 73 -61.7 83 -61.7
+		 92 -61.7 100 -61.7 109 -61.7 115 -61.7;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_L_indexFinger";
 	rename -uid "0666DE9C-4B69-71E3-A389-54AC83DAFCFD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -61.7 13 -61.7 25 -61.7 32 -61.7 40 -61.7
-		 49 -61.7 56 -61.7 64 -61.7 73 -61.7 83 -61.7;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -61.7 5 -61.7 13 -61.7 19 -61.7 25 -61.7
+		 29 -61.7 32 -61.7 37 -61.7 40 -61.7 49 -61.7 56 -61.7 64 -61.7 73 -61.7 83 -61.7
+		 92 -61.7 100 -61.7 109 -61.7 115 -61.7;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_L_thumbTwist";
 	rename -uid "9FE1D6AC-41C3-84B9-9526-23880CD5734A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_L_thumbBend";
 	rename -uid "3C15320F-472E-B09C-D575-5CAA1067C409";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -26.400000000000002 13 -26.400000000000002
-		 25 -26.400000000000002 32 -26.400000000000002 40 -26.400000000000002 49 -26.400000000000002
-		 56 -26.400000000000002 64 -26.400000000000002 73 -26.400000000000002 83 -26.400000000000002;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -26.400000000000002 5 -26.400000000000002
+		 13 -26.400000000000002 19 -26.400000000000002 25 -26.400000000000002 29 -26.400000000000002
+		 32 -26.400000000000002 37 -26.400000000000002 40 -26.400000000000002 49 -26.400000000000002
+		 56 -26.400000000000002 64 -26.400000000000002 73 -26.400000000000002 83 -26.400000000000002
+		 92 -26.400000000000002 100 -26.400000000000002 109 -26.400000000000002 115 -26.400000000000002;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_L_fingerSpread";
 	rename -uid "370FF0DB-4860-363A-A433-15B9DE2CAFA9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_R_backFingers";
 	rename -uid "18E6B2E0-4F3C-8FA3-27DD-598D8DFE521B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -64.2 13 -64.2 25 -64.2 32 -64.2 40 -64.2
-		 49 -64.2 56 -64.2 64 -64.2 73 -64.2 83 -64.2;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -64.2 5 -64.2 13 -64.2 19 -64.2 25 -64.2
+		 29 -64.2 32 -64.2 37 -64.2 40 -64.2 49 -64.2 56 -64.2 64 -64.2 73 -64.2 83 -64.2
+		 92 -64.2 100 -64.2 109 -64.2 115 -64.2;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_R_indexFinger";
 	rename -uid "6A6CD393-454B-5D70-007A-7798F5E61771";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -64.2 13 -64.2 25 -64.2 32 -64.2 40 -64.2
-		 49 -64.2 56 -64.2 64 -64.2 73 -64.2 83 -64.2;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -64.2 5 -64.2 13 -64.2 19 -64.2 25 -64.2
+		 29 -64.2 32 -64.2 37 -64.2 40 -64.2 49 -64.2 56 -64.2 64 -64.2 73 -64.2 83 -64.2
+		 92 -64.2 100 -64.2 109 -64.2 115 -64.2;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_R_thumbTwist";
 	rename -uid "4045093F-4999-7221-39B0-A580A3A85697";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -21.300000000000004 13 -21.300000000000004
-		 25 -21.300000000000004 32 -21.300000000000004 40 -21.300000000000004 49 -21.300000000000004
-		 56 -21.300000000000004 64 -21.300000000000004 73 -21.300000000000004 83 -21.300000000000004;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -21.300000000000004 5 -21.300000000000004
+		 13 -21.300000000000004 19 -21.300000000000004 25 -21.300000000000004 29 -21.300000000000004
+		 32 -21.300000000000004 37 -21.300000000000004 40 -21.300000000000004 49 -21.300000000000004
+		 56 -21.300000000000004 64 -21.300000000000004 73 -21.300000000000004 83 -21.300000000000004
+		 92 -21.300000000000004 100 -21.300000000000004 109 -21.300000000000004 115 -21.300000000000004;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_R_thumbBend";
 	rename -uid "9A0D808A-4734-6243-1869-768965E24A35";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -28.3 13 -28.3 25 -28.3 32 -28.3 40 -28.3
-		 49 -28.3 56 -28.3 64 -28.3 73 -28.3 83 -28.3;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".ktv[0:17]"  1 -28.3 5 -28.3 13 -28.3 19 -28.3 25 -28.3
+		 29 -28.3 32 -28.3 37 -28.3 40 -28.3 49 -28.3 56 -28.3 64 -28.3 73 -28.3 83 -28.3
+		 92 -28.3 100 -28.3 109 -28.3 115 -28.3;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "FingersCtrl_R_fingerSpread";
 	rename -uid "D7FC7297-4BD5-C599-DFE3-2C87BD8E635B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 13 0 25 0 32 0 40 0 49 0 56 0 64 0 73 0
-		 83 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 18 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
-createNode displayLayer -n "layer1";
+	setAttr -s 18 ".ktv[0:17]"  1 0 5 0 13 0 19 0 25 0 29 0 32 0 37 0 40 0
+		 49 0 56 0 64 0 73 0 83 0 92 0 100 0 109 0 115 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode displayLayer -n "shiplayer";
 	rename -uid "96A9FC31-4C10-CAEA-5BA2-7A89B6287C58";
 	setAttr ".dt" 2;
 	setAttr ".do" 1;
@@ -6818,151 +7405,184 @@ createNode animCurveTA -n "MainCtrl_rotateX";
 	rename -uid "4117FFFF-44A9-0B01-2E99-F9B1A87887F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 0 49 0 56 0 64 0 73 0 83 0;
+	setAttr -s 9 ".ktv[0:8]"  32 0 49 0 56 0 64 0 73 0 83 0 92 0 109 0
+		 115 0;
 createNode animCurveTA -n "MainCtrl_rotateY";
 	rename -uid "5EB55359-4A6A-E962-E0A6-F88E198AC1B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 -134.24605943034678 49 -134.24605943034678
-		 56 -134.24605943034678 64 -134.24605943034678 73 -134.24605943034678 83 -134.24605943034678;
+	setAttr -s 9 ".ktv[0:8]"  32 -134.24605943034678 49 -134.24605943034678
+		 56 -134.24605943034678 64 -134.24605943034678 73 -134.24605943034678 83 -134.24605943034678
+		 92 -134.24605943034678 109 -134.24605943034678 115 -134.24605943034678;
 createNode animCurveTA -n "MainCtrl_rotateZ";
 	rename -uid "BF4EA35E-4526-6932-8E64-8B8003553D87";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 0 49 0 56 0 64 0 73 0 83 0;
+	setAttr -s 9 ".ktv[0:8]"  32 0 49 0 56 0 64 0 73 0 83 0 92 0 109 0
+		 115 0;
 createNode animCurveTU -n "MainCtrl_visibility";
 	rename -uid "24151418-4466-315B-3B37-178B10224AB7";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 1 49 1 56 1 64 1 73 1 83 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  32 1 49 1 56 1 64 1 73 1 83 1 92 1 109 1
+		 115 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTL -n "MainCtrl_translateX";
 	rename -uid "413CE3DF-4810-9710-58BF-BBBE8FA5B314";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 -39.256871918761462 49 -39.256871918761462
-		 56 -39.256871918761462 64 -39.256871918761462 73 -39.256871918761462 83 -39.256871918761462;
+	setAttr -s 9 ".ktv[0:8]"  32 -39.256871918761462 49 -39.256871918761462
+		 56 -39.256871918761462 64 -39.256871918761462 73 -39.256871918761462 83 -39.256871918761462
+		 92 -39.256871918761462 109 -39.256871918761462 115 -39.256871918761462;
 createNode animCurveTL -n "MainCtrl_translateY";
 	rename -uid "6B6BDBD4-43D6-AE9E-9902-E692C4CE6D6F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 0 49 0 56 0 64 0 73 0 83 0;
+	setAttr -s 9 ".ktv[0:8]"  32 0 49 0 56 0 64 0 73 0 83 0 92 0 109 0
+		 115 0;
 createNode animCurveTL -n "MainCtrl_translateZ";
 	rename -uid "88CD6263-4515-A373-1459-2B8B53758366";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 -26.705788076625254 49 -26.705788076625254
-		 56 -26.705788076625254 64 -26.705788076625254 73 -26.705788076625254 83 -26.705788076625254;
+	setAttr -s 9 ".ktv[0:8]"  32 -26.705788076625254 49 -26.705788076625254
+		 56 -26.705788076625254 64 -26.705788076625254 73 -26.705788076625254 83 -26.705788076625254
+		 92 -26.705788076625254 109 -26.705788076625254 115 -26.705788076625254;
 createNode animCurveTU -n "MainCtrl_scaleX";
 	rename -uid "FE69F26E-451E-FD47-F08A-7DBEB2DA014A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 1 49 1 56 1 64 1 73 1 83 1;
+	setAttr -s 9 ".ktv[0:8]"  32 1 49 1 56 1 64 1 73 1 83 1 92 1 109 1
+		 115 1;
 createNode animCurveTU -n "MainCtrl_scaleY";
 	rename -uid "E7AE485B-435E-0686-E2C4-BCB837F22203";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 1 49 1 56 1 64 1 73 1 83 1;
+	setAttr -s 9 ".ktv[0:8]"  32 1 49 1 56 1 64 1 73 1 83 1 92 1 109 1
+		 115 1;
 createNode animCurveTU -n "MainCtrl_scaleZ";
 	rename -uid "6D975F83-4710-BADC-BB19-F2AF22E2006D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  32 1 49 1 56 1 64 1 73 1 83 1;
+	setAttr -s 9 ".ktv[0:8]"  32 1 49 1 56 1 64 1 73 1 83 1 92 1 109 1
+		 115 1;
 createNode animCurveTA -n "hand_ctrl_ik_L_rotateX";
 	rename -uid "BA5AC08A-4756-5F1D-380A-65AC774C1F9A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 0 73 0 83 0;
+	setAttr -s 7 ".ktv[0:6]"  64 0 73 0 83 0 92 0 100 0 109 0 115 0;
 createNode animCurveTA -n "hand_ctrl_ik_L_rotateY";
 	rename -uid "9EBAFEF1-4972-B50C-84FC-03852FD339DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 -94.054874413476057 73 -94.054874413476057
-		 83 -94.054874413476057;
+	setAttr -s 7 ".ktv[0:6]"  64 -94.054874413476057 73 -94.054874413476057
+		 83 -52.941878831626013 92 -52.941878831626013 100 -52.941878831626013 109 -52.941878831626013
+		 115 -4.6036271451468851;
 createNode animCurveTA -n "hand_ctrl_ik_L_rotateZ";
 	rename -uid "31770B1A-4FB3-B780-8E9E-56A980289190";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 17.587037021919389 73 17.587037021919389
-		 83 -9.7097870765038916;
+	setAttr -s 7 ".ktv[0:6]"  64 17.587037021919389 73 17.587037021919389
+		 83 55.929463275539113 92 55.929463275539113 100 55.929463275539113 109 55.929463275539113
+		 115 11.298085793222276;
 createNode animCurveTL -n "hand_ctrl_ik_L_translateX";
 	rename -uid "ACD483CA-432E-5DA7-6843-60A65E3EB38C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 -4.6203942054044989 73 -4.6348662690601143
-		 83 -4.7820362047575715;
+	setAttr -s 7 ".ktv[0:6]"  64 -4.6203942054044989 73 -4.6348662690601143
+		 83 -3.4944778276411044 92 -3.4944778276411044 100 -3.4944778276411044 109 -3.4944778276411044
+		 115 -4.8159145830269763;
 createNode animCurveTL -n "hand_ctrl_ik_L_translateY";
 	rename -uid "38E63885-4AB6-653D-5B6A-28820375DB25";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 2.1513515211507932 73 2.3529463735690253
-		 83 3.5307404146499706;
+	setAttr -s 7 ".ktv[0:6]"  64 2.1513515211507932 73 2.3529463735690253
+		 83 7.0738796566027622 92 7.0738796566027622 100 7.0738796566027622 109 7.0738796566027622
+		 115 3.7572346437912203;
 createNode animCurveTL -n "hand_ctrl_ik_L_translateZ";
 	rename -uid "36F38045-41CA-9E6C-B8BB-D3B2EFB889CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 8.5650493188382395 73 8.769199505954127
-		 83 10.845252419029906;
+	setAttr -s 7 ".ktv[0:6]"  64 8.5650493188382395 73 8.769199505954127
+		 83 12.413057377941294 92 12.413057377941294 100 12.413057377941294 109 12.413057377941294
+		 115 12.306652904710329;
 createNode animCurveTU -n "hand_ctrl_ik_L_armTwist";
 	rename -uid "2D1A813B-43ED-9562-CE5B-04906E91EDA1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 -38.4 73 -38.4 83 -38.4;
+	setAttr -s 7 ".ktv[0:6]"  64 -38.4 73 -38.4 83 -38.4 92 -38.4 100 -38.4
+		 109 -38.4 115 -38.4;
 createNode animCurveTU -n "hand_ctrl_ik_L_rotationOrder";
 	rename -uid "91212E98-4583-A625-676C-909AEFA31997";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 3 73 3 83 3;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  64 3 73 3 83 3 92 3 100 3 109 3 115 3;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "hand_ctrl_ik_R_rotateX";
 	rename -uid "D7F850FC-4874-282B-C6FE-0CBB0CC11A5F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 0 73 0 83 0;
+	setAttr -s 7 ".ktv[0:6]"  64 0 73 0 83 0 92 0 100 0 109 0 115 0;
 createNode animCurveTA -n "hand_ctrl_ik_R_rotateY";
 	rename -uid "F7C12C5E-48F0-BDE1-CE6B-D2923C3A41F7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 -84.710168757788608 73 -84.710168757788608
-		 83 -84.710168757788608;
+	setAttr -s 7 ".ktv[0:6]"  64 -84.710168757788608 73 -84.710168757788608
+		 83 -84.710168757788608 92 -151.85723825309478 100 -151.85723825309478 109 -151.85723825309478
+		 115 -151.85723825309478;
 createNode animCurveTA -n "hand_ctrl_ik_R_rotateZ";
 	rename -uid "371418C2-4A5E-282E-353E-9F819491E5EC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 28.134296134962973 73 28.134296134962973
-		 83 6.738681002147195;
+	setAttr -s 7 ".ktv[0:6]"  64 28.134296134962973 73 28.134296134962973
+		 83 6.738681002147195 92 6.738681002147195 100 6.738681002147195 109 6.738681002147195
+		 115 6.738681002147195;
 createNode animCurveTL -n "hand_ctrl_ik_R_translateX";
 	rename -uid "8FDE0672-4A2F-6C3A-9D7A-7097A4F03664";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 3.421463007670654 73 3.134094702776661
-		 83 3.0943535439183747;
+	setAttr -s 7 ".ktv[0:6]"  64 3.421463007670654 73 3.134094702776661
+		 83 3.0943535439183747 92 5.4937267092236137 100 5.1065672463714256 109 4.112161042693689
+		 115 4.112161042693689;
 createNode animCurveTL -n "hand_ctrl_ik_R_translateY";
 	rename -uid "560EDE0E-4D78-5613-0FA5-A6A0D3CFB761";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 -1.0112369466412061 73 -3.6348710826289139
-		 83 -3.6858041380068043;
+	setAttr -s 7 ".ktv[0:6]"  64 -1.0112369466412061 73 -3.6348710826289139
+		 83 -3.6858041380068043 92 -8.5466419264071778 100 -8.705506372852982 109 -4.4485766933498754
+		 115 -4.4485766933498754;
 createNode animCurveTL -n "hand_ctrl_ik_R_translateZ";
 	rename -uid "CEB9D4E7-423B-E576-709F-A9A5D73D973A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 -7.3572085689579501 73 -10.460933753559789
-		 83 -10.890158666374001;
+	setAttr -s 7 ".ktv[0:6]"  64 -7.3572085689579501 73 -10.460933753559789
+		 83 -10.890158666374001 92 -13.366520969862457 100 -14.310657704036327 109 -16.967946680600495
+		 115 -16.967946680600495;
 createNode animCurveTU -n "hand_ctrl_ik_R_armTwist";
 	rename -uid "BAA928A5-4B86-04E1-F819-B994CC0CB4D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 44.7 73 44.7 83 44.7;
+	setAttr -s 7 ".ktv[0:6]"  64 44.7 73 44.7 83 44.7 92 44.7 100 44.7
+		 109 44.7 115 44.7;
 createNode animCurveTU -n "hand_ctrl_ik_R_rotationOrder";
 	rename -uid "68BF7693-4AAB-D3C9-F9DF-BCB5DBBBB42C";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  64 3 73 3 83 3;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  64 3 73 3 83 3 92 3 100 3 109 3 115 3;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+createNode animCurveTU -n "Text_HatchxControl_1_hatchControl";
+	rename -uid "9CF80A7B-42F7-3B53-2042-78B5F2067332";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  114 10 117 0;
+createNode animCurveTU -n "Text_LadderxControl_1_ladderControl";
+	rename -uid "86B9A66F-4373-2081-67F4-F0BE5025D10C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  114 20 117 0;
 select -ne :time1;
-	setAttr ".o" 83;
-	setAttr ".unw" 83;
+	setAttr ".o" 44;
+	setAttr ".unw" 44;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -7188,1154 +7808,1158 @@ connectAttr "FingersCtrl_R_indexFinger.o" "BaseRig_0133RN.phl[191]";
 connectAttr "FingersCtrl_R_thumbTwist.o" "BaseRig_0133RN.phl[192]";
 connectAttr "FingersCtrl_R_thumbBend.o" "BaseRig_0133RN.phl[193]";
 connectAttr "FingersCtrl_R_fingerSpread.o" "BaseRig_0133RN.phl[194]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[6]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[7]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[8]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[9]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[10]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[11]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[12]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[13]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[14]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[15]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[16]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[17]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[18]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[19]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[20]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[21]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[22]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[23]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[24]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[25]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[26]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[27]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[28]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[29]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[30]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[31]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[32]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[33]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[34]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[35]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[36]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[37]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[38]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[39]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[40]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[41]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[42]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[43]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[44]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[45]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[46]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[47]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[48]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[49]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[50]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[51]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[52]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[53]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[54]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[55]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[56]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[57]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[58]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[59]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[60]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[61]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[62]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[63]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[64]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[65]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[66]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[67]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[68]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[69]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[70]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[71]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[72]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[73]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[74]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[75]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[76]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[77]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[78]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[79]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[80]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[81]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[82]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[83]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[84]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[85]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[86]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[87]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[88]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[89]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[90]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[91]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[92]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[93]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[94]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[95]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[96]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[97]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[98]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[99]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[100]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[101]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[102]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[103]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[104]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[105]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[106]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[107]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[108]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[109]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[110]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[111]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[112]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[113]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[114]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[115]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[116]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[117]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[118]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[119]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[120]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[121]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[122]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[123]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[124]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[125]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[126]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[127]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[128]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[129]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[130]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[131]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[132]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[133]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[134]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[135]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[136]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[137]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[138]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[139]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[140]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[141]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[142]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[143]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[144]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[145]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[146]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[147]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[148]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[149]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[150]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[151]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[152]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[153]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[154]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[155]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[156]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[157]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[158]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[159]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[160]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[161]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[162]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[163]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[164]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[165]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[166]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[167]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[168]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[169]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[170]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[171]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[172]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[173]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[174]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[175]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[176]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[177]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[178]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[179]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[180]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[181]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[182]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[183]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[184]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[185]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[186]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[187]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[188]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[189]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[190]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[191]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[192]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[193]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[194]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[195]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[196]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[197]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[198]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[199]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[200]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[201]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[202]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[203]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[204]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[205]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[206]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[207]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[208]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[209]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[210]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[211]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[212]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[213]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[214]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[215]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[216]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[217]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[218]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[219]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[220]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[221]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[222]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[223]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[224]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[225]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[226]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[227]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[228]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[229]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[230]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[231]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[232]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[233]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[234]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[235]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[236]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[237]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[238]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[239]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[240]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[241]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[242]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[243]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[244]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[245]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[246]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[247]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[248]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[249]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[250]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[251]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[252]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[253]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[254]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[255]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[256]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[257]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[258]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[259]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[260]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[261]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[262]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[263]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[264]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[265]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[266]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[267]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[268]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[269]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[270]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[271]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[272]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[273]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[274]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[275]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[276]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[277]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[278]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[279]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[280]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[281]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[282]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[283]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[284]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[285]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[286]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[287]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[288]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[289]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[290]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[291]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[292]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[293]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[294]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[295]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[296]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[297]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[298]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[299]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[300]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[301]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[302]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[303]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[304]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[305]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[306]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[307]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[308]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[309]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[310]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[311]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[312]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[313]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[314]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[315]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[316]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[317]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[318]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[319]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[320]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[321]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[322]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[323]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[324]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[325]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[326]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[327]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[328]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[329]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[330]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[331]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[332]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[333]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[334]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[335]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[336]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[337]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[338]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[339]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[340]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[341]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[342]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[343]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[344]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[345]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[346]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[347]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[348]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[349]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[350]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[351]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[352]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[353]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[354]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[355]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[356]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[357]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[358]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[359]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[360]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[361]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[362]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[363]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[364]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[365]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[366]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[367]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[368]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[369]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[370]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[371]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[372]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[373]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[374]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[375]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[376]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[377]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[378]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[379]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[380]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[381]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[382]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[383]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[384]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[385]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[386]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[387]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[388]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[389]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[390]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[391]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[392]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[393]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[394]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[395]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[396]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[397]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[398]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[399]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[400]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[401]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[402]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[403]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[404]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[405]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[406]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[407]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[408]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[409]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[410]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[411]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[412]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[413]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[414]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[415]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[416]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[417]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[418]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[419]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[420]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[421]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[422]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[423]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[424]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[425]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[426]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[427]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[428]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[429]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[430]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[431]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[432]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[433]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[434]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[435]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[436]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[437]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[438]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[439]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[440]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[441]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[442]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[443]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[444]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[445]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[446]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[447]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[448]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[449]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[450]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[451]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[452]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[453]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[454]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[455]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[456]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[457]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[458]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[459]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[460]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[461]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[462]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[463]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[464]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[465]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[466]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[467]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[468]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[469]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[470]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[471]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[472]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[473]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[474]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[475]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[476]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[477]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[478]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[479]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[480]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[481]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[482]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[483]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[484]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[485]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[486]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[487]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[488]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[489]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[490]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[491]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[492]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[493]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[494]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[495]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[496]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[497]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[498]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[499]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[500]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[501]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[502]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[503]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[504]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[505]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[506]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[507]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[508]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[509]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[510]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[511]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[512]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[513]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[514]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[515]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[516]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[517]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[518]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[519]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[520]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[521]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[522]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[523]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[524]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[525]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[526]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[527]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[528]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[529]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[530]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[531]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[532]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[533]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[534]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[535]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[536]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[537]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[538]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[539]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[540]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[541]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[542]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[543]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[544]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[545]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[546]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[547]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[548]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[549]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[550]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[551]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[552]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[553]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[554]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[555]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[556]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[557]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[558]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[559]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[560]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[561]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[562]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[563]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[564]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[565]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[566]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[567]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[568]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[569]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[570]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[571]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[572]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[573]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[574]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[575]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[576]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[577]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[578]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[579]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[580]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[581]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[582]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[583]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[584]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[585]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[586]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[587]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[588]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[589]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[590]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[591]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[592]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[593]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[594]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[595]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[596]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[597]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[598]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[599]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[600]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[601]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[602]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[603]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[604]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[605]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[606]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[607]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[608]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[609]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[610]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[611]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[612]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[613]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[614]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[615]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[616]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[617]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[618]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[619]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[620]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[621]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[622]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[623]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[624]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[625]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[626]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[627]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[628]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[629]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[630]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[631]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[632]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[633]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[634]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[635]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[636]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[637]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[638]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[639]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[640]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[641]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[642]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[643]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[644]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[645]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[646]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[647]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[648]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[649]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[650]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[651]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[652]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[653]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[654]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[655]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[656]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[657]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[658]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[659]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[660]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[661]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[662]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[663]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[664]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[665]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[666]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[667]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[668]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[669]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[670]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[671]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[672]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[673]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[674]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[675]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[676]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[677]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[678]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[679]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[680]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[681]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[682]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[683]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[684]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[685]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[686]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[687]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[688]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[689]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[690]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[691]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[692]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[693]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[694]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[695]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[696]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[697]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[698]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[699]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[700]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[701]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[702]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[703]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[704]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[705]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[706]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[707]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[708]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[709]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[710]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[711]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[712]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[713]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[714]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[715]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[716]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[717]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[718]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[719]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[720]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[721]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[722]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[723]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[724]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[725]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[726]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[727]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[728]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[729]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[730]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[731]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[732]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[733]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[734]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[735]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[736]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[737]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[738]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[739]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[740]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[741]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[742]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[743]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[744]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[745]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[746]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[747]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[748]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[749]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[750]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[751]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[752]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[753]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[754]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[755]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[756]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[757]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[758]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[759]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[760]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[761]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[762]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[763]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[764]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[765]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[766]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[767]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[768]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[769]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[770]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[771]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[772]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[773]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[774]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[775]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[776]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[777]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[778]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[779]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[780]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[781]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[782]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[783]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[784]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[785]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[786]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[787]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[788]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[789]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[790]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[791]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[792]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[793]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[794]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[795]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[796]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[797]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[798]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[799]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[800]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[801]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[802]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[803]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[804]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[805]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[806]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[807]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[808]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[809]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[810]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[811]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[812]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[813]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[814]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[815]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[816]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[817]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[818]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[819]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[820]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[821]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[822]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[823]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[824]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[825]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[826]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[827]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[828]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[829]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[830]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[831]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[832]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[833]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[834]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[835]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[836]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[837]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[838]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[839]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[840]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[841]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[842]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[843]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[844]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[845]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[846]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[847]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[848]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[849]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[850]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[851]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[852]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[853]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[854]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[855]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[856]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[857]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[858]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[859]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[860]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[861]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[862]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[863]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[864]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[865]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[866]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[867]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[868]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[869]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[870]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[871]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[872]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[873]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[874]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[875]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[876]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[877]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[878]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[879]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[880]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[881]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[882]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[883]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[884]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[885]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[886]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[887]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[888]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[889]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[890]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[891]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[892]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[893]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[894]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[895]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[896]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[897]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[898]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[899]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[900]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[901]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[902]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[903]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[904]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[905]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[906]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[907]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[908]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[909]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[910]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[911]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[912]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[913]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[914]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[915]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[916]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[917]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[918]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[919]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[920]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[921]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[922]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[923]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[924]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[925]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[926]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[927]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[928]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[929]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[930]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[931]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[932]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[933]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[934]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[935]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[936]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[937]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[938]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[939]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[940]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[941]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[942]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[943]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[944]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[945]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[946]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[947]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[948]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[949]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[950]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[951]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[952]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[953]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[954]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[955]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[956]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[957]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[958]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[959]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[960]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[961]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[962]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[963]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[964]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[965]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[966]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[967]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[968]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[969]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[970]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[971]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[972]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[973]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[974]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[975]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[976]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[977]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[978]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[979]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[980]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[981]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[982]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[983]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[984]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[985]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[986]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[987]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[988]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[989]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[990]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[991]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[992]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[993]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[994]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[995]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[996]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[997]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[998]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[999]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1000]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1001]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1002]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1003]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1004]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1005]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1006]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1007]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1008]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1009]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1010]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1011]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1012]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1013]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1014]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1015]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1016]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1017]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1018]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1019]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1020]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1021]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1022]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1023]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1024]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1025]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1026]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1027]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1028]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1029]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1030]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1031]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1032]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1033]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1034]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1035]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1036]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1037]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1038]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1039]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1040]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1041]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1042]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1043]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1044]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1045]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1046]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1047]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1048]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1049]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1050]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1051]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1052]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1053]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1054]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1055]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1056]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1057]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1058]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1059]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1060]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1061]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1062]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1063]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1064]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1065]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1066]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1067]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1068]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1069]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1070]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1071]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1072]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1073]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1074]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1075]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1076]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1077]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1078]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1079]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1080]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1081]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1082]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1083]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1084]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1085]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1086]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1087]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1088]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1089]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1090]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1091]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1092]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1093]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1094]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1095]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1096]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1097]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1098]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1099]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1100]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1101]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1102]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1103]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1104]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1105]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1106]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1107]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1108]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1109]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1110]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1111]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1112]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1113]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1114]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1115]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1116]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1117]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1118]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1119]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1120]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1121]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1122]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1123]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1124]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1125]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1126]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1127]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1128]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1129]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1130]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1131]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1132]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1133]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1134]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1135]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1136]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1137]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1138]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1139]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1140]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1141]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1142]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1143]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1144]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1145]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1146]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1147]";
-connectAttr "layer1.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1148]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[6]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[7]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[8]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[9]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[10]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[11]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[12]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[13]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[14]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[15]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[16]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[17]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[18]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[19]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[20]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[21]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[22]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[23]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[24]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[25]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[26]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[27]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[28]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[29]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[30]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[31]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[32]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[33]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[34]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[35]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[36]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[37]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[38]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[39]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[40]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[41]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[42]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[43]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[44]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[45]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[46]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[47]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[48]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[49]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[50]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[51]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[52]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[53]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[54]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[55]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[56]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[57]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[58]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[59]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[60]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[61]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[62]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[63]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[64]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[65]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[66]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[67]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[68]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[69]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[70]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[71]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[72]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[73]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[74]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[75]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[76]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[77]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[78]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[79]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[80]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[81]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[82]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[83]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[84]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[85]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[86]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[87]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[88]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[89]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[90]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[91]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[92]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[93]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[94]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[95]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[96]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[97]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[98]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[99]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[100]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[101]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[102]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[103]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[104]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[105]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[106]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[107]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[108]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[109]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[110]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[111]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[112]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[113]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[114]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[115]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[116]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[117]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[118]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[119]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[120]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[121]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[122]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[123]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[124]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[125]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[126]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[127]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[128]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[129]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[130]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[131]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[132]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[133]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[134]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[135]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[136]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[137]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[138]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[139]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[140]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[141]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[142]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[143]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[144]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[145]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[146]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[147]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[148]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[149]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[150]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[151]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[152]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[153]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[154]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[155]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[156]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[157]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[158]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[159]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[160]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[161]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[162]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[163]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[164]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[165]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[166]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[167]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[168]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[169]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[170]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[171]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[172]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[173]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[174]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[175]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[176]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[177]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[178]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[179]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[180]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[181]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[182]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[183]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[184]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[185]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[186]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[187]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[188]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[189]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[190]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[191]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[192]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[193]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[194]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[195]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[196]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[197]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[198]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[199]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[200]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[201]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[202]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[203]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[204]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[205]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[206]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[207]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[208]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[209]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[210]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[211]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[212]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[213]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[214]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[215]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[216]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[217]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[218]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[219]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[220]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[221]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[222]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[223]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[224]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[225]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[226]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[227]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[228]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[229]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[230]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[231]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[232]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[233]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[234]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[235]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[236]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[237]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[238]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[239]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[240]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[241]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[242]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[243]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[244]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[245]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[246]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[247]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[248]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[249]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[250]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[251]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[252]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[253]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[254]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[255]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[256]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[257]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[258]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[259]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[260]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[261]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[262]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[263]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[264]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[265]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[266]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[267]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[268]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[269]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[270]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[271]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[272]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[273]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[274]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[275]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[276]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[277]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[278]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[279]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[280]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[281]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[282]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[283]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[284]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[285]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[286]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[287]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[288]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[289]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[290]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[291]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[292]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[293]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[294]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[295]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[296]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[297]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[298]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[299]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[300]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[301]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[302]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[303]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[304]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[305]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[306]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[307]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[308]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[309]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[310]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[311]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[312]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[313]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[314]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[315]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[316]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[317]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[318]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[319]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[320]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[321]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[322]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[323]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[324]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[325]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[326]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[327]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[328]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[329]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[330]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[331]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[332]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[333]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[334]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[335]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[336]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[337]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[338]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[339]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[340]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[341]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[342]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[343]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[344]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[345]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[346]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[347]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[348]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[349]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[350]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[351]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[352]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[353]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[354]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[355]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[356]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[357]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[358]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[359]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[360]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[361]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[362]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[363]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[364]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[365]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[366]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[367]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[368]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[369]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[370]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[371]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[372]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[373]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[374]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[375]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[376]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[377]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[378]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[379]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[380]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[381]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[382]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[383]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[384]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[385]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[386]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[387]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[388]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[389]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[390]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[391]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[392]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[393]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[394]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[395]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[396]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[397]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[398]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[399]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[400]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[401]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[402]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[403]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[404]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[405]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[406]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[407]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[408]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[409]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[410]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[411]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[412]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[413]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[414]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[415]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[416]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[417]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[418]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[419]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[420]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[421]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[422]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[423]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[424]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[425]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[426]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[427]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[428]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[429]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[430]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[431]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[432]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[433]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[434]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[435]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[436]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[437]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[438]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[439]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[440]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[441]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[442]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[443]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[444]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[445]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[446]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[447]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[448]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[449]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[450]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[451]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[452]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[453]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[454]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[455]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[456]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[457]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[458]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[459]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[460]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[461]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[462]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[463]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[464]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[465]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[466]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[467]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[468]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[469]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[470]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[471]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[472]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[473]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[474]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[475]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[476]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[477]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[478]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[479]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[480]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[481]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[482]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[483]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[484]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[485]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[486]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[487]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[488]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[489]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[490]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[491]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[492]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[493]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[494]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[495]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[496]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[497]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[498]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[499]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[500]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[501]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[502]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[503]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[504]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[505]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[506]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[507]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[508]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[509]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[510]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[511]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[512]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[513]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[514]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[515]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[516]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[517]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[518]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[519]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[520]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[521]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[522]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[523]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[524]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[525]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[526]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[527]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[528]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[529]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[530]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[531]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[532]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[533]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[534]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[535]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[536]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[537]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[538]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[539]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[540]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[541]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[542]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[543]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[544]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[545]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[546]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[547]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[548]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[549]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[550]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[551]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[552]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[553]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[554]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[555]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[556]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[557]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[558]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[559]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[560]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[561]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[562]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[563]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[564]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[565]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[566]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[567]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[568]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[569]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[570]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[571]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[572]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[573]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[574]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[575]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[576]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[577]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[578]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[579]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[580]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[581]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[582]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[583]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[584]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[585]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[586]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[587]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[588]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[589]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[590]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[591]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[592]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[593]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[594]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[595]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[596]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[597]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[598]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[599]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[600]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[601]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[602]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[603]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[604]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[605]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[606]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[607]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[608]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[609]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[610]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[611]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[612]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[613]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[614]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[615]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[616]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[617]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[618]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[619]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[620]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[621]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[622]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[623]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[624]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[625]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[626]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[627]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[628]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[629]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[630]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[631]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[632]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[633]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[634]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[635]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[636]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[637]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[638]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[639]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[640]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[641]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[642]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[643]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[644]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[645]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[646]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[647]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[648]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[649]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[650]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[651]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[652]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[653]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[654]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[655]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[656]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[657]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[658]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[659]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[660]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[661]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[662]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[663]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[664]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[665]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[666]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[667]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[668]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[669]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[670]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[671]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[672]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[673]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[674]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[675]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[676]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[677]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[678]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[679]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[680]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[681]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[682]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[683]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[684]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[685]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[686]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[687]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[688]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[689]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[690]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[691]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[692]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[693]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[694]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[695]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[696]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[697]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[698]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[699]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[700]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[701]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[702]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[703]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[704]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[705]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[706]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[707]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[708]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[709]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[710]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[711]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[712]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[713]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[714]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[715]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[716]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[717]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[718]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[719]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[720]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[721]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[722]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[723]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[724]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[725]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[726]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[727]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[728]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[729]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[730]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[731]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[732]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[733]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[734]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[735]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[736]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[737]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[738]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[739]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[740]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[741]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[742]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[743]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[744]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[745]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[746]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[747]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[748]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[749]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[750]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[751]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[752]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[753]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[754]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[755]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[756]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[757]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[758]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[759]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[760]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[761]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[762]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[763]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[764]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[765]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[766]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[767]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[768]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[769]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[770]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[771]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[772]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[773]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[774]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[775]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[776]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[777]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[778]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[779]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[780]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[781]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[782]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[783]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[784]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[785]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[786]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[787]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[788]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[789]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[790]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[791]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[792]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[793]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[794]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[795]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[796]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[797]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[798]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[799]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[800]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[801]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[802]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[803]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[804]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[805]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[806]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[807]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[808]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[809]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[810]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[811]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[812]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[813]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[814]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[815]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[816]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[817]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[818]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[819]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[820]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[821]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[822]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[823]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[824]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[825]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[826]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[827]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[828]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[829]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[830]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[831]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[832]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[833]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[834]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[835]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[836]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[837]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[838]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[839]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[840]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[841]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[842]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[843]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[844]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[845]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[846]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[847]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[848]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[849]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[850]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[851]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[852]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[853]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[854]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[855]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[856]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[857]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[858]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[859]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[860]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[861]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[862]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[863]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[864]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[865]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[866]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[867]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[868]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[869]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[870]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[871]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[872]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[873]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[874]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[875]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[876]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[877]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[878]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[879]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[880]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[881]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[882]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[883]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[884]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[885]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[886]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[887]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[888]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[889]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[890]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[891]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[892]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[893]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[894]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[895]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[896]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[897]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[898]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[899]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[900]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[901]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[902]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[903]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[904]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[905]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[906]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[907]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[908]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[909]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[910]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[911]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[912]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[913]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[914]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[915]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[916]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[917]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[918]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[919]";
+connectAttr "Text_LadderxControl_1_ladderControl.o" "FighterModelMaya_RIGVERSION_0065RN.phl[920]"
+		;
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[921]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[922]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[923]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[924]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[925]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[926]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[927]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[928]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[929]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[930]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[931]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[932]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[933]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[934]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[935]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[936]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[937]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[938]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[939]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[940]";
+connectAttr "Text_HatchxControl_1_hatchControl.o" "FighterModelMaya_RIGVERSION_0065RN.phl[941]"
+		;
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[942]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[943]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[944]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[945]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[946]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[947]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[948]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[949]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[950]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[951]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[952]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[953]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[954]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[955]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[956]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[957]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[958]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[959]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[960]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[961]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[962]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[963]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[964]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[965]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[966]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[967]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[968]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[969]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[970]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[971]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[972]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[973]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[974]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[975]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[976]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[977]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[978]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[979]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[980]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[981]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[982]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[983]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[984]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[985]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[986]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[987]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[988]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[989]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[990]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[991]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[992]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[993]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[994]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[995]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[996]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[997]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[998]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[999]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1000]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1001]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1002]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1003]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1004]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1005]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1006]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1007]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1008]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1009]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1010]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1011]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1012]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1013]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1014]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1015]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1016]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1017]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1018]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1019]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1020]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1021]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1022]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1023]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1024]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1025]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1026]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1027]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1028]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1029]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1030]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1031]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1032]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1033]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1034]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1035]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1036]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1037]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1038]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1039]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1040]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1041]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1042]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1043]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1044]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1045]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1046]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1047]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1048]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1049]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1050]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1051]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1052]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1053]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1054]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1055]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1056]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1057]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1058]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1059]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1060]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1061]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1062]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1063]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1064]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1065]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1066]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1067]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1068]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1069]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1070]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1071]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1072]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1073]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1074]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1075]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1076]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1077]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1078]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1079]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1080]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1081]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1082]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1083]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1084]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1085]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1086]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1087]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1088]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1089]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1090]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1091]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1092]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1093]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1094]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1095]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1096]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1097]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1098]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1099]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1100]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1101]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1102]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1103]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1104]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1105]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1106]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1107]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1108]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1109]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1110]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1111]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1112]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1113]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1114]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1115]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1116]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1117]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1118]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1119]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1120]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1121]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1122]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1123]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1124]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1125]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1126]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1127]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1128]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1129]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1130]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1131]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1132]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1133]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1134]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1135]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1136]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1137]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1138]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1139]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1140]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1141]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1142]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1143]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1144]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1145]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1146]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1147]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1148]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1149]";
+connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1150]";
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
@@ -8349,7 +8973,7 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "layerManager.dli[2]" "layer1.id";
+connectAttr "layerManager.dli[2]" "shiplayer.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
