@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: TestAnimation_003_SLOMO.0011.ma
-//Last modified: Wed, Apr 06, 2016 10:16:50 AM
+//Last modified: Thu, Apr 07, 2016 08:52:35 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "BaseRig_0133RN" -op "v=0;" -typ "mayaAscii" "C:/Users/Kev-bo/Documents/KevinRoberts-Senior-Capstone/SeniorCapstone/Spring//PilotRig/BaseRig.0135.ma";
 file -rdi 2 -ns ":" -rfn "PilotModel_Maya_0005RN" -op "v=0;" -typ "mayaAscii"
@@ -112,7 +112,7 @@ createNode lookAt -n "camera1_group";
 	rename -uid "FBA267EE-46A7-AB6F-781F-03B3EA83C8F1";
 	setAttr ".t" -type "double3" 55.938679156749096 6.6164954326643475 -44.99049019568875 ;
 	setAttr ".a" -type "double3" 0 0 -1 ;
-	setAttr ".db" 69.496245487768334;
+	setAttr ".db" 16.863117817690934;
 	setAttr ".tws" -8.5377364625159387e-007;
 createNode transform -n "camera1_aim" -p "camera1_group";
 	rename -uid "B7D84984-4E7B-1104-D45E-299676923C3C";
@@ -133,7 +133,7 @@ createNode camera -n "MainCameraShape" -p "MainCamera";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr ".coi" 69.496245487768334;
+	setAttr ".coi" 16.863117817690934;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -418,19 +418,19 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "A78CB073-4520-77D5-F383-5A9D1DCFE1C4";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4A2367D7-4A84-295D-F29B-C3888069FBC8";
+	rename -uid "EBFED40B-4A51-BAF6-0B1C-28B14600A58D";
 	setAttr -s 79 ".lnk";
 	setAttr -s 30 ".ign";
 	setAttr -s 29 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F8E83D82-46E5-24FC-B4B4-94A2AA903F32";
+	rename -uid "D9D21FA3-4922-8B5E-8412-A288BF36CCD5";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "6AFDADEC-483F-B944-C2A3-6A9341944487";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5F6F1BFD-4675-02A1-359D-EB91FC4F6D30";
+	rename -uid "D56B364C-4696-328E-D50D-53908E8B486E";
 	setAttr -s 5 ".rlmi[1:4]"  1 2 3 4;
 	setAttr -s 5 ".rlmi";
 createNode renderLayer -n "defaultRenderLayer";
@@ -1540,9 +1540,9 @@ createNode reference -n "BaseRig_0133RN";
 		"BaseRig_0133RN.placeHolderList[45]" ""
 		5 3 "BaseRig_0133RN" "|Mesh_Grp|Eyes_grp|Eyes_R|Eyes_RShape.primaryVisibility" 
 		"BaseRig_0133RN.placeHolderList[46]" ""
-		7 "link" ":lightLinker1" 2 "|Mesh_Grp|Helmet|PlaneFBXASC046001|PlaneFBXASC046001Shape.message" "|charMainLight|charMainLightShape.message" 
-		0
 		7 "link" ":lightLinker1" 2 "|Mesh_Grp|Helmet|PlaneFBXASC046001|PlaneFBXASC046001Shape.message" "|Reflected_Light|Reflected_LightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|Mesh_Grp|Helmet|PlaneFBXASC046001|PlaneFBXASC046001Shape.message" "|charMainLight|charMainLightShape.message" 
 		0
 		"BaseRig_0133RN" 546
 		2 "|Ctrl_Main_Grp|MainCtrl" "visibility" " -av 1"
@@ -1562,12 +1562,12 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl" "scaleZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "visibility" " -av 1"
 		
-		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translate" " -type \"double3\" -2.481749962104161 5.8466264594042432 14.394714355552855"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translate" " -type \"double3\" -59.702228964656172 -1.1176399093925271 -66.733465523441609"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translateY" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "translateZ" " -av"
-		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotate" " -type \"double3\" -26.278366689440123 83.374297650052114 0"
+		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotate" " -type \"double3\" 30.377965398708369 50 0"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk" "rotateY" " -av"
@@ -1582,7 +1582,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "visibility" 
 		" -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotate" 
-		" -type \"double3\" 0 0 0"
+		" -type \"double3\" 0 14.249150881519254 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|hips_ctrl_fk" "rotateY" 
@@ -1598,7 +1598,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "visibility" 
 		" -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotate" 
-		" -type \"double3\" 15.767396984610755 0 0"
+		" -type \"double3\" 15.629548295638955 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk" "rotateY" 
@@ -1610,7 +1610,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
-		"rotate" " -type \"double3\" 44.034390118744142 0 0"
+		"rotate" " -type \"double3\" 21.430243295453288 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk" 
@@ -1622,7 +1622,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
-		"rotate" " -type \"double3\" -18.750838931912131 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk" 
@@ -1634,7 +1634,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
-		"rotate" " -type \"double3\" 0 -41.083260331740881 13.490933628402365"
+		"rotate" " -type \"double3\" 0 -29.779407102767106 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
@@ -1644,9 +1644,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L" 
 		"rotationOrder" " -av -k 1 2"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L" 
-		"rotate" " -type \"double3\" -61.321450770582295 -54.105503629427439 31.624817120672574"
+		"rotate" " -type \"double3\" -61.287646392443712 -63.809313552278368 35.24326439043211"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L" 
 		"rotateX" " -av"
@@ -1657,9 +1657,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L" 
 		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L" 
-		"rotate" " -type \"double3\" 0 -33.692785592087176 0"
+		"rotate" " -type \"double3\" 0 -12.994441683471642 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L" 
@@ -1669,9 +1669,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L" 
 		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L|hand_rotatefix_grp_L_DONTFREEZE|hand_ctrl_fk_L" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L|hand_rotatefix_grp_L_DONTFREEZE|hand_ctrl_fk_L" 
-		"rotate" " -type \"double3\" 0 -21.259089543289456 0"
+		"rotate" " -type \"double3\" 0 28.389266464090305 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L|hand_rotatefix_grp_L_DONTFREEZE|hand_ctrl_fk_L" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_L|clavicle_rotatefix_grp_L_DONTFREEZE|clavicle_ctrl_fk_L|shoulder_rotatefix_grp_L_DONTFREEZE|shoulder_ctrl_fk_L|elbow_rotatefix_grp_L_DONTFREEZE|elbow_ctrl_fk_L|hand_rotatefix_grp_L_DONTFREEZE|hand_ctrl_fk_L" 
@@ -1683,7 +1683,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
-		"rotate" " -type \"double3\" 0 -31.057209752958435 0"
+		"rotate" " -type \"double3\" 0 21.317292136283999 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
@@ -1693,9 +1693,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R" 
 		"rotationOrder" " -av -k 1 2"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R" 
-		"rotate" " -type \"double3\" -9.3303738486066994 -70.25710321375864 -21.158578674586359"
+		"rotate" " -type \"double3\" 40.731715866951369 41.163851838481087 -28.505737866938659"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R" 
 		"rotateX" " -av"
@@ -1706,7 +1706,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R" 
 		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R" 
 		"rotate" " -type \"double3\" 0 -21.965853178120991 -16.621434172573299"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R" 
@@ -1718,7 +1718,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R" 
 		"rotationOrder" " -av -k 1 3"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
 		"rotate" " -type \"double3\" 0 0 16.180292349210568"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|Arm_Ctrl_grp_R|clavicle_rotatefix_grp_R_DONTFREEZE|clavicle_ctrl_fk_R|shoulder_rotatefix_grp_R_DONTFREEZE|shoulder_ctrl_fk_R|elbow_rotatefix_grp_R_DONTFREEZE|elbow_ctrl_fk_R|hand_rotatefix_grp_R_DONTFREEZE|hand_ctrl_fk_R" 
@@ -1740,7 +1740,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
 		"translateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
-		"rotate" " -type \"double3\" 10.517454095431495 8.3710020355029204 0"
+		"rotate" " -type \"double3\" -27.629672485066209 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk" 
@@ -1760,7 +1760,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
-		"rotate" " -type \"double3\" -10.656365899273251 0 0"
+		"rotate" " -type \"double3\" -21.735865824141033 0 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|neck_ctrl_fk|head_ctrl_fk" 
@@ -1802,7 +1802,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
-		"rotate" " -type \"double3\" 0 0 -14.573132955444656"
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a" 
@@ -1814,7 +1814,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
-		"rotate" " -type \"double3\" 0 -13.522060078794318 47.401057946722617"
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b" 
@@ -1826,7 +1826,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
-		"rotate" " -type \"double3\" 0 0 24.12500761839533"
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c" 
@@ -1838,7 +1838,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
-		"rotate" " -type \"double3\" 0 0 24.12500761839533"
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d" 
@@ -1850,7 +1850,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
-		"rotate" " -type \"double3\" 0 0 24.12500761839533"
+		"rotate" " -type \"double3\" 0 0 -7.949021912646093"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
@@ -1860,9 +1860,9 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|center_ctrl_fk|botSpine_ctrl_fk|topSpine_ctrl_fk|chest_ctrl_fk|scarf_rotatefix_grp_a|scarf_ctrl_a|scarf_rotatefix_grp_b|scarf_ctrl_b|scarf_rotatefix_grp_c|scarf_ctrl_c|scarf_rotatefix_grp_d|scarf_ctrl_d|scarf_rotatefix_grp_e|scarf_ctrl_e" 
 		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
-		"visibility" " -av 1"
+		"visibility" " -av 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
-		"translate" " -type \"double3\" 4.112161042693689 -4.4485766933498754 -16.967946680600495"
+		"translate" " -type \"double3\" 3.421463007670654 -1.0112369466412061 -7.3572085689579501"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"translateX" " -av"
@@ -1871,7 +1871,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"translateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
-		"rotate" " -type \"double3\" 0 -151.85723825309478 6.738681002147195"
+		"rotate" " -type \"double3\" 0 -84.710168757788622 28.134296134962973"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|hand_ik_rotatefix_R|hand_ctrl_ik_R" 
@@ -1885,7 +1885,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"visibility" " -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
-		"translate" " -type \"double3\" 0.54036390459351691 -9.2202217633771753 -16.45321700630122"
+		"translate" " -type \"double3\" -60.639340261645707 -2.2349519050676885 66.601415633788946"
 		
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"translateX" " -av"
@@ -1894,7 +1894,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"translateZ" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
-		"rotate" " -type \"double3\" 0 -90 0"
+		"rotate" " -type \"double3\" 80.133204024541342 -50 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"rotateX" " -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
@@ -1922,13 +1922,13 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"heelRaise" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
-		"legTwist" " -av -k 1 34.7"
+		"legTwist" " -av -k 1 21.6"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_R|ikFoot_ctrl_ROTATEFIX|foot_ctrl_ik_R" 
 		"rotationOrder" " -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "visibility" 
 		" -av 1"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translate" 
-		" -type \"double3\" -1.3914626019488623 9.4492397064553071 13.892093011473769"
+		" -type \"double3\" -62.724597376358041 0.81131289087414049 -69.785062595024044"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translateY" 
@@ -1936,7 +1936,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "translateZ" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotate" 
-		" -type \"double3\" 15.96743248114619 87.068164188681635 0"
+		" -type \"double3\" 112.24856819173314 50 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotateY" 
@@ -1964,13 +1964,13 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "heelRaise" 
 		" -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "legTwist" 
-		" -av -k 1 -13.000000000000007"
+		" -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|foot_ctrl_ik_L" "rotationOrder" 
 		" -av -k 1 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "visibility" 
-		" -av 1"
+		" -av 0"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translate" 
-		" -type \"double3\" -4.8159145830269763 3.7572346437912203 12.306652904710329"
+		" -type \"double3\" -4.6203942054044989 2.1513515211507932 8.5650493188382395"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translateY" 
@@ -1978,7 +1978,7 @@ createNode reference -n "BaseRig_0133RN";
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "translateZ" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotate" 
-		" -type \"double3\" 0 -4.603627145146886 11.298085793222276"
+		" -type \"double3\" 0 -94.054874413476057 17.587037021919389"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotateX" 
 		" -av"
 		2 "|Ctrl_Main_Grp|MainCtrl|ctrl_grp|IK_switch_ctrl_L|hand_ctrl_ik_L" "rotateY" 
@@ -2533,93 +2533,93 @@ createNode reference -n "BaseRig_0133RN";
 		"BaseRig_0133RN.placeHolderList[285]" ""
 		5 3 "BaseRig_0133RN" "|PilotModel_Maya_0005RNfosterParent1|BootsShapeDeformed.primaryVisibility" 
 		"BaseRig_0133RN.placeHolderList[286]" ""
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Eyes_RShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
-		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Eyes_RShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Eyes_LShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Eyes_RShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Eyes_LShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HandFBXASC032L1ShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Eyes_LShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HandFBXASC032L1ShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|MainBodyShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HandFBXASC032L1ShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|MainBodyShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032BackShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|MainBodyShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032BackShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032LShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032BackShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032LShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032RShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032LShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032RShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032MainFrontFBXASC032LShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032RShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032MainFrontFBXASC032LShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032MainFrontFBXASC032RShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032MainFrontFBXASC032LShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032MainFrontFBXASC032RShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairStrandFBXASC046001ShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairFBXASC032MainFrontFBXASC032RShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairStrandFBXASC046001ShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairStrandShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairStrandFBXASC046001ShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairStrandShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HeadShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HairStrandShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HeadShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|CapeShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HeadShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|CapeShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|ScarfShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|CapeShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|ScarfShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HoseShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|ScarfShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HoseShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Belt_BuckleShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|HoseShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Belt_BuckleShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Belt_UpperShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Belt_BuckleShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Belt_UpperShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|PouchShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|Belt_UpperShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|PouchShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|BeltShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|PouchShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|BeltShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|LegBeltShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|BeltShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|LegBeltShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|LegBelt2ShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|LegBeltShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|LegBelt2ShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
 		0
-		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|BootsShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|LegBelt2ShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0
 		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|BootsShapeDeformed.message" "|Reflected_Light|Reflected_LightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|PilotModel_Maya_0005RNfosterParent1|BootsShapeDeformed.message" "|charMainLight|charMainLightShape.message" 
 		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -9835,26 +9835,18 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		"primaryVisibility" " 1"
 		2 "|fighter_Main_Ctrl|Mesh_grp|Wing_grp|RightWing|mainHinge|mainWing|SecondaryHinge|SecondaryWing|polySurface221|polySurface215|polySurfaceShape215" 
 		"primaryVisibility" " 1"
-		2 "|fighter_Main_Ctrl|Text_LadderxControl_1" "ladderControl" " -av -k 1 0"
+		2 "|fighter_Main_Ctrl|Text_LadderxControl_1" "ladderControl" " -av -k 1 20"
 		
-		2 "|fighter_Main_Ctrl|Text_HatchxControl_1" "hatchControl" " -av -k 1 0"
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371|polySurface371_orientConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371.rotateX" 
+		2 "|fighter_Main_Ctrl|Text_HatchxControl_1" "hatchControl" " -av -k 1 10"
+		
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163|polySurface163_orientConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163.rotateX" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371|polySurface371_orientConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371.rotateY" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163|polySurface163_orientConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163.rotateY" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371|polySurface371_orientConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371.rotateZ" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161|polySurface161_orientConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161.rotateX" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161|polySurface161_orientConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161.rotateY" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161|polySurface161_orientConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161.rotateZ" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163|polySurface163_orientConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163.rotateZ" 
 		""
 		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface54|polySurface54_parentConstraint1.constraintTranslateX" 
 		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface54.translateX" 
@@ -9874,6 +9866,33 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface54|polySurface54_parentConstraint1.constraintRotateZ" 
 		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface54.rotateZ" ""
 		
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161|polySurface161_orientConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161.rotateX" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161|polySurface161_orientConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161.rotateY" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161|polySurface161_orientConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface161.rotateZ" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintTranslateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.translateX" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintTranslateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.translateY" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintTranslateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.translateZ" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.rotateX" ""
+		
+		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.rotateY" ""
+		
+		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.rotateZ" ""
+		
 		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface56|polySurface56_parentConstraint1.constraintTranslateX" 
 		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface56.translateX" 
 		""
@@ -9892,14 +9911,14 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface56|polySurface56_parentConstraint1.constraintRotateZ" 
 		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface56.rotateZ" ""
 		
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359|polySurface359_orientConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359.rotateX" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162|polySurface162_orientConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162.rotateX" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359|polySurface359_orientConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359.rotateY" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162|polySurface162_orientConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162.rotateY" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359|polySurface359_orientConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359.rotateZ" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162|polySurface162_orientConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162.rotateZ" 
 		""
 		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface365|polySurface365_orientConstraint1.constraintRotateX" 
 		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface365.rotateX" 
@@ -9928,15 +9947,6 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		3 "|fighter_Main_Ctrl|Mesh_grp|Nose_grp|FrontLandingGearHatch_grp|polySurface15|polySurface15_parentConstraint1.constraintRotateZ" 
 		"|fighter_Main_Ctrl|Mesh_grp|Nose_grp|FrontLandingGearHatch_grp|polySurface15.rotateZ" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162|polySurface162_orientConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162.rotateX" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162|polySurface162_orientConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162.rotateY" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162|polySurface162_orientConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface162.rotateZ" 
-		""
 		3 "|fighter_Main_Ctrl|Mesh_grp|Nose_grp|FrontLandingGearHatch_grp|polySurface14|polySurface14_parentConstraint1.constraintTranslateX" 
 		"|fighter_Main_Ctrl|Mesh_grp|Nose_grp|FrontLandingGearHatch_grp|polySurface14.translateX" 
 		""
@@ -9955,24 +9965,6 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		3 "|fighter_Main_Ctrl|Mesh_grp|Nose_grp|FrontLandingGearHatch_grp|polySurface14|polySurface14_parentConstraint1.constraintRotateZ" 
 		"|fighter_Main_Ctrl|Mesh_grp|Nose_grp|FrontLandingGearHatch_grp|polySurface14.rotateZ" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintTranslateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.translateX" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintTranslateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.translateY" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintTranslateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.translateZ" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.rotateX" ""
-		
-		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.rotateY" ""
-		
-		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57|polySurface57_parentConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface57.rotateZ" ""
-		
 		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface59|polySurface59_parentConstraint1.constraintTranslateX" 
 		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface59.translateX" 
 		""
@@ -9991,23 +9983,14 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		3 "|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface59|polySurface59_parentConstraint1.constraintRotateZ" 
 		"|fighter_Main_Ctrl|Mesh_grp|MainBody_grp|BottomHatches|polySurface59.rotateZ" ""
 		
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163|polySurface163_orientConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163.rotateX" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359|polySurface359_orientConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359.rotateX" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163|polySurface163_orientConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163.rotateY" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359|polySurface359_orientConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359.rotateY" 
 		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163|polySurface163_orientConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|FrontLandingGear|PylonConnection|polySurface163.rotateZ" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353|polySurface353_orientConstraint1.constraintRotateX" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353.rotateX" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353|polySurface353_orientConstraint1.constraintRotateY" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353.rotateY" 
-		""
-		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353|polySurface353_orientConstraint1.constraintRotateZ" 
-		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353.rotateZ" 
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359|polySurface359_orientConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface359.rotateZ" 
 		""
 		3 "|fighter_Main_Ctrl|Mesh_grp|Nose_grp|Static_Grp|polySurface20|polySurfaceShape20.instObjGroups" 
 		"phongE_nose_SG.dagSetMembers" "-na"
@@ -10019,6 +10002,24 @@ createNode reference -n "FighterModelMaya_RIGVERSION_0065RN";
 		"phongE_nose_SG.dagSetMembers" "-na"
 		3 "|fighter_Main_Ctrl|Mesh_grp|Nose_grp|Canopy_Grp|polySurface19|polySurface18|polySurface23|polySurfaceShape23.instObjGroups" 
 		"phongE_nose_SG.dagSetMembers" "-na"
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353|polySurface353_orientConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353.rotateX" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353|polySurface353_orientConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353.rotateY" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353|polySurface353_orientConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_left|main_Jnt_left|polySurface353.rotateZ" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371|polySurface371_orientConstraint1.constraintRotateX" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371.rotateX" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371|polySurface371_orientConstraint1.constraintRotateY" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371.rotateY" 
+		""
+		3 "|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371|polySurface371_orientConstraint1.constraintRotateZ" 
+		"|fighter_Main_Ctrl|Mesh_grp|Undercarriage_grp|BackLandingGearHatch_Pistons|main_Jnt_grp_right|main_jnt_right|polySurface371.rotateZ" 
+		""
 		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl.translateX" 
 		"FighterModelMaya_RIGVERSION_0065RN.placeHolderList[1]" ""
 		5 4 "FighterModelMaya_RIGVERSION_0065RN" "|fighter_Main_Ctrl.translateY" 
@@ -47012,8 +47013,8 @@ createNode renderLayer -n "Shadows";
 	setAttr ".oajs[0].oaid" 0;
 	setAttr ".do" 4;
 select -ne :time1;
-	setAttr ".o" 500;
-	setAttr ".unw" 500;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -47045,8 +47046,6 @@ select -ne :defaultRenderGlobals;
 	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
 select -ne :defaultResolution;
-	setAttr ".w" 1280;
-	setAttr ".h" 720;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.7777777910232544;
 select -ne :defaultLightSet;
@@ -47058,52 +47057,52 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "BaseRig_0133RN.phl[1]" "defaultRenderLayer.adjs[533].plg";
-connectAttr "BaseRig_0133RN.phl[2]" "Shadows.adjs[509].plg";
-connectAttr "BaseRig_0133RN.phl[3]" "defaultRenderLayer.adjs[535].plg";
-connectAttr "BaseRig_0133RN.phl[4]" "Shadows.adjs[511].plg";
-connectAttr "BaseRig_0133RN.phl[5]" "defaultRenderLayer.adjs[537].plg";
-connectAttr "BaseRig_0133RN.phl[6]" "Shadows.adjs[513].plg";
-connectAttr "BaseRig_0133RN.phl[7]" "defaultRenderLayer.adjs[539].plg";
-connectAttr "BaseRig_0133RN.phl[8]" "Shadows.adjs[515].plg";
-connectAttr "BaseRig_0133RN.phl[9]" "defaultRenderLayer.adjs[541].plg";
-connectAttr "BaseRig_0133RN.phl[10]" "Shadows.adjs[517].plg";
-connectAttr "BaseRig_0133RN.phl[11]" "defaultRenderLayer.adjs[543].plg";
-connectAttr "BaseRig_0133RN.phl[12]" "Shadows.adjs[519].plg";
-connectAttr "BaseRig_0133RN.phl[13]" "defaultRenderLayer.adjs[545].plg";
-connectAttr "BaseRig_0133RN.phl[14]" "Shadows.adjs[521].plg";
-connectAttr "BaseRig_0133RN.phl[15]" "defaultRenderLayer.adjs[547].plg";
-connectAttr "BaseRig_0133RN.phl[16]" "Shadows.adjs[523].plg";
-connectAttr "BaseRig_0133RN.phl[17]" "defaultRenderLayer.adjs[549].plg";
-connectAttr "BaseRig_0133RN.phl[18]" "Shadows.adjs[525].plg";
-connectAttr "BaseRig_0133RN.phl[19]" "defaultRenderLayer.adjs[551].plg";
-connectAttr "BaseRig_0133RN.phl[20]" "Shadows.adjs[527].plg";
-connectAttr "BaseRig_0133RN.phl[21]" "defaultRenderLayer.adjs[553].plg";
-connectAttr "BaseRig_0133RN.phl[22]" "Shadows.adjs[529].plg";
-connectAttr "BaseRig_0133RN.phl[23]" "defaultRenderLayer.adjs[555].plg";
-connectAttr "BaseRig_0133RN.phl[24]" "Shadows.adjs[531].plg";
-connectAttr "BaseRig_0133RN.phl[25]" "defaultRenderLayer.adjs[557].plg";
-connectAttr "BaseRig_0133RN.phl[26]" "Shadows.adjs[533].plg";
-connectAttr "BaseRig_0133RN.phl[27]" "defaultRenderLayer.adjs[559].plg";
-connectAttr "BaseRig_0133RN.phl[28]" "Shadows.adjs[535].plg";
-connectAttr "BaseRig_0133RN.phl[29]" "defaultRenderLayer.adjs[561].plg";
-connectAttr "BaseRig_0133RN.phl[30]" "Shadows.adjs[537].plg";
-connectAttr "BaseRig_0133RN.phl[31]" "defaultRenderLayer.adjs[563].plg";
-connectAttr "BaseRig_0133RN.phl[32]" "Shadows.adjs[539].plg";
-connectAttr "BaseRig_0133RN.phl[33]" "defaultRenderLayer.adjs[565].plg";
-connectAttr "BaseRig_0133RN.phl[34]" "Shadows.adjs[541].plg";
-connectAttr "BaseRig_0133RN.phl[35]" "defaultRenderLayer.adjs[567].plg";
-connectAttr "BaseRig_0133RN.phl[36]" "Shadows.adjs[543].plg";
-connectAttr "BaseRig_0133RN.phl[37]" "defaultRenderLayer.adjs[569].plg";
-connectAttr "BaseRig_0133RN.phl[38]" "Shadows.adjs[545].plg";
-connectAttr "BaseRig_0133RN.phl[39]" "defaultRenderLayer.adjs[571].plg";
-connectAttr "BaseRig_0133RN.phl[40]" "Shadows.adjs[547].plg";
-connectAttr "BaseRig_0133RN.phl[41]" "defaultRenderLayer.adjs[572].plg";
-connectAttr "BaseRig_0133RN.phl[42]" "Shadows.adjs[548].plg";
-connectAttr "BaseRig_0133RN.phl[43]" "defaultRenderLayer.adjs[574].plg";
-connectAttr "BaseRig_0133RN.phl[44]" "Shadows.adjs[550].plg";
-connectAttr "BaseRig_0133RN.phl[45]" "defaultRenderLayer.adjs[576].plg";
-connectAttr "BaseRig_0133RN.phl[46]" "Shadows.adjs[552].plg";
+connectAttr "BaseRig_0133RN.phl[1]" "Shadows.adjs[509].plg";
+connectAttr "BaseRig_0133RN.phl[2]" "defaultRenderLayer.adjs[533].plg";
+connectAttr "BaseRig_0133RN.phl[3]" "Shadows.adjs[511].plg";
+connectAttr "BaseRig_0133RN.phl[4]" "defaultRenderLayer.adjs[535].plg";
+connectAttr "BaseRig_0133RN.phl[5]" "Shadows.adjs[513].plg";
+connectAttr "BaseRig_0133RN.phl[6]" "defaultRenderLayer.adjs[537].plg";
+connectAttr "BaseRig_0133RN.phl[7]" "Shadows.adjs[515].plg";
+connectAttr "BaseRig_0133RN.phl[8]" "defaultRenderLayer.adjs[539].plg";
+connectAttr "BaseRig_0133RN.phl[9]" "Shadows.adjs[517].plg";
+connectAttr "BaseRig_0133RN.phl[10]" "defaultRenderLayer.adjs[541].plg";
+connectAttr "BaseRig_0133RN.phl[11]" "Shadows.adjs[519].plg";
+connectAttr "BaseRig_0133RN.phl[12]" "defaultRenderLayer.adjs[543].plg";
+connectAttr "BaseRig_0133RN.phl[13]" "Shadows.adjs[521].plg";
+connectAttr "BaseRig_0133RN.phl[14]" "defaultRenderLayer.adjs[545].plg";
+connectAttr "BaseRig_0133RN.phl[15]" "Shadows.adjs[523].plg";
+connectAttr "BaseRig_0133RN.phl[16]" "defaultRenderLayer.adjs[547].plg";
+connectAttr "BaseRig_0133RN.phl[17]" "Shadows.adjs[525].plg";
+connectAttr "BaseRig_0133RN.phl[18]" "defaultRenderLayer.adjs[549].plg";
+connectAttr "BaseRig_0133RN.phl[19]" "Shadows.adjs[527].plg";
+connectAttr "BaseRig_0133RN.phl[20]" "defaultRenderLayer.adjs[551].plg";
+connectAttr "BaseRig_0133RN.phl[21]" "Shadows.adjs[529].plg";
+connectAttr "BaseRig_0133RN.phl[22]" "defaultRenderLayer.adjs[553].plg";
+connectAttr "BaseRig_0133RN.phl[23]" "Shadows.adjs[531].plg";
+connectAttr "BaseRig_0133RN.phl[24]" "defaultRenderLayer.adjs[555].plg";
+connectAttr "BaseRig_0133RN.phl[25]" "Shadows.adjs[533].plg";
+connectAttr "BaseRig_0133RN.phl[26]" "defaultRenderLayer.adjs[557].plg";
+connectAttr "BaseRig_0133RN.phl[27]" "Shadows.adjs[535].plg";
+connectAttr "BaseRig_0133RN.phl[28]" "defaultRenderLayer.adjs[559].plg";
+connectAttr "BaseRig_0133RN.phl[29]" "Shadows.adjs[537].plg";
+connectAttr "BaseRig_0133RN.phl[30]" "defaultRenderLayer.adjs[561].plg";
+connectAttr "BaseRig_0133RN.phl[31]" "Shadows.adjs[539].plg";
+connectAttr "BaseRig_0133RN.phl[32]" "defaultRenderLayer.adjs[563].plg";
+connectAttr "BaseRig_0133RN.phl[33]" "Shadows.adjs[541].plg";
+connectAttr "BaseRig_0133RN.phl[34]" "defaultRenderLayer.adjs[565].plg";
+connectAttr "BaseRig_0133RN.phl[35]" "Shadows.adjs[543].plg";
+connectAttr "BaseRig_0133RN.phl[36]" "defaultRenderLayer.adjs[567].plg";
+connectAttr "BaseRig_0133RN.phl[37]" "Shadows.adjs[545].plg";
+connectAttr "BaseRig_0133RN.phl[38]" "defaultRenderLayer.adjs[569].plg";
+connectAttr "BaseRig_0133RN.phl[39]" "Shadows.adjs[547].plg";
+connectAttr "BaseRig_0133RN.phl[40]" "defaultRenderLayer.adjs[571].plg";
+connectAttr "BaseRig_0133RN.phl[41]" "Shadows.adjs[548].plg";
+connectAttr "BaseRig_0133RN.phl[42]" "defaultRenderLayer.adjs[572].plg";
+connectAttr "BaseRig_0133RN.phl[43]" "Shadows.adjs[550].plg";
+connectAttr "BaseRig_0133RN.phl[44]" "defaultRenderLayer.adjs[574].plg";
+connectAttr "BaseRig_0133RN.phl[45]" "Shadows.adjs[552].plg";
+connectAttr "BaseRig_0133RN.phl[46]" "defaultRenderLayer.adjs[576].plg";
 connectAttr "MainCtrl_visibility.o" "BaseRig_0133RN.phl[47]";
 connectAttr "MainCtrl_translateX.o" "BaseRig_0133RN.phl[48]";
 connectAttr "MainCtrl_translateY.o" "BaseRig_0133RN.phl[49]";
@@ -47300,50 +47299,50 @@ connectAttr "FingersCtrl_R_thumbBend.o" "BaseRig_0133RN.phl[239]";
 connectAttr "FingersCtrl_R_fingerSpread.o" "BaseRig_0133RN.phl[240]";
 connectAttr "Pilot.ri" "BaseRig_0133RN.phl[241]";
 connectAttr "Shadows.ri" "BaseRig_0133RN.phl[242]";
-connectAttr "BaseRig_0133RN.phl[243]" "defaultRenderLayer.adjs[577].plg";
-connectAttr "BaseRig_0133RN.phl[244]" "Shadows.adjs[553].plg";
-connectAttr "BaseRig_0133RN.phl[245]" "defaultRenderLayer.adjs[575].plg";
-connectAttr "BaseRig_0133RN.phl[246]" "Shadows.adjs[551].plg";
-connectAttr "BaseRig_0133RN.phl[247]" "defaultRenderLayer.adjs[573].plg";
-connectAttr "BaseRig_0133RN.phl[248]" "Shadows.adjs[549].plg";
-connectAttr "BaseRig_0133RN.phl[249]" "defaultRenderLayer.adjs[570].plg";
-connectAttr "BaseRig_0133RN.phl[250]" "Shadows.adjs[546].plg";
-connectAttr "BaseRig_0133RN.phl[251]" "defaultRenderLayer.adjs[568].plg";
-connectAttr "BaseRig_0133RN.phl[252]" "Shadows.adjs[544].plg";
-connectAttr "BaseRig_0133RN.phl[253]" "defaultRenderLayer.adjs[566].plg";
-connectAttr "BaseRig_0133RN.phl[254]" "Shadows.adjs[542].plg";
-connectAttr "BaseRig_0133RN.phl[255]" "defaultRenderLayer.adjs[564].plg";
-connectAttr "BaseRig_0133RN.phl[256]" "Shadows.adjs[540].plg";
-connectAttr "BaseRig_0133RN.phl[257]" "defaultRenderLayer.adjs[562].plg";
-connectAttr "BaseRig_0133RN.phl[258]" "Shadows.adjs[538].plg";
-connectAttr "BaseRig_0133RN.phl[259]" "defaultRenderLayer.adjs[560].plg";
-connectAttr "BaseRig_0133RN.phl[260]" "Shadows.adjs[536].plg";
-connectAttr "BaseRig_0133RN.phl[261]" "defaultRenderLayer.adjs[558].plg";
-connectAttr "BaseRig_0133RN.phl[262]" "Shadows.adjs[534].plg";
-connectAttr "BaseRig_0133RN.phl[263]" "defaultRenderLayer.adjs[556].plg";
-connectAttr "BaseRig_0133RN.phl[264]" "Shadows.adjs[532].plg";
-connectAttr "BaseRig_0133RN.phl[265]" "defaultRenderLayer.adjs[554].plg";
-connectAttr "BaseRig_0133RN.phl[266]" "Shadows.adjs[530].plg";
-connectAttr "BaseRig_0133RN.phl[267]" "defaultRenderLayer.adjs[552].plg";
-connectAttr "BaseRig_0133RN.phl[268]" "Shadows.adjs[528].plg";
-connectAttr "BaseRig_0133RN.phl[269]" "defaultRenderLayer.adjs[550].plg";
-connectAttr "BaseRig_0133RN.phl[270]" "Shadows.adjs[526].plg";
-connectAttr "BaseRig_0133RN.phl[271]" "defaultRenderLayer.adjs[548].plg";
-connectAttr "BaseRig_0133RN.phl[272]" "Shadows.adjs[524].plg";
-connectAttr "BaseRig_0133RN.phl[273]" "defaultRenderLayer.adjs[546].plg";
-connectAttr "BaseRig_0133RN.phl[274]" "Shadows.adjs[522].plg";
-connectAttr "BaseRig_0133RN.phl[275]" "defaultRenderLayer.adjs[544].plg";
-connectAttr "BaseRig_0133RN.phl[276]" "Shadows.adjs[520].plg";
-connectAttr "BaseRig_0133RN.phl[277]" "defaultRenderLayer.adjs[542].plg";
-connectAttr "BaseRig_0133RN.phl[278]" "Shadows.adjs[518].plg";
-connectAttr "BaseRig_0133RN.phl[279]" "defaultRenderLayer.adjs[540].plg";
-connectAttr "BaseRig_0133RN.phl[280]" "Shadows.adjs[516].plg";
-connectAttr "BaseRig_0133RN.phl[281]" "defaultRenderLayer.adjs[538].plg";
-connectAttr "BaseRig_0133RN.phl[282]" "Shadows.adjs[514].plg";
-connectAttr "BaseRig_0133RN.phl[283]" "defaultRenderLayer.adjs[536].plg";
-connectAttr "BaseRig_0133RN.phl[284]" "Shadows.adjs[512].plg";
-connectAttr "BaseRig_0133RN.phl[285]" "defaultRenderLayer.adjs[534].plg";
-connectAttr "BaseRig_0133RN.phl[286]" "Shadows.adjs[510].plg";
+connectAttr "BaseRig_0133RN.phl[243]" "Shadows.adjs[553].plg";
+connectAttr "BaseRig_0133RN.phl[244]" "defaultRenderLayer.adjs[577].plg";
+connectAttr "BaseRig_0133RN.phl[245]" "Shadows.adjs[551].plg";
+connectAttr "BaseRig_0133RN.phl[246]" "defaultRenderLayer.adjs[575].plg";
+connectAttr "BaseRig_0133RN.phl[247]" "Shadows.adjs[549].plg";
+connectAttr "BaseRig_0133RN.phl[248]" "defaultRenderLayer.adjs[573].plg";
+connectAttr "BaseRig_0133RN.phl[249]" "Shadows.adjs[546].plg";
+connectAttr "BaseRig_0133RN.phl[250]" "defaultRenderLayer.adjs[570].plg";
+connectAttr "BaseRig_0133RN.phl[251]" "Shadows.adjs[544].plg";
+connectAttr "BaseRig_0133RN.phl[252]" "defaultRenderLayer.adjs[568].plg";
+connectAttr "BaseRig_0133RN.phl[253]" "Shadows.adjs[542].plg";
+connectAttr "BaseRig_0133RN.phl[254]" "defaultRenderLayer.adjs[566].plg";
+connectAttr "BaseRig_0133RN.phl[255]" "Shadows.adjs[540].plg";
+connectAttr "BaseRig_0133RN.phl[256]" "defaultRenderLayer.adjs[564].plg";
+connectAttr "BaseRig_0133RN.phl[257]" "Shadows.adjs[538].plg";
+connectAttr "BaseRig_0133RN.phl[258]" "defaultRenderLayer.adjs[562].plg";
+connectAttr "BaseRig_0133RN.phl[259]" "Shadows.adjs[536].plg";
+connectAttr "BaseRig_0133RN.phl[260]" "defaultRenderLayer.adjs[560].plg";
+connectAttr "BaseRig_0133RN.phl[261]" "Shadows.adjs[534].plg";
+connectAttr "BaseRig_0133RN.phl[262]" "defaultRenderLayer.adjs[558].plg";
+connectAttr "BaseRig_0133RN.phl[263]" "Shadows.adjs[532].plg";
+connectAttr "BaseRig_0133RN.phl[264]" "defaultRenderLayer.adjs[556].plg";
+connectAttr "BaseRig_0133RN.phl[265]" "Shadows.adjs[530].plg";
+connectAttr "BaseRig_0133RN.phl[266]" "defaultRenderLayer.adjs[554].plg";
+connectAttr "BaseRig_0133RN.phl[267]" "Shadows.adjs[528].plg";
+connectAttr "BaseRig_0133RN.phl[268]" "defaultRenderLayer.adjs[552].plg";
+connectAttr "BaseRig_0133RN.phl[269]" "Shadows.adjs[526].plg";
+connectAttr "BaseRig_0133RN.phl[270]" "defaultRenderLayer.adjs[550].plg";
+connectAttr "BaseRig_0133RN.phl[271]" "Shadows.adjs[524].plg";
+connectAttr "BaseRig_0133RN.phl[272]" "defaultRenderLayer.adjs[548].plg";
+connectAttr "BaseRig_0133RN.phl[273]" "Shadows.adjs[522].plg";
+connectAttr "BaseRig_0133RN.phl[274]" "defaultRenderLayer.adjs[546].plg";
+connectAttr "BaseRig_0133RN.phl[275]" "Shadows.adjs[520].plg";
+connectAttr "BaseRig_0133RN.phl[276]" "defaultRenderLayer.adjs[544].plg";
+connectAttr "BaseRig_0133RN.phl[277]" "Shadows.adjs[518].plg";
+connectAttr "BaseRig_0133RN.phl[278]" "defaultRenderLayer.adjs[542].plg";
+connectAttr "BaseRig_0133RN.phl[279]" "Shadows.adjs[516].plg";
+connectAttr "BaseRig_0133RN.phl[280]" "defaultRenderLayer.adjs[540].plg";
+connectAttr "BaseRig_0133RN.phl[281]" "Shadows.adjs[514].plg";
+connectAttr "BaseRig_0133RN.phl[282]" "defaultRenderLayer.adjs[538].plg";
+connectAttr "BaseRig_0133RN.phl[283]" "Shadows.adjs[512].plg";
+connectAttr "BaseRig_0133RN.phl[284]" "defaultRenderLayer.adjs[536].plg";
+connectAttr "BaseRig_0133RN.phl[285]" "Shadows.adjs[510].plg";
+connectAttr "BaseRig_0133RN.phl[286]" "defaultRenderLayer.adjs[534].plg";
 connectAttr "fighter_Main_Ctrl_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1]"
 		;
 connectAttr "fighter_Main_Ctrl_translateY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2]"
@@ -47380,9 +47379,9 @@ connectAttr "polySurface19_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[21]
 		;
 connectAttr "polySurface19_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[22]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[23]" "defaultRenderLayer.adjs[24].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[23]" "Shadows.adjs[0].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[24]" "defaultRenderLayer.adjs[24].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[24]" "Shadows.adjs[0].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[25]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[26]";
 connectAttr "polySurface18_visibility.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27]"
@@ -47393,9 +47392,9 @@ connectAttr "polySurface18_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29]
 		;
 connectAttr "polySurface18_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[31]" "defaultRenderLayer.adjs[25].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[31]" "Shadows.adjs[1].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[32]" "defaultRenderLayer.adjs[25].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[32]" "Shadows.adjs[1].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[33]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[34]";
 connectAttr "polySurface23_visibility.o" "FighterModelMaya_RIGVERSION_0065RN.phl[35]"
@@ -47407,24 +47406,24 @@ connectAttr "polySurface23_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[37]
 connectAttr "polySurface23_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[38]"
 		;
 connectAttr "Pilot.ri" "FighterModelMaya_RIGVERSION_0065RN.phl[39]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[40]" "defaultRenderLayer.oajs[4].opg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[40]" "Pilot.oajs[4].opg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[41]" "defaultRenderLayer.oajs[4].opg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[41]" "Pilot.oajs[4].opg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[42]" "defaultRenderLayer.adjs[18].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[42]" "Pilot.adjs[18].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[43]" "defaultRenderLayer.adjs[18].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[43]" "Pilot.adjs[18].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[44]" "defaultRenderLayer.adjs[19].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[44]" "Pilot.adjs[19].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[45]" "defaultRenderLayer.adjs[19].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[45]" "Pilot.adjs[19].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[46]" "defaultRenderLayer.adjs[17].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[46]" "Pilot.adjs[17].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[47]" "defaultRenderLayer.adjs[17].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[47]" "Pilot.adjs[17].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[48]" "defaultRenderLayer.adjs[16].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[48]" "Pilot.adjs[16].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[49]" "defaultRenderLayer.adjs[16].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[49]" "Pilot.adjs[16].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[50]" "defaultRenderLayer.adjs[26].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[50]" "Shadows.adjs[2].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[51]" "defaultRenderLayer.adjs[26].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[51]" "Shadows.adjs[2].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[52]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[53]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[54]";
@@ -47456,9 +47455,9 @@ connectAttr "polySurface32_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[71]
 		;
 connectAttr "polySurface32_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[72]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[73]" "defaultRenderLayer.adjs[27].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[73]" "Shadows.adjs[3].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[74]" "defaultRenderLayer.adjs[27].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[74]" "Shadows.adjs[3].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[75]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[76]";
 connectAttr "polySurface33_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[77]"
@@ -47481,9 +47480,9 @@ connectAttr "polySurface33_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[85]
 		;
 connectAttr "polySurface33_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[86]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[87]" "defaultRenderLayer.adjs[28].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[87]" "Shadows.adjs[4].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[88]" "defaultRenderLayer.adjs[28].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[88]" "Shadows.adjs[4].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[89]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[90]";
 connectAttr "polySurface34_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[91]"
@@ -47506,9 +47505,9 @@ connectAttr "polySurface34_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[99]
 		;
 connectAttr "polySurface34_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[100]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[101]" "defaultRenderLayer.adjs[29].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[101]" "Shadows.adjs[5].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[102]" "defaultRenderLayer.adjs[29].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[102]" "Shadows.adjs[5].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[103]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[104]";
 connectAttr "polySurface35_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[105]"
@@ -47531,9 +47530,9 @@ connectAttr "polySurface35_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[113
 		;
 connectAttr "polySurface35_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[114]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[115]" "defaultRenderLayer.adjs[30].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[115]" "Shadows.adjs[6].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[116]" "defaultRenderLayer.adjs[30].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[116]" "Shadows.adjs[6].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[117]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[118]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[119]";
@@ -47557,9 +47556,9 @@ connectAttr "polySurface46_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[128
 		;
 connectAttr "polySurface46_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[129]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[130]" "defaultRenderLayer.adjs[31].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[130]" "Shadows.adjs[7].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[131]" "defaultRenderLayer.adjs[31].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[131]" "Shadows.adjs[7].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[132]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[133]";
 connectAttr "polySurface45_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[134]"
@@ -47582,9 +47581,9 @@ connectAttr "polySurface45_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[142
 		;
 connectAttr "polySurface45_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[143]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[144]" "defaultRenderLayer.adjs[32].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[144]" "Shadows.adjs[8].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[145]" "defaultRenderLayer.adjs[32].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[145]" "Shadows.adjs[8].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[146]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[147]";
 connectAttr "polySurface40_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[148]"
@@ -47607,9 +47606,9 @@ connectAttr "polySurface40_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[156
 		;
 connectAttr "polySurface40_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[157]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[158]" "defaultRenderLayer.adjs[33].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[158]" "Shadows.adjs[9].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[159]" "defaultRenderLayer.adjs[33].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[159]" "Shadows.adjs[9].plg";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[160]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[161]";
 connectAttr "polySurface39_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[162]"
@@ -47632,9 +47631,9 @@ connectAttr "polySurface39_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[170
 		;
 connectAttr "polySurface39_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[171]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[172]" "defaultRenderLayer.adjs[34].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[172]" "Shadows.adjs[10].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[173]" "Shadows.adjs[10].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[173]" "defaultRenderLayer.adjs[34].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[174]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[175]";
@@ -47658,9 +47657,9 @@ connectAttr "polySurface38_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[184
 		;
 connectAttr "polySurface38_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[185]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[186]" "defaultRenderLayer.adjs[35].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[186]" "Shadows.adjs[11].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[187]" "Shadows.adjs[11].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[187]" "defaultRenderLayer.adjs[35].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[188]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[189]";
@@ -47684,9 +47683,9 @@ connectAttr "polySurface37_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[198
 		;
 connectAttr "polySurface37_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[199]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[200]" "defaultRenderLayer.adjs[36].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[200]" "Shadows.adjs[12].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[201]" "Shadows.adjs[12].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[201]" "defaultRenderLayer.adjs[36].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[202]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[203]";
@@ -47710,9 +47709,9 @@ connectAttr "polySurface36_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[212
 		;
 connectAttr "polySurface36_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[213]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[214]" "defaultRenderLayer.adjs[37].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[214]" "Shadows.adjs[13].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[215]" "Shadows.adjs[13].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[215]" "defaultRenderLayer.adjs[37].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[216]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[217]";
@@ -47737,9 +47736,9 @@ connectAttr "polySurface41_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[227
 		;
 connectAttr "polySurface41_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[228]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[229]" "defaultRenderLayer.adjs[38].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[229]" "Shadows.adjs[14].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[230]" "Shadows.adjs[14].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[230]" "defaultRenderLayer.adjs[38].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[231]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[232]";
@@ -47763,9 +47762,9 @@ connectAttr "polySurface42_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[241
 		;
 connectAttr "polySurface42_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[242]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[243]" "defaultRenderLayer.adjs[39].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[243]" "Shadows.adjs[15].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[244]" "Shadows.adjs[15].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[244]" "defaultRenderLayer.adjs[39].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[245]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[246]";
@@ -47789,9 +47788,9 @@ connectAttr "polySurface43_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[255
 		;
 connectAttr "polySurface43_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[256]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[257]" "defaultRenderLayer.adjs[40].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[257]" "Shadows.adjs[16].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[258]" "Shadows.adjs[16].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[258]" "defaultRenderLayer.adjs[40].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[259]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[260]";
@@ -47815,9 +47814,9 @@ connectAttr "polySurface44_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[269
 		;
 connectAttr "polySurface44_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[270]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[271]" "defaultRenderLayer.adjs[41].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[271]" "Shadows.adjs[17].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[272]" "Shadows.adjs[17].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[272]" "defaultRenderLayer.adjs[41].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[273]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[274]";
@@ -47842,14 +47841,14 @@ connectAttr "polySurface51_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[284
 		;
 connectAttr "polySurface51_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[285]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[286]" "defaultRenderLayer.adjs[42].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[286]" "Shadows.adjs[18].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[287]" "Shadows.adjs[18].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[287]" "defaultRenderLayer.adjs[42].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[288]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[289]" "defaultRenderLayer.adjs[43].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[289]" "Shadows.adjs[19].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[290]" "Shadows.adjs[19].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[290]" "defaultRenderLayer.adjs[43].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[291]";
 connectAttr "polySurface52_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[292]"
@@ -47872,14 +47871,14 @@ connectAttr "polySurface52_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[300
 		;
 connectAttr "polySurface52_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[301]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[302]" "defaultRenderLayer.adjs[44].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[302]" "Shadows.adjs[20].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[303]" "Shadows.adjs[20].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[303]" "defaultRenderLayer.adjs[44].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[304]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[305]" "defaultRenderLayer.adjs[45].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[305]" "Shadows.adjs[21].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[306]" "Shadows.adjs[21].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[306]" "defaultRenderLayer.adjs[45].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[307]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[308]";
@@ -47903,9 +47902,9 @@ connectAttr "polySurface48_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[317
 		;
 connectAttr "polySurface48_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[318]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[319]" "defaultRenderLayer.adjs[46].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[319]" "Shadows.adjs[22].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[320]" "Shadows.adjs[22].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[320]" "defaultRenderLayer.adjs[46].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[321]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[322]";
@@ -47929,9 +47928,9 @@ connectAttr "polySurface47_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[331
 		;
 connectAttr "polySurface47_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[332]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[333]" "defaultRenderLayer.adjs[47].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[333]" "Shadows.adjs[23].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[334]" "Shadows.adjs[23].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[334]" "defaultRenderLayer.adjs[47].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[335]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[336]";
@@ -47956,9 +47955,9 @@ connectAttr "polySurface49_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[346
 		;
 connectAttr "polySurface49_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[347]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[348]" "defaultRenderLayer.adjs[48].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[348]" "Shadows.adjs[24].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[349]" "Shadows.adjs[24].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[349]" "defaultRenderLayer.adjs[48].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[350]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[351]";
@@ -47982,9 +47981,9 @@ connectAttr "polySurface50_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[360
 		;
 connectAttr "polySurface50_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[361]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[362]" "defaultRenderLayer.adjs[49].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[362]" "Shadows.adjs[25].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[363]" "Shadows.adjs[25].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[363]" "defaultRenderLayer.adjs[49].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[364]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[365]";
@@ -48009,14 +48008,14 @@ connectAttr "polySurface27_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[375
 		;
 connectAttr "polySurface27_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[376]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[377]" "defaultRenderLayer.adjs[50].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[377]" "Shadows.adjs[26].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[378]" "Shadows.adjs[26].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[378]" "defaultRenderLayer.adjs[50].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[379]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[380]" "defaultRenderLayer.adjs[51].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[380]" "Shadows.adjs[27].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[381]" "Shadows.adjs[27].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[381]" "defaultRenderLayer.adjs[51].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[382]";
 connectAttr "polySurface28_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[383]"
@@ -48039,14 +48038,14 @@ connectAttr "polySurface28_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[391
 		;
 connectAttr "polySurface28_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[392]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[393]" "defaultRenderLayer.adjs[52].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[393]" "Shadows.adjs[28].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[394]" "Shadows.adjs[28].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[394]" "defaultRenderLayer.adjs[52].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[395]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[396]" "defaultRenderLayer.adjs[53].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[396]" "Shadows.adjs[29].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[397]" "Shadows.adjs[29].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[397]" "defaultRenderLayer.adjs[53].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[398]";
 connectAttr "polySurface26_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[399]"
@@ -48069,14 +48068,14 @@ connectAttr "polySurface26_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[407
 		;
 connectAttr "polySurface26_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[408]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[409]" "defaultRenderLayer.adjs[54].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[409]" "Shadows.adjs[30].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[410]" "Shadows.adjs[30].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[410]" "defaultRenderLayer.adjs[54].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[411]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[412]" "defaultRenderLayer.adjs[55].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[412]" "Shadows.adjs[31].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[413]" "Shadows.adjs[31].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[413]" "defaultRenderLayer.adjs[55].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[414]";
 connectAttr "polySurface25_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[415]"
@@ -48099,14 +48098,14 @@ connectAttr "polySurface25_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[423
 		;
 connectAttr "polySurface25_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[424]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[425]" "defaultRenderLayer.adjs[56].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[425]" "Shadows.adjs[32].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[426]" "Shadows.adjs[32].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[426]" "defaultRenderLayer.adjs[56].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[427]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[428]" "defaultRenderLayer.adjs[57].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[428]" "Shadows.adjs[33].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[429]" "Shadows.adjs[33].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[429]" "defaultRenderLayer.adjs[57].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[430]";
 connectAttr "polySurface24_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[431]"
@@ -48129,14 +48128,14 @@ connectAttr "polySurface24_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[439
 		;
 connectAttr "polySurface24_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[440]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[441]" "defaultRenderLayer.adjs[58].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[441]" "Shadows.adjs[34].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[442]" "Shadows.adjs[34].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[442]" "defaultRenderLayer.adjs[58].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[443]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[444]" "defaultRenderLayer.adjs[59].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[444]" "Shadows.adjs[35].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[445]" "Shadows.adjs[35].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[445]" "defaultRenderLayer.adjs[59].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[446]";
 connectAttr "polySurface31_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[447]"
@@ -48159,14 +48158,14 @@ connectAttr "polySurface31_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[455
 		;
 connectAttr "polySurface31_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[456]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[457]" "defaultRenderLayer.adjs[60].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[457]" "Shadows.adjs[36].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[458]" "Shadows.adjs[36].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[458]" "defaultRenderLayer.adjs[60].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[459]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[460]" "defaultRenderLayer.adjs[61].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[460]" "Shadows.adjs[37].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[461]" "Shadows.adjs[37].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[461]" "defaultRenderLayer.adjs[61].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[462]";
 connectAttr "polySurface30_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[463]"
@@ -48189,14 +48188,14 @@ connectAttr "polySurface30_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[471
 		;
 connectAttr "polySurface30_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[472]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[473]" "defaultRenderLayer.adjs[62].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[473]" "Shadows.adjs[38].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[474]" "Shadows.adjs[38].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[474]" "defaultRenderLayer.adjs[62].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[475]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[476]" "defaultRenderLayer.adjs[63].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[476]" "Shadows.adjs[39].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[477]" "Shadows.adjs[39].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[477]" "defaultRenderLayer.adjs[63].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[478]";
 connectAttr "polySurface29_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[479]"
@@ -48219,14 +48218,14 @@ connectAttr "polySurface29_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[487
 		;
 connectAttr "polySurface29_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[488]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[489]" "defaultRenderLayer.adjs[64].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[489]" "Shadows.adjs[40].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[490]" "Shadows.adjs[40].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[490]" "defaultRenderLayer.adjs[64].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[491]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[492]" "defaultRenderLayer.adjs[65].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[492]" "Shadows.adjs[41].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[493]" "Shadows.adjs[41].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[493]" "defaultRenderLayer.adjs[65].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[494]";
 connectAttr "pairBlend5.otx" "FighterModelMaya_RIGVERSION_0065RN.phl[495]";
@@ -48247,14 +48246,14 @@ connectAttr "polySurface14_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[506
 		;
 connectAttr "polySurface14_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[507]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[508]" "defaultRenderLayer.adjs[66].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[508]" "Shadows.adjs[42].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[509]" "Shadows.adjs[42].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[509]" "defaultRenderLayer.adjs[66].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[510]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[511]" "defaultRenderLayer.adjs[67].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[511]" "Shadows.adjs[43].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[512]" "Shadows.adjs[43].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[512]" "defaultRenderLayer.adjs[67].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[513]" "pairBlend5.itx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[514]" "pairBlend5.ity2";
@@ -48281,14 +48280,14 @@ connectAttr "polySurface15_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[531
 		;
 connectAttr "polySurface15_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[532]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[533]" "defaultRenderLayer.adjs[68].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[533]" "Shadows.adjs[44].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[534]" "Shadows.adjs[44].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[534]" "defaultRenderLayer.adjs[68].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[535]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[536]" "defaultRenderLayer.adjs[69].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[536]" "Shadows.adjs[45].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[537]" "Shadows.adjs[45].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[537]" "defaultRenderLayer.adjs[69].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[538]" "pairBlend6.itx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[539]" "pairBlend6.ity2";
@@ -48320,24 +48319,24 @@ connectAttr "polySurface17_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[555
 connectAttr "polySurface17_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[556]"
 		;
 connectAttr "Pilot.ri" "FighterModelMaya_RIGVERSION_0065RN.phl[557]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[558]" "defaultRenderLayer.oajs[2].opg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[558]" "Pilot.oajs[2].opg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[559]" "defaultRenderLayer.oajs[2].opg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[559]" "Pilot.oajs[2].opg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[560]" "defaultRenderLayer.adjs[13].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[560]" "Pilot.adjs[13].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[561]" "defaultRenderLayer.adjs[13].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[561]" "Pilot.adjs[13].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[562]" "defaultRenderLayer.adjs[12].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[562]" "Pilot.adjs[12].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[563]" "defaultRenderLayer.adjs[12].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[563]" "Pilot.adjs[12].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[564]" "defaultRenderLayer.adjs[15].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[564]" "Pilot.adjs[15].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[565]" "defaultRenderLayer.adjs[15].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[565]" "Pilot.adjs[15].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[566]" "defaultRenderLayer.adjs[14].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[566]" "Pilot.adjs[14].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[567]" "defaultRenderLayer.adjs[14].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[567]" "Pilot.adjs[14].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[568]" "defaultRenderLayer.adjs[70].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[568]" "Shadows.adjs[46].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[569]" "Shadows.adjs[46].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[569]" "defaultRenderLayer.adjs[70].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[570]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[571]";
@@ -48361,9 +48360,9 @@ connectAttr "polySurface16_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[580
 		;
 connectAttr "polySurface16_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[581]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[582]" "defaultRenderLayer.adjs[71].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[582]" "Shadows.adjs[47].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[583]" "Shadows.adjs[47].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[583]" "defaultRenderLayer.adjs[71].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[584]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[585]";
@@ -48387,9 +48386,9 @@ connectAttr "polySurface2_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[594]
 		;
 connectAttr "polySurface2_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[595]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[596]" "defaultRenderLayer.adjs[72].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[596]" "Shadows.adjs[48].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[597]" "Shadows.adjs[48].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[597]" "defaultRenderLayer.adjs[72].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[598]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[599]";
@@ -48413,9 +48412,9 @@ connectAttr "polySurface1_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[608]
 		;
 connectAttr "polySurface1_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[609]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[610]" "defaultRenderLayer.adjs[73].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[610]" "Shadows.adjs[49].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[611]" "Shadows.adjs[49].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[611]" "defaultRenderLayer.adjs[73].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[612]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[613]";
@@ -48439,9 +48438,9 @@ connectAttr "polySurface3_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[622]
 		;
 connectAttr "polySurface3_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[623]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[624]" "defaultRenderLayer.adjs[74].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[624]" "Shadows.adjs[50].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[625]" "Shadows.adjs[50].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[625]" "defaultRenderLayer.adjs[74].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[626]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[627]";
@@ -48466,29 +48465,29 @@ connectAttr "polySurface22_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[636
 connectAttr "polySurface22_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[637]"
 		;
 connectAttr "Pilot.ri" "FighterModelMaya_RIGVERSION_0065RN.phl[638]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[639]" "defaultRenderLayer.oajs[1].opg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[639]" "Pilot.oajs[1].opg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[640]" "defaultRenderLayer.oajs[1].opg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[640]" "Pilot.oajs[1].opg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[641]" "defaultRenderLayer.adjs[9].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[641]" "Pilot.adjs[9].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[642]" "defaultRenderLayer.adjs[9].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[642]" "Pilot.adjs[9].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[643]" "defaultRenderLayer.adjs[8].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[643]" "Pilot.adjs[8].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[644]" "defaultRenderLayer.adjs[8].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[644]" "Pilot.adjs[8].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[645]" "defaultRenderLayer.adjs[11].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[645]" "Pilot.adjs[11].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[646]" "defaultRenderLayer.adjs[11].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[646]" "Pilot.adjs[11].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[647]" "defaultRenderLayer.adjs[10].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[647]" "Pilot.adjs[10].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[648]" "defaultRenderLayer.adjs[10].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[648]" "Pilot.adjs[10].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[649]" "defaultRenderLayer.adjs[75].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[649]" "Shadows.adjs[51].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[650]" "Shadows.adjs[51].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[650]" "defaultRenderLayer.adjs[75].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[651]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[652]" "defaultRenderLayer.adjs[76].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[652]" "Shadows.adjs[52].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[653]" "Shadows.adjs[52].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[653]" "defaultRenderLayer.adjs[76].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[654]";
 connectAttr "polySurface20_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[655]"
@@ -48512,41 +48511,41 @@ connectAttr "polySurface20_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[663
 connectAttr "polySurface20_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[664]"
 		;
 connectAttr "Pilot.ri" "FighterModelMaya_RIGVERSION_0065RN.phl[665]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[666]" "defaultRenderLayer.oajs[0].opg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[666]" "Pilot.oajs[0].opg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[667]" "defaultRenderLayer.oajs[0].opg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[667]" "Pilot.oajs[0].opg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[668]" "defaultRenderLayer.adjs[5].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[668]" "Pilot.adjs[5].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[669]" "defaultRenderLayer.adjs[5].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[669]" "Pilot.adjs[5].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[670]" "defaultRenderLayer.adjs[4].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[670]" "Pilot.adjs[4].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[671]" "defaultRenderLayer.adjs[4].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[671]" "Pilot.adjs[4].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[672]" "defaultRenderLayer.adjs[7].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[672]" "Pilot.adjs[7].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[673]" "defaultRenderLayer.adjs[7].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[673]" "Pilot.adjs[7].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[674]" "defaultRenderLayer.adjs[6].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[674]" "Pilot.adjs[6].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[675]" "defaultRenderLayer.adjs[6].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[675]" "Pilot.adjs[6].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[676]" "defaultRenderLayer.adjs[77].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[676]" "Shadows.adjs[53].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[677]" "Shadows.adjs[53].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[677]" "defaultRenderLayer.adjs[77].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[678]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[679]" "defaultRenderLayer.adjs[21].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[679]" "Pilot.adjs[21].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[680]" "defaultRenderLayer.adjs[21].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[680]" "Pilot.adjs[21].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[681]" "defaultRenderLayer.adjs[20].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[681]" "Pilot.adjs[20].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[682]" "defaultRenderLayer.adjs[20].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[682]" "Pilot.adjs[20].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[683]" "defaultRenderLayer.adjs[23].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[683]" "Pilot.adjs[23].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[684]" "defaultRenderLayer.adjs[23].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[684]" "Pilot.adjs[23].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[685]" "defaultRenderLayer.adjs[22].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[685]" "Pilot.adjs[22].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[686]" "defaultRenderLayer.adjs[22].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[686]" "Pilot.adjs[22].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[687]" "defaultRenderLayer.adjs[78].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[687]" "Shadows.adjs[54].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[688]" "Shadows.adjs[54].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[688]" "defaultRenderLayer.adjs[78].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[689]";
 connectAttr "polySurface21_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[690]"
@@ -48570,24 +48569,24 @@ connectAttr "polySurface21_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[698
 connectAttr "polySurface21_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[699]"
 		;
 connectAttr "Pilot.ri" "FighterModelMaya_RIGVERSION_0065RN.phl[700]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[701]" "defaultRenderLayer.oajs[3].opg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[701]" "Pilot.oajs[3].opg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[702]" "defaultRenderLayer.oajs[3].opg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[702]" "Pilot.oajs[3].opg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[703]" "defaultRenderLayer.adjs[1].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[703]" "Pilot.adjs[1].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[704]" "defaultRenderLayer.adjs[1].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[704]" "Pilot.adjs[1].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[705]" "defaultRenderLayer.adjs[0].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[705]" "Pilot.adjs[0].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[706]" "defaultRenderLayer.adjs[0].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[706]" "Pilot.adjs[0].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[707]" "defaultRenderLayer.adjs[3].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[707]" "Pilot.adjs[3].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[708]" "defaultRenderLayer.adjs[3].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[708]" "Pilot.adjs[3].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[709]" "defaultRenderLayer.adjs[2].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[709]" "Pilot.adjs[2].plg";
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[710]" "defaultRenderLayer.adjs[2].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[710]" "Pilot.adjs[2].plg";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[711]" "defaultRenderLayer.adjs[79].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[711]" "Shadows.adjs[55].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[712]" "Shadows.adjs[55].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[712]" "defaultRenderLayer.adjs[79].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[713]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[714]";
@@ -48613,14 +48612,14 @@ connectAttr "polySurface131_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[72
 		;
 connectAttr "polySurface131_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[726]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[727]" "defaultRenderLayer.adjs[80].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[727]" "Shadows.adjs[56].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[728]" "Shadows.adjs[56].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[728]" "defaultRenderLayer.adjs[80].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[729]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[730]" "defaultRenderLayer.adjs[81].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[730]" "Shadows.adjs[57].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[731]" "Shadows.adjs[57].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[731]" "defaultRenderLayer.adjs[81].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[732]";
 connectAttr "polySurface132_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[733]"
@@ -48643,14 +48642,14 @@ connectAttr "polySurface132_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[74
 		;
 connectAttr "polySurface132_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[742]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[743]" "defaultRenderLayer.adjs[82].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[743]" "Shadows.adjs[58].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[744]" "Shadows.adjs[58].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[744]" "defaultRenderLayer.adjs[82].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[745]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[746]" "defaultRenderLayer.adjs[83].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[746]" "Shadows.adjs[59].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[747]" "Shadows.adjs[59].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[747]" "defaultRenderLayer.adjs[83].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[748]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[749]";
@@ -48677,14 +48676,14 @@ connectAttr "polySurface160_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[76
 		;
 connectAttr "polySurface160_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[762]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[763]" "defaultRenderLayer.adjs[84].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[763]" "Shadows.adjs[60].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[764]" "Shadows.adjs[60].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[764]" "defaultRenderLayer.adjs[84].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[765]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[766]" "defaultRenderLayer.adjs[85].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[766]" "Shadows.adjs[61].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[767]" "Shadows.adjs[61].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[767]" "defaultRenderLayer.adjs[85].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[768]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[769]";
@@ -48711,14 +48710,14 @@ connectAttr "polySurface164_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[78
 		;
 connectAttr "polySurface164_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[782]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[783]" "defaultRenderLayer.adjs[86].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[783]" "Shadows.adjs[62].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[784]" "Shadows.adjs[62].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[784]" "defaultRenderLayer.adjs[86].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[785]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[786]" "defaultRenderLayer.adjs[87].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[786]" "Shadows.adjs[63].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[787]" "Shadows.adjs[63].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[787]" "defaultRenderLayer.adjs[87].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[788]";
 connectAttr "polySurface165_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[789]"
@@ -48741,14 +48740,14 @@ connectAttr "polySurface165_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[79
 		;
 connectAttr "polySurface165_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[798]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[799]" "defaultRenderLayer.adjs[88].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[799]" "Shadows.adjs[64].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[800]" "Shadows.adjs[64].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[800]" "defaultRenderLayer.adjs[88].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[801]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[802]" "defaultRenderLayer.adjs[89].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[802]" "Shadows.adjs[65].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[803]" "Shadows.adjs[65].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[803]" "defaultRenderLayer.adjs[89].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[804]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[805]";
@@ -48776,9 +48775,9 @@ connectAttr "polySurface141_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[81
 		;
 connectAttr "polySurface141_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[819]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[820]" "defaultRenderLayer.adjs[90].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[820]" "Shadows.adjs[66].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[821]" "Shadows.adjs[66].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[821]" "defaultRenderLayer.adjs[90].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[822]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[823]";
@@ -48802,9 +48801,9 @@ connectAttr "polySurface134_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[83
 		;
 connectAttr "polySurface134_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[833]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[834]" "defaultRenderLayer.adjs[91].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[834]" "Shadows.adjs[67].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[835]" "Shadows.adjs[67].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[835]" "defaultRenderLayer.adjs[91].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[836]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[837]";
@@ -48828,9 +48827,9 @@ connectAttr "polySurface135_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[84
 		;
 connectAttr "polySurface135_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[847]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[848]" "defaultRenderLayer.adjs[92].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[848]" "Shadows.adjs[68].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[849]" "Shadows.adjs[68].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[849]" "defaultRenderLayer.adjs[92].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[850]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[851]";
@@ -48854,9 +48853,9 @@ connectAttr "polySurface136_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[86
 		;
 connectAttr "polySurface136_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[861]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[862]" "defaultRenderLayer.adjs[93].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[862]" "Shadows.adjs[69].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[863]" "Shadows.adjs[69].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[863]" "defaultRenderLayer.adjs[93].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[864]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[865]";
@@ -48880,9 +48879,9 @@ connectAttr "polySurface137_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[87
 		;
 connectAttr "polySurface137_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[875]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[876]" "defaultRenderLayer.adjs[94].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[876]" "Shadows.adjs[70].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[877]" "Shadows.adjs[70].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[877]" "defaultRenderLayer.adjs[94].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[878]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[879]";
@@ -48906,9 +48905,9 @@ connectAttr "polySurface138_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[88
 		;
 connectAttr "polySurface138_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[889]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[890]" "defaultRenderLayer.adjs[95].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[890]" "Shadows.adjs[71].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[891]" "Shadows.adjs[71].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[891]" "defaultRenderLayer.adjs[95].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[892]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[893]";
@@ -48932,9 +48931,9 @@ connectAttr "polySurface139_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[90
 		;
 connectAttr "polySurface139_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[903]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[904]" "defaultRenderLayer.adjs[96].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[904]" "Shadows.adjs[72].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[905]" "Shadows.adjs[72].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[905]" "defaultRenderLayer.adjs[96].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[906]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[907]";
@@ -48958,9 +48957,9 @@ connectAttr "polySurface140_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[91
 		;
 connectAttr "polySurface140_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[917]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[918]" "defaultRenderLayer.adjs[97].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[918]" "Shadows.adjs[73].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[919]" "Shadows.adjs[73].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[919]" "defaultRenderLayer.adjs[97].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[920]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[921]";
@@ -48984,9 +48983,9 @@ connectAttr "polySurface133_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[93
 		;
 connectAttr "polySurface133_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[931]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[932]" "defaultRenderLayer.adjs[98].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[932]" "Shadows.adjs[74].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[933]" "Shadows.adjs[74].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[933]" "defaultRenderLayer.adjs[98].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[934]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[935]";
@@ -49011,9 +49010,9 @@ connectAttr "polySurface154_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[94
 		;
 connectAttr "polySurface154_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[946]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[947]" "defaultRenderLayer.adjs[99].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[947]" "Shadows.adjs[75].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[948]" "Shadows.adjs[75].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[948]" "defaultRenderLayer.adjs[99].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[949]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[950]";
@@ -49037,9 +49036,9 @@ connectAttr "polySurface147_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[95
 		;
 connectAttr "polySurface147_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[960]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[961]" "defaultRenderLayer.adjs[100].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[961]" "Shadows.adjs[76].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[962]" "Shadows.adjs[76].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[962]" "defaultRenderLayer.adjs[100].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[963]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[964]";
@@ -49063,9 +49062,9 @@ connectAttr "polySurface148_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[97
 		;
 connectAttr "polySurface148_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[974]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[975]" "defaultRenderLayer.adjs[101].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[975]" "Shadows.adjs[77].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[976]" "Shadows.adjs[77].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[976]" "defaultRenderLayer.adjs[101].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[977]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[978]";
@@ -49089,9 +49088,9 @@ connectAttr "polySurface149_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[98
 		;
 connectAttr "polySurface149_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[988]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[989]" "defaultRenderLayer.adjs[102].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[989]" "Shadows.adjs[78].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[990]" "Shadows.adjs[78].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[990]" "defaultRenderLayer.adjs[102].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[991]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[992]";
@@ -49115,9 +49114,9 @@ connectAttr "polySurface150_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface150_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1002]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1003]" "defaultRenderLayer.adjs[103].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1003]" "Shadows.adjs[79].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1004]" "Shadows.adjs[79].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1004]" "defaultRenderLayer.adjs[103].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1005]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1006]";
@@ -49141,9 +49140,9 @@ connectAttr "polySurface151_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface151_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1016]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1017]" "defaultRenderLayer.adjs[104].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1017]" "Shadows.adjs[80].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1018]" "Shadows.adjs[80].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1018]" "defaultRenderLayer.adjs[104].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1019]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1020]";
@@ -49167,9 +49166,9 @@ connectAttr "polySurface152_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface152_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1030]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1031]" "defaultRenderLayer.adjs[105].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1031]" "Shadows.adjs[81].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1032]" "Shadows.adjs[81].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1032]" "defaultRenderLayer.adjs[105].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1033]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1034]";
@@ -49193,9 +49192,9 @@ connectAttr "polySurface153_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface153_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1044]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1045]" "defaultRenderLayer.adjs[106].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1045]" "Shadows.adjs[82].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1046]" "Shadows.adjs[82].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1046]" "defaultRenderLayer.adjs[106].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1047]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1048]";
@@ -49219,9 +49218,9 @@ connectAttr "polySurface146_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface146_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1058]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1059]" "defaultRenderLayer.adjs[107].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1059]" "Shadows.adjs[83].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1060]" "Shadows.adjs[83].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1060]" "defaultRenderLayer.adjs[107].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1061]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1062]";
@@ -49246,9 +49245,9 @@ connectAttr "polySurface143_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface143_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1073]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1074]" "defaultRenderLayer.adjs[108].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1074]" "Shadows.adjs[84].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1075]" "Shadows.adjs[84].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1075]" "defaultRenderLayer.adjs[108].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1076]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1077]";
@@ -49272,9 +49271,9 @@ connectAttr "polySurface145_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[10
 		;
 connectAttr "polySurface145_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1087]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1088]" "defaultRenderLayer.adjs[109].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1088]" "Shadows.adjs[85].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1089]" "Shadows.adjs[85].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1089]" "defaultRenderLayer.adjs[109].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1090]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1091]";
@@ -49298,9 +49297,9 @@ connectAttr "polySurface144_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface144_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1101]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1102]" "defaultRenderLayer.adjs[110].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1102]" "Shadows.adjs[86].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1103]" "Shadows.adjs[86].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1103]" "defaultRenderLayer.adjs[110].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1104]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1105]";
@@ -49324,9 +49323,9 @@ connectAttr "polySurface142_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface142_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1115]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1116]" "defaultRenderLayer.adjs[111].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1116]" "Shadows.adjs[87].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1117]" "Shadows.adjs[87].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1117]" "defaultRenderLayer.adjs[111].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1118]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1119]";
@@ -49350,9 +49349,9 @@ connectAttr "polySurface158_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface158_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1129]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1130]" "defaultRenderLayer.adjs[112].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1130]" "Shadows.adjs[88].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1131]" "Shadows.adjs[88].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1131]" "defaultRenderLayer.adjs[112].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1132]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1133]";
@@ -49376,9 +49375,9 @@ connectAttr "polySurface159_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface159_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1143]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1144]" "defaultRenderLayer.adjs[113].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1144]" "Shadows.adjs[89].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1145]" "Shadows.adjs[89].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1145]" "defaultRenderLayer.adjs[113].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1146]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1147]";
@@ -49402,9 +49401,9 @@ connectAttr "polySurface155_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface155_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1157]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1158]" "defaultRenderLayer.adjs[114].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1158]" "Shadows.adjs[90].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1159]" "Shadows.adjs[90].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1159]" "defaultRenderLayer.adjs[114].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1160]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1161]";
@@ -49428,9 +49427,9 @@ connectAttr "polySurface156_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface156_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1171]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1172]" "defaultRenderLayer.adjs[115].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1172]" "Shadows.adjs[91].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1173]" "Shadows.adjs[91].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1173]" "defaultRenderLayer.adjs[115].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1174]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1175]";
@@ -49454,9 +49453,9 @@ connectAttr "polySurface157_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[11
 		;
 connectAttr "polySurface157_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1185]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1186]" "defaultRenderLayer.adjs[116].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1186]" "Shadows.adjs[92].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1187]" "Shadows.adjs[92].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1187]" "defaultRenderLayer.adjs[116].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1188]";
 connectAttr "pairBlend7.orx" "FighterModelMaya_RIGVERSION_0065RN.phl[1189]";
@@ -49480,14 +49479,14 @@ connectAttr "polySurface162_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[12
 		;
 connectAttr "polySurface162_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1201]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1202]" "defaultRenderLayer.adjs[117].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1202]" "Shadows.adjs[93].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1203]" "Shadows.adjs[93].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1203]" "defaultRenderLayer.adjs[117].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1204]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1205]" "defaultRenderLayer.adjs[118].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1205]" "Shadows.adjs[94].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1206]" "Shadows.adjs[94].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1206]" "defaultRenderLayer.adjs[118].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1207]" "pairBlend7.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1208]" "pairBlend7.iry2";
@@ -49514,14 +49513,14 @@ connectAttr "polySurface163_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[12
 		;
 connectAttr "polySurface163_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1223]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1224]" "defaultRenderLayer.adjs[119].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1224]" "Shadows.adjs[95].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1225]" "Shadows.adjs[95].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1225]" "defaultRenderLayer.adjs[119].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1226]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1227]" "defaultRenderLayer.adjs[120].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1227]" "Shadows.adjs[96].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1228]" "Shadows.adjs[96].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1228]" "defaultRenderLayer.adjs[120].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1229]" "pairBlend8.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1230]" "pairBlend8.iry2";
@@ -49548,14 +49547,14 @@ connectAttr "polySurface161_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[12
 		;
 connectAttr "polySurface161_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1245]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1246]" "defaultRenderLayer.adjs[121].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1246]" "Shadows.adjs[97].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1247]" "Shadows.adjs[97].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1247]" "defaultRenderLayer.adjs[121].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1248]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1249]" "defaultRenderLayer.adjs[122].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1249]" "Shadows.adjs[98].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1250]" "Shadows.adjs[98].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1250]" "defaultRenderLayer.adjs[122].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1251]" "pairBlend9.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1252]" "pairBlend9.iry2";
@@ -49584,9 +49583,9 @@ connectAttr "polySurface319_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[12
 		;
 connectAttr "polySurface319_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1267]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1268]" "defaultRenderLayer.adjs[123].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1268]" "Shadows.adjs[99].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1269]" "Shadows.adjs[99].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1269]" "defaultRenderLayer.adjs[123].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1270]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1271]";
@@ -49610,9 +49609,9 @@ connectAttr "polySurface349_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[12
 		;
 connectAttr "polySurface349_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1281]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1282]" "defaultRenderLayer.adjs[124].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1282]" "Shadows.adjs[100].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1283]" "Shadows.adjs[100].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1283]" "defaultRenderLayer.adjs[124].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1284]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1285]";
@@ -49636,9 +49635,9 @@ connectAttr "polySurface325_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[12
 		;
 connectAttr "polySurface325_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1295]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1296]" "defaultRenderLayer.adjs[125].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1296]" "Shadows.adjs[101].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1297]" "Shadows.adjs[101].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1297]" "defaultRenderLayer.adjs[125].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1298]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1299]";
@@ -49662,9 +49661,9 @@ connectAttr "polySurface343_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface343_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1309]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1310]" "defaultRenderLayer.adjs[126].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1310]" "Shadows.adjs[102].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1311]" "Shadows.adjs[102].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1311]" "defaultRenderLayer.adjs[126].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1312]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1313]";
@@ -49688,9 +49687,9 @@ connectAttr "polySurface331_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface331_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1323]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1324]" "defaultRenderLayer.adjs[127].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1324]" "Shadows.adjs[103].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1325]" "Shadows.adjs[103].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1325]" "defaultRenderLayer.adjs[127].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1326]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1327]";
@@ -49714,9 +49713,9 @@ connectAttr "polySurface337_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface337_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1337]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1338]" "defaultRenderLayer.adjs[128].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1338]" "Shadows.adjs[104].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1339]" "Shadows.adjs[104].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1339]" "defaultRenderLayer.adjs[128].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1340]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1341]";
@@ -49740,9 +49739,9 @@ connectAttr "polySurface350_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface350_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1351]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1352]" "defaultRenderLayer.adjs[129].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1352]" "Shadows.adjs[105].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1353]" "Shadows.adjs[105].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1353]" "defaultRenderLayer.adjs[129].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1354]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1355]";
@@ -49766,9 +49765,9 @@ connectAttr "polySurface344_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface344_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1365]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1366]" "defaultRenderLayer.adjs[130].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1366]" "Shadows.adjs[106].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1367]" "Shadows.adjs[106].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1367]" "defaultRenderLayer.adjs[130].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1368]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1369]";
@@ -49792,9 +49791,9 @@ connectAttr "polySurface320_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface320_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1379]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1380]" "defaultRenderLayer.adjs[131].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1380]" "Shadows.adjs[107].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1381]" "Shadows.adjs[107].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1381]" "defaultRenderLayer.adjs[131].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1382]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1383]";
@@ -49818,9 +49817,9 @@ connectAttr "polySurface326_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[13
 		;
 connectAttr "polySurface326_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1393]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1394]" "defaultRenderLayer.adjs[132].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1394]" "Shadows.adjs[108].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1395]" "Shadows.adjs[108].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1395]" "defaultRenderLayer.adjs[132].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1396]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1397]";
@@ -49844,9 +49843,9 @@ connectAttr "polySurface338_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface338_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1407]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1408]" "defaultRenderLayer.adjs[133].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1408]" "Shadows.adjs[109].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1409]" "Shadows.adjs[109].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1409]" "defaultRenderLayer.adjs[133].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1410]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1411]";
@@ -49870,9 +49869,9 @@ connectAttr "polySurface332_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface332_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1421]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1422]" "defaultRenderLayer.adjs[134].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1422]" "Shadows.adjs[110].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1423]" "Shadows.adjs[110].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1423]" "defaultRenderLayer.adjs[134].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1424]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1425]";
@@ -49899,9 +49898,9 @@ connectAttr "polySurface333_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface333_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1438]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1439]" "defaultRenderLayer.adjs[135].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1439]" "Shadows.adjs[111].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1440]" "Shadows.adjs[111].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1440]" "defaultRenderLayer.adjs[135].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1441]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1442]";
@@ -49925,9 +49924,9 @@ connectAttr "polySurface327_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface327_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1452]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1453]" "defaultRenderLayer.adjs[136].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1453]" "Shadows.adjs[112].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1454]" "Shadows.adjs[112].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1454]" "defaultRenderLayer.adjs[136].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1455]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1456]";
@@ -49951,9 +49950,9 @@ connectAttr "polySurface321_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface321_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1466]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1467]" "defaultRenderLayer.adjs[137].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1467]" "Shadows.adjs[113].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1468]" "Shadows.adjs[113].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1468]" "defaultRenderLayer.adjs[137].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1469]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1470]";
@@ -49977,9 +49976,9 @@ connectAttr "polySurface328_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface328_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1480]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1481]" "defaultRenderLayer.adjs[138].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1481]" "Shadows.adjs[114].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1482]" "Shadows.adjs[114].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1482]" "defaultRenderLayer.adjs[138].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1483]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1484]";
@@ -50003,9 +50002,9 @@ connectAttr "polySurface322_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[14
 		;
 connectAttr "polySurface322_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1494]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1495]" "defaultRenderLayer.adjs[139].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1495]" "Shadows.adjs[115].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1496]" "Shadows.adjs[115].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1496]" "defaultRenderLayer.adjs[139].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1497]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1498]";
@@ -50029,9 +50028,9 @@ connectAttr "polySurface334_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[15
 		;
 connectAttr "polySurface334_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1508]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1509]" "defaultRenderLayer.adjs[140].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1509]" "Shadows.adjs[116].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1510]" "Shadows.adjs[116].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1510]" "defaultRenderLayer.adjs[140].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1511]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1512]";
@@ -50055,14 +50054,14 @@ connectAttr "polySurface317_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[15
 		;
 connectAttr "polySurface317_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1522]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1523]" "defaultRenderLayer.adjs[141].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1523]" "Shadows.adjs[117].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1524]" "Shadows.adjs[117].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1524]" "defaultRenderLayer.adjs[141].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1525]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1526]" "defaultRenderLayer.adjs[142].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1526]" "Shadows.adjs[118].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1527]" "Shadows.adjs[118].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1527]" "defaultRenderLayer.adjs[142].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1528]";
 connectAttr "polySurface323_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1529]"
@@ -50085,14 +50084,14 @@ connectAttr "polySurface323_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[15
 		;
 connectAttr "polySurface323_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1538]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1539]" "defaultRenderLayer.adjs[143].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1539]" "Shadows.adjs[119].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1540]" "Shadows.adjs[119].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1540]" "defaultRenderLayer.adjs[143].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1541]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1542]" "defaultRenderLayer.adjs[144].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1542]" "Shadows.adjs[120].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1543]" "Shadows.adjs[120].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1543]" "defaultRenderLayer.adjs[144].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1544]";
 connectAttr "polySurface329_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1545]"
@@ -50115,14 +50114,14 @@ connectAttr "polySurface329_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[15
 		;
 connectAttr "polySurface329_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1554]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1555]" "defaultRenderLayer.adjs[145].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1555]" "Shadows.adjs[121].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1556]" "Shadows.adjs[121].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1556]" "defaultRenderLayer.adjs[145].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1557]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1558]" "defaultRenderLayer.adjs[146].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1558]" "Shadows.adjs[122].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1559]" "Shadows.adjs[122].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1559]" "defaultRenderLayer.adjs[146].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1560]";
 connectAttr "polySurface318_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1561]"
@@ -50145,14 +50144,14 @@ connectAttr "polySurface318_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[15
 		;
 connectAttr "polySurface318_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1570]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1571]" "defaultRenderLayer.adjs[147].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1571]" "Shadows.adjs[123].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1572]" "Shadows.adjs[123].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1572]" "defaultRenderLayer.adjs[147].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1573]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1574]" "defaultRenderLayer.adjs[148].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1574]" "Shadows.adjs[124].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1575]" "Shadows.adjs[124].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1575]" "defaultRenderLayer.adjs[148].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1576]";
 connectAttr "polySurface324_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1577]"
@@ -50175,14 +50174,14 @@ connectAttr "polySurface324_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[15
 		;
 connectAttr "polySurface324_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1586]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1587]" "defaultRenderLayer.adjs[149].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1587]" "Shadows.adjs[125].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1588]" "Shadows.adjs[125].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1588]" "defaultRenderLayer.adjs[149].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1589]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1590]" "defaultRenderLayer.adjs[150].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1590]" "Shadows.adjs[126].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1591]" "Shadows.adjs[126].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1591]" "defaultRenderLayer.adjs[150].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1592]";
 connectAttr "polySurface330_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1593]"
@@ -50205,14 +50204,14 @@ connectAttr "polySurface330_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface330_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1602]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1603]" "defaultRenderLayer.adjs[151].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1603]" "Shadows.adjs[127].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1604]" "Shadows.adjs[127].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1604]" "defaultRenderLayer.adjs[151].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1605]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1606]" "defaultRenderLayer.adjs[152].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1606]" "Shadows.adjs[128].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1607]" "Shadows.adjs[128].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1607]" "defaultRenderLayer.adjs[152].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1608]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1609]";
@@ -50237,9 +50236,9 @@ connectAttr "polySurface351_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface351_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1620]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1621]" "defaultRenderLayer.adjs[153].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1621]" "Shadows.adjs[129].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1622]" "Shadows.adjs[129].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1622]" "defaultRenderLayer.adjs[153].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1623]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1624]";
@@ -50263,9 +50262,9 @@ connectAttr "polySurface345_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface345_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1634]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1635]" "defaultRenderLayer.adjs[154].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1635]" "Shadows.adjs[130].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1636]" "Shadows.adjs[130].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1636]" "defaultRenderLayer.adjs[154].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1637]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1638]";
@@ -50289,9 +50288,9 @@ connectAttr "polySurface339_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface339_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1648]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1649]" "defaultRenderLayer.adjs[155].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1649]" "Shadows.adjs[131].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1650]" "Shadows.adjs[131].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1650]" "defaultRenderLayer.adjs[155].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1651]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1652]";
@@ -50315,9 +50314,9 @@ connectAttr "polySurface352_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface352_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1662]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1663]" "defaultRenderLayer.adjs[156].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1663]" "Shadows.adjs[132].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1664]" "Shadows.adjs[132].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1664]" "defaultRenderLayer.adjs[156].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1665]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1666]";
@@ -50341,9 +50340,9 @@ connectAttr "polySurface346_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface346_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1676]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1677]" "defaultRenderLayer.adjs[157].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1677]" "Shadows.adjs[133].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1678]" "Shadows.adjs[133].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1678]" "defaultRenderLayer.adjs[157].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1679]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1680]";
@@ -50367,9 +50366,9 @@ connectAttr "polySurface340_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[16
 		;
 connectAttr "polySurface340_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1690]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1691]" "defaultRenderLayer.adjs[158].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1691]" "Shadows.adjs[134].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1692]" "Shadows.adjs[134].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1692]" "defaultRenderLayer.adjs[158].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1693]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1694]";
@@ -50393,14 +50392,14 @@ connectAttr "polySurface341_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[17
 		;
 connectAttr "polySurface341_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1704]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1705]" "defaultRenderLayer.adjs[159].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1705]" "Shadows.adjs[135].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1706]" "Shadows.adjs[135].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1706]" "defaultRenderLayer.adjs[159].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1707]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1708]" "defaultRenderLayer.adjs[160].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1708]" "Shadows.adjs[136].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1709]" "Shadows.adjs[136].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1709]" "defaultRenderLayer.adjs[160].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1710]";
 connectAttr "polySurface347_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1711]"
@@ -50423,14 +50422,14 @@ connectAttr "polySurface347_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[17
 		;
 connectAttr "polySurface347_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1720]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1721]" "defaultRenderLayer.adjs[161].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1721]" "Shadows.adjs[137].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1722]" "Shadows.adjs[137].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1722]" "defaultRenderLayer.adjs[161].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1723]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1724]" "defaultRenderLayer.adjs[162].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1724]" "Shadows.adjs[138].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1725]" "Shadows.adjs[138].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1725]" "defaultRenderLayer.adjs[162].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1726]";
 connectAttr "polySurface335_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1727]"
@@ -50453,14 +50452,14 @@ connectAttr "polySurface335_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[17
 		;
 connectAttr "polySurface335_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1736]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1737]" "defaultRenderLayer.adjs[163].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1737]" "Shadows.adjs[139].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1738]" "Shadows.adjs[139].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1738]" "defaultRenderLayer.adjs[163].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1739]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1740]" "defaultRenderLayer.adjs[164].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1740]" "Shadows.adjs[140].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1741]" "Shadows.adjs[140].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1741]" "defaultRenderLayer.adjs[164].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1742]";
 connectAttr "polySurface342_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1743]"
@@ -50483,14 +50482,14 @@ connectAttr "polySurface342_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[17
 		;
 connectAttr "polySurface342_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1752]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1753]" "defaultRenderLayer.adjs[165].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1753]" "Shadows.adjs[141].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1754]" "Shadows.adjs[141].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1754]" "defaultRenderLayer.adjs[165].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1755]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1756]" "defaultRenderLayer.adjs[166].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1756]" "Shadows.adjs[142].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1757]" "Shadows.adjs[142].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1757]" "defaultRenderLayer.adjs[166].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1758]";
 connectAttr "polySurface348_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1759]"
@@ -50513,14 +50512,14 @@ connectAttr "polySurface348_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[17
 		;
 connectAttr "polySurface348_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1768]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1769]" "defaultRenderLayer.adjs[167].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1769]" "Shadows.adjs[143].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1770]" "Shadows.adjs[143].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1770]" "defaultRenderLayer.adjs[167].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1771]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1772]" "defaultRenderLayer.adjs[168].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1772]" "Shadows.adjs[144].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1773]" "Shadows.adjs[144].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1773]" "defaultRenderLayer.adjs[168].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1774]";
 connectAttr "polySurface336_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1775]"
@@ -50543,14 +50542,14 @@ connectAttr "polySurface336_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[17
 		;
 connectAttr "polySurface336_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1784]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1785]" "defaultRenderLayer.adjs[169].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1785]" "Shadows.adjs[145].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1786]" "Shadows.adjs[145].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1786]" "defaultRenderLayer.adjs[169].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1787]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1788]" "defaultRenderLayer.adjs[170].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1788]" "Shadows.adjs[146].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1789]" "Shadows.adjs[146].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1789]" "defaultRenderLayer.adjs[170].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1790]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1791]";
@@ -50574,9 +50573,9 @@ connectAttr "polySurface130_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface130_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1801]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1802]" "defaultRenderLayer.adjs[171].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1802]" "Shadows.adjs[147].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1803]" "Shadows.adjs[147].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1803]" "defaultRenderLayer.adjs[171].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1804]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1805]";
@@ -50600,14 +50599,14 @@ connectAttr "polySurface129_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface129_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1815]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1816]" "defaultRenderLayer.adjs[172].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1816]" "Shadows.adjs[148].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1817]" "Shadows.adjs[148].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1817]" "defaultRenderLayer.adjs[172].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1818]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1819]" "defaultRenderLayer.adjs[173].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1819]" "Shadows.adjs[149].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1820]" "Shadows.adjs[149].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1820]" "defaultRenderLayer.adjs[173].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1821]";
 connectAttr "polySurface128_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1822]"
@@ -50630,14 +50629,14 @@ connectAttr "polySurface128_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface128_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1831]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1832]" "defaultRenderLayer.adjs[174].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1832]" "Shadows.adjs[150].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1833]" "Shadows.adjs[150].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1833]" "defaultRenderLayer.adjs[174].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1834]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1835]" "defaultRenderLayer.adjs[175].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1835]" "Shadows.adjs[151].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1836]" "Shadows.adjs[151].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1836]" "defaultRenderLayer.adjs[175].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1837]";
 connectAttr "polySurface127_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1838]"
@@ -50660,9 +50659,9 @@ connectAttr "polySurface127_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface127_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1847]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1848]" "defaultRenderLayer.adjs[176].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1848]" "Shadows.adjs[152].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1849]" "Shadows.adjs[152].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1849]" "defaultRenderLayer.adjs[176].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1850]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1851]";
@@ -50686,14 +50685,14 @@ connectAttr "polySurface119_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface119_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1861]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1862]" "defaultRenderLayer.adjs[177].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1862]" "Shadows.adjs[153].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1863]" "Shadows.adjs[153].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1863]" "defaultRenderLayer.adjs[177].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1864]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1865]" "defaultRenderLayer.adjs[178].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1865]" "Shadows.adjs[154].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1866]" "Shadows.adjs[154].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1866]" "defaultRenderLayer.adjs[178].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1867]";
 connectAttr "polySurface120_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1868]"
@@ -50716,14 +50715,14 @@ connectAttr "polySurface120_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface120_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1877]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1878]" "defaultRenderLayer.adjs[179].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1878]" "Shadows.adjs[155].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1879]" "Shadows.adjs[155].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1879]" "defaultRenderLayer.adjs[179].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1880]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1881]" "defaultRenderLayer.adjs[180].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1881]" "Shadows.adjs[156].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1882]" "Shadows.adjs[156].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1882]" "defaultRenderLayer.adjs[180].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1883]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1884]";
@@ -50747,9 +50746,9 @@ connectAttr "polySurface123_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[18
 		;
 connectAttr "polySurface123_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1894]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1895]" "defaultRenderLayer.adjs[181].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1895]" "Shadows.adjs[157].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1896]" "Shadows.adjs[157].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1896]" "defaultRenderLayer.adjs[181].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1897]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1898]";
@@ -50778,9 +50777,9 @@ connectAttr "polySurface114_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[19
 		;
 connectAttr "polySurface114_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1913]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1914]" "defaultRenderLayer.adjs[182].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1914]" "Shadows.adjs[158].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1915]" "Shadows.adjs[158].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1915]" "defaultRenderLayer.adjs[182].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1916]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1917]";
@@ -50804,9 +50803,9 @@ connectAttr "polySurface113_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[19
 		;
 connectAttr "polySurface113_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1927]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1928]" "defaultRenderLayer.adjs[183].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1928]" "Shadows.adjs[159].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1929]" "Shadows.adjs[159].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1929]" "defaultRenderLayer.adjs[183].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1930]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1931]";
@@ -50835,9 +50834,9 @@ connectAttr "polySurface112_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[19
 		;
 connectAttr "polySurface112_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1946]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1947]" "defaultRenderLayer.adjs[184].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1947]" "Shadows.adjs[160].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1948]" "Shadows.adjs[160].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1948]" "defaultRenderLayer.adjs[184].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1949]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1950]";
@@ -50861,9 +50860,9 @@ connectAttr "polySurface111_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[19
 		;
 connectAttr "polySurface111_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1960]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1961]" "defaultRenderLayer.adjs[185].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1961]" "Shadows.adjs[161].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1962]" "Shadows.adjs[161].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1962]" "defaultRenderLayer.adjs[185].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1963]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1964]";
@@ -50892,14 +50891,14 @@ connectAttr "polySurface115_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[19
 		;
 connectAttr "polySurface115_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1979]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1980]" "defaultRenderLayer.adjs[186].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1980]" "Shadows.adjs[162].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1981]" "Shadows.adjs[162].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1981]" "defaultRenderLayer.adjs[186].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1982]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1983]" "defaultRenderLayer.adjs[187].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1983]" "Shadows.adjs[163].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1984]" "Shadows.adjs[163].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1984]" "defaultRenderLayer.adjs[187].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1985]";
 connectAttr "polySurface116_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1986]"
@@ -50922,14 +50921,14 @@ connectAttr "polySurface116_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[19
 		;
 connectAttr "polySurface116_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[1995]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1996]" "defaultRenderLayer.adjs[188].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1996]" "Shadows.adjs[164].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1997]" "Shadows.adjs[164].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1997]" "defaultRenderLayer.adjs[188].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[1998]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1999]" "defaultRenderLayer.adjs[189].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[1999]" "Shadows.adjs[165].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2000]" "Shadows.adjs[165].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2000]" "defaultRenderLayer.adjs[189].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2001]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2002]";
@@ -50957,14 +50956,14 @@ connectAttr "polySurface104_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[20
 		;
 connectAttr "polySurface104_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2016]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2017]" "defaultRenderLayer.adjs[190].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2017]" "Shadows.adjs[166].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2018]" "Shadows.adjs[166].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2018]" "defaultRenderLayer.adjs[190].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2019]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2020]" "defaultRenderLayer.adjs[191].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2020]" "Shadows.adjs[167].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2021]" "Shadows.adjs[167].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2021]" "defaultRenderLayer.adjs[191].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2022]";
 connectAttr "polySurface110_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2023]"
@@ -50987,9 +50986,9 @@ connectAttr "polySurface110_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[20
 		;
 connectAttr "polySurface110_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2032]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2033]" "defaultRenderLayer.adjs[192].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2033]" "Shadows.adjs[168].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2034]" "Shadows.adjs[168].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2034]" "defaultRenderLayer.adjs[192].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2035]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2036]";
@@ -51013,9 +51012,9 @@ connectAttr "polySurface107_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[20
 		;
 connectAttr "polySurface107_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2046]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2047]" "defaultRenderLayer.adjs[193].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2047]" "Shadows.adjs[169].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2048]" "Shadows.adjs[169].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2048]" "defaultRenderLayer.adjs[193].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2049]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2050]";
@@ -51039,9 +51038,9 @@ connectAttr "polySurface95_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[205
 		;
 connectAttr "polySurface95_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2060]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2061]" "defaultRenderLayer.adjs[194].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2061]" "Shadows.adjs[170].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2062]" "Shadows.adjs[170].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2062]" "defaultRenderLayer.adjs[194].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2063]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2064]";
@@ -51065,9 +51064,9 @@ connectAttr "polySurface109_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[20
 		;
 connectAttr "polySurface109_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2074]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2075]" "defaultRenderLayer.adjs[195].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2075]" "Shadows.adjs[171].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2076]" "Shadows.adjs[171].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2076]" "defaultRenderLayer.adjs[195].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2077]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2078]";
@@ -51091,9 +51090,9 @@ connectAttr "polySurface108_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[20
 		;
 connectAttr "polySurface108_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2088]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2089]" "defaultRenderLayer.adjs[196].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2089]" "Shadows.adjs[172].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2090]" "Shadows.adjs[172].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2090]" "defaultRenderLayer.adjs[196].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2091]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2092]";
@@ -51117,9 +51116,9 @@ connectAttr "polySurface106_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[21
 		;
 connectAttr "polySurface106_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2102]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2103]" "defaultRenderLayer.adjs[197].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2103]" "Shadows.adjs[173].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2104]" "Shadows.adjs[173].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2104]" "defaultRenderLayer.adjs[197].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2105]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2106]";
@@ -51143,9 +51142,9 @@ connectAttr "polySurface105_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[21
 		;
 connectAttr "polySurface105_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2116]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2117]" "defaultRenderLayer.adjs[198].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2117]" "Shadows.adjs[174].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2118]" "Shadows.adjs[174].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2118]" "defaultRenderLayer.adjs[198].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2119]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2120]";
@@ -51169,9 +51168,9 @@ connectAttr "polySurface97_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[212
 		;
 connectAttr "polySurface97_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2130]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2131]" "defaultRenderLayer.adjs[199].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2131]" "Shadows.adjs[175].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2132]" "Shadows.adjs[175].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2132]" "defaultRenderLayer.adjs[199].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2133]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2134]";
@@ -51195,9 +51194,9 @@ connectAttr "polySurface96_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[214
 		;
 connectAttr "polySurface96_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2144]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2145]" "defaultRenderLayer.adjs[200].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2145]" "Shadows.adjs[176].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2146]" "Shadows.adjs[176].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2146]" "defaultRenderLayer.adjs[200].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2147]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2148]";
@@ -51222,14 +51221,14 @@ connectAttr "polySurface103_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[21
 		;
 connectAttr "polySurface103_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2159]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2160]" "defaultRenderLayer.adjs[201].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2160]" "Shadows.adjs[177].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2161]" "Shadows.adjs[177].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2161]" "defaultRenderLayer.adjs[201].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2162]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2163]" "defaultRenderLayer.adjs[202].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2163]" "Shadows.adjs[178].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2164]" "Shadows.adjs[178].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2164]" "defaultRenderLayer.adjs[202].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2165]";
 connectAttr "polySurface102_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2166]"
@@ -51252,14 +51251,14 @@ connectAttr "polySurface102_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[21
 		;
 connectAttr "polySurface102_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2175]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2176]" "defaultRenderLayer.adjs[203].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2176]" "Shadows.adjs[179].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2177]" "Shadows.adjs[179].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2177]" "defaultRenderLayer.adjs[203].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2178]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2179]" "defaultRenderLayer.adjs[204].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2179]" "Shadows.adjs[180].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2180]" "Shadows.adjs[180].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2180]" "defaultRenderLayer.adjs[204].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2181]";
 connectAttr "polySurface101_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2182]"
@@ -51282,14 +51281,14 @@ connectAttr "polySurface101_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[21
 		;
 connectAttr "polySurface101_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2191]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2192]" "defaultRenderLayer.adjs[205].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2192]" "Shadows.adjs[181].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2193]" "Shadows.adjs[181].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2193]" "defaultRenderLayer.adjs[205].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2194]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2195]" "defaultRenderLayer.adjs[206].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2195]" "Shadows.adjs[182].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2196]" "Shadows.adjs[182].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2196]" "defaultRenderLayer.adjs[206].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2197]";
 connectAttr "polySurface100_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2198]"
@@ -51312,14 +51311,14 @@ connectAttr "polySurface100_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[22
 		;
 connectAttr "polySurface100_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2207]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2208]" "defaultRenderLayer.adjs[207].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2208]" "Shadows.adjs[183].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2209]" "Shadows.adjs[183].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2209]" "defaultRenderLayer.adjs[207].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2210]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2211]" "defaultRenderLayer.adjs[208].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2211]" "Shadows.adjs[184].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2212]" "Shadows.adjs[184].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2212]" "defaultRenderLayer.adjs[208].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2213]";
 connectAttr "polySurface99_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2214]"
@@ -51342,14 +51341,14 @@ connectAttr "polySurface99_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[222
 		;
 connectAttr "polySurface99_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2223]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2224]" "defaultRenderLayer.adjs[209].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2224]" "Shadows.adjs[185].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2225]" "Shadows.adjs[185].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2225]" "defaultRenderLayer.adjs[209].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2226]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2227]" "defaultRenderLayer.adjs[210].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2227]" "Shadows.adjs[186].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2228]" "Shadows.adjs[186].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2228]" "defaultRenderLayer.adjs[210].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2229]";
 connectAttr "polySurface98_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2230]"
@@ -51372,14 +51371,14 @@ connectAttr "polySurface98_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[223
 		;
 connectAttr "polySurface98_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2239]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2240]" "defaultRenderLayer.adjs[211].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2240]" "Shadows.adjs[187].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2241]" "Shadows.adjs[187].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2241]" "defaultRenderLayer.adjs[211].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2242]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2243]" "defaultRenderLayer.adjs[212].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2243]" "Shadows.adjs[188].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2244]" "Shadows.adjs[188].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2244]" "defaultRenderLayer.adjs[212].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2245]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2246]";
@@ -51403,9 +51402,9 @@ connectAttr "polySurface94_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[225
 		;
 connectAttr "polySurface94_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2256]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2257]" "defaultRenderLayer.adjs[213].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2257]" "Shadows.adjs[189].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2258]" "Shadows.adjs[189].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2258]" "defaultRenderLayer.adjs[213].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2259]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2260]";
@@ -51429,9 +51428,9 @@ connectAttr "polySurface93_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[226
 		;
 connectAttr "polySurface93_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2270]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2271]" "defaultRenderLayer.adjs[214].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2271]" "Shadows.adjs[190].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2272]" "Shadows.adjs[190].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2272]" "defaultRenderLayer.adjs[214].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2273]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2274]";
@@ -51456,9 +51455,9 @@ connectAttr "polySurface91_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[228
 		;
 connectAttr "polySurface91_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2285]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2286]" "defaultRenderLayer.adjs[215].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2286]" "Shadows.adjs[191].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2287]" "Shadows.adjs[191].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2287]" "defaultRenderLayer.adjs[215].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2288]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2289]";
@@ -51482,9 +51481,9 @@ connectAttr "polySurface92_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[229
 		;
 connectAttr "polySurface92_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2299]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2300]" "defaultRenderLayer.adjs[216].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2300]" "Shadows.adjs[192].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2301]" "Shadows.adjs[192].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2301]" "defaultRenderLayer.adjs[216].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2302]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2303]";
@@ -51509,14 +51508,14 @@ connectAttr "polySurface117_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[23
 		;
 connectAttr "polySurface117_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2314]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2315]" "defaultRenderLayer.adjs[217].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2315]" "Shadows.adjs[193].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2316]" "Shadows.adjs[193].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2316]" "defaultRenderLayer.adjs[217].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2317]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2318]" "defaultRenderLayer.adjs[218].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2318]" "Shadows.adjs[194].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2319]" "Shadows.adjs[194].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2319]" "defaultRenderLayer.adjs[218].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2320]";
 connectAttr "polySurface118_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2321]"
@@ -51539,14 +51538,14 @@ connectAttr "polySurface118_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[23
 		;
 connectAttr "polySurface118_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2330]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2331]" "defaultRenderLayer.adjs[219].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2331]" "Shadows.adjs[195].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2332]" "Shadows.adjs[195].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2332]" "defaultRenderLayer.adjs[219].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2333]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2334]" "defaultRenderLayer.adjs[220].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2334]" "Shadows.adjs[196].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2335]" "Shadows.adjs[196].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2335]" "defaultRenderLayer.adjs[220].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2336]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2337]";
@@ -51577,9 +51576,9 @@ connectAttr "polySurface279_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[23
 		;
 connectAttr "polySurface279_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2354]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2355]" "defaultRenderLayer.adjs[221].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2355]" "Shadows.adjs[197].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2356]" "Shadows.adjs[197].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2356]" "defaultRenderLayer.adjs[221].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2357]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2358]";
@@ -51603,9 +51602,9 @@ connectAttr "polySurface278_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[23
 		;
 connectAttr "polySurface278_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2368]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2369]" "defaultRenderLayer.adjs[222].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2369]" "Shadows.adjs[198].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2370]" "Shadows.adjs[198].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2370]" "defaultRenderLayer.adjs[222].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2371]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2372]";
@@ -51629,9 +51628,9 @@ connectAttr "polySurface277_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[23
 		;
 connectAttr "polySurface277_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2382]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2383]" "defaultRenderLayer.adjs[223].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2383]" "Shadows.adjs[199].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2384]" "Shadows.adjs[199].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2384]" "defaultRenderLayer.adjs[223].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2385]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2386]";
@@ -51655,9 +51654,9 @@ connectAttr "polySurface276_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[23
 		;
 connectAttr "polySurface276_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2396]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2397]" "defaultRenderLayer.adjs[224].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2397]" "Shadows.adjs[200].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2398]" "Shadows.adjs[200].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2398]" "defaultRenderLayer.adjs[224].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2399]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2400]";
@@ -51681,14 +51680,14 @@ connectAttr "polySurface274_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface274_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2410]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2411]" "defaultRenderLayer.adjs[225].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2411]" "Shadows.adjs[201].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2412]" "Shadows.adjs[201].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2412]" "defaultRenderLayer.adjs[225].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2413]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2414]" "defaultRenderLayer.adjs[226].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2414]" "Shadows.adjs[202].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2415]" "Shadows.adjs[202].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2415]" "defaultRenderLayer.adjs[226].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2416]";
 connectAttr "polySurface273_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2417]"
@@ -51711,14 +51710,14 @@ connectAttr "polySurface273_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface273_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2426]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2427]" "defaultRenderLayer.adjs[227].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2427]" "Shadows.adjs[203].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2428]" "Shadows.adjs[203].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2428]" "defaultRenderLayer.adjs[227].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2429]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2430]" "defaultRenderLayer.adjs[228].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2430]" "Shadows.adjs[204].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2431]" "Shadows.adjs[204].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2431]" "defaultRenderLayer.adjs[228].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2432]";
 connectAttr "polySurface283_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2433]"
@@ -51741,9 +51740,9 @@ connectAttr "polySurface283_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface283_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2442]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2443]" "defaultRenderLayer.adjs[229].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2443]" "Shadows.adjs[205].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2444]" "Shadows.adjs[205].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2444]" "defaultRenderLayer.adjs[229].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2445]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2446]";
@@ -51767,9 +51766,9 @@ connectAttr "polySurface282_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface282_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2456]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2457]" "defaultRenderLayer.adjs[230].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2457]" "Shadows.adjs[206].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2458]" "Shadows.adjs[206].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2458]" "defaultRenderLayer.adjs[230].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2459]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2460]";
@@ -51793,9 +51792,9 @@ connectAttr "polySurface281_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface281_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2470]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2471]" "defaultRenderLayer.adjs[231].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2471]" "Shadows.adjs[207].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2472]" "Shadows.adjs[207].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2472]" "defaultRenderLayer.adjs[231].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2473]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2474]";
@@ -51819,9 +51818,9 @@ connectAttr "polySurface280_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface280_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2484]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2485]" "defaultRenderLayer.adjs[232].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2485]" "Shadows.adjs[208].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2486]" "Shadows.adjs[208].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2486]" "defaultRenderLayer.adjs[232].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2487]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2488]";
@@ -51845,14 +51844,14 @@ connectAttr "polySurface275_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[24
 		;
 connectAttr "polySurface275_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2498]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2499]" "defaultRenderLayer.adjs[233].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2499]" "Shadows.adjs[209].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2500]" "Shadows.adjs[209].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2500]" "defaultRenderLayer.adjs[233].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2501]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2502]" "defaultRenderLayer.adjs[234].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2502]" "Shadows.adjs[210].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2503]" "Shadows.adjs[210].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2503]" "defaultRenderLayer.adjs[234].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2504]";
 connectAttr "polySurface271_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2505]"
@@ -51875,14 +51874,14 @@ connectAttr "polySurface271_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[25
 		;
 connectAttr "polySurface271_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2514]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2515]" "defaultRenderLayer.adjs[235].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2515]" "Shadows.adjs[211].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2516]" "Shadows.adjs[211].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2516]" "defaultRenderLayer.adjs[235].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2517]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2518]" "defaultRenderLayer.adjs[236].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2518]" "Shadows.adjs[212].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2519]" "Shadows.adjs[212].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2519]" "defaultRenderLayer.adjs[236].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2520]";
 connectAttr "polySurface285_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2521]"
@@ -51905,14 +51904,14 @@ connectAttr "polySurface285_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[25
 		;
 connectAttr "polySurface285_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2530]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2531]" "defaultRenderLayer.adjs[237].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2531]" "Shadows.adjs[213].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2532]" "Shadows.adjs[213].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2532]" "defaultRenderLayer.adjs[237].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2533]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2534]" "defaultRenderLayer.adjs[238].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2534]" "Shadows.adjs[214].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2535]" "Shadows.adjs[214].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2535]" "defaultRenderLayer.adjs[238].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2536]";
 connectAttr "polySurface284_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2537]"
@@ -51935,14 +51934,14 @@ connectAttr "polySurface284_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[25
 		;
 connectAttr "polySurface284_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2546]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2547]" "defaultRenderLayer.adjs[239].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2547]" "Shadows.adjs[215].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2548]" "Shadows.adjs[215].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2548]" "defaultRenderLayer.adjs[239].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2549]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2550]" "defaultRenderLayer.adjs[240].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2550]" "Shadows.adjs[216].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2551]" "Shadows.adjs[216].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2551]" "defaultRenderLayer.adjs[240].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2552]";
 connectAttr "polySurface272_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2553]"
@@ -51965,14 +51964,14 @@ connectAttr "polySurface272_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[25
 		;
 connectAttr "polySurface272_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2562]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2563]" "defaultRenderLayer.adjs[241].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2563]" "Shadows.adjs[217].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2564]" "Shadows.adjs[217].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2564]" "defaultRenderLayer.adjs[241].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2565]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2566]" "defaultRenderLayer.adjs[242].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2566]" "Shadows.adjs[218].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2567]" "Shadows.adjs[218].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2567]" "defaultRenderLayer.adjs[242].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2568]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2569]";
@@ -52002,9 +52001,9 @@ connectAttr "polySurface304_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[25
 		;
 connectAttr "polySurface304_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2585]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2586]" "defaultRenderLayer.adjs[243].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2586]" "Shadows.adjs[219].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2587]" "Shadows.adjs[219].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2587]" "defaultRenderLayer.adjs[243].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2588]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2589]";
@@ -52028,9 +52027,9 @@ connectAttr "polySurface303_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[25
 		;
 connectAttr "polySurface303_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2599]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2600]" "defaultRenderLayer.adjs[244].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2600]" "Shadows.adjs[220].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2601]" "Shadows.adjs[220].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2601]" "defaultRenderLayer.adjs[244].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2602]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2603]";
@@ -52054,9 +52053,9 @@ connectAttr "polySurface302_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[26
 		;
 connectAttr "polySurface302_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2613]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2614]" "defaultRenderLayer.adjs[245].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2614]" "Shadows.adjs[221].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2615]" "Shadows.adjs[221].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2615]" "defaultRenderLayer.adjs[245].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2616]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2617]";
@@ -52080,9 +52079,9 @@ connectAttr "polySurface301_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[26
 		;
 connectAttr "polySurface301_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2627]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2628]" "defaultRenderLayer.adjs[246].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2628]" "Shadows.adjs[222].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2629]" "Shadows.adjs[222].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2629]" "defaultRenderLayer.adjs[246].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2630]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2631]";
@@ -52106,14 +52105,14 @@ connectAttr "polySurface298_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[26
 		;
 connectAttr "polySurface298_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2641]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2642]" "defaultRenderLayer.adjs[247].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2642]" "Shadows.adjs[223].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2643]" "Shadows.adjs[223].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2643]" "defaultRenderLayer.adjs[247].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2644]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2645]" "defaultRenderLayer.adjs[248].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2645]" "Shadows.adjs[224].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2646]" "Shadows.adjs[224].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2646]" "defaultRenderLayer.adjs[248].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2647]";
 connectAttr "polySurface299_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2648]"
@@ -52136,14 +52135,14 @@ connectAttr "polySurface299_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[26
 		;
 connectAttr "polySurface299_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2657]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2658]" "defaultRenderLayer.adjs[249].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2658]" "Shadows.adjs[225].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2659]" "Shadows.adjs[225].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2659]" "defaultRenderLayer.adjs[249].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2660]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2661]" "defaultRenderLayer.adjs[250].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2661]" "Shadows.adjs[226].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2662]" "Shadows.adjs[226].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2662]" "defaultRenderLayer.adjs[250].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2663]";
 connectAttr "polySurface308_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2664]"
@@ -52166,9 +52165,9 @@ connectAttr "polySurface308_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[26
 		;
 connectAttr "polySurface308_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2673]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2674]" "defaultRenderLayer.adjs[251].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2674]" "Shadows.adjs[227].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2675]" "Shadows.adjs[227].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2675]" "defaultRenderLayer.adjs[251].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2676]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2677]";
@@ -52192,9 +52191,9 @@ connectAttr "polySurface307_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[26
 		;
 connectAttr "polySurface307_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2687]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2688]" "defaultRenderLayer.adjs[252].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2688]" "Shadows.adjs[228].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2689]" "Shadows.adjs[228].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2689]" "defaultRenderLayer.adjs[252].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2690]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2691]";
@@ -52218,9 +52217,9 @@ connectAttr "polySurface306_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface306_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2701]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2702]" "defaultRenderLayer.adjs[253].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2702]" "Shadows.adjs[229].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2703]" "Shadows.adjs[229].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2703]" "defaultRenderLayer.adjs[253].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2704]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2705]";
@@ -52244,9 +52243,9 @@ connectAttr "polySurface305_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface305_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2715]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2716]" "defaultRenderLayer.adjs[254].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2716]" "Shadows.adjs[230].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2717]" "Shadows.adjs[230].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2717]" "defaultRenderLayer.adjs[254].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2718]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2719]";
@@ -52270,14 +52269,14 @@ connectAttr "polySurface300_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface300_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2729]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2730]" "defaultRenderLayer.adjs[255].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2730]" "Shadows.adjs[231].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2731]" "Shadows.adjs[231].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2731]" "defaultRenderLayer.adjs[255].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2732]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2733]" "defaultRenderLayer.adjs[256].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2733]" "Shadows.adjs[232].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2734]" "Shadows.adjs[232].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2734]" "defaultRenderLayer.adjs[256].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2735]";
 connectAttr "polySurface296_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2736]"
@@ -52300,14 +52299,14 @@ connectAttr "polySurface296_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface296_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2745]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2746]" "defaultRenderLayer.adjs[257].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2746]" "Shadows.adjs[233].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2747]" "Shadows.adjs[233].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2747]" "defaultRenderLayer.adjs[257].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2748]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2749]" "defaultRenderLayer.adjs[258].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2749]" "Shadows.adjs[234].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2750]" "Shadows.adjs[234].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2750]" "defaultRenderLayer.adjs[258].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2751]";
 connectAttr "polySurface310_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2752]"
@@ -52330,14 +52329,14 @@ connectAttr "polySurface310_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface310_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2761]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2762]" "defaultRenderLayer.adjs[259].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2762]" "Shadows.adjs[235].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2763]" "Shadows.adjs[235].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2763]" "defaultRenderLayer.adjs[259].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2764]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2765]" "defaultRenderLayer.adjs[260].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2765]" "Shadows.adjs[236].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2766]" "Shadows.adjs[236].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2766]" "defaultRenderLayer.adjs[260].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2767]";
 connectAttr "polySurface309_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2768]"
@@ -52360,14 +52359,14 @@ connectAttr "polySurface309_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface309_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2777]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2778]" "defaultRenderLayer.adjs[261].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2778]" "Shadows.adjs[237].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2779]" "Shadows.adjs[237].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2779]" "defaultRenderLayer.adjs[261].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2780]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2781]" "defaultRenderLayer.adjs[262].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2781]" "Shadows.adjs[238].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2782]" "Shadows.adjs[238].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2782]" "defaultRenderLayer.adjs[262].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2783]";
 connectAttr "polySurface297_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2784]"
@@ -52390,14 +52389,14 @@ connectAttr "polySurface297_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[27
 		;
 connectAttr "polySurface297_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2793]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2794]" "defaultRenderLayer.adjs[263].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2794]" "Shadows.adjs[239].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2795]" "Shadows.adjs[239].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2795]" "defaultRenderLayer.adjs[263].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2796]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2797]" "defaultRenderLayer.adjs[264].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2797]" "Shadows.adjs[240].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2798]" "Shadows.adjs[240].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2798]" "defaultRenderLayer.adjs[264].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2799]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2800]";
@@ -52421,9 +52420,9 @@ connectAttr "polySurface122_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[28
 		;
 connectAttr "polySurface122_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2810]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2811]" "defaultRenderLayer.adjs[265].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2811]" "Shadows.adjs[241].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2812]" "Shadows.adjs[241].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2812]" "defaultRenderLayer.adjs[265].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2813]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2814]";
@@ -52447,9 +52446,9 @@ connectAttr "polySurface121_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[28
 		;
 connectAttr "polySurface121_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2824]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2825]" "defaultRenderLayer.adjs[266].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2825]" "Shadows.adjs[242].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2826]" "Shadows.adjs[242].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2826]" "defaultRenderLayer.adjs[266].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2827]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2828]";
@@ -52473,14 +52472,14 @@ connectAttr "polySurface270_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[28
 		;
 connectAttr "polySurface270_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2838]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2839]" "defaultRenderLayer.adjs[267].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2839]" "Shadows.adjs[243].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2840]" "Shadows.adjs[243].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2840]" "defaultRenderLayer.adjs[267].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2841]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2842]" "defaultRenderLayer.adjs[268].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2842]" "Shadows.adjs[244].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2843]" "Shadows.adjs[244].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2843]" "defaultRenderLayer.adjs[268].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2844]";
 connectAttr "polySurface269_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2845]"
@@ -52503,14 +52502,14 @@ connectAttr "polySurface269_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[28
 		;
 connectAttr "polySurface269_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2854]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2855]" "defaultRenderLayer.adjs[269].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2855]" "Shadows.adjs[245].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2856]" "Shadows.adjs[245].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2856]" "defaultRenderLayer.adjs[269].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2857]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2858]" "defaultRenderLayer.adjs[270].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2858]" "Shadows.adjs[246].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2859]" "Shadows.adjs[246].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2859]" "defaultRenderLayer.adjs[270].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2860]";
 connectAttr "polySurface268_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2861]"
@@ -52533,14 +52532,14 @@ connectAttr "polySurface268_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[28
 		;
 connectAttr "polySurface268_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2870]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2871]" "defaultRenderLayer.adjs[271].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2871]" "Shadows.adjs[247].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2872]" "Shadows.adjs[247].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2872]" "defaultRenderLayer.adjs[271].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2873]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2874]" "defaultRenderLayer.adjs[272].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2874]" "Shadows.adjs[248].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2875]" "Shadows.adjs[248].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2875]" "defaultRenderLayer.adjs[272].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2876]";
 connectAttr "polySurface267_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2877]"
@@ -52563,14 +52562,14 @@ connectAttr "polySurface267_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[28
 		;
 connectAttr "polySurface267_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2886]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2887]" "defaultRenderLayer.adjs[273].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2887]" "Shadows.adjs[249].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2888]" "Shadows.adjs[249].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2888]" "defaultRenderLayer.adjs[273].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2889]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2890]" "defaultRenderLayer.adjs[274].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2890]" "Shadows.adjs[250].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2891]" "Shadows.adjs[250].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2891]" "defaultRenderLayer.adjs[274].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2892]";
 connectAttr "polySurface126_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2893]"
@@ -52593,14 +52592,14 @@ connectAttr "polySurface126_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface126_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2902]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2903]" "defaultRenderLayer.adjs[275].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2903]" "Shadows.adjs[251].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2904]" "Shadows.adjs[251].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2904]" "defaultRenderLayer.adjs[275].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2905]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2906]" "defaultRenderLayer.adjs[276].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2906]" "Shadows.adjs[252].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2907]" "Shadows.adjs[252].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2907]" "defaultRenderLayer.adjs[276].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2908]";
 connectAttr "polySurface124_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2909]"
@@ -52623,9 +52622,9 @@ connectAttr "polySurface124_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface124_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2918]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2919]" "defaultRenderLayer.adjs[277].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2919]" "Shadows.adjs[253].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2920]" "Shadows.adjs[253].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2920]" "defaultRenderLayer.adjs[277].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2921]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2922]";
@@ -52649,14 +52648,14 @@ connectAttr "polySurface125_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface125_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2932]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2933]" "defaultRenderLayer.adjs[278].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2933]" "Shadows.adjs[254].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2934]" "Shadows.adjs[254].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2934]" "defaultRenderLayer.adjs[278].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2935]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2936]" "defaultRenderLayer.adjs[279].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2936]" "Shadows.adjs[255].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2937]" "Shadows.adjs[255].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2937]" "defaultRenderLayer.adjs[279].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2938]";
 connectAttr "polySurface295_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2939]"
@@ -52679,14 +52678,14 @@ connectAttr "polySurface295_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface295_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2948]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2949]" "defaultRenderLayer.adjs[280].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2949]" "Shadows.adjs[256].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2950]" "Shadows.adjs[256].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2950]" "defaultRenderLayer.adjs[280].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2951]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2952]" "defaultRenderLayer.adjs[281].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2952]" "Shadows.adjs[257].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2953]" "Shadows.adjs[257].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2953]" "defaultRenderLayer.adjs[281].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2954]";
 connectAttr "polySurface294_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2955]"
@@ -52709,14 +52708,14 @@ connectAttr "polySurface294_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface294_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2964]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2965]" "defaultRenderLayer.adjs[282].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2965]" "Shadows.adjs[258].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2966]" "Shadows.adjs[258].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2966]" "defaultRenderLayer.adjs[282].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2967]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2968]" "defaultRenderLayer.adjs[283].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2968]" "Shadows.adjs[259].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2969]" "Shadows.adjs[259].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2969]" "defaultRenderLayer.adjs[283].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2970]";
 connectAttr "polySurface293_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2971]"
@@ -52739,14 +52738,14 @@ connectAttr "polySurface293_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface293_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2980]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2981]" "defaultRenderLayer.adjs[284].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2981]" "Shadows.adjs[260].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2982]" "Shadows.adjs[260].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2982]" "defaultRenderLayer.adjs[284].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2983]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2984]" "defaultRenderLayer.adjs[285].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2984]" "Shadows.adjs[261].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2985]" "Shadows.adjs[261].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2985]" "defaultRenderLayer.adjs[285].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2986]";
 connectAttr "polySurface292_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2987]"
@@ -52769,14 +52768,14 @@ connectAttr "polySurface292_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[29
 		;
 connectAttr "polySurface292_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[2996]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2997]" "defaultRenderLayer.adjs[286].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2997]" "Shadows.adjs[262].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2998]" "Shadows.adjs[262].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[2998]" "defaultRenderLayer.adjs[286].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[2999]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3000]" "defaultRenderLayer.adjs[287].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3000]" "Shadows.adjs[263].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3001]" "Shadows.adjs[263].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3001]" "defaultRenderLayer.adjs[287].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3002]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3003]";
@@ -52804,14 +52803,14 @@ connectAttr "polySurface360_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30
 		;
 connectAttr "polySurface360_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3017]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3018]" "defaultRenderLayer.adjs[288].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3018]" "Shadows.adjs[264].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3019]" "Shadows.adjs[264].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3019]" "defaultRenderLayer.adjs[288].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3020]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3021]" "defaultRenderLayer.adjs[289].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3021]" "Shadows.adjs[265].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3022]" "Shadows.adjs[265].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3022]" "defaultRenderLayer.adjs[289].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3023]";
 connectAttr "polySurface354_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3024]"
@@ -52834,14 +52833,14 @@ connectAttr "polySurface354_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30
 		;
 connectAttr "polySurface354_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3033]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3034]" "defaultRenderLayer.adjs[290].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3034]" "Shadows.adjs[266].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3035]" "Shadows.adjs[266].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3035]" "defaultRenderLayer.adjs[290].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3036]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3037]" "defaultRenderLayer.adjs[291].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3037]" "Shadows.adjs[267].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3038]" "Shadows.adjs[267].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3038]" "defaultRenderLayer.adjs[291].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3039]";
 connectAttr "polySurface356_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3040]"
@@ -52864,9 +52863,9 @@ connectAttr "polySurface356_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30
 		;
 connectAttr "polySurface356_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3049]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3050]" "defaultRenderLayer.adjs[292].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3050]" "Shadows.adjs[268].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3051]" "Shadows.adjs[268].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3051]" "defaultRenderLayer.adjs[292].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3052]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3053]";
@@ -52890,9 +52889,9 @@ connectAttr "polySurface362_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30
 		;
 connectAttr "polySurface362_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3063]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3064]" "defaultRenderLayer.adjs[293].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3064]" "Shadows.adjs[269].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3065]" "Shadows.adjs[269].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3065]" "defaultRenderLayer.adjs[293].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3066]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3067]";
@@ -52916,9 +52915,9 @@ connectAttr "polySurface355_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30
 		;
 connectAttr "polySurface355_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3077]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3078]" "defaultRenderLayer.adjs[294].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3078]" "Shadows.adjs[270].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3079]" "Shadows.adjs[270].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3079]" "defaultRenderLayer.adjs[294].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3080]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3081]";
@@ -52942,9 +52941,9 @@ connectAttr "polySurface361_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[30
 		;
 connectAttr "polySurface361_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3091]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3092]" "defaultRenderLayer.adjs[295].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3092]" "Shadows.adjs[271].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3093]" "Shadows.adjs[271].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3093]" "defaultRenderLayer.adjs[295].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3094]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3095]";
@@ -52971,14 +52970,14 @@ connectAttr "polySurface359_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[31
 		;
 connectAttr "polySurface359_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3110]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3111]" "defaultRenderLayer.adjs[296].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3111]" "Shadows.adjs[272].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3112]" "Shadows.adjs[272].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3112]" "defaultRenderLayer.adjs[296].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3113]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3114]" "defaultRenderLayer.adjs[297].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3114]" "Shadows.adjs[273].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3115]" "Shadows.adjs[273].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3115]" "defaultRenderLayer.adjs[297].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3116]" "pairBlend10.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3117]" "pairBlend10.iry2";
@@ -53005,14 +53004,14 @@ connectAttr "polySurface353_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[31
 		;
 connectAttr "polySurface353_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3132]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3133]" "defaultRenderLayer.adjs[298].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3133]" "Shadows.adjs[274].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3134]" "Shadows.adjs[274].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3134]" "defaultRenderLayer.adjs[298].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3135]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3136]" "defaultRenderLayer.adjs[299].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3136]" "Shadows.adjs[275].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3137]" "Shadows.adjs[275].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3137]" "defaultRenderLayer.adjs[299].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3138]" "pairBlend11.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3139]" "pairBlend11.iry2";
@@ -53039,9 +53038,9 @@ connectAttr "polySurface358_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[31
 		;
 connectAttr "polySurface358_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3152]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3153]" "defaultRenderLayer.adjs[300].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3153]" "Shadows.adjs[276].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3154]" "Shadows.adjs[276].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3154]" "defaultRenderLayer.adjs[300].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3155]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3156]";
@@ -53065,9 +53064,9 @@ connectAttr "polySurface364_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[31
 		;
 connectAttr "polySurface364_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3166]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3167]" "defaultRenderLayer.adjs[301].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3167]" "Shadows.adjs[277].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3168]" "Shadows.adjs[277].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3168]" "defaultRenderLayer.adjs[301].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3169]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3170]";
@@ -53091,9 +53090,9 @@ connectAttr "polySurface357_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[31
 		;
 connectAttr "polySurface357_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3180]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3181]" "defaultRenderLayer.adjs[302].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3181]" "Shadows.adjs[278].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3182]" "Shadows.adjs[278].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3182]" "defaultRenderLayer.adjs[302].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3183]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3184]";
@@ -53117,9 +53116,9 @@ connectAttr "polySurface363_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[31
 		;
 connectAttr "polySurface363_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3194]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3195]" "defaultRenderLayer.adjs[303].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3195]" "Shadows.adjs[279].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3196]" "Shadows.adjs[279].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3196]" "defaultRenderLayer.adjs[303].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3197]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3198]";
@@ -53148,9 +53147,9 @@ connectAttr "polySurface374_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[32
 		;
 connectAttr "polySurface374_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3213]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3214]" "defaultRenderLayer.adjs[304].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3214]" "Shadows.adjs[280].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3215]" "Shadows.adjs[280].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3215]" "defaultRenderLayer.adjs[304].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3216]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3217]";
@@ -53174,9 +53173,9 @@ connectAttr "polySurface368_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[32
 		;
 connectAttr "polySurface368_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3227]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3228]" "defaultRenderLayer.adjs[305].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3228]" "Shadows.adjs[281].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3229]" "Shadows.adjs[281].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3229]" "defaultRenderLayer.adjs[305].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3230]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3231]";
@@ -53200,14 +53199,14 @@ connectAttr "polySurface366_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[32
 		;
 connectAttr "polySurface366_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3241]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3242]" "defaultRenderLayer.adjs[306].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3242]" "Shadows.adjs[282].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3243]" "Shadows.adjs[282].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3243]" "defaultRenderLayer.adjs[306].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3244]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3245]" "defaultRenderLayer.adjs[307].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3245]" "Shadows.adjs[283].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3246]" "Shadows.adjs[283].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3246]" "defaultRenderLayer.adjs[307].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3247]";
 connectAttr "polySurface372_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3248]"
@@ -53230,14 +53229,14 @@ connectAttr "polySurface372_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[32
 		;
 connectAttr "polySurface372_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3257]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3258]" "defaultRenderLayer.adjs[308].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3258]" "Shadows.adjs[284].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3259]" "Shadows.adjs[284].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3259]" "defaultRenderLayer.adjs[308].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3260]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3261]" "defaultRenderLayer.adjs[309].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3261]" "Shadows.adjs[285].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3262]" "Shadows.adjs[285].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3262]" "defaultRenderLayer.adjs[309].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3263]";
 connectAttr "polySurface373_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3264]"
@@ -53260,9 +53259,9 @@ connectAttr "polySurface373_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[32
 		;
 connectAttr "polySurface373_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3273]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3274]" "defaultRenderLayer.adjs[310].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3274]" "Shadows.adjs[286].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3275]" "Shadows.adjs[286].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3275]" "defaultRenderLayer.adjs[310].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3276]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3277]";
@@ -53286,9 +53285,9 @@ connectAttr "polySurface367_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[32
 		;
 connectAttr "polySurface367_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3287]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3288]" "defaultRenderLayer.adjs[311].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3288]" "Shadows.adjs[287].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3289]" "Shadows.adjs[287].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3289]" "defaultRenderLayer.adjs[311].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3290]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3291]";
@@ -53316,9 +53315,9 @@ connectAttr "polySurface375_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[33
 		;
 connectAttr "polySurface375_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3305]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3306]" "defaultRenderLayer.adjs[312].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3306]" "Shadows.adjs[288].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3307]" "Shadows.adjs[288].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3307]" "defaultRenderLayer.adjs[312].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3308]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3309]";
@@ -53342,9 +53341,9 @@ connectAttr "polySurface369_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[33
 		;
 connectAttr "polySurface369_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3319]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3320]" "defaultRenderLayer.adjs[313].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3320]" "Shadows.adjs[289].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3321]" "Shadows.adjs[289].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3321]" "defaultRenderLayer.adjs[313].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3322]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3323]";
@@ -53368,9 +53367,9 @@ connectAttr "polySurface376_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[33
 		;
 connectAttr "polySurface376_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3333]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3334]" "defaultRenderLayer.adjs[314].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3334]" "Shadows.adjs[290].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3335]" "Shadows.adjs[290].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3335]" "defaultRenderLayer.adjs[314].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3336]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3337]";
@@ -53394,9 +53393,9 @@ connectAttr "polySurface370_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[33
 		;
 connectAttr "polySurface370_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3347]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3348]" "defaultRenderLayer.adjs[315].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3348]" "Shadows.adjs[291].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3349]" "Shadows.adjs[291].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3349]" "defaultRenderLayer.adjs[315].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3350]";
 connectAttr "pairBlend12.orx" "FighterModelMaya_RIGVERSION_0065RN.phl[3351]";
@@ -53420,14 +53419,14 @@ connectAttr "polySurface365_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[33
 		;
 connectAttr "polySurface365_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3363]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3364]" "defaultRenderLayer.adjs[316].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3364]" "Shadows.adjs[292].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3365]" "Shadows.adjs[292].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3365]" "defaultRenderLayer.adjs[316].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3366]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3367]" "defaultRenderLayer.adjs[317].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3367]" "Shadows.adjs[293].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3368]" "Shadows.adjs[293].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3368]" "defaultRenderLayer.adjs[317].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3369]" "pairBlend12.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3370]" "pairBlend12.iry2";
@@ -53454,14 +53453,14 @@ connectAttr "polySurface371_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[33
 		;
 connectAttr "polySurface371_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3385]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3386]" "defaultRenderLayer.adjs[318].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3386]" "Shadows.adjs[294].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3387]" "Shadows.adjs[294].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3387]" "defaultRenderLayer.adjs[318].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3388]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3389]" "defaultRenderLayer.adjs[319].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3389]" "Shadows.adjs[295].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3390]" "Shadows.adjs[295].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3390]" "defaultRenderLayer.adjs[319].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3391]" "pairBlend13.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3392]" "pairBlend13.iry2";
@@ -53489,9 +53488,9 @@ connectAttr "polySurface315_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface315_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3406]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3407]" "defaultRenderLayer.adjs[320].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3407]" "Shadows.adjs[296].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3408]" "Shadows.adjs[296].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3408]" "defaultRenderLayer.adjs[320].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3409]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3410]";
@@ -53515,9 +53514,9 @@ connectAttr "polySurface290_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface290_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3420]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3421]" "defaultRenderLayer.adjs[321].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3421]" "Shadows.adjs[297].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3422]" "Shadows.adjs[297].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3422]" "defaultRenderLayer.adjs[321].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3423]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3424]";
@@ -53541,9 +53540,9 @@ connectAttr "polySurface316_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface316_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3434]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3435]" "defaultRenderLayer.adjs[322].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3435]" "Shadows.adjs[298].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3436]" "Shadows.adjs[298].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3436]" "defaultRenderLayer.adjs[322].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3437]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3438]";
@@ -53567,9 +53566,9 @@ connectAttr "polySurface291_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface291_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3448]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3449]" "defaultRenderLayer.adjs[323].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3449]" "Shadows.adjs[299].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3450]" "Shadows.adjs[299].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3450]" "defaultRenderLayer.adjs[323].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3451]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3452]";
@@ -53597,9 +53596,9 @@ connectAttr "polySurface288_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface288_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3466]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3467]" "defaultRenderLayer.adjs[324].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3467]" "Shadows.adjs[300].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3468]" "Shadows.adjs[300].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3468]" "defaultRenderLayer.adjs[324].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3469]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3470]";
@@ -53623,9 +53622,9 @@ connectAttr "polySurface289_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface289_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3480]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3481]" "defaultRenderLayer.adjs[325].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3481]" "Shadows.adjs[301].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3482]" "Shadows.adjs[301].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3482]" "defaultRenderLayer.adjs[325].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3483]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3484]";
@@ -53650,9 +53649,9 @@ connectAttr "polySurface286_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[34
 		;
 connectAttr "polySurface286_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3495]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3496]" "defaultRenderLayer.adjs[326].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3496]" "Shadows.adjs[302].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3497]" "Shadows.adjs[302].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3497]" "defaultRenderLayer.adjs[326].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3498]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3499]";
@@ -53676,9 +53675,9 @@ connectAttr "polySurface287_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[35
 		;
 connectAttr "polySurface287_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3509]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3510]" "defaultRenderLayer.adjs[327].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3510]" "Shadows.adjs[303].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3511]" "Shadows.adjs[303].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3511]" "defaultRenderLayer.adjs[327].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3512]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3513]";
@@ -53706,9 +53705,9 @@ connectAttr "polySurface313_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[35
 		;
 connectAttr "polySurface313_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3527]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3528]" "defaultRenderLayer.adjs[328].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3528]" "Shadows.adjs[304].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3529]" "Shadows.adjs[304].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3529]" "defaultRenderLayer.adjs[328].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3530]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3531]";
@@ -53732,9 +53731,9 @@ connectAttr "polySurface314_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[35
 		;
 connectAttr "polySurface314_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3541]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3542]" "defaultRenderLayer.adjs[329].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3542]" "Shadows.adjs[305].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3543]" "Shadows.adjs[305].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3543]" "defaultRenderLayer.adjs[329].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3544]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3545]";
@@ -53759,9 +53758,9 @@ connectAttr "polySurface311_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[35
 		;
 connectAttr "polySurface311_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3556]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3557]" "defaultRenderLayer.adjs[330].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3557]" "Shadows.adjs[306].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3558]" "Shadows.adjs[306].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3558]" "defaultRenderLayer.adjs[330].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3559]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3560]";
@@ -53785,9 +53784,9 @@ connectAttr "polySurface312_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[35
 		;
 connectAttr "polySurface312_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3570]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3571]" "defaultRenderLayer.adjs[331].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3571]" "Shadows.adjs[307].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3572]" "Shadows.adjs[307].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3572]" "defaultRenderLayer.adjs[331].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3573]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3574]";
@@ -53820,9 +53819,9 @@ connectAttr "polySurface4_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3592
 		;
 connectAttr "polySurface4_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3593]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3594]" "defaultRenderLayer.adjs[332].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3594]" "Shadows.adjs[308].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3595]" "Shadows.adjs[308].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3595]" "defaultRenderLayer.adjs[332].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3596]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3597]";
@@ -53846,9 +53845,9 @@ connectAttr "polySurface5_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3606
 		;
 connectAttr "polySurface5_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3607]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3608]" "defaultRenderLayer.adjs[333].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3608]" "Shadows.adjs[309].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3609]" "Shadows.adjs[309].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3609]" "defaultRenderLayer.adjs[333].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3610]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3611]";
@@ -53872,9 +53871,9 @@ connectAttr "polySurface6_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3620
 		;
 connectAttr "polySurface6_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3621]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3622]" "defaultRenderLayer.adjs[334].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3622]" "Shadows.adjs[310].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3623]" "Shadows.adjs[310].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3623]" "defaultRenderLayer.adjs[334].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3624]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3625]";
@@ -53898,9 +53897,9 @@ connectAttr "polySurface7_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3634
 		;
 connectAttr "polySurface7_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3635]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3636]" "defaultRenderLayer.adjs[335].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3636]" "Shadows.adjs[311].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3637]" "Shadows.adjs[311].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3637]" "defaultRenderLayer.adjs[335].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3638]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3639]";
@@ -53924,9 +53923,9 @@ connectAttr "polySurface8_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3648
 		;
 connectAttr "polySurface8_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3649]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3650]" "defaultRenderLayer.adjs[336].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3650]" "Shadows.adjs[312].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3651]" "Shadows.adjs[312].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3651]" "defaultRenderLayer.adjs[336].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3652]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3653]";
@@ -53950,9 +53949,9 @@ connectAttr "polySurface9_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3662
 		;
 connectAttr "polySurface9_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3663]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3664]" "defaultRenderLayer.adjs[337].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3664]" "Shadows.adjs[313].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3665]" "Shadows.adjs[313].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3665]" "defaultRenderLayer.adjs[337].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3666]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3667]";
@@ -53976,9 +53975,9 @@ connectAttr "polySurface10_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[367
 		;
 connectAttr "polySurface10_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3677]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3678]" "defaultRenderLayer.adjs[338].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3678]" "Shadows.adjs[314].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3679]" "Shadows.adjs[314].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3679]" "defaultRenderLayer.adjs[338].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3680]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3681]";
@@ -54002,9 +54001,9 @@ connectAttr "polySurface11_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[369
 		;
 connectAttr "polySurface11_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3691]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3692]" "defaultRenderLayer.adjs[339].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3692]" "Shadows.adjs[315].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3693]" "Shadows.adjs[315].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3693]" "defaultRenderLayer.adjs[339].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3694]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3695]";
@@ -54028,9 +54027,9 @@ connectAttr "polySurface12_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[370
 		;
 connectAttr "polySurface12_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3705]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3706]" "defaultRenderLayer.adjs[340].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3706]" "Shadows.adjs[316].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3707]" "Shadows.adjs[316].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3707]" "defaultRenderLayer.adjs[340].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3708]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3709]";
@@ -54054,9 +54053,9 @@ connectAttr "polySurface13_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[371
 		;
 connectAttr "polySurface13_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3719]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3720]" "defaultRenderLayer.adjs[341].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3720]" "Shadows.adjs[317].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3721]" "Shadows.adjs[317].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3721]" "defaultRenderLayer.adjs[341].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3722]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3723]";
@@ -54079,9 +54078,9 @@ connectAttr "polySurface54_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[373
 		;
 connectAttr "polySurface54_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3737]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3738]" "defaultRenderLayer.adjs[342].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3738]" "Shadows.adjs[318].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3739]" "Shadows.adjs[318].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3739]" "defaultRenderLayer.adjs[342].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3740]";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3741]" "pairBlend1.itx2";
@@ -54109,14 +54108,14 @@ connectAttr "polySurface59_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[375
 		;
 connectAttr "polySurface59_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3760]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3761]" "defaultRenderLayer.adjs[343].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3761]" "Shadows.adjs[319].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3762]" "Shadows.adjs[319].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3762]" "defaultRenderLayer.adjs[343].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3763]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3764]" "defaultRenderLayer.adjs[344].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3764]" "Shadows.adjs[320].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3765]" "Shadows.adjs[320].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3765]" "defaultRenderLayer.adjs[344].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3766]" "pairBlend4.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3767]" "pairBlend4.iry2";
@@ -54143,14 +54142,14 @@ connectAttr "polySurface56_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[378
 		;
 connectAttr "polySurface56_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3785]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3786]" "defaultRenderLayer.adjs[345].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3786]" "Shadows.adjs[321].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3787]" "Shadows.adjs[321].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3787]" "defaultRenderLayer.adjs[345].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3788]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3789]" "defaultRenderLayer.adjs[346].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3789]" "Shadows.adjs[322].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3790]" "Shadows.adjs[322].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3790]" "defaultRenderLayer.adjs[346].plg"
 		;
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3791]" "pairBlend2.irx2";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3792]" "pairBlend2.iry2";
@@ -54177,9 +54176,9 @@ connectAttr "polySurface57_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[380
 		;
 connectAttr "polySurface57_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3810]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3811]" "defaultRenderLayer.adjs[347].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3811]" "Shadows.adjs[323].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3812]" "Shadows.adjs[323].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3812]" "defaultRenderLayer.adjs[347].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3813]";
 connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3814]" "pairBlend3.itx2";
@@ -54199,9 +54198,9 @@ connectAttr "missileHatch_R_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[38
 		;
 connectAttr "missileHatch_R_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3826]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3827]" "defaultRenderLayer.adjs[348].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3827]" "Shadows.adjs[324].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3828]" "Shadows.adjs[324].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3828]" "defaultRenderLayer.adjs[348].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3829]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3830]";
@@ -54213,9 +54212,9 @@ connectAttr "missileHatch_L_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[38
 		;
 connectAttr "missileHatch_L_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3834]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3835]" "defaultRenderLayer.adjs[349].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3835]" "Shadows.adjs[325].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3836]" "Shadows.adjs[325].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3836]" "defaultRenderLayer.adjs[349].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3837]";
 connectAttr "Sensor_Parent_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3838]"
@@ -54237,9 +54236,9 @@ connectAttr "Sensor_Parent_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[384
 		;
 connectAttr "Sensor_Parent_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3847]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3848]" "defaultRenderLayer.adjs[350].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3848]" "Shadows.adjs[326].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3849]" "Shadows.adjs[326].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3849]" "defaultRenderLayer.adjs[350].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3850]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3851]";
@@ -54263,9 +54262,9 @@ connectAttr "Sensor_Child_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3860
 		;
 connectAttr "Sensor_Child_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3861]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3862]" "defaultRenderLayer.adjs[351].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3862]" "Shadows.adjs[327].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3863]" "Shadows.adjs[327].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3863]" "defaultRenderLayer.adjs[351].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3864]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3865]";
@@ -54290,9 +54289,9 @@ connectAttr "polySurface60_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[387
 		;
 connectAttr "polySurface60_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3876]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3877]" "defaultRenderLayer.adjs[352].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3877]" "Shadows.adjs[328].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3878]" "Shadows.adjs[328].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3878]" "defaultRenderLayer.adjs[352].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3879]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3880]";
@@ -54316,9 +54315,9 @@ connectAttr "polySurface63_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[388
 		;
 connectAttr "polySurface63_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3890]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3891]" "defaultRenderLayer.adjs[353].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3891]" "Shadows.adjs[329].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3892]" "Shadows.adjs[329].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3892]" "defaultRenderLayer.adjs[353].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3893]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3894]";
@@ -54342,9 +54341,9 @@ connectAttr "polySurface64_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[390
 		;
 connectAttr "polySurface64_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3904]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3905]" "defaultRenderLayer.adjs[354].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3905]" "Shadows.adjs[330].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3906]" "Shadows.adjs[330].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3906]" "defaultRenderLayer.adjs[354].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3907]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3908]";
@@ -54368,9 +54367,9 @@ connectAttr "polySurface65_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[391
 		;
 connectAttr "polySurface65_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3918]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3919]" "defaultRenderLayer.adjs[355].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3919]" "Shadows.adjs[331].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3920]" "Shadows.adjs[331].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3920]" "defaultRenderLayer.adjs[355].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3921]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3922]";
@@ -54394,9 +54393,9 @@ connectAttr "polySurface66_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[393
 		;
 connectAttr "polySurface66_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3932]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3933]" "defaultRenderLayer.adjs[356].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3933]" "Shadows.adjs[332].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3934]" "Shadows.adjs[332].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3934]" "defaultRenderLayer.adjs[356].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3935]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3936]";
@@ -54420,9 +54419,9 @@ connectAttr "polySurface67_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[394
 		;
 connectAttr "polySurface67_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3946]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3947]" "defaultRenderLayer.adjs[357].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3947]" "Shadows.adjs[333].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3948]" "Shadows.adjs[333].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3948]" "defaultRenderLayer.adjs[357].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3949]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3950]";
@@ -54446,9 +54445,9 @@ connectAttr "polySurface68_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[395
 		;
 connectAttr "polySurface68_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3960]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3961]" "defaultRenderLayer.adjs[358].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3961]" "Shadows.adjs[334].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3962]" "Shadows.adjs[334].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3962]" "defaultRenderLayer.adjs[358].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3963]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3964]";
@@ -54472,9 +54471,9 @@ connectAttr "polySurface69_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[397
 		;
 connectAttr "polySurface69_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3974]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3975]" "defaultRenderLayer.adjs[359].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3975]" "Shadows.adjs[335].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3976]" "Shadows.adjs[335].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3976]" "defaultRenderLayer.adjs[359].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3977]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3978]";
@@ -54498,9 +54497,9 @@ connectAttr "polySurface70_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[398
 		;
 connectAttr "polySurface70_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[3988]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3989]" "defaultRenderLayer.adjs[360].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3989]" "Shadows.adjs[336].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3990]" "Shadows.adjs[336].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[3990]" "defaultRenderLayer.adjs[360].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3991]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[3992]";
@@ -54524,9 +54523,9 @@ connectAttr "polySurface71_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[400
 		;
 connectAttr "polySurface71_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4002]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4003]" "defaultRenderLayer.adjs[361].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4003]" "Shadows.adjs[337].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4004]" "Shadows.adjs[337].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4004]" "defaultRenderLayer.adjs[361].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4005]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4006]";
@@ -54550,9 +54549,9 @@ connectAttr "polySurface72_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[401
 		;
 connectAttr "polySurface72_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4016]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4017]" "defaultRenderLayer.adjs[362].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4017]" "Shadows.adjs[338].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4018]" "Shadows.adjs[338].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4018]" "defaultRenderLayer.adjs[362].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4019]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4020]";
@@ -54576,9 +54575,9 @@ connectAttr "polySurface73_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[402
 		;
 connectAttr "polySurface73_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4030]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4031]" "defaultRenderLayer.adjs[363].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4031]" "Shadows.adjs[339].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4032]" "Shadows.adjs[339].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4032]" "defaultRenderLayer.adjs[363].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4033]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4034]";
@@ -54602,9 +54601,9 @@ connectAttr "polySurface74_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[404
 		;
 connectAttr "polySurface74_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4044]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4045]" "defaultRenderLayer.adjs[364].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4045]" "Shadows.adjs[340].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4046]" "Shadows.adjs[340].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4046]" "defaultRenderLayer.adjs[364].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4047]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4048]";
@@ -54628,9 +54627,9 @@ connectAttr "polySurface75_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[405
 		;
 connectAttr "polySurface75_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4058]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4059]" "defaultRenderLayer.adjs[365].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4059]" "Shadows.adjs[341].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4060]" "Shadows.adjs[341].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4060]" "defaultRenderLayer.adjs[365].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4061]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4062]";
@@ -54654,9 +54653,9 @@ connectAttr "polySurface76_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[407
 		;
 connectAttr "polySurface76_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4072]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4073]" "defaultRenderLayer.adjs[366].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4073]" "Shadows.adjs[342].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4074]" "Shadows.adjs[342].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4074]" "defaultRenderLayer.adjs[366].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4075]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4076]";
@@ -54680,9 +54679,9 @@ connectAttr "polySurface77_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[408
 		;
 connectAttr "polySurface77_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4086]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4087]" "defaultRenderLayer.adjs[367].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4087]" "Shadows.adjs[343].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4088]" "Shadows.adjs[343].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4088]" "defaultRenderLayer.adjs[367].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4089]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4090]";
@@ -54706,9 +54705,9 @@ connectAttr "polySurface78_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[409
 		;
 connectAttr "polySurface78_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4100]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4101]" "defaultRenderLayer.adjs[368].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4101]" "Shadows.adjs[344].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4102]" "Shadows.adjs[344].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4102]" "defaultRenderLayer.adjs[368].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4103]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4104]";
@@ -54732,9 +54731,9 @@ connectAttr "polySurface79_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[411
 		;
 connectAttr "polySurface79_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4114]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4115]" "defaultRenderLayer.adjs[369].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4115]" "Shadows.adjs[345].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4116]" "Shadows.adjs[345].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4116]" "defaultRenderLayer.adjs[369].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4117]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4118]";
@@ -54758,9 +54757,9 @@ connectAttr "polySurface80_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[412
 		;
 connectAttr "polySurface80_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4128]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4129]" "defaultRenderLayer.adjs[370].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4129]" "Shadows.adjs[346].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4130]" "Shadows.adjs[346].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4130]" "defaultRenderLayer.adjs[370].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4131]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4132]";
@@ -54784,9 +54783,9 @@ connectAttr "polySurface81_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[414
 		;
 connectAttr "polySurface81_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4142]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4143]" "defaultRenderLayer.adjs[371].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4143]" "Shadows.adjs[347].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4144]" "Shadows.adjs[347].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4144]" "defaultRenderLayer.adjs[371].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4145]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4146]";
@@ -54810,9 +54809,9 @@ connectAttr "polySurface82_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[415
 		;
 connectAttr "polySurface82_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4156]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4157]" "defaultRenderLayer.adjs[372].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4157]" "Shadows.adjs[348].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4158]" "Shadows.adjs[348].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4158]" "defaultRenderLayer.adjs[372].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4159]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4160]";
@@ -54836,9 +54835,9 @@ connectAttr "polySurface83_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[416
 		;
 connectAttr "polySurface83_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4170]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4171]" "defaultRenderLayer.adjs[373].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4171]" "Shadows.adjs[349].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4172]" "Shadows.adjs[349].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4172]" "defaultRenderLayer.adjs[373].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4173]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4174]";
@@ -54862,14 +54861,14 @@ connectAttr "polySurface84_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[418
 		;
 connectAttr "polySurface84_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4184]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4185]" "defaultRenderLayer.adjs[374].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4185]" "Shadows.adjs[350].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4186]" "Shadows.adjs[350].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4186]" "defaultRenderLayer.adjs[374].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4187]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4188]" "defaultRenderLayer.adjs[375].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4188]" "Shadows.adjs[351].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4189]" "Shadows.adjs[351].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4189]" "defaultRenderLayer.adjs[375].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4190]";
 connectAttr "polySurface85_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4191]"
@@ -54892,9 +54891,9 @@ connectAttr "polySurface85_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[419
 		;
 connectAttr "polySurface85_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4200]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4201]" "defaultRenderLayer.adjs[376].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4201]" "Shadows.adjs[352].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4202]" "Shadows.adjs[352].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4202]" "defaultRenderLayer.adjs[376].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4203]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4204]";
@@ -54918,9 +54917,9 @@ connectAttr "polySurface86_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[421
 		;
 connectAttr "polySurface86_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4214]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4215]" "defaultRenderLayer.adjs[377].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4215]" "Shadows.adjs[353].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4216]" "Shadows.adjs[353].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4216]" "defaultRenderLayer.adjs[377].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4217]";
 connectAttr "polySurface87_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4218]"
@@ -54944,9 +54943,9 @@ connectAttr "polySurface87_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[422
 connectAttr "polySurface87_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4227]"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4228]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4229]" "defaultRenderLayer.adjs[378].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4229]" "Shadows.adjs[354].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4230]" "Shadows.adjs[354].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4230]" "defaultRenderLayer.adjs[378].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4231]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4232]";
@@ -54970,9 +54969,9 @@ connectAttr "polySurface88_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[424
 		;
 connectAttr "polySurface88_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4242]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4243]" "defaultRenderLayer.adjs[379].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4243]" "Shadows.adjs[355].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4244]" "Shadows.adjs[355].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4244]" "defaultRenderLayer.adjs[379].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4245]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4246]";
@@ -54996,14 +54995,14 @@ connectAttr "polySurface89_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[425
 		;
 connectAttr "polySurface89_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4256]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4257]" "defaultRenderLayer.adjs[380].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4257]" "Shadows.adjs[356].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4258]" "Shadows.adjs[356].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4258]" "defaultRenderLayer.adjs[380].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4259]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4260]" "defaultRenderLayer.adjs[381].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4260]" "Shadows.adjs[357].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4261]" "Shadows.adjs[357].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4261]" "defaultRenderLayer.adjs[381].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4262]";
 connectAttr "polySurface53_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4263]"
@@ -55026,14 +55025,14 @@ connectAttr "polySurface53_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[427
 		;
 connectAttr "polySurface53_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4272]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4273]" "defaultRenderLayer.adjs[382].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4273]" "Shadows.adjs[358].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4274]" "Shadows.adjs[358].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4274]" "defaultRenderLayer.adjs[382].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4275]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4276]" "defaultRenderLayer.adjs[383].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4276]" "Shadows.adjs[359].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4277]" "Shadows.adjs[359].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4277]" "defaultRenderLayer.adjs[383].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4278]";
 connectAttr "polySurface377_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4279]"
@@ -55056,14 +55055,14 @@ connectAttr "polySurface377_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[42
 		;
 connectAttr "polySurface377_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4288]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4289]" "defaultRenderLayer.adjs[384].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4289]" "Shadows.adjs[360].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4290]" "Shadows.adjs[360].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4290]" "defaultRenderLayer.adjs[384].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4291]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4292]" "defaultRenderLayer.adjs[385].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4292]" "Shadows.adjs[361].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4293]" "Shadows.adjs[361].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4293]" "defaultRenderLayer.adjs[385].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4294]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4295]";
@@ -55088,14 +55087,14 @@ connectAttr "polySurface229_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[43
 		;
 connectAttr "polySurface229_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4306]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4307]" "defaultRenderLayer.adjs[386].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4307]" "Shadows.adjs[362].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4308]" "Shadows.adjs[362].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4308]" "defaultRenderLayer.adjs[386].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4309]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4310]" "defaultRenderLayer.adjs[387].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4310]" "Shadows.adjs[363].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4311]" "Shadows.adjs[363].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4311]" "defaultRenderLayer.adjs[387].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4312]";
 connectAttr "polySurface230_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4313]"
@@ -55118,14 +55117,14 @@ connectAttr "polySurface230_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[43
 		;
 connectAttr "polySurface230_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4322]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4323]" "defaultRenderLayer.adjs[388].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4323]" "Shadows.adjs[364].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4324]" "Shadows.adjs[364].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4324]" "defaultRenderLayer.adjs[388].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4325]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4326]" "defaultRenderLayer.adjs[389].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4326]" "Shadows.adjs[365].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4327]" "Shadows.adjs[365].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4327]" "defaultRenderLayer.adjs[389].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4328]";
 connectAttr "polySurface232_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4329]"
@@ -55148,14 +55147,14 @@ connectAttr "polySurface232_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[43
 		;
 connectAttr "polySurface232_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4338]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4339]" "defaultRenderLayer.adjs[390].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4339]" "Shadows.adjs[366].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4340]" "Shadows.adjs[366].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4340]" "defaultRenderLayer.adjs[390].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4341]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4342]" "defaultRenderLayer.adjs[391].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4342]" "Shadows.adjs[367].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4343]" "Shadows.adjs[367].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4343]" "defaultRenderLayer.adjs[391].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4344]";
 connectAttr "polySurface231_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4345]"
@@ -55178,14 +55177,14 @@ connectAttr "polySurface231_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[43
 		;
 connectAttr "polySurface231_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4354]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4355]" "defaultRenderLayer.adjs[392].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4355]" "Shadows.adjs[368].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4356]" "Shadows.adjs[368].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4356]" "defaultRenderLayer.adjs[392].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4357]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4358]" "defaultRenderLayer.adjs[393].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4358]" "Shadows.adjs[369].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4359]" "Shadows.adjs[369].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4359]" "defaultRenderLayer.adjs[393].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4360]";
 connectAttr "polySurface235_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4361]"
@@ -55208,14 +55207,14 @@ connectAttr "polySurface235_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[43
 		;
 connectAttr "polySurface235_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4370]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4371]" "defaultRenderLayer.adjs[394].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4371]" "Shadows.adjs[370].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4372]" "Shadows.adjs[370].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4372]" "defaultRenderLayer.adjs[394].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4373]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4374]" "defaultRenderLayer.adjs[395].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4374]" "Shadows.adjs[371].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4375]" "Shadows.adjs[371].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4375]" "defaultRenderLayer.adjs[395].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4376]";
 connectAttr "polySurface233_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4377]"
@@ -55238,14 +55237,14 @@ connectAttr "polySurface233_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[43
 		;
 connectAttr "polySurface233_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4386]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4387]" "defaultRenderLayer.adjs[396].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4387]" "Shadows.adjs[372].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4388]" "Shadows.adjs[372].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4388]" "defaultRenderLayer.adjs[396].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4389]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4390]" "defaultRenderLayer.adjs[397].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4390]" "Shadows.adjs[373].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4391]" "Shadows.adjs[373].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4391]" "defaultRenderLayer.adjs[397].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4392]";
 connectAttr "polySurface234_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4393]"
@@ -55268,14 +55267,14 @@ connectAttr "polySurface234_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[44
 		;
 connectAttr "polySurface234_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4402]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4403]" "defaultRenderLayer.adjs[398].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4403]" "Shadows.adjs[374].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4404]" "Shadows.adjs[374].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4404]" "defaultRenderLayer.adjs[398].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4405]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4406]" "defaultRenderLayer.adjs[399].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4406]" "Shadows.adjs[375].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4407]" "Shadows.adjs[375].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4407]" "defaultRenderLayer.adjs[399].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4408]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4409]";
@@ -55299,14 +55298,14 @@ connectAttr "polySurface238_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[44
 		;
 connectAttr "polySurface238_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4419]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4420]" "defaultRenderLayer.adjs[400].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4420]" "Shadows.adjs[376].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4421]" "Shadows.adjs[376].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4421]" "defaultRenderLayer.adjs[400].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4422]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4423]" "defaultRenderLayer.adjs[401].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4423]" "Shadows.adjs[377].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4424]" "Shadows.adjs[377].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4424]" "defaultRenderLayer.adjs[401].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4425]";
 connectAttr "polySurface240_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4426]"
@@ -55329,14 +55328,14 @@ connectAttr "polySurface240_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[44
 		;
 connectAttr "polySurface240_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4435]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4436]" "defaultRenderLayer.adjs[402].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4436]" "Shadows.adjs[378].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4437]" "Shadows.adjs[378].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4437]" "defaultRenderLayer.adjs[402].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4438]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4439]" "defaultRenderLayer.adjs[403].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4439]" "Shadows.adjs[379].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4440]" "Shadows.adjs[379].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4440]" "defaultRenderLayer.adjs[403].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4441]";
 connectAttr "polySurface236_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4442]"
@@ -55359,14 +55358,14 @@ connectAttr "polySurface236_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[44
 		;
 connectAttr "polySurface236_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4451]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4452]" "defaultRenderLayer.adjs[404].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4452]" "Shadows.adjs[380].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4453]" "Shadows.adjs[380].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4453]" "defaultRenderLayer.adjs[404].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4454]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4455]" "defaultRenderLayer.adjs[405].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4455]" "Shadows.adjs[381].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4456]" "Shadows.adjs[381].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4456]" "defaultRenderLayer.adjs[405].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4457]";
 connectAttr "polySurface237_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4458]"
@@ -55389,14 +55388,14 @@ connectAttr "polySurface237_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[44
 		;
 connectAttr "polySurface237_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4467]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4468]" "defaultRenderLayer.adjs[406].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4468]" "Shadows.adjs[382].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4469]" "Shadows.adjs[382].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4469]" "defaultRenderLayer.adjs[406].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4470]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4471]" "defaultRenderLayer.adjs[407].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4471]" "Shadows.adjs[383].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4472]" "Shadows.adjs[383].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4472]" "defaultRenderLayer.adjs[407].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4473]";
 connectAttr "polySurface239_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4474]"
@@ -55419,14 +55418,14 @@ connectAttr "polySurface239_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[44
 		;
 connectAttr "polySurface239_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4483]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4484]" "defaultRenderLayer.adjs[408].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4484]" "Shadows.adjs[384].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4485]" "Shadows.adjs[384].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4485]" "defaultRenderLayer.adjs[408].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4486]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4487]" "defaultRenderLayer.adjs[409].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4487]" "Shadows.adjs[385].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4488]" "Shadows.adjs[385].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4488]" "defaultRenderLayer.adjs[409].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4489]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4490]";
@@ -55450,9 +55449,9 @@ connectAttr "polySurface90_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[449
 		;
 connectAttr "polySurface90_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4500]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4501]" "defaultRenderLayer.adjs[410].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4501]" "Shadows.adjs[386].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4502]" "Shadows.adjs[386].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4502]" "defaultRenderLayer.adjs[410].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4503]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4504]";
@@ -55477,14 +55476,14 @@ connectAttr "polySurface241_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[45
 		;
 connectAttr "polySurface241_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4515]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4516]" "defaultRenderLayer.adjs[411].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4516]" "Shadows.adjs[387].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4517]" "Shadows.adjs[387].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4517]" "defaultRenderLayer.adjs[411].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4518]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4519]" "defaultRenderLayer.adjs[412].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4519]" "Shadows.adjs[388].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4520]" "Shadows.adjs[388].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4520]" "defaultRenderLayer.adjs[412].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4521]";
 connectAttr "polySurface242_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4522]"
@@ -55507,14 +55506,14 @@ connectAttr "polySurface242_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[45
 		;
 connectAttr "polySurface242_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4531]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4532]" "defaultRenderLayer.adjs[413].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4532]" "Shadows.adjs[389].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4533]" "Shadows.adjs[389].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4533]" "defaultRenderLayer.adjs[413].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4534]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4535]" "defaultRenderLayer.adjs[414].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4535]" "Shadows.adjs[390].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4536]" "Shadows.adjs[390].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4536]" "defaultRenderLayer.adjs[414].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4537]";
 connectAttr "polySurface243_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4538]"
@@ -55537,14 +55536,14 @@ connectAttr "polySurface243_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[45
 		;
 connectAttr "polySurface243_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4547]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4548]" "defaultRenderLayer.adjs[415].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4548]" "Shadows.adjs[391].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4549]" "Shadows.adjs[391].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4549]" "defaultRenderLayer.adjs[415].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4550]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4551]" "defaultRenderLayer.adjs[416].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4551]" "Shadows.adjs[392].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4552]" "Shadows.adjs[392].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4552]" "defaultRenderLayer.adjs[416].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4553]";
 connectAttr "polySurface244_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4554]"
@@ -55567,14 +55566,14 @@ connectAttr "polySurface244_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[45
 		;
 connectAttr "polySurface244_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4563]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4564]" "defaultRenderLayer.adjs[417].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4564]" "Shadows.adjs[393].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4565]" "Shadows.adjs[393].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4565]" "defaultRenderLayer.adjs[417].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4566]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4567]" "defaultRenderLayer.adjs[418].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4567]" "Shadows.adjs[394].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4568]" "Shadows.adjs[394].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4568]" "defaultRenderLayer.adjs[418].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4569]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4570]";
@@ -55599,14 +55598,14 @@ connectAttr "polySurface251_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[45
 		;
 connectAttr "polySurface251_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4581]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4582]" "defaultRenderLayer.adjs[419].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4582]" "Shadows.adjs[395].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4583]" "Shadows.adjs[395].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4583]" "defaultRenderLayer.adjs[419].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4584]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4585]" "defaultRenderLayer.adjs[420].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4585]" "Shadows.adjs[396].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4586]" "Shadows.adjs[396].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4586]" "defaultRenderLayer.adjs[420].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4587]";
 connectAttr "polySurface252_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4588]"
@@ -55629,14 +55628,14 @@ connectAttr "polySurface252_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[45
 		;
 connectAttr "polySurface252_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4597]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4598]" "defaultRenderLayer.adjs[421].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4598]" "Shadows.adjs[397].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4599]" "Shadows.adjs[397].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4599]" "defaultRenderLayer.adjs[421].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4600]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4601]" "defaultRenderLayer.adjs[422].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4601]" "Shadows.adjs[398].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4602]" "Shadows.adjs[398].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4602]" "defaultRenderLayer.adjs[422].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4603]";
 connectAttr "polySurface254_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4604]"
@@ -55659,14 +55658,14 @@ connectAttr "polySurface254_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[46
 		;
 connectAttr "polySurface254_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4613]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4614]" "defaultRenderLayer.adjs[423].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4614]" "Shadows.adjs[399].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4615]" "Shadows.adjs[399].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4615]" "defaultRenderLayer.adjs[423].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4616]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4617]" "defaultRenderLayer.adjs[424].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4617]" "Shadows.adjs[400].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4618]" "Shadows.adjs[400].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4618]" "defaultRenderLayer.adjs[424].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4619]";
 connectAttr "polySurface253_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4620]"
@@ -55689,14 +55688,14 @@ connectAttr "polySurface253_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[46
 		;
 connectAttr "polySurface253_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4629]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4630]" "defaultRenderLayer.adjs[425].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4630]" "Shadows.adjs[401].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4631]" "Shadows.adjs[401].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4631]" "defaultRenderLayer.adjs[425].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4632]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4633]" "defaultRenderLayer.adjs[426].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4633]" "Shadows.adjs[402].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4634]" "Shadows.adjs[402].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4634]" "defaultRenderLayer.adjs[426].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4635]";
 connectAttr "polySurface257_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4636]"
@@ -55719,14 +55718,14 @@ connectAttr "polySurface257_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[46
 		;
 connectAttr "polySurface257_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4645]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4646]" "defaultRenderLayer.adjs[427].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4646]" "Shadows.adjs[403].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4647]" "Shadows.adjs[403].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4647]" "defaultRenderLayer.adjs[427].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4648]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4649]" "defaultRenderLayer.adjs[428].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4649]" "Shadows.adjs[404].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4650]" "Shadows.adjs[404].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4650]" "defaultRenderLayer.adjs[428].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4651]";
 connectAttr "polySurface256_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4652]"
@@ -55749,14 +55748,14 @@ connectAttr "polySurface256_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[46
 		;
 connectAttr "polySurface256_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4661]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4662]" "defaultRenderLayer.adjs[429].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4662]" "Shadows.adjs[405].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4663]" "Shadows.adjs[405].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4663]" "defaultRenderLayer.adjs[429].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4664]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4665]" "defaultRenderLayer.adjs[430].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4665]" "Shadows.adjs[406].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4666]" "Shadows.adjs[406].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4666]" "defaultRenderLayer.adjs[430].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4667]";
 connectAttr "polySurface255_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4668]"
@@ -55779,14 +55778,14 @@ connectAttr "polySurface255_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[46
 		;
 connectAttr "polySurface255_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4677]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4678]" "defaultRenderLayer.adjs[431].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4678]" "Shadows.adjs[407].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4679]" "Shadows.adjs[407].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4679]" "defaultRenderLayer.adjs[431].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4680]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4681]" "defaultRenderLayer.adjs[432].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4681]" "Shadows.adjs[408].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4682]" "Shadows.adjs[408].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4682]" "defaultRenderLayer.adjs[432].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4683]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4684]";
@@ -55810,14 +55809,14 @@ connectAttr "polySurface262_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[46
 		;
 connectAttr "polySurface262_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4694]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4695]" "defaultRenderLayer.adjs[433].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4695]" "Shadows.adjs[409].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4696]" "Shadows.adjs[409].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4696]" "defaultRenderLayer.adjs[433].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4697]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4698]" "defaultRenderLayer.adjs[434].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4698]" "Shadows.adjs[410].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4699]" "Shadows.adjs[410].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4699]" "defaultRenderLayer.adjs[434].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4700]";
 connectAttr "polySurface259_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4701]"
@@ -55840,14 +55839,14 @@ connectAttr "polySurface259_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[47
 		;
 connectAttr "polySurface259_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4710]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4711]" "defaultRenderLayer.adjs[435].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4711]" "Shadows.adjs[411].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4712]" "Shadows.adjs[411].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4712]" "defaultRenderLayer.adjs[435].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4713]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4714]" "defaultRenderLayer.adjs[436].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4714]" "Shadows.adjs[412].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4715]" "Shadows.adjs[412].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4715]" "defaultRenderLayer.adjs[436].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4716]";
 connectAttr "polySurface258_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4717]"
@@ -55870,14 +55869,14 @@ connectAttr "polySurface258_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[47
 		;
 connectAttr "polySurface258_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4726]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4727]" "defaultRenderLayer.adjs[437].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4727]" "Shadows.adjs[413].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4728]" "Shadows.adjs[413].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4728]" "defaultRenderLayer.adjs[437].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4729]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4730]" "defaultRenderLayer.adjs[438].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4730]" "Shadows.adjs[414].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4731]" "Shadows.adjs[414].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4731]" "defaultRenderLayer.adjs[438].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4732]";
 connectAttr "polySurface261_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4733]"
@@ -55900,14 +55899,14 @@ connectAttr "polySurface261_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[47
 		;
 connectAttr "polySurface261_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4742]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4743]" "defaultRenderLayer.adjs[439].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4743]" "Shadows.adjs[415].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4744]" "Shadows.adjs[415].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4744]" "defaultRenderLayer.adjs[439].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4745]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4746]" "defaultRenderLayer.adjs[440].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4746]" "Shadows.adjs[416].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4747]" "Shadows.adjs[416].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4747]" "defaultRenderLayer.adjs[440].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4748]";
 connectAttr "polySurface260_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4749]"
@@ -55930,14 +55929,14 @@ connectAttr "polySurface260_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[47
 		;
 connectAttr "polySurface260_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4758]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4759]" "defaultRenderLayer.adjs[441].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4759]" "Shadows.adjs[417].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4760]" "Shadows.adjs[417].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4760]" "defaultRenderLayer.adjs[441].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4761]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4762]" "defaultRenderLayer.adjs[442].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4762]" "Shadows.adjs[418].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4763]" "Shadows.adjs[418].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4763]" "defaultRenderLayer.adjs[442].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4764]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4765]";
@@ -55962,14 +55961,14 @@ connectAttr "polySurface264_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[47
 		;
 connectAttr "polySurface264_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4776]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4777]" "defaultRenderLayer.adjs[443].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4777]" "Shadows.adjs[419].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4778]" "Shadows.adjs[419].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4778]" "defaultRenderLayer.adjs[443].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4779]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4780]" "defaultRenderLayer.adjs[444].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4780]" "Shadows.adjs[420].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4781]" "Shadows.adjs[420].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4781]" "defaultRenderLayer.adjs[444].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4782]";
 connectAttr "polySurface263_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4783]"
@@ -55992,14 +55991,14 @@ connectAttr "polySurface263_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[47
 		;
 connectAttr "polySurface263_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4792]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4793]" "defaultRenderLayer.adjs[445].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4793]" "Shadows.adjs[421].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4794]" "Shadows.adjs[421].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4794]" "defaultRenderLayer.adjs[445].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4795]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4796]" "defaultRenderLayer.adjs[446].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4796]" "Shadows.adjs[422].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4797]" "Shadows.adjs[422].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4797]" "defaultRenderLayer.adjs[446].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4798]";
 connectAttr "polySurface266_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4799]"
@@ -56022,9 +56021,9 @@ connectAttr "polySurface266_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "polySurface266_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4808]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4809]" "defaultRenderLayer.adjs[447].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4809]" "Shadows.adjs[423].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4810]" "Shadows.adjs[423].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4810]" "defaultRenderLayer.adjs[447].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4811]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4812]";
@@ -56048,14 +56047,14 @@ connectAttr "polySurface265_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "polySurface265_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4822]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4823]" "defaultRenderLayer.adjs[448].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4823]" "Shadows.adjs[424].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4824]" "Shadows.adjs[424].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4824]" "defaultRenderLayer.adjs[448].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4825]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4826]" "defaultRenderLayer.adjs[449].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4826]" "Shadows.adjs[425].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4827]" "Shadows.adjs[425].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4827]" "defaultRenderLayer.adjs[449].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4828]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4829]";
@@ -56067,9 +56066,9 @@ connectAttr "hatch_parent_R_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "hatch_parent_R_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4833]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4834]" "defaultRenderLayer.adjs[450].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4834]" "Shadows.adjs[426].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4835]" "Shadows.adjs[426].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4835]" "defaultRenderLayer.adjs[450].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4836]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4837]";
@@ -56093,14 +56092,14 @@ connectAttr "polySurface246_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "polySurface246_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4847]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4848]" "defaultRenderLayer.adjs[451].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4848]" "Shadows.adjs[427].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4849]" "Shadows.adjs[427].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4849]" "defaultRenderLayer.adjs[451].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4850]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4851]" "defaultRenderLayer.adjs[452].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4851]" "Shadows.adjs[428].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4852]" "Shadows.adjs[428].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4852]" "defaultRenderLayer.adjs[452].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4853]";
 connectAttr "polySurface247_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4854]"
@@ -56123,14 +56122,14 @@ connectAttr "polySurface247_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "polySurface247_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4863]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4864]" "defaultRenderLayer.adjs[453].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4864]" "Shadows.adjs[429].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4865]" "Shadows.adjs[429].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4865]" "defaultRenderLayer.adjs[453].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4866]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4867]" "defaultRenderLayer.adjs[454].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4867]" "Shadows.adjs[430].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4868]" "Shadows.adjs[430].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4868]" "defaultRenderLayer.adjs[454].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4869]";
 connectAttr "polySurface248_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4870]"
@@ -56153,14 +56152,14 @@ connectAttr "polySurface248_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "polySurface248_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4879]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4880]" "defaultRenderLayer.adjs[455].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4880]" "Shadows.adjs[431].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4881]" "Shadows.adjs[431].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4881]" "defaultRenderLayer.adjs[455].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4882]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4883]" "defaultRenderLayer.adjs[456].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4883]" "Shadows.adjs[432].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4884]" "Shadows.adjs[432].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4884]" "defaultRenderLayer.adjs[456].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4885]";
 connectAttr "polySurface249_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4886]"
@@ -56183,14 +56182,14 @@ connectAttr "polySurface249_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[48
 		;
 connectAttr "polySurface249_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4895]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4896]" "defaultRenderLayer.adjs[457].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4896]" "Shadows.adjs[433].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4897]" "Shadows.adjs[433].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4897]" "defaultRenderLayer.adjs[457].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4898]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4899]" "defaultRenderLayer.adjs[458].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4899]" "Shadows.adjs[434].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4900]" "Shadows.adjs[434].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4900]" "defaultRenderLayer.adjs[458].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4901]";
 connectAttr "hatch_parent_L_visibility.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4902]"
@@ -56201,9 +56200,9 @@ connectAttr "hatch_parent_L_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[49
 		;
 connectAttr "hatch_parent_L_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4905]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4906]" "defaultRenderLayer.adjs[459].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4906]" "Shadows.adjs[435].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4907]" "Shadows.adjs[435].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4907]" "defaultRenderLayer.adjs[459].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4908]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4909]";
@@ -56227,14 +56226,14 @@ connectAttr "polySurface224_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[49
 		;
 connectAttr "polySurface224_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4919]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4920]" "defaultRenderLayer.adjs[460].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4920]" "Shadows.adjs[436].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4921]" "Shadows.adjs[436].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4921]" "defaultRenderLayer.adjs[460].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4922]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4923]" "defaultRenderLayer.adjs[461].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4923]" "Shadows.adjs[437].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4924]" "Shadows.adjs[437].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4924]" "defaultRenderLayer.adjs[461].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4925]";
 connectAttr "polySurface225_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4926]"
@@ -56257,14 +56256,14 @@ connectAttr "polySurface225_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[49
 		;
 connectAttr "polySurface225_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4935]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4936]" "defaultRenderLayer.adjs[462].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4936]" "Shadows.adjs[438].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4937]" "Shadows.adjs[438].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4937]" "defaultRenderLayer.adjs[462].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4938]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4939]" "defaultRenderLayer.adjs[463].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4939]" "Shadows.adjs[439].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4940]" "Shadows.adjs[439].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4940]" "defaultRenderLayer.adjs[463].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4941]";
 connectAttr "polySurface226_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4942]"
@@ -56287,14 +56286,14 @@ connectAttr "polySurface226_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[49
 		;
 connectAttr "polySurface226_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4951]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4952]" "defaultRenderLayer.adjs[464].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4952]" "Shadows.adjs[440].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4953]" "Shadows.adjs[440].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4953]" "defaultRenderLayer.adjs[464].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4954]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4955]" "defaultRenderLayer.adjs[465].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4955]" "Shadows.adjs[441].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4956]" "Shadows.adjs[441].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4956]" "defaultRenderLayer.adjs[465].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4957]";
 connectAttr "polySurface227_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4958]"
@@ -56317,14 +56316,14 @@ connectAttr "polySurface227_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[49
 		;
 connectAttr "polySurface227_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4967]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4968]" "defaultRenderLayer.adjs[466].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4968]" "Shadows.adjs[442].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4969]" "Shadows.adjs[442].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4969]" "defaultRenderLayer.adjs[466].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4970]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4971]" "defaultRenderLayer.adjs[467].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4971]" "Shadows.adjs[443].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4972]" "Shadows.adjs[443].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4972]" "defaultRenderLayer.adjs[467].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4973]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4974]";
@@ -56350,9 +56349,9 @@ connectAttr "polySurface228_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[49
 		;
 connectAttr "polySurface228_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[4986]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4987]" "defaultRenderLayer.adjs[468].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4987]" "Shadows.adjs[444].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4988]" "Shadows.adjs[444].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[4988]" "defaultRenderLayer.adjs[468].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4989]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[4990]";
@@ -56380,9 +56379,9 @@ connectAttr "polySurface250_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[50
 		;
 connectAttr "polySurface250_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5004]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5005]" "defaultRenderLayer.adjs[469].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5005]" "Shadows.adjs[445].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5006]" "Shadows.adjs[445].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5006]" "defaultRenderLayer.adjs[469].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5007]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5008]";
@@ -56406,9 +56405,9 @@ connectAttr "right_Quad_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5018]"
 		;
 connectAttr "right_Quad_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5019]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5020]" "defaultRenderLayer.adjs[470].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5020]" "Shadows.adjs[446].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5021]" "Shadows.adjs[446].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5021]" "defaultRenderLayer.adjs[470].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5022]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5023]";
@@ -56432,9 +56431,9 @@ connectAttr "polySurface166_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[50
 		;
 connectAttr "polySurface166_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5033]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5034]" "defaultRenderLayer.adjs[471].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5034]" "Shadows.adjs[447].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5035]" "Shadows.adjs[447].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5035]" "defaultRenderLayer.adjs[471].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5036]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5037]";
@@ -56458,9 +56457,9 @@ connectAttr "polySurface168_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[50
 		;
 connectAttr "polySurface168_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5047]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5048]" "defaultRenderLayer.adjs[472].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5048]" "Shadows.adjs[448].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5049]" "Shadows.adjs[448].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5049]" "defaultRenderLayer.adjs[472].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5050]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5051]";
@@ -56484,9 +56483,9 @@ connectAttr "polySurface169_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[50
 		;
 connectAttr "polySurface169_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5061]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5062]" "defaultRenderLayer.adjs[473].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5062]" "Shadows.adjs[449].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5063]" "Shadows.adjs[449].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5063]" "defaultRenderLayer.adjs[473].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5064]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5065]";
@@ -56510,9 +56509,9 @@ connectAttr "polySurface171_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[50
 		;
 connectAttr "polySurface171_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5075]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5076]" "defaultRenderLayer.adjs[474].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5076]" "Shadows.adjs[450].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5077]" "Shadows.adjs[450].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5077]" "defaultRenderLayer.adjs[474].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5078]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5079]";
@@ -56536,9 +56535,9 @@ connectAttr "polySurface172_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[50
 		;
 connectAttr "polySurface172_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5089]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5090]" "defaultRenderLayer.adjs[475].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5090]" "Shadows.adjs[451].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5091]" "Shadows.adjs[451].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5091]" "defaultRenderLayer.adjs[475].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5092]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5093]";
@@ -56562,9 +56561,9 @@ connectAttr "polySurface173_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface173_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5103]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5104]" "defaultRenderLayer.adjs[476].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5104]" "Shadows.adjs[452].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5105]" "Shadows.adjs[452].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5105]" "defaultRenderLayer.adjs[476].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5106]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5107]";
@@ -56588,9 +56587,9 @@ connectAttr "polySurface174_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface174_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5117]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5118]" "defaultRenderLayer.adjs[477].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5118]" "Shadows.adjs[453].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5119]" "Shadows.adjs[453].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5119]" "defaultRenderLayer.adjs[477].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5120]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5121]";
@@ -56614,9 +56613,9 @@ connectAttr "polySurface175_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface175_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5131]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5132]" "defaultRenderLayer.adjs[478].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5132]" "Shadows.adjs[454].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5133]" "Shadows.adjs[454].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5133]" "defaultRenderLayer.adjs[478].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5134]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5135]";
@@ -56640,9 +56639,9 @@ connectAttr "polySurface176_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface176_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5145]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5146]" "defaultRenderLayer.adjs[479].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5146]" "Shadows.adjs[455].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5147]" "Shadows.adjs[455].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5147]" "defaultRenderLayer.adjs[479].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5148]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5149]";
@@ -56666,9 +56665,9 @@ connectAttr "polySurface177_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface177_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5159]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5160]" "defaultRenderLayer.adjs[480].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5160]" "Shadows.adjs[456].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5161]" "Shadows.adjs[456].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5161]" "defaultRenderLayer.adjs[480].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5162]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5163]";
@@ -56692,9 +56691,9 @@ connectAttr "polySurface178_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface178_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5173]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5174]" "defaultRenderLayer.adjs[481].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5174]" "Shadows.adjs[457].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5175]" "Shadows.adjs[457].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5175]" "defaultRenderLayer.adjs[481].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5176]";
 connectAttr "left_Quad_rotateY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5177]"
@@ -56713,9 +56712,9 @@ connectAttr "left_Quad_visibility.o" "FighterModelMaya_RIGVERSION_0065RN.phl[518
 connectAttr "left_Quad_scaleX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5184]";
 connectAttr "left_Quad_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5185]";
 connectAttr "left_Quad_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5186]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5187]" "defaultRenderLayer.adjs[482].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5187]" "Shadows.adjs[458].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5188]" "Shadows.adjs[458].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5188]" "defaultRenderLayer.adjs[482].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5189]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5190]";
@@ -56739,9 +56738,9 @@ connectAttr "polySurface167_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[51
 		;
 connectAttr "polySurface167_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5200]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5201]" "defaultRenderLayer.adjs[483].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5201]" "Shadows.adjs[459].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5202]" "Shadows.adjs[459].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5202]" "defaultRenderLayer.adjs[483].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5203]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5204]";
@@ -56765,9 +56764,9 @@ connectAttr "polySurface179_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface179_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5214]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5215]" "defaultRenderLayer.adjs[484].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5215]" "Shadows.adjs[460].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5216]" "Shadows.adjs[460].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5216]" "defaultRenderLayer.adjs[484].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5217]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5218]";
@@ -56791,9 +56790,9 @@ connectAttr "polySurface180_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface180_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5228]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5229]" "defaultRenderLayer.adjs[485].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5229]" "Shadows.adjs[461].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5230]" "Shadows.adjs[461].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5230]" "defaultRenderLayer.adjs[485].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5231]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5232]";
@@ -56817,9 +56816,9 @@ connectAttr "polySurface182_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface182_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5242]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5243]" "defaultRenderLayer.adjs[486].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5243]" "Shadows.adjs[462].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5244]" "Shadows.adjs[462].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5244]" "defaultRenderLayer.adjs[486].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5245]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5246]";
@@ -56843,9 +56842,9 @@ connectAttr "polySurface183_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface183_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5256]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5257]" "defaultRenderLayer.adjs[487].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5257]" "Shadows.adjs[463].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5258]" "Shadows.adjs[463].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5258]" "defaultRenderLayer.adjs[487].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5259]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5260]";
@@ -56869,9 +56868,9 @@ connectAttr "polySurface184_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface184_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5270]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5271]" "defaultRenderLayer.adjs[488].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5271]" "Shadows.adjs[464].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5272]" "Shadows.adjs[464].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5272]" "defaultRenderLayer.adjs[488].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5273]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5274]";
@@ -56895,9 +56894,9 @@ connectAttr "polySurface185_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface185_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5284]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5285]" "defaultRenderLayer.adjs[489].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5285]" "Shadows.adjs[465].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5286]" "Shadows.adjs[465].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5286]" "defaultRenderLayer.adjs[489].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5287]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5288]";
@@ -56921,9 +56920,9 @@ connectAttr "polySurface186_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[52
 		;
 connectAttr "polySurface186_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5298]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5299]" "defaultRenderLayer.adjs[490].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5299]" "Shadows.adjs[466].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5300]" "Shadows.adjs[466].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5300]" "defaultRenderLayer.adjs[490].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5301]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5302]";
@@ -56947,9 +56946,9 @@ connectAttr "polySurface187_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface187_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5312]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5313]" "defaultRenderLayer.adjs[491].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5313]" "Shadows.adjs[467].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5314]" "Shadows.adjs[467].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5314]" "defaultRenderLayer.adjs[491].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5315]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5316]";
@@ -56973,9 +56972,9 @@ connectAttr "polySurface188_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface188_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5326]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5327]" "defaultRenderLayer.adjs[492].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5327]" "Shadows.adjs[468].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5328]" "Shadows.adjs[468].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5328]" "defaultRenderLayer.adjs[492].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5329]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5330]";
@@ -56999,9 +56998,9 @@ connectAttr "polySurface189_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface189_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5340]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5341]" "defaultRenderLayer.adjs[493].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5341]" "Shadows.adjs[469].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5342]" "Shadows.adjs[469].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5342]" "defaultRenderLayer.adjs[493].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5343]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5344]";
@@ -57025,9 +57024,9 @@ connectAttr "polySurface193_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface193_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5354]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5355]" "defaultRenderLayer.adjs[494].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5355]" "Shadows.adjs[470].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5356]" "Shadows.adjs[470].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5356]" "defaultRenderLayer.adjs[494].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5357]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5358]";
@@ -57051,9 +57050,9 @@ connectAttr "polySurface190_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface190_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5368]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5369]" "defaultRenderLayer.adjs[495].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5369]" "Shadows.adjs[471].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5370]" "Shadows.adjs[471].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5370]" "defaultRenderLayer.adjs[495].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5371]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5372]";
@@ -57077,9 +57076,9 @@ connectAttr "polySurface191_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface191_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5382]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5383]" "defaultRenderLayer.adjs[496].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5383]" "Shadows.adjs[472].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5384]" "Shadows.adjs[472].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5384]" "defaultRenderLayer.adjs[496].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5385]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5386]";
@@ -57103,9 +57102,9 @@ connectAttr "polySurface192_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[53
 		;
 connectAttr "polySurface192_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5396]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5397]" "defaultRenderLayer.adjs[497].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5397]" "Shadows.adjs[473].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5398]" "Shadows.adjs[473].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5398]" "defaultRenderLayer.adjs[497].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5399]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5400]";
@@ -57129,9 +57128,9 @@ connectAttr "polySurface194_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface194_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5410]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5411]" "defaultRenderLayer.adjs[498].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5411]" "Shadows.adjs[474].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5412]" "Shadows.adjs[474].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5412]" "defaultRenderLayer.adjs[498].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5413]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5414]";
@@ -57156,14 +57155,14 @@ connectAttr "polySurface197_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface197_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5425]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5426]" "defaultRenderLayer.adjs[499].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5426]" "Shadows.adjs[475].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5427]" "Shadows.adjs[475].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5427]" "defaultRenderLayer.adjs[499].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5428]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5429]" "defaultRenderLayer.adjs[500].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5429]" "Shadows.adjs[476].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5430]" "Shadows.adjs[476].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5430]" "defaultRenderLayer.adjs[500].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5431]";
 connectAttr "polySurface196_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5432]"
@@ -57186,9 +57185,9 @@ connectAttr "polySurface196_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface196_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5441]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5442]" "defaultRenderLayer.adjs[501].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5442]" "Shadows.adjs[477].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5443]" "Shadows.adjs[477].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5443]" "defaultRenderLayer.adjs[501].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5444]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5445]";
@@ -57212,9 +57211,9 @@ connectAttr "polySurface195_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface195_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5455]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5456]" "defaultRenderLayer.adjs[502].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5456]" "Shadows.adjs[478].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5457]" "Shadows.adjs[478].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5457]" "defaultRenderLayer.adjs[502].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5458]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5459]";
@@ -57238,14 +57237,14 @@ connectAttr "polySurface211_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface211_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5469]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5470]" "defaultRenderLayer.adjs[503].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5470]" "Shadows.adjs[479].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5471]" "Shadows.adjs[479].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5471]" "defaultRenderLayer.adjs[503].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5472]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5473]" "defaultRenderLayer.adjs[504].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5473]" "Shadows.adjs[480].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5474]" "Shadows.adjs[480].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5474]" "defaultRenderLayer.adjs[504].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5475]";
 connectAttr "polySurface210_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5476]"
@@ -57268,9 +57267,9 @@ connectAttr "polySurface210_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface210_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5485]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5486]" "defaultRenderLayer.adjs[505].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5486]" "Shadows.adjs[481].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5487]" "Shadows.adjs[481].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5487]" "defaultRenderLayer.adjs[505].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5488]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5489]";
@@ -57294,9 +57293,9 @@ connectAttr "polySurface209_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[54
 		;
 connectAttr "polySurface209_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5499]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5500]" "defaultRenderLayer.adjs[506].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5500]" "Shadows.adjs[482].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5501]" "Shadows.adjs[482].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5501]" "defaultRenderLayer.adjs[506].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5502]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5503]";
@@ -57312,14 +57311,14 @@ connectAttr "mainHinge_visibility.o" "FighterModelMaya_RIGVERSION_0065RN.phl[550
 connectAttr "mainHinge_scaleX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5509]";
 connectAttr "mainHinge_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5510]";
 connectAttr "mainHinge_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5511]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5512]" "defaultRenderLayer.adjs[507].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5512]" "Shadows.adjs[483].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5513]" "Shadows.adjs[483].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5513]" "defaultRenderLayer.adjs[507].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5514]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5515]" "defaultRenderLayer.adjs[508].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5515]" "Shadows.adjs[484].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5516]" "Shadows.adjs[484].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5516]" "defaultRenderLayer.adjs[508].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5517]";
 connectAttr "mainWing_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5518]"
@@ -57336,14 +57335,14 @@ connectAttr "mainWing_rotateZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5524]";
 connectAttr "mainWing_scaleX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5525]";
 connectAttr "mainWing_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5526]";
 connectAttr "mainWing_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5527]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5528]" "defaultRenderLayer.adjs[509].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5528]" "Shadows.adjs[485].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5529]" "Shadows.adjs[485].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5529]" "defaultRenderLayer.adjs[509].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5530]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5531]" "defaultRenderLayer.adjs[510].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5531]" "Shadows.adjs[486].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5532]" "Shadows.adjs[486].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5532]" "defaultRenderLayer.adjs[510].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5533]";
 connectAttr "topflapHinge_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5534]"
@@ -57360,9 +57359,9 @@ connectAttr "topflapHinge_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5539
 		;
 connectAttr "topflapHinge_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5540]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5541]" "defaultRenderLayer.adjs[511].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5541]" "Shadows.adjs[487].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5542]" "Shadows.adjs[487].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5542]" "defaultRenderLayer.adjs[511].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5543]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5544]";
@@ -57386,9 +57385,9 @@ connectAttr "polySurface198_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[55
 		;
 connectAttr "polySurface198_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5554]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5555]" "defaultRenderLayer.adjs[512].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5555]" "Shadows.adjs[488].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5556]" "Shadows.adjs[488].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5556]" "defaultRenderLayer.adjs[512].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5557]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5558]";
@@ -57406,9 +57405,9 @@ connectAttr "botflapHinge_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5564
 		;
 connectAttr "botflapHinge_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5565]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5566]" "defaultRenderLayer.adjs[513].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5566]" "Shadows.adjs[489].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5567]" "Shadows.adjs[489].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5567]" "defaultRenderLayer.adjs[513].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5568]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5569]";
@@ -57432,9 +57431,9 @@ connectAttr "polySurface199_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[55
 		;
 connectAttr "polySurface199_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5579]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5580]" "defaultRenderLayer.adjs[514].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5580]" "Shadows.adjs[490].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5581]" "Shadows.adjs[490].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5581]" "defaultRenderLayer.adjs[514].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5582]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5583]";
@@ -57452,9 +57451,9 @@ connectAttr "SecondaryHinge_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[55
 		;
 connectAttr "SecondaryHinge_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5590]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5591]" "defaultRenderLayer.adjs[515].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5591]" "Shadows.adjs[491].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5592]" "Shadows.adjs[491].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5592]" "defaultRenderLayer.adjs[515].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5593]";
 connectAttr "SecondaryWing_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5594]"
@@ -57478,9 +57477,9 @@ connectAttr "SecondaryWing_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[560
 connectAttr "SecondaryWing_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5603]"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5604]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5605]" "defaultRenderLayer.adjs[516].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5605]" "Shadows.adjs[492].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5606]" "Shadows.adjs[492].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5606]" "defaultRenderLayer.adjs[516].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5607]";
 connectAttr "polySurface200_translateX.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5608]"
@@ -57504,9 +57503,9 @@ connectAttr "polySurface200_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[56
 connectAttr "polySurface200_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5617]"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5618]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5619]" "defaultRenderLayer.adjs[517].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5619]" "Shadows.adjs[493].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5620]" "Shadows.adjs[493].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5620]" "defaultRenderLayer.adjs[517].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5621]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5622]";
@@ -57524,9 +57523,9 @@ connectAttr "polySurface207_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[56
 		;
 connectAttr "polySurface207_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5629]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5630]" "defaultRenderLayer.adjs[518].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5630]" "Shadows.adjs[494].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5631]" "Shadows.adjs[494].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5631]" "defaultRenderLayer.adjs[518].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5632]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5633]";
@@ -57550,9 +57549,9 @@ connectAttr "polySurface201_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[56
 		;
 connectAttr "polySurface201_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5643]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5644]" "defaultRenderLayer.adjs[519].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5644]" "Shadows.adjs[495].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5645]" "Shadows.adjs[495].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5645]" "defaultRenderLayer.adjs[519].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5646]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5647]";
@@ -57571,14 +57570,14 @@ connectAttr "mainHinge_scaleY1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5654]"
 		;
 connectAttr "mainHinge_scaleZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5655]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5656]" "defaultRenderLayer.adjs[520].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5656]" "Shadows.adjs[496].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5657]" "Shadows.adjs[496].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5657]" "defaultRenderLayer.adjs[520].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5658]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5659]" "defaultRenderLayer.adjs[521].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5659]" "Shadows.adjs[497].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5660]" "Shadows.adjs[497].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5660]" "defaultRenderLayer.adjs[521].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5661]";
 connectAttr "mainWing_translateX1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5662]"
@@ -57598,14 +57597,14 @@ connectAttr "mainWing_rotateZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5668]"
 connectAttr "mainWing_scaleX1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5669]";
 connectAttr "mainWing_scaleY1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5670]";
 connectAttr "mainWing_scaleZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5671]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5672]" "defaultRenderLayer.adjs[522].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5672]" "Shadows.adjs[498].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5673]" "Shadows.adjs[498].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5673]" "defaultRenderLayer.adjs[522].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5674]";
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5675]" "defaultRenderLayer.adjs[523].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5675]" "Shadows.adjs[499].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5676]" "Shadows.adjs[499].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5676]" "defaultRenderLayer.adjs[523].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5677]";
 connectAttr "topflapHinge_translateX1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5678]"
@@ -57622,9 +57621,9 @@ connectAttr "topflapHinge_scaleY1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[568
 		;
 connectAttr "topflapHinge_scaleZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5684]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5685]" "defaultRenderLayer.adjs[524].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5685]" "Shadows.adjs[500].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5686]" "Shadows.adjs[500].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5686]" "defaultRenderLayer.adjs[524].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5687]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5688]";
@@ -57648,9 +57647,9 @@ connectAttr "polySurface212_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[56
 		;
 connectAttr "polySurface212_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5698]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5699]" "defaultRenderLayer.adjs[525].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5699]" "Shadows.adjs[501].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5700]" "Shadows.adjs[501].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5700]" "defaultRenderLayer.adjs[525].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5701]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5702]";
@@ -57668,9 +57667,9 @@ connectAttr "botflapHinge_scaleY1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[570
 		;
 connectAttr "botflapHinge_scaleZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5709]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5710]" "defaultRenderLayer.adjs[526].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5710]" "Shadows.adjs[502].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5711]" "Shadows.adjs[502].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5711]" "defaultRenderLayer.adjs[526].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5712]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5713]";
@@ -57694,9 +57693,9 @@ connectAttr "polySurface213_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[57
 		;
 connectAttr "polySurface213_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5723]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5724]" "defaultRenderLayer.adjs[527].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5724]" "Shadows.adjs[503].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5725]" "Shadows.adjs[503].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5725]" "defaultRenderLayer.adjs[527].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5726]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5727]";
@@ -57714,9 +57713,9 @@ connectAttr "SecondaryHinge_scaleY1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5
 		;
 connectAttr "SecondaryHinge_scaleZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5734]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5735]" "defaultRenderLayer.adjs[528].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5735]" "Shadows.adjs[504].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5736]" "Shadows.adjs[504].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5736]" "defaultRenderLayer.adjs[528].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5737]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5738]";
@@ -57740,9 +57739,9 @@ connectAttr "SecondaryWing_scaleY1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[57
 		;
 connectAttr "SecondaryWing_scaleZ1.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5748]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5749]" "defaultRenderLayer.adjs[529].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5749]" "Shadows.adjs[505].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5750]" "Shadows.adjs[505].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5750]" "defaultRenderLayer.adjs[529].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5751]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5752]";
@@ -57766,9 +57765,9 @@ connectAttr "polySurface214_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[57
 		;
 connectAttr "polySurface214_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5762]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5763]" "defaultRenderLayer.adjs[530].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5763]" "Shadows.adjs[506].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5764]" "Shadows.adjs[506].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5764]" "defaultRenderLayer.adjs[530].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5765]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5766]";
@@ -57786,9 +57785,9 @@ connectAttr "polySurface221_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[57
 		;
 connectAttr "polySurface221_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5773]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5774]" "defaultRenderLayer.adjs[531].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5774]" "Shadows.adjs[507].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5775]" "Shadows.adjs[507].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5775]" "defaultRenderLayer.adjs[531].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5776]";
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5777]";
@@ -57812,9 +57811,9 @@ connectAttr "polySurface215_scaleY.o" "FighterModelMaya_RIGVERSION_0065RN.phl[57
 		;
 connectAttr "polySurface215_scaleZ.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5787]"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5788]" "defaultRenderLayer.adjs[532].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5788]" "Shadows.adjs[508].plg"
 		;
-connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5789]" "Shadows.adjs[508].plg"
+connectAttr "FighterModelMaya_RIGVERSION_0065RN.phl[5789]" "defaultRenderLayer.adjs[532].plg"
 		;
 connectAttr "shiplayer.di" "FighterModelMaya_RIGVERSION_0065RN.phl[5790]";
 connectAttr "Text_LadderxControl_1_ladderControl.o" "FighterModelMaya_RIGVERSION_0065RN.phl[5791]"
@@ -58116,8 +58115,8 @@ connectAttr "Background.ri" "HangarMaya_0002RN.phl[7]";
 connectAttr "Background.ri" "HangarMaya_0002RN.phl[8]";
 connectAttr "Background.ri" "HangarMaya_0002RN.phl[9]";
 connectAttr "Shadows.ri" "HangarMaya_0002RN.phl[10]";
-connectAttr "HangarMaya_0002RN.phl[11]" "defaultRenderLayer.oajs[5].opg";
-connectAttr "HangarMaya_0002RN.phl[12]" "Shadows.oajs[0].opg";
+connectAttr "HangarMaya_0002RN.phl[11]" "Shadows.oajs[0].opg";
+connectAttr "HangarMaya_0002RN.phl[12]" "defaultRenderLayer.oajs[5].opg";
 connectAttr "Background.ri" "HangarMaya_0002RN.phl[13]";
 connectAttr "Background.ri" "HangarMaya_0002RN.phl[14]";
 connectAttr "Background.ri" "HangarMaya_0002RN.phl[15]";
